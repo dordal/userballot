@@ -13,7 +13,8 @@ var userballotApp = angular.module('userballotApp', ['firebase'])
       })
       .when('/admin', {
         templateUrl: 'views/adminarea.html',
-        controller: 'AdminAreaCtrl'
+        controller: 'AdminAreaCtrl',
+        authRequired: true
       })
       .otherwise({
         redirectTo: '/'
