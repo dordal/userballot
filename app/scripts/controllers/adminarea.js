@@ -1,6 +1,6 @@
 'use strict';
 
-userballotApp.controller('AdminAreaCtrl', function($scope, angularFireCollection) {
+userballotApp.controller('AdminAreaCtrl', function($scope, angularFire) {
     $scope.sites = [];
     $scope.messages = [];
     $scope.question = '';
@@ -23,15 +23,28 @@ userballotApp.controller('AdminAreaCtrl', function($scope, angularFireCollection
 			// user authenticated with Firebase
 			console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
 
-			//var userEmail = user.email.replace('.','\.');
-			var usersRef = new Firebase("https://userballotdb.firebaseio.com/users");
-		    $scope.users = angularFireCollection(usersRef, function(){
-		    	console.log($scope.users);
-		    });
+			// get the logged in user's email
+			var loggedInEmail = user.email.replace(/\./g, ',');
+			// use this to query the appropriate user
+			var url = new Firebase("https://userballotdb.firebaseio.com/users/id/"+loggedInEmail);
+			var userPromise = angularFire(url, $scope, 'user');
+			// when this completes do something
+			userPromise.then(function(user) {
+				console.log($scope.user);
 
-			// get the sites from the database
-		    //var sitesRef = new Firebase("https://userballotdb.firebaseio.com/sites");
-		    //angularFire(sitesRef, $scope, "sites");
+				var userSite = user.sites.id;
+
+				// get the site for the user from the database
+			    var sitesRef = new Firebase("https://userballotdb.firebaseio.com/sites/id/"+userSite);
+			    var sitesPromise = angularFire(sitesRef, $scope, "sites");
+
+			    sitesPromise.then(function(sites) {
+			    	console.log($scope.sites);
+			    });
+
+			});
+
+			
 
 		    $scope.submit = function() {
 			console.log($scope.question);
