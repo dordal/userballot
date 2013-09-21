@@ -32,9 +32,11 @@
 						</div>
 						<div class="card-wrap">
 							<h2 class="emphasis-heading">Ask a new question</h2>
-							<textarea class="topcoat-textarea" rows="3" cols="70" placeholder="The simplest question you can ask a user is a yes or no question"></textarea>
+							<form ng-submit="submit()" ng-controller="AdminAreaCtrl">
+							<textarea class="topcoat-textarea" ng-model="question" name="text" rows="3" cols="70" placeholder="The simplest question you can ask a user is a yes or no question"></textarea>
 							<br><br>
 							<button class="topcoat-button--large--cta">Save</button>
+							</form>
 						</div>
 						<div class="card-wrap">
 							<h2>Manage your questions</h2>
