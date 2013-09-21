@@ -3,7 +3,7 @@
 userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFire, angularFireAuth, userballotAuthSvc) {
     $scope.sites = [];
     $scope.messages = [];
-    $scope.question = 'Blah';
+    $scope.question = '';
 
     // authenticate a user
     var userRef = new Firebase('https://userballotdb.firebaseio.com');
