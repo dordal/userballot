@@ -2,6 +2,8 @@
 
 userballotApp.controller('AdminAreaCtrl', function($scope, angularFire) {
     $scope.sites = [];
+    $scope.messages = [];
+    $scope.question = 'Blah';
 
     // authenticate a user
     var userRef = new Firebase('https://userballotdb.firebaseio.com');
@@ -43,6 +45,10 @@ userballotApp.controller('AdminAreaCtrl', function($scope, angularFire) {
 			});
 
 			
+
+		    $scope.submit = function() {
+			console.log($scope.question);
+		    };
 
 		} else {
 			// user is logged out
