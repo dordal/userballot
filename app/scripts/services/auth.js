@@ -16,9 +16,9 @@ userballotApp.service('userballotAuthSvc', ["angularFireAuth", "$location", "$ro
     });
     $rootScope.$on("angularFireAuth:error", function(evt, err) {
       // There was an error during authentication.
-       console.log(error);
+       console.log(err);
                 // an error occurred while attempting login
-                switch(error.code) {
+                switch(err.code) {
                     case 'INVALID_EMAIL':
                         alert("invalid email address");
                     case 'INVALID_PASSWORD':

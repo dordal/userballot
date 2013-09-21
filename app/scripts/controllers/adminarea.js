@@ -1,6 +1,6 @@
 'use strict';
 
-userballotApp.controller('AdminAreaCtrl', function($scope, angularFire) {
+userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFire, angularFireAuth, userballotAuthSvc) {
     $scope.sites = [];
     $scope.messages = [];
     $scope.question = 'Blah';
@@ -55,9 +55,9 @@ userballotApp.controller('AdminAreaCtrl', function($scope, angularFire) {
 			console.log("logged out");
 		}
 	});
-	auth.login('password', {
-		email: 'test@exavault.com',
-		password: 'quaker17'
-	});
+	$scope.logout = function() {
+		angularFireAuth.logout();
+		$location.path("/login");
+	}
 
 });
