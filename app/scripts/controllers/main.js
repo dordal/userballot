@@ -11,6 +11,6 @@ userballotApp.controller('MainCtrl', function($scope,angularFire) {
   var ref = new Firebase("https://userballotdb.firebaseio.com/users");
   angularFire(ref, $scope, "users");
 
-  console.log($scope.users);
+  //console.log($scope);
 
 });
