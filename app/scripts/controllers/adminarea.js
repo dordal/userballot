@@ -22,17 +22,17 @@ userballotApp.controller('AdminAreaCtrl', function($scope, angularFire) {
 			console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
 
 			// get the sites from the database
-		    var siteRef = new Firebase("https://userballotdb.firebaseio.com/sites");
-		    angularFire(ref, $scope, "sites");
-    
+		    var sitesRef = new Firebase("https://userballotdb.firebaseio.com/sites");
+		    angularFire(sitesRef, $scope, "sites");
+
 		} else {
 			// user is logged out
 			console.log("logged out");
 		}
 	});
 	auth.login('password', {
-	email: 'test@exavault.com',
-	password: 'quaker17'
+		email: 'test@exavault.com',
+		password: 'quaker17'
 	});
 
 });
