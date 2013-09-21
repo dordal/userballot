@@ -1,6 +1,107 @@
 <!-- AdminArea -->
 <div ng-controller="AdminAreaCtrl">
-  <ul>
-    <li ng-repeat="site in sites">
-      <p>Domain: {{site.domain}}, Frequency: {{site.frequency}}</p>
+	<div class="extended-wrap">
+
+		<!-- The container is a centered 960px -->
+		<div class="container content-wrap">
+			<div class="sixteen columns">
+				<div class="row">
+					<div class="three columns alpha">
+						&nbsp;
+					</div>
+					<!-- logo -->
+					<div class="thirteen columns omega">
+						<img class="logo" src="img/userBallotLogoFullWhite.png" alt="" width="150">
+					</div>
+				</div>
+			</div>
+			<!-- Give column value in word form (one, two..., twelve) -->
+			<div class="sixteen columns">
+				<div class="row">
+					<div class="three columns alpha">
+		              <a class="main-nav-item" href="#">Dashboard</a>
+		              <a class="main-nav-item" href="#">Settings</a>
+		              <a class="main-nav-item" href="#" id="embedCodeShow">Embed code</a>
+					</div>
+					<div class="thirteen columns omega">
+						<div id="embedCodeProvider" class="card-wrap hide">
+							<a href="" class="close right">Hide</a>
+							<br class="clear" />
+							<h2 class="emphasis-heading">Copy and paste this in your website</h2>
+							<textarea class="topcoat-textarea active" rows="5" cols="70" placeholder=""><script> var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']]; (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0]; g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js'; s.parentNode.insertBefore(g,s)}(document,'script'));</script></textarea>
+						</div>
+						<div class="card-wrap">
+							<h2 class="emphasis-heading">Ask a new question</h2>
+							<textarea class="topcoat-textarea" rows="3" cols="70" placeholder="The simplest question you can ask a user is a yes or no question"></textarea>
+							<br><br>
+							<button class="topcoat-button--large--cta">Save</button>
+						</div>
+						<div class="card-wrap">
+							<h2>Manage your questions</h2>
+							<a href="#">active</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">draft</a>
+							
+							
+							<div class="line-item">
+								<div class="question-wrap left">
+									Would a mobile version of our application significantly improve your work-flow?
+								</div>
+								<div class="line-item-controls right">
+									<button class="topcoat-button--quiet">Active</button>
+									<button class="topcoat-button--quiet active">Draft</button>
+								</div>
+								<!-- results pills -->
+								<br class="clear" />
+								<div class="line-item-results right">
+									<span class="result-label">Yes</span><span class="pill yes">54</span>
+									<span class="result-label">No</span><span class="pill no">33</span>
+								</div>
+								<br class="clear" />				
+							</div>
+
+
+
+							<div class="line-item">
+								<div class="question-wrap left">
+									Would having a better way to delete items in your profile be a win for you?
+								</div>
+								<div class="line-item-controls right">
+									<button class="topcoat-button--quiet active">Active</button>
+									<button class="topcoat-button--quiet">Draft</button>
+								</div>
+								<!-- results pills -->
+								<br class="clear" />
+								<div class="line-item-results right">
+									<span class="result-label">Yes</span><span class="pill yes">4</span>
+									<span class="result-label">No</span><span class="pill updated no">12</span>
+								</div>
+								<br class="clear" />
+							</div>
+							
+
+
+							<div class="line-item">
+								<div class="question-wrap left">
+									If you had access to a dedicated help section, would it solve a pain point that you have?
+								</div>
+								<div class="line-item-controls right">
+									<button class="topcoat-button--quiet active">Active</button>
+									<button class="topcoat-button--quiet">Draft</button>
+								</div>
+								<!-- results pills -->
+								<br class="clear" />
+								<div class="line-item-results right">
+									<span class="result-label">Yes</span><span class="pill yes">23</span>
+									<span class="result-label">No</span><span class="pill no">8</span>
+								</div>
+								<br class="clear" />
+							</div>
+
+
+						</div>
+					</div>
+					<br class="clear" />
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
