@@ -41,59 +41,21 @@
 						<div class="card-wrap">
 							<h2>Manage your questions</h2>
 							<a href="#">active</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">draft</a>
-							
-							
-							<div class="line-item">
+		
+
+							<div class="line-item" ng-repeat="message in messages">
 								<div class="question-wrap left">
-									Would a mobile version of our application significantly improve your work-flow?
+									{{message.text}}
 								</div>
 								<div class="line-item-controls right">
-									<button class="topcoat-button--quiet">Active</button>
-									<button class="topcoat-button--quiet active">Draft</button>
+									<button class="topcoat-button--quiet {{message.active == "1" | iif : "active" : ""}}">Active</button>
+									<button class="topcoat-button--quiet {{message.active == "0" | iif : "active" : ""}}">Draft</button>
 								</div>
 								<!-- results pills -->
 								<br class="clear" />
 								<div class="line-item-results right">
-									<span class="result-label">Yes</span><span class="pill yes">54</span>
-									<span class="result-label">No</span><span class="pill no">33</span>
-								</div>
-								<br class="clear" />				
-							</div>
-
-
-
-							<div class="line-item">
-								<div class="question-wrap left">
-									Would having a better way to delete items in your profile be a win for you?
-								</div>
-								<div class="line-item-controls right">
-									<button class="topcoat-button--quiet active">Active</button>
-									<button class="topcoat-button--quiet">Draft</button>
-								</div>
-								<!-- results pills -->
-								<br class="clear" />
-								<div class="line-item-results right">
-									<span class="result-label">Yes</span><span class="pill yes">4</span>
-									<span class="result-label">No</span><span class="pill updated no">12</span>
-								</div>
-								<br class="clear" />
-							</div>
-							
-
-
-							<div class="line-item">
-								<div class="question-wrap left">
-									If you had access to a dedicated help section, would it solve a pain point that you have?
-								</div>
-								<div class="line-item-controls right">
-									<button class="topcoat-button--quiet active">Active</button>
-									<button class="topcoat-button--quiet">Draft</button>
-								</div>
-								<!-- results pills -->
-								<br class="clear" />
-								<div class="line-item-results right">
-									<span class="result-label">Yes</span><span class="pill yes">23</span>
-									<span class="result-label">No</span><span class="pill no">8</span>
+									<span class="result-label">Yes</span><span class="pill yes">{{message.yesVotes}}</span>
+									<span class="result-label">No</span><span class="pill no">{{message.noVotes</span>
 								</div>
 								<br class="clear" />
 							</div>
