@@ -1,0 +1,5 @@
+1. 
+I. open a site with one question in window A.
+II.  open a site with one question in window B. Answer the question in window B 'yes'.
+III. Answer the question in window A 'yes'.
+IIII. the yes count for the question should go up two.
