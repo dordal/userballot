@@ -1,6 +1,6 @@
 'use strict';
 
-userballotApp.controller('MainCtrl', function($scope,angularFire) {
+userballotApp.controller('MainCtrl', ['$scope', 'angularfire', function($scope,angularFire) {
   $scope.awesomeThings = [
     'HTML5 Boilerplate',
     'AngularJS',
@@ -13,4 +13,4 @@ userballotApp.controller('MainCtrl', function($scope,angularFire) {
 
   //console.log($scope);
 
-});
+})]);
