@@ -1,6 +1,6 @@
 'use strict';
 
-userballotApp.controller('AdminAreaCtrl', function($scope, angularFire) {
+userballotApp.controller('AdminAreaCtrl', function($scope, angularFireCollection) {
     $scope.sites = [];
     $scope.messages = [];
     $scope.question = 'Blah';
@@ -23,9 +23,15 @@ userballotApp.controller('AdminAreaCtrl', function($scope, angularFire) {
 			// user authenticated with Firebase
 			console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
 
+			//var userEmail = user.email.replace('.','\.');
+			var usersRef = new Firebase("https://userballotdb.firebaseio.com/users");
+		    $scope.users = angularFireCollection(usersRef, function(){
+		    	console.log($scope.users);
+		    });
+
 			// get the sites from the database
-		    var sitesRef = new Firebase("https://userballotdb.firebaseio.com/sites");
-		    angularFire(sitesRef, $scope, "sites");
+		    //var sitesRef = new Firebase("https://userballotdb.firebaseio.com/sites");
+		    //angularFire(sitesRef, $scope, "sites");
 
 		    $scope.submit = function() {
 			console.log($scope.question);
