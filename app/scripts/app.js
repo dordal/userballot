@@ -1,6 +1,6 @@
 'use strict';
 
-var userballotApp = angular.module('userballotApp', [])
+var userballotApp = angular.module('userballotApp', ['firebase'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
