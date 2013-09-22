@@ -1,7 +1,7 @@
 <!-- AdminArea -->
 <div ng-controller="AdminAreaCtrl">
 	<div class="extended-wrap">
-		<span ng-show="user.email">{{user.email}} | <a ng-click="logout()">Logout</a></span>
+		<div class="admin-bar"><span ng-show="user.email">{{user.email}} | <a ng-click="logout()">Logout</a></span></div>
 		<!-- The container is a centered 960px -->
 		<div class="container content-wrap">
 			<div class="sixteen columns">
@@ -56,6 +56,7 @@
 								<div class="line-item-controls right">
 									<button class="topcoat-button--quiet" ng-click="selectActive" ng:class="{true:'active', false:''}[message.active=='1']">Active</button>
 									<button class="topcoat-button--quiet" ng-click="selectDraft" ng:class="{true:'active', false:''}[message.active=='0']">Draft</button>
+									<button class="topcoat-button--quiet" ng-click="removeMessage($index)">Remove</button>
 								</div>
 								<!-- results pills -->
 								<br class="clear" />
@@ -63,7 +64,6 @@
 									<span class="result-label">Yes</span><span class="pill yes">{{message.yesVotes}}</span>
 									<span class="result-label">No</span><span class="pill no">{{message.noVotes}}</span>
 								</div>
-								<a ng-click="removeMessage($index)">Remove</a>
 								<br class="clear" />
 							</div>
 						</div>
