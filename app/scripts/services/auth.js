@@ -23,6 +23,7 @@ userballotApp.service('userballotAuthSvc', ["angularFireAuth", "$location", "$ro
             case 'INVALID_PASSWORD':
                 alert("Invalid Password");
             default:
+                alert("Unknown Error: " + err.code);
         }
     });
 
