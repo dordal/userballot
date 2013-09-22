@@ -45,10 +45,11 @@
             <script src="scripts/vendor/json3.min.js"></script>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <div class="container" ng-view>
+        <!-- action message -->
+        <div class="action-message hide"></div>
 
-        </div>
+        <!-- Add your site or application content here -->
+        <div class="container" ng-view></div>
 
         <script src="scripts/jquery-2.0.3.min.js"></script>
         <script src="scripts/vendor/angular.js"></script>
@@ -58,6 +59,7 @@
 
         <!-- build:js scripts/scripts.js -->
         <script src="scripts/app.js"></script>
+        <script src="scripts/services/auth.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/login.js"></script>
         <script src="scripts/controllers/adminarea.js"></script>
@@ -71,5 +73,6 @@
             g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
+        <script type="text/javascript">var $ub = window.$ub || {};$ub.siteId = '984915cc906d4f5f952258bd24c56a30';</script><script src="http://local.app.userballot//client.js"></script>
     </body>
 </html>

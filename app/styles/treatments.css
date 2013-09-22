@@ -10,6 +10,19 @@ body {
 .hide {
 	display: none;
 }
+.action-message {
+	background-color: #2ecc71;
+	color: #fff;
+	font-size: 22px;
+	font-weight: 400;
+	left: 0;	
+	padding: 20px;
+	position: fixed;
+	right: 0;
+	text-align: center;
+	top: 0;
+	z-index: 1000;
+}
 .extended-wrap {
 	padding: 40px;
 }
