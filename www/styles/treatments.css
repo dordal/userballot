@@ -1,0 +1,117 @@
+body {
+	background-color: #ecf0f1!important;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.hide {
+	display: none;
+}
+.action-message {
+	background-color: #222;
+	color: #fff;
+	font-size: 22px;
+	font-weight: 400;
+	left: 0;	
+	padding: 20px;
+	position: fixed;
+	right: 0;
+	text-align: center;
+	top: 0;
+	z-index: 1000;
+}
+.extended-wrap {
+	padding: 40px;
+}
+.content-wrap {
+	height: 900px;
+}
+.main-nav-item {
+	background-color: #31B96B;
+	border-radius: 5px;
+	color: #fff;
+	display: block;
+	margin-bottom: 10px;
+	padding: 20px 0;
+	text-align: center;
+	text-decoration: none;
+}
+.main-nav-item:hover {
+	background-color: #1B9B51;
+	cursor: pointer;
+}
+.main-nav-item a {
+	color: #fff;
+	text-decoration: none;
+}
+.card-wrap {
+	background-color: #fff;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	padding: 40px;
+}
+.content-wrap h2 {
+	color: #222;
+	font-weight: 300;
+	margin: 10px 0 25px;
+	font-size: 26px;
+	position: relative;
+	display: inline-block;
+	padding-right: 10px;
+}
+.content-wrap h2.emphasis-heading {
+	color: #16a085;
+}
+.line-item {
+	/*background-color: #ecf0f1;*/
+	border: 1px solid #ecf0f1;
+	border-radius: 5px;
+	line-height: 25px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	padding: 10px;
+}
+.question-wrap {
+	/*background-color: #F3F6F6;*/
+	border-radius: 5px;
+	height: 50px;
+	/*margin-bottom: 10px;*/
+	padding: 5px;
+	width: 80%;
+}
+.line-item-results {
+	margin: 4px 10px 5px 0;
+}
+.result-label {
+	color: #7f8c8d;
+	margin: 0 10px;
+}
+.line-item-results .pill {
+	background-color: #fff;
+	border-radius: 5px;
+	display: inline-block;
+	font-size: 25px;
+	padding: 5px;
+	text-align: center;
+	min-width: 50px;
+}
+.line-item-results .updated.pill {
+	background-color: #2ecc71;
+	color: #fff;
+}
+.line-item-results .pill.yes {
+	color: #2ecc71;
+}
+.line-item-results .pill.no {
+	color: ##3498db;
+}
+/* extent topcoat components */
+.topcoat-icon-button--large:hover {
+	cursor: pointer;
+}
+.topcoat-button--quiet.active {
+	color: #16a085;
+}
