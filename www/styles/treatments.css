@@ -10,6 +10,30 @@ body {
 .hide {
 	display: none;
 }
+.login-bar {
+	background-color: #27ae60;
+	padding: 20px 100px 0 0;
+	text-align: right;
+}
+.login-bar a {
+	color: #fff;
+	cursor: pointer;
+	font-size: 13px;
+}
+.signup-btn {
+	display: block;
+	cursor: pointer; 
+	border: none; margin: 0; 
+	padding: 20px 40px; 
+	color: #fff; 
+	font-weight: 200; 
+	font-size: 25px; 
+	background-color: #2ecc71; 
+	text-decoration: none;
+}
+.signup-btn:hover {
+	background-color: #27DB73;
+}
 .action-message {
 	background-color: #222;
 	color: #fff;
