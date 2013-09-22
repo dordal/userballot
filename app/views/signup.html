@@ -1,8 +1,10 @@
-{{createError}}
+{{loginerror.message}}
 <form name="signup">
 
-	<input type="text" ng-model="email" placeholder="Enter your email">
-	<input type="password" ng-model="password" placeholder="Enter your password">
+	<input type="text" ng-model="email" placeholder="Enter your email"><br />
+	<input type="password" ng-model="password" placeholder="Enter your password"><br />
+	<input type="password" ng-model="password-confirm" placeholder="Re-enter the same password"><br />
+	<input type="text" ng-model="domain" placeholder="Enter your website URL"><br />
 	<button ng-click="addMe()">Sign Me Up!</button>
 
 </form>
