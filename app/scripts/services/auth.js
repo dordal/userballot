@@ -7,24 +7,28 @@ userballotApp.service('userballotAuthSvc', ["angularFireAuth", "$location", "$ro
 
     $rootScope.$on("angularFireAuth:login", function(evt, user) {
        // User logged in.
-       // console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
-       $location.path('/admin');
+       console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
+       
     });
     $rootScope.$on("angularFireAuth:logout", function(evt) {
        // User logged out.
-       // console.log("logged out");
+       console.log("logged out");
        $location.path('/login')
     });
     $rootScope.$on("angularFireAuth:error", function(evt, err) {
-        // There was an error during authentication.
+      // There was an error during authentication.
+       console.log(err);
+        // an error occurred while attempting login
         switch(err.code) {
             case 'INVALID_EMAIL':
-                alert("Invalid Email Address");
+                $rootScope.error = "Invalid email address";
             case 'INVALID_PASSWORD':
-                alert("Invalid Password");
+                $rootScope.error = "Invalid password";
             default:
-                alert("Unknown Error: " + err.code);
+                $rootScope.error = "An error has occured, please try again.";
+            break;
         }
+    
     });
 
     this.login = function(email, password) {
@@ -37,6 +41,7 @@ userballotApp.service('userballotAuthSvc', ["angularFireAuth", "$location", "$ro
 
     this.logout = function() {
         angularFireAuth.logout();
+        alert("logout")
         $location.path("/login");        
     }
 }]);

@@ -10,7 +10,6 @@ var userballotApp = angular.module('userballotApp', ['firebase'])
       .when('/admin', {
         templateUrl: 'views/adminarea.html',
         controller: 'AdminAreaCtrl',
-        authRequired: true
       })
       .when('/signup', {
         templateUrl: 'views/signup.html',
