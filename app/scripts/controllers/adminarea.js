@@ -44,10 +44,10 @@ userballotApp.controller('AdminAreaCtrl', function($scope, angularFire) {
 
 			});
 
-			
-
 		    $scope.submit = function() {
-			console.log($scope.question);
+			if (this.question) {
+			    $scope.messages.push($scope.question);
+			}
 		    };
 
 		} else {
