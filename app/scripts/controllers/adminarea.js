@@ -6,8 +6,7 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
     $scope.question = '';
     $scope.myError = '';
 
-    // load everything on login
-    $scope.$on("angularFireAuth:login", function(evt, user) {
+    var user = $scope.user;
 
 	console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
 
@@ -19,46 +18,75 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 
 	var sitesRef;
 
-	// when this completes do something
+	// when this completes use the user data to get their site
 	userPromise.then(function(user) {
-	    //console.log($scope.user);
+
 	    var siteId;
 	    // you can't access the site due to a random ID
 	    for (siteId in $scope.user.sites) {
-		// reference to the users site
-		var userSite = $scope.user.sites[siteId];
-		break;
+			// reference to the users site
+			var userSite = $scope.user.sites[siteId];
+			break;
 	    }
 
 	    // get the specific site for the user from the database
 	    sitesRef = new Firebase("https://userballotdb.firebaseio.com/sites/"+userSite);
 	    var sitesPromise = angularFire(sitesRef, $scope, "site");
 
-	    // when this completes do something
+	    // when this completes we have the site ID
 	    sitesPromise.then(function(site) {
-		// Assign site ID for easy access
-		$scope.site.id = siteId;
-		console.log($scope.site.messages);
+			// Assign site ID for easy access
+			$scope.site.id = siteId;
+
 	    });
 	});
 
 	// you would only submit if a valid user
 	$scope.submit = function() {
 	    if($scope.question) {
-		$scope.site.messages[sitesRef.push().name()] = {
+	    	if ($scope.site.messages == undefined) {
+	    		$scope.site.messages = new Object();
+	    	}
+			$scope.site.messages[sitesRef.push().name()] = {
 	            text: $scope.question, yesVotes: 0, noVotes: 0, position: 0, active: 1
-		};
+	        };
+	    } else {
+			this.error = 'Dude you forgot to ask a question...';
 	    }
 
 	    $scope.question = '';
 	};
-    });
+
 
     $scope.logout = function() {
-	userballotAuthSvc.logout();
+		userballotAuthSvc.logout();
     };
+
+    // remove a message at a specific index based on 
+    // a click in the dom
+    $scope.removeMessage = function ( index ) {
+    	var key = keyAt($scope.site.messages, index);
+    	$scope.site.messages[key] = null;
+	};
+
+	$scope.selectDraft = function( index ){
+		var key = keyAt($scope.site.messages, index);
+    	$scope.site.messages[key].active = 0;
+	}
+
+	$scope.selectActive = function( index ){
+		var key = keyAt($scope.site.messages, index);
+    	$scope.site.messages[key].active = 1;
+	}
+
 });
 
+var keyAt = function(obj, index) {
+		    var i = 0;
+		    for (var key in obj) {
+		        if ((index || 0) === i++) return key;
+		    }
+		}
 
 userballotApp.filter('iif', function () {
     return function(input, trueValue, falseValue) {

@@ -1,7 +1,7 @@
 <!-- AdminArea -->
 <div ng-controller="AdminAreaCtrl">
 	<div class="extended-wrap">
-		<span ng-show="user.email">{{user.email}} | <a ng-click="logout()">Logout</a></span>
+		<div class="admin-bar"><span ng-show="user.email">{{user.email}} | <a ng-click="logout()">Logout</a></span></div>
 		<!-- The container is a centered 960px -->
 		<div class="container content-wrap">
 			<div class="sixteen columns">
@@ -11,7 +11,7 @@
 					</div>
 					<!-- logo -->
 					<div class="thirteen columns omega">
-						<img class="logo" src="img/userBallotLogoFullWhite.png" alt="" width="150">
+						<a href="http://app.userballot.com/"><img class="logo" src="img/userBallotLogoFullWhite.png" alt="" width="120"></a>
 					</div>
 				</div>
 			</div>
@@ -54,8 +54,11 @@
 									{{message.text}}
 								</div>
 								<div class="line-item-controls right">
-									<button class="topcoat-button--quiet" ng-click="selectActive" ng:class="{true:'active', false:''}[message.active=='1']">Active</button>
-									<button class="topcoat-button--quiet" ng-click="selectDraft" ng:class="{true:'active', false:''}[message.active=='0']">Draft</button>
+									
+									<button class="topcoat-button--quiet" ng-click="selectActive($index)" ng:class="{true:'active', false:''}[message.active=='1']">Active</button>
+									<button class="topcoat-button--quiet" ng-click="selectDraft($index)" ng:class="{true:'active', false:''}[message.active=='0']">Draft</button>
+									<button class="topcoat-button--quiet" ng-click="removeMessage($index)">Remove</button>
+
 								</div>
 								<!-- results pills -->
 								<br class="clear" />
