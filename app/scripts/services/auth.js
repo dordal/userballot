@@ -26,4 +26,4 @@ userballotApp.service('userballotAuthSvc', ["angularFireAuth", "$location", "$ro
                     default:
                 }
     });
-}])
+}]);
