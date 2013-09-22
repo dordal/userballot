@@ -12,6 +12,7 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 
 	// get the logged in user's email
 	var loggedInEmail = user.email.replace(/\./g, ',');
+
 	// use this to query the appropriate user
 	var url = new Firebase("https://userballotdb.firebaseio.com/users/"+loggedInEmail);
 	var userPromise = angularFire(url, $scope, 'user');
@@ -47,8 +48,6 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 			$scope.site.messages[sitesRef.push().name()] = {
 	            text: $scope.question, yesVotes: 0, noVotes: 0, position: 0, active: 1
 	        };
-	    } else {
-			this.error = 'Dude you forgot to ask a question...';
 	    }
 
 	    $scope.question = '';
