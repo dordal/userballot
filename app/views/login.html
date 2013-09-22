@@ -1,15 +1,17 @@
-<div class="card-wrap">
-	<div class="title">Login to UserBallot</div>
+<div style="padding: 50px 0 0 10px;"><img class="logo" src="img/userBallotLogoFullWhite.png" alt="" width="120"></div>
+<div class="card-wrap" style="margin-top: 50px; text-align: center;">
+	<br/>
 	<div class="error">{{error}}</div>
 	<form ng-submit="login()">
 		<br/>
-		<input type="text" class="topcoat-text-input--large" ng-model="email" placeholder="Enter your email" />
+		<span style="display: inline-block; width: 175px; text-align: right; margin: 15px 20px 0 0; color: #696F74;">Email</span>
+		<input type="text" class="topcoat-text-input--large" ng-model="email" placeholder="Enter your email" style="width: 300px; padding: 10px;" />
 		<br/><br/>
-		<input type="password" class="topcoat-text-input--large" ng-model="password" placeholder="Enter your password" />
+		<span style="display: inline-block; width: 175px; text-align: right; margin: 15px 20px 0 0; color: #696F74;">Password</span>
+		<input type="password" class="topcoat-text-input--large" ng-model="password" placeholder="" style="width: 300px; padding: 10px;" />
 		<br/><br/>
 		<input type="submit" class="topcoat-button--large" name="submit" value="Login" />
-		<br/><br/>
-		<a ng-href="/#/signup">No Account? Signup Now!</a> 
+		<!-- <br/><br/>
+		<a ng-href="/#/signup">No Account? Signup Now!</a> --> 
 	</form>
 </div>
-
