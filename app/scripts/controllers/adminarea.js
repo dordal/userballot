@@ -45,6 +45,9 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 	// you would only submit if a valid user
 	$scope.submit = function() {
 	    if($scope.question) {
+	    	if ($scope.site.messages == undefined) {
+	    		$scope.site.messages = new Object();
+	    	}
 			$scope.site.messages[sitesRef.push().name()] = {
 	            text: $scope.question, yesVotes: 0, noVotes: 0, position: 0, active: 1
 	        };
@@ -57,6 +60,11 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
     $scope.logout = function() {
 		userballotAuthSvc.logout();
     };
+
+    $scope.removeMessage = function ( index ) {
+    	console.log($scope.site.messages);
+		$scope.site.messages.splice( index, 1 );
+	};
 });
 
 
