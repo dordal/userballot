@@ -10,6 +10,15 @@ body {
 .hide {
 	display: none;
 }
+.admin-bar {
+	color: #fff;
+	font-size: 13px;
+	padding: 20px 0 0 0;
+	text-align: right;
+}
+.admin-bar a {
+	color: #fff;
+}
 .action-message {
 	background-color: #222;
 	color: #fff;
@@ -80,7 +89,7 @@ body {
 	height: 50px;
 	/*margin-bottom: 10px;*/
 	padding: 5px;
-	width: 80%;
+	width: 70%;
 }
 .line-item-results {
 	margin: 4px 10px 5px 0;
