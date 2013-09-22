@@ -5,22 +5,9 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
     $scope.messages = [];
     $scope.question = '';
 
-    // authenticate a user
-    var userRef = new Firebase('https://userballotdb.firebaseio.com');
-	var auth = new FirebaseSimpleLogin(userRef, function(error, user) {
-
-		if (error) {
-			console.log(error);
-			// an error occurred while attempting login
-			switch(error.code) {
-			  	case 'INVALID_EMAIL':
-			  		alert("invalid email address");
-			  	case 'INVALID_PASSWORD':
-			  		alert("invalid password");
-			  	default:
-			}
-		} else if (user) {
-			// user authenticated with Firebase
+    // load everything on login
+    $scope.$on("angularFireAuth:login", function(evt, user) {
+		// get the logged in user's email
 			console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
 
 			// get the logged in user's email
@@ -44,16 +31,9 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 
 			});
 
-			
-
 		    $scope.submit = function() {
-			console.log($scope.question);
+				console.log($scope.question);
 		    };
-
-		} else {
-			// user is logged out
-			console.log("logged out");
-		}
 	});
 	$scope.logout = function() {
 		angularFireAuth.logout();
