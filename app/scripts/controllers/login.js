@@ -28,7 +28,7 @@ userballotApp.controller('LoginCtrl', function($scope, $location, angularFire, a
             	$scope.error = "Unable to find a user with email: " + $scope.email;
            	break;
             default:
-                $scope.error = "Unknown Error: " + error.code;
+                $scope.error = "Login Error: " + error.code;
         }
     });
 
