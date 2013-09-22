@@ -19,6 +19,9 @@ userballotApp.controller('LoginCtrl', function($scope, $location, angularFire, a
     // Handle and report errors
     $scope.$on("angularFireAuth:error", function(evt, error) {
 
+	$scope.emailError = null;
+	$scope.passwdError = null;
+
         // There was an error during authentication.
         switch(error.code) {
         case 'INVALID_EMAIL':
