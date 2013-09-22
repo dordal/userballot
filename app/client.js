@@ -30,7 +30,7 @@ window.onload = function() {
 					// for some reason setting.id wasn't working
 					messageObject.hash = messageId;
 					
-					if( messageObject.active === 1 ){
+					if(( messageObject.active === 1 )&& (!docCookies.hasItem(messageId))){
 						activeMessages.push(messageObject);
 					}
 				}
@@ -61,42 +61,50 @@ window.onload = function() {
  * displayMessage(): Adds the message to the DOM and displays it
  */
 $ub.displayMessage = function() {
-	var body = document.getElementsByTagName("body")[0];
-	var fragment = create('<div id="ub-container" style="z-index: 1000; padding: 30px 10px 35px; height: 50px; position: fixed; bottom: 0; left: 0; right: 0; background-color: #ffffff; color: #16a085; font-size: 18px; border-top: 10px solid #D8E0E5;"><div style="text-align: left; position: relative; max-width: 980px; margin: 0 auto;"><img src="http://app.userballot.com/img/question-flag.png" height="22" width="19" style="height: 22px; width: 19px; position: absolute; top: 1px; left: 0;" /><span id="message-text" style="text-align: left;padding: 0 150px 0 50px; word-break: break-word; position: absolute; left: 0; right: 45px;">' + $ub.selectedMessage.text + '</span><span style="position: absolute; right: 0;"><a style="text-align: center; background-color: #1abc9c; color: #ffffff; text-decoration: none; padding: 3px 10px; width: 60px; display: inline-block;" href="" id="ub-yes">Yes</a> <a style="text-align: center; background-color: #1abc9c; color: #ffffff; text-decoration: none; padding: 3px 10px; width: 60px; display: inline-block;" href="" id="ub-no">No</a></span></div></div>');
+	var is_muted = docCookies.hasItem("mute");
+	if ( !is_muted ) { 
 
-	setTimeout(function() {
-		document.body.appendChild(fragment, document.body);
-		if (window.jQuery) {
-			$("#ub-container").css("display", "none");
-			$("#ub-container").fadeIn();
-		} 
+		var body = document.getElementsByTagName("body")[0];
+		var fragment = create('<div id="ub-container" style="z-index: 1000; padding: 30px 10px 35px; height: 50px; position: fixed; bottom: 0; left: 0; right: 0; background-color: #ffffff; color: #16a085; font-size: 18px; border-top: 10px solid #D8E0E5;"><div style="text-align: left; position: relative; max-width: 980px; margin: 0 auto;"><img src="http://app.userballot.com/img/question-flag.png" height="22" width="19" style="height: 22px; width: 19px; position: absolute; top: 1px; left: 0;" /><span id="message-text" style="text-align: left;padding: 0 150px 0 50px; word-break: break-word; position: absolute; left: 0; right: 45px;">' + $ub.selectedMessage.text + '</span><span style="position: absolute; right: 0;"><a style="text-align: center; background-color: #1abc9c; color: #ffffff; text-decoration: none; padding: 3px 10px; width: 60px; display: inline-block;" href="" id="ub-yes">Yes</a> <a style="text-align: center; background-color: #1abc9c; color: #ffffff; text-decoration: none; padding: 3px 10px; width: 60px; display: inline-block;" href="" id="ub-no">No</a></span></div></div>');
 
-		document.getElementById("ub-yes").onclick = function(e) {
-			e.preventDefault();
-			$ub.UpdateCount("yes");
+		setTimeout(function() {
+			document.body.appendChild(fragment, document.body);
+			if (window.jQuery) {
+				$("#ub-container").css("display", "none");
+				$("#ub-container").fadeIn();
+			} 
 
-			document.getElementById("ub-yes").style.display="none";
-			document.getElementById("ub-no").style.display="none";
-			document.getElementById("message-text").innerHTML = "Thank you!";
+			document.getElementById("ub-yes").onclick = function(e) {
+				e.preventDefault();
+				$ub.UpdateCount("yes");
 
-			setTimeout(function() {
-				$ub.closeMessage();
-			}, 500);
-		}
-		document.getElementById("ub-no").onclick = function(e) {
-			e.preventDefault();
-			$ub.UpdateCount("no");
-			
-			document.getElementById("ub-yes").style.display="none";
-			document.getElementById("ub-no").style.display="none";
-			document.getElementById("message-text").innerHTML = "Thank you!";
+				document.getElementById("ub-yes").style.display="none";
+				document.getElementById("ub-no").style.display="none";
+				document.getElementById("message-text").innerHTML = "Thank you!";
 
-			setTimeout(function() {
-				$ub.closeMessage();
-			}, 500);
-		}
+				setTimeout(function() {
+					$ub.closeMessage();
+				}, 500);
+			}
+			document.getElementById("ub-no").onclick = function(e) {
+				e.preventDefault();
+				$ub.UpdateCount("no");
+				
+				document.getElementById("ub-yes").style.display="none";
+				document.getElementById("ub-no").style.display="none";
+				document.getElementById("message-text").innerHTML = "Thank you!";
 
-	}, 1500)
+				setTimeout(function() {
+					$ub.closeMessage();
+				}, 500);
+			}
+
+		}, 1500)
+	}
+}
+
+$ub.setMuteCookie = function() {
+	docCookies.setItem('mute','yes');
 }
 
 $ub.closeMessage = function() {
@@ -118,9 +126,51 @@ function create(htmlStr) {
     return frag;
 }
 
+var docCookies = {
+  getItem: function (sKey) {
+    return decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*" + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1")) || null;
+  },
+  setItem: function (sKey, sValue, vEnd, sPath, sDomain, bSecure) {
+    if (!sKey || /^(?:expires|max\-age|path|domain|secure)$/i.test(sKey)) { return false; }
+    var sExpires = "";
+    if (vEnd) {
+      switch (vEnd.constructor) {
+        case Number:
+          sExpires = vEnd === Infinity ? "; expires=Fri, 31 Dec 9999 23:59:59 GMT" : "; max-age=" + vEnd;
+          break;
+        case String:
+          sExpires = "; expires=" + vEnd;
+          break;
+        case Date:
+          sExpires = "; expires=" + vEnd.toUTCString();
+          break;
+      }
+    }
+    document.cookie = encodeURIComponent(sKey) + "=" + encodeURIComponent(sValue) + sExpires + (sDomain ? "; domain=" + sDomain : "") + (sPath ? "; path=" + sPath : "") + (bSecure ? "; secure" : "");
+    return true;
+  },
+  
+  
+  removeItem: function (sKey, sPath, sDomain) {
+    if (!sKey || !this.hasItem(sKey)) { return false; }
+    document.cookie = encodeURIComponent(sKey) + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT" + ( sDomain ? "; domain=" + sDomain : "") + ( sPath ? "; path=" + sPath : "");
+    return true;
+  },
+  hasItem: function (sKey) {
+    return (new RegExp("(?:^|;\\s*)" + encodeURIComponent(sKey).replace(/[\-\.\+\*]/g, "\\$&") + "\\s*\\=")).test(document.cookie);
+  },
+  keys: /* optional method: you can safely remove it! */ function () {
+    var aKeys = document.cookie.replace(/((?:^|\s*;)[^\=]+)(?=;|$)|^\s*|\s*(?:\=[^;]*)?(?:\1|$)/g, "").split(/\s*(?:\=[^;]*)?;\s*/);
+    for (var nIdx = 0; nIdx < aKeys.length; nIdx++) { aKeys[nIdx] = decodeURIComponent(aKeys[nIdx]); }
+    return aKeys;
+  }
+};
+
 $ub.UpdateCount = function(type) {
 
 	var voteType = type + "Votes"; 
+
+	docCookies.setItem($ub.selectedMessage.id,type);
 
 	$ub.selectedMessage[voteType] = $ub.selectedMessage[voteType] + 1;
 	req = new XMLHttpRequest();
