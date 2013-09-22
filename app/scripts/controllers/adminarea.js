@@ -40,20 +40,22 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 
 	    });
 
-	    /*
+	    
 	    sitesRef.on('child_added', function(snapshot) {
 	    	var snapVal = snapshot.val();
 	    	if (snapshot.name() == 'messages') {
 	    		snapshot.ref().on('child_changed', function(messageSnapshot) {
-	    			var messageName = messageSnapshot.name();
-	    			$(".yes-" + messageName).css("background-color", "#00FF00");
-	    			$(".yes-" + messageName).animate({
-	    				backgroundColor: "#FFF"
-	    			}, 1000)
+	    			setTimeout(function() {
+		    			var messageName = messageSnapshot.name();
+		    			$(".yes-" + messageName).css("background-color", "#D0E4EC");
+		    			$(".yes-" + messageName).animate({
+		    				backgroundColor: "#FFF"
+		    			}, 1000)
+		    		}, 50);
 	    		})
 	    	}
 		});
-		*/
+		
 
 		 $scope.$watch('state', function(){
             if ($scope.onStateChange){
@@ -99,17 +101,6 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 		var key = keyAt($scope.site.messages, index);
     	$scope.site.messages[key].active = 1;
 	}
-	// open the message for editing
-	$scope.editMessage = function( index ){
-		var key = keyAt($scope.site.messages, index);
-		$scope.site.messages[key].editing = true;
-	}
-	// update the message
-	$scope.updateMessage = function( index ){
-		var key = keyAt($scope.site.messages, index);
-		console.log($scope.site.messages[key]);
-		$scope.site.messages[key].editing = false;
-	}
 
 });
 
@@ -119,53 +110,3 @@ var keyAt = function(obj, index) {
         if ((index || 0) === i++) return key;
     }
 }
-
-userballotApp.directive('highlightChanges', function(){
-  return {
-    link: function(scope, elm, attrs, ctrl) {
-      scope.$watch('value', function(){
-        var bgColor = $(elm).css('backgroundColor');
-        //$(elm).text(scope.value);
-        $(elm).css('backgroundColor', '#37AFD3');
-        $(elm).animate({
-          backgroundColor: "white"
-        }, 1000);
-      }, true);
-    }
-  };
-});
-
-userballotApp.directive('updateModelOnBlur', function() {
-  return {
-    restrict: 'A',
-    require: 'ngModel',
-    link: function(scope, elm, attr, ngModelCtrl)
-    {
-      if(attr.type === 'radio' || attr.type === 'checkbox')
-      {
-        return;
-      }
-
-      // Update model on blur only
-      elm.unbind('input').unbind('keydown').unbind('change');
-      var updateModel = function()
-      {
-        scope.$apply(function()
-        {
-          ngModelCtrl.$setViewValue(elm.val());
-        });
-      };
-      elm.bind('blur', updateModel);
-
-      // Not a textarea
-      if(elm[0].nodeName.toLowerCase() !== 'textarea')
-      {
-        // Update model on ENTER
-        elm.bind('keydown', function(e)
-        {
-          e.which == 13 && updateModel();
-        });
-      }
-    }
-  };
-});
