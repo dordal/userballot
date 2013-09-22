@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	
 	$('body').delegate('.main-nav-item', 'click', function(e) {
 		e.preventDefault();
 		if ($(this).hasClass('open')) {
@@ -18,7 +19,7 @@ $(document).ready(function() {
 	});
 	$('body').delegate('#save-question', 'click', function(e) {
 		$(this).siblings('textarea').text('');
-		$('.action-message').text('Bingo! Your question as been added.').fadeIn('fast', function() {
+		$('.action-message').text('Bingo! Your question has been added.').fadeIn('fast', function() {
 				$(this).delay(2500).fadeOut('fast');	
 		});;
 
