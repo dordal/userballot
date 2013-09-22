@@ -1,4 +1,4 @@
-userballotApp.service('userballotAuthSvc', ["angularFireAuth", "$location", "$rootScope", function(angularFireAuth, $location, $rootScope) {
+userballotApp.service('userballotAuthSvc', function(angularFireAuth, $location, $rootScope) {
     var ref = new Firebase('https://userballotdb.firebaseio.com');
     angularFireAuth.initialize(ref, {
         scope: $rootScope, 
@@ -8,7 +8,7 @@ userballotApp.service('userballotAuthSvc', ["angularFireAuth", "$location", "$ro
     $rootScope.$on("angularFireAuth:login", function(evt, user) {
        // User logged in.
        console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
-       
+       // $location.path('/admin');
     });
     $rootScope.$on("angularFireAuth:logout", function(evt) {
        // User logged out.
@@ -16,19 +16,15 @@ userballotApp.service('userballotAuthSvc', ["angularFireAuth", "$location", "$ro
        $location.path('/login')
     });
     $rootScope.$on("angularFireAuth:error", function(evt, err) {
-      // There was an error during authentication.
-       console.log(err);
-        // an error occurred while attempting login
+        // There was an error during authentication.
         switch(err.code) {
             case 'INVALID_EMAIL':
-                $rootScope.error = "Invalid email address";
+                $rootScope.error = "Invalid Email Address";
             case 'INVALID_PASSWORD':
-                $rootScope.error = "Invalid password";
+                $rootScope.error = "Invalid Password";
             default:
-                $rootScope.error = "An error has occurred, please try again.";
-            break;
+                $rootScope.error = "Unknown Error: " + err.code;
         }
-    
     });
 
     this.login = function(email, password) {
@@ -41,7 +37,6 @@ userballotApp.service('userballotAuthSvc', ["angularFireAuth", "$location", "$ro
 
     this.logout = function() {
         angularFireAuth.logout();
-        alert("logout")
         $location.path("/login");        
     }
-}]);
+});

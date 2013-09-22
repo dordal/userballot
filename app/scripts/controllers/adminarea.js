@@ -46,6 +46,10 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 	    });
 	});
 
+	$scope.logout = function() {
+		userballotAuthSvc.logout();
+	}
+
 	// you would only submit if a valid user
     $scope.submit = function() {
     	$scope.site.messages[sitesRef.push().name()] = {
