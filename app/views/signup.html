@@ -1,9 +1,9 @@
 
 <div class="card-wrap">
 	<div class="title">Register for UserBallot</div><br/>
-	<div class="error">{{error}}</div>
+	<div class="error" style="color: red;">{{error}}</div><br/>
 	<form name="signup" ng-submit="register()" class="css-form" novalidate>
-		<input type="text" class="topcoat-text-input--large"  ng-model="email" name="uEmail" required placeholder="Enter your email" /><br/><br/>
+		<input type="text" class="topcoat-text-input--large"  ng-model="email" name="uEmail" required placeholder="Enter your email"/><span style="color:red; width: 25%;">{{emailError}}</span><br /><br/>
 		<input type="password" class="topcoat-text-input--large"  ng-model="password" required placeholder="Enter your password" /><br/><br/>
 		<input type="text" class="topcoat-text-input--large" ng-model="domain" required placeholder="Enter your website URL" /> <br/><br/>
 		<input type="submit" class="topcoat-button--large" ng-disabled="signup.$invalid" name="submit" value="Signup Now!" />	
