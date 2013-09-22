@@ -1,10 +1,8 @@
-{{loginerror}}
+<div class="title">Register for UserBallot</div>
+<div class="error">{{error}}</div>
 <form name="signup" ng-submit="register()">
-
 	<input type="text" ng-model="email" placeholder="Enter your email" /><br />
 	<input type="password" ng-model="password" placeholder="Enter your password" /><br />
-	<input type="password" ng-model="passwordConfirm" placeholder="Re-enter the same password" /><br />
 	<input type="text" ng-model="domain" placeholder="Enter your website URL" /><br />
 	<input type="submit" />
-
 </form>

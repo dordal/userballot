@@ -15,16 +15,14 @@ userballotApp.service('userballotAuthSvc', ["angularFireAuth", "$location", "$ro
        console.log("logged out");
     });
     $rootScope.$on("angularFireAuth:error", function(evt, err) {
-      // There was an error during authentication.
-       console.log(err);
-                // an error occurred while attempting login
-                switch(err.code) {
-                    case 'INVALID_EMAIL':
-                        alert("invalid email address");
-                    case 'INVALID_PASSWORD':
-                        alert("invalid password");
-                    default:
-                }
+        // There was an error during authentication.
+        switch(err.code) {
+            case 'INVALID_EMAIL':
+                alert("Invalid Email Address");
+            case 'INVALID_PASSWORD':
+                alert("Invalid Password");
+            default:
+        }
     });
 
     this.login = function(email, password) {
