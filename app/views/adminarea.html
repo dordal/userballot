@@ -1,7 +1,7 @@
 <!-- AdminArea -->
 <div ng-controller="AdminAreaCtrl">
 	<div class="extended-wrap">
-
+		<span ng-show="user.email">{{user.email}} | <a ng-click="logout()">Logout</a></span>
 		<!-- The container is a centered 960px -->
 		<div class="container content-wrap">
 			<div class="sixteen columns">
@@ -67,8 +67,6 @@
 								</div>
 								<br class="clear" />
 							</div>
-							<a href="" ng-click="logout()">Logout</a>
-
 						</div>
 					</div>
 					<br class="clear" />

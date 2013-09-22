@@ -5,7 +5,7 @@
  * Given the specified site ID, this gets questions
  * and displays one question with controls for answering
  *
- * This code is kickin' old school. No libraries, standard JS
+ * This code is kickin' it old school. No libraries, all standard JS
  * This is done so that we keep the load on user's site extremely light
  */
 
@@ -45,7 +45,7 @@ window.onload = function() {
  */
 $ub.displayMessage = function() {
 	var body = document.getElementsByTagName("body")[0];
-	var fragment = create('<div id="ub-container" style="z-index: 1000; padding: 30px 10px 35px; position: fixed; bottom: 0; left: 0; right: 0; background-color: #ffffff; color: #16a085; font-size: 18px;"><div style="position: relative; max-width: 980px; margin: 0 auto;"><img src="http://app.userballot.com/img/question-flag.png" height="22" width="19" style="height: 22px; width: 19px; position: absolute; top: 0; left: 0;" /><span style="text-align: left; padding: 0 20px 0 50px;">' + $ub.selectedMessage.text + '</span><span style="position: absolute; right: 0;"><a style="text-align: center; background-color: #1abc9c; color: #ffffff; text-decoration: none; padding: 3px 10px; width: 60px; display: inline-block;" href="" id="ub-yes">Yes</a> <a style="text-align: center; background-color: #1abc9c; color: #ffffff; text-decoration: none; padding: 3px 10px; width: 60px; display: inline-block;" href="" id="ub-no">No</a></span></div></div>');
+	var fragment = create('<div id="ub-container" style="z-index: 1000; padding: 30px 10px 35px; position: fixed; bottom: 0; left: 0; right: 0; background-color: #ffffff; color: #16a085; font-size: 18px; border-top: 10px solid #D8E0E5;"><div style="position: relative; max-width: 980px; margin: 0 auto;"><img src="http://app.userballot.com/img/question-flag.png" height="22" width="19" style="height: 22px; width: 19px; position: absolute; top: 0; left: 0;" /><span style="text-align: left; padding: 0 20px 0 50px;">' + $ub.selectedMessage.text + '</span><span style="position: absolute; right: 0;"><a style="text-align: center; background-color: #1abc9c; color: #ffffff; text-decoration: none; padding: 3px 10px; width: 60px; display: inline-block;" href="" id="ub-yes">Yes</a> <a style="text-align: center; background-color: #1abc9c; color: #ffffff; text-decoration: none; padding: 3px 10px; width: 60px; display: inline-block;" href="" id="ub-no">No</a></span></div></div>');
 	document.body.insertBefore(fragment, document.body.childNodes[0]);
 
 	document.getElementById("ub-yes").onclick = function(e) {
