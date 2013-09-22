@@ -5,7 +5,7 @@
  * Given the specified site ID, this gets questions
  * and displays one question with controls for answering
  *
- * This code is kickin' old school. No libraries, standard JS
+ * This code is kickin' it old school. No libraries, all standard JS
  * This is done so that we keep the load on user's site extremely light
  */
 

@@ -1,0 +1,41 @@
+1. 
+I. open a site with one question in window A.
+II.  open a site with one question in window B. Answer the question in window B 'yes'.
+III. Answer the question in window A 'yes'.
+IV. the yes count for the question should go up two.
+2.
+I. make sure you have a site with one question.
+II.deactivate the question.
+III. make sure it doesn't show on the site.
+IV. reactivate the question.
+V. make sure it shows on the site.
+3.
+I. Create a new question.
+II. look at it's results page. (the counts should be zero)
+III. vote yes on the question.
+IV. look at it's results page. (the yes count should be 1, the no count should be 0)
+V. vote no on the question.
+VI. look at it's results page. (the counts should both be 1)
+VII. delete the question
+4.
+I. embed in a page with an onLoad
+II. refresh page. The question should show and the page shouldn't be broken.
+5. 
+I. create new user
+II. create a new site for that user
+III. create a new question
+IV. embed in page and point at new site
+V. load page. A question should appear.
+VI. Vote on the question.
+VII. look at the question's results page. one of the counts should be  one.
+VIII. delete the question, site, and user.
+
+--misc QA--
+test login
+test registration
+test embed
+add a question
+test voting
+view results of a question
+deactivate a question
+reactivate a question
