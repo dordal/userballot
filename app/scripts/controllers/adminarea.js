@@ -7,40 +7,42 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 
     // load everything on login
     $scope.$on("angularFireAuth:login", function(evt, user) {
+
+		console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
+
 		// get the logged in user's email
-			console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
+		var loggedInEmail = user.email.replace(/\./g, ',');
+		// use this to query the appropriate user
+		var url = new Firebase("https://userballotdb.firebaseio.com/users/"+loggedInEmail);
+		var userPromise = angularFire(url, $scope, 'user');
 
-			// get the logged in user's email
-			var loggedInEmail = user.email.replace(/\./g, ',');
-			// use this to query the appropriate user
-			var url = new Firebase("https://userballotdb.firebaseio.com/users/id/"+loggedInEmail);
-			var userPromise = angularFire(url, $scope, 'user');
-			// when this completes do something
-			userPromise.then(function(user) {
-				console.log($scope.user);
+		// when this completes do something
+		userPromise.then(function(user) {
+			//console.log($scope.user);
 
-				var userSite = user.sites.id;
-
-				// get the site for the user from the database
-			    var sitesRef = new Firebase("https://userballotdb.firebaseio.com/sites/id/"+userSite);
-			    var sitesPromise = angularFire(sitesRef, $scope, "sites");
-
-			    sitesPromise.then(function(sites) {
-			    	console.log($scope.sites);
-			    });
-
-			});
-
-		    $scope.submit = function() {
-<<<<<<< HEAD
-			if (this.question) {
-			    $scope.messages.push($scope.question);
+			// you can't access the site due to a random ID
+			for (var siteId in $scope.user.sites) {
+				// reference to the users site
+				var userSite = $scope.user.sites[siteId];
+				break;
 			}
-=======
-				console.log($scope.question);
->>>>>>> f748d98a2ff7d932ee0c79dd3d3e9db4689ed6b2
-		    };
+
+			// get the specific site for the user from the database
+		    var sitesRef = new Firebase("https://userballotdb.firebaseio.com/sites/"+userSite);
+		    var sitesPromise = angularFire(sitesRef, $scope, "site");
+
+		    // when this completes do something
+		    sitesPromise.then(function(site) {
+		    	console.log($scope.site.messages);
+		    });
+		});
+
+		// you would only submit if a valid user
+	    $scope.submit = function() {
+			$scope.messages.push($scope.question);
+	    };
 	});
+
 	$scope.logout = function() {
 		angularFireAuth.logout();
 		$location.path("/login");
