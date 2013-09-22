@@ -7,12 +7,12 @@ userballotApp.service('userballotAuthSvc', ["angularFireAuth", "$location", "$ro
 
     $rootScope.$on("angularFireAuth:login", function(evt, user) {
        // User logged in.
-       console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
+       // console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
        $location.path('/admin');
     });
     $rootScope.$on("angularFireAuth:logout", function(evt) {
        // User logged out.
-       console.log("logged out");
+       // console.log("logged out");
        $location.path('/login')
     });
     $rootScope.$on("angularFireAuth:error", function(evt, err) {
