@@ -1,14 +1,16 @@
-
-<div class="card-wrap">
-	<div class="title">Register for UserBallot</div><br/>
+<div style="padding: 50px 0 0 10px;"><img class="logo" src="img/userBallotLogoFullWhite.png" alt="" width="120"></div>
+<div class="card-wrap" style="margin-top: 50px; text-align: center; padding-left: 0;">
+	<br/>
 	<div class="error">{{error}}</div>
+	<span style="display: inline-block; width: 30px; text-align: right; margin: 5px 20px 0 0;"></span><div class="" style="font-size: 17px; display: inline-block; margin-bottom: 20px; font-weight: 500;">Create your account</div>
 	<form name="signup" ng-submit="register()" class="css-form" novalidate>
-		<input type="text" class="topcoat-text-input--large"  ng-model="email" name="uEmail" required placeholder="Enter your email" /><br/><br/>
-		<input type="password" class="topcoat-text-input--large"  ng-model="password" required placeholder="Enter your password" /><br/><br/>
-		<input type="text" class="topcoat-text-input--large" ng-model="domain" required placeholder="Enter your website URL" /> <br/><br/>
+		<span style="display: inline-block; width: 175px; text-align: right; margin: 15px 20px 0 0; color: #696F74;">Email</span><input type="text" class="topcoat-text-input--large"  ng-model="email" name="uEmail" required placeholder="jack@beanstalk.com" style="width: 300px; padding: 10px;" /><br/><br/>
+		<span style="display: inline-block; width: 175px; text-align: right; margin: 15px 20px 0 0; color: #696F74;">Password</span><input type="password" class="topcoat-text-input--large"  ng-model="password" required placeholder="Enter your password" style="width: 300px; padding: 10px;" /><br/><br/>
+		<span style="display: inline-block; width: 175px; text-align: right; margin: 15px 20px 0 0; color: #696F74;">Site URL</span><input type="text" class="topcoat-text-input--large" ng-model="domain" required placeholder="beanstalk.com" style="width: 300px; padding: 10px;" /> <br/><br/><br/>
 		<input type="submit" class="topcoat-button--large" ng-disabled="signup.$invalid" name="submit" value="Signup Now!" />	
-	</form><br />
-	<a ng-href="/#/login">Already Have An Account? Login Now!</a> 
+	</form><br /><br /><br />
+	<a ng-href="/#/login" class="right">Already have an account?</a> 
+	<br class="clear" />
 
 </div>
 
