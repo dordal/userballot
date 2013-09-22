@@ -2,9 +2,13 @@
 	<div class="title">Login to UserBallot</div>
 	<div class="error">{{error}}</div>
 	<form ng-submit="login()">
+		<br/>
 		<input type="text" class="topcoat-text-input--large" ng-model="email" placeholder="Enter your email" />
-		<input type="text" class="topcoat-text-input--large" ng-model="password" placeholder="Enter your password" />
+		<br/><br/>
+		<input type="password" class="topcoat-text-input--large" ng-model="password" placeholder="Enter your password" />
+		<br/><br/>
 		<input type="submit" class="topcoat-button--large" name="submit" value="Signup Now!" />
+		<br/><br/>
 		<a ng-href="/#/signup">No Account? Signup Now!</a> 
 	</form>
 </div>
