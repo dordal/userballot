@@ -7,34 +7,42 @@ userballotApp.controller('AdminAreaCtrl', ["$scope", "$location", "angularFire",
 
     // load everything on login
     $scope.$on("angularFireAuth:login", function(evt, user) {
+
+		console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
+
 		// get the logged in user's email
-			console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
+		var loggedInEmail = user.email.replace(/\./g, ',');
+		// use this to query the appropriate user
+		var url = new Firebase("https://userballotdb.firebaseio.com/users/"+loggedInEmail);
+		var userPromise = angularFire(url, $scope, 'user');
 
-			// get the logged in user's email
-			var loggedInEmail = user.email.replace(/\./g, ',');
-			// use this to query the appropriate user
-			var url = new Firebase("https://userballotdb.firebaseio.com/users/id/"+loggedInEmail);
-			var userPromise = angularFire(url, $scope, 'user');
-			// when this completes do something
-			userPromise.then(function(user) {
-				console.log($scope.user);
+		// when this completes do something
+		userPromise.then(function(user) {
+			//console.log($scope.user);
 
-				var userSite = user.sites.id;
+			// you can't access the site due to a random ID
+			for (var siteId in $scope.user.sites) {
+				// reference to the users site
+				var userSite = $scope.user.sites[siteId];
+				break;
+			}
 
-				// get the site for the user from the database
-			    var sitesRef = new Firebase("https://userballotdb.firebaseio.com/sites/id/"+userSite);
-			    var sitesPromise = angularFire(sitesRef, $scope, "sites");
+			// get the specific site for the user from the database
+		    var sitesRef = new Firebase("https://userballotdb.firebaseio.com/sites/"+userSite);
+		    var sitesPromise = angularFire(sitesRef, $scope, "site");
 
-			    sitesPromise.then(function(sites) {
-			    	console.log($scope.sites);
-			    });
+		    // when this completes do something
+		    sitesPromise.then(function(site) {
+		    	console.log($scope.site.messages);
+		    });
+		});
 
-			});
-
-		    $scope.submit = function() {
-				console.log($scope.question);
-		    };
+		// you would only submit if a valid user
+	    $scope.submit = function() {
+			$scope.messages.push($scope.question);
+	    };
 	});
+
 	$scope.logout = function() {
 		userballotAuthSvc.logout();
 	}

@@ -41,6 +41,7 @@
 						</div>
 						<div class="card-wrap">
 							<h2>Manage your questions</h2>
+							<a href="#">active</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">draft</a>
 							<!-- <a href="#">active</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">draft</a> -->
 							
 							
@@ -79,22 +80,20 @@
 								</div>
 								<br class="clear" />
 							</div>
-							
 
-
-							<div class="line-item">
+							<div class="line-item" ng-repeat="message in site.messages">
 								<div class="question-wrap left">
-									If you had access to a dedicated help section, would it solve a pain point that you have?
+									{{message.text}}
 								</div>
 								<div class="line-item-controls right">
-									<button class="topcoat-button--quiet active">Active</button>
-									<button class="topcoat-button--quiet">Draft</button>
+									<button class="topcoat-button--quiet {{message.active == "1" | iif : "active" : ""}}">Active</button>
+									<button class="topcoat-button--quiet {{message.active == "0" | iif : "active" : ""}}">Draft</button>
 								</div>
 								<!-- results pills -->
 								<br class="clear" />
 								<div class="line-item-results right">
-									<span class="result-label">Yes</span><span class="pill yes">23</span>
-									<span class="result-label">No</span><span class="pill no">8</span>
+									<span class="result-label">Yes</span><span class="pill yes">{{message.yesVotes}}</span>
+									<span class="result-label">No</span><span class="pill no">{{message.noVotes}}</span>
 								</div>
 								<br class="clear" />
 							</div>
