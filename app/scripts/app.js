@@ -10,6 +10,7 @@ var userballotApp = angular.module('userballotApp', ['firebase'])
       .when('/admin', {
         templateUrl: 'views/adminarea.html',
         controller: 'AdminAreaCtrl',
+        authRequired: true
       })
       .when('/signup', {
         templateUrl: 'views/signup.html',
@@ -18,4 +19,10 @@ var userballotApp = angular.module('userballotApp', ['firebase'])
       .otherwise({
         redirectTo: '/admin'
       });
-  }]);
+  }])
+
+   // establish authentication
+   .run(['angularFireAuth', '$rootScope', function(angularFireAuth, $rootScope) {
+      var ref = new Firebase('https://userballotdb.firebaseio.com');
+      angularFireAuth.initialize(ref, {scope: $rootScope, name: "user", path: '/login'});
+   }]);
