@@ -33,7 +33,7 @@ body {
 	z-index: 1000;
 }
 .extended-wrap {
-	padding: 40px;
+	padding: 0 40px;
 }
 .content-wrap {
 	height: 900px;
