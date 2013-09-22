@@ -23,9 +23,15 @@ window.onload = function() {
 			// create array of active messages only
 			var activeMessages = new Array();
 			if( response ){
+				
 				for (messageId in response.messages) {
-					if( response.messages[messageId].active === 1 ){
-						activeMessages.push(response.messages[messageId])
+
+					var messageObject = response.messages[messageId];
+					// for some reason setting.id wasn't working
+					messageObject.hash = messageId;
+					
+					if( messageObject.active === 1 ){
+						activeMessages.push(messageObject);
 					}
 				}
 			}
@@ -36,19 +42,13 @@ window.onload = function() {
 
 				// select a random number based on the number of active messages
 				var selectedId = Math.floor(Math.random() * Object.keys(activeMessages).length);
-				var i = 0;
-				for (messageId in activeMessages) {
-					if (i == selectedId) {
-						// select the message 
-						$ub.selectedMessage = activeMessages[messageId];
-						$ub.selectedMessage.id = messageId;
-						break;
-					}
-					i++;
-				}
+				
+				// select the message 
+				$ub.selectedMessage = activeMessages[selectedId];
+				$ub.selectedMessage.id = activeMessages[selectedId].hash;
+
 				// display the selected message
 				$ub.displayMessage();
-
 			}
 	    }
 	}
