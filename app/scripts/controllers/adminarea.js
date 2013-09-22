@@ -46,6 +46,7 @@ userballotApp.controller('AdminAreaCtrl', ["$scope", "$location", "angularFire",
 	    	$scope.site.messages[sitesRef.push().name()] = {
 	         	text: $scope.question, yesVotes: 0, noVotes: 0, position: 0, active: 1
 	        };
+		$scope.question = '';
 	    };
 	});
 
