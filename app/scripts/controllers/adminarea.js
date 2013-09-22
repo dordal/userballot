@@ -65,19 +65,28 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
     // remove a message at a specific index based on 
     // a click in the dom
     $scope.removeMessage = function ( index ) {
-    	
-    	var keyAt = function(obj, index) {
+    	var key = keyAt($scope.site.messages, index);
+    	$scope.site.messages[key] = null;
+	};
+
+	$scope.selectDraft = function( index ){
+		var key = keyAt($scope.site.messages, index);
+    	$scope.site.messages[key].active = 0;
+	}
+
+	$scope.selectActive = function( index ){
+		var key = keyAt($scope.site.messages, index);
+    	$scope.site.messages[key].active = 1;
+	}
+
+});
+
+var keyAt = function(obj, index) {
 		    var i = 0;
 		    for (var key in obj) {
 		        if ((index || 0) === i++) return key;
 		    }
 		}
-    	var key = keyAt($scope.site.messages, index);
-    	$scope.site.messages[key] = null;
-		
-	};
-});
-
 
 userballotApp.filter('iif', function () {
     return function(input, trueValue, falseValue) {
