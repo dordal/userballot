@@ -1,34 +1,24 @@
 'use strict';
 
-userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, angularFireAuth) {
+userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, angularFireAuth, userballotAuthSvc) {
     $scope.email = '';
     $scope.password = '';
-    // authenticate a user
-    
+    $scope.error = null;
 
-	$scope.addMe = function() {
-		var chatRef = new Firebase('https://userballotdb.firebaseIO.com');
-		var auth = new FirebaseSimpleLogin(chatRef, function(error, user) {
-		  if (error) {
-		    // an error occurred while attempting login
-		    console.log(error);
-		  } else if (user) {
-		 // 	auth.logout();
-		  } else {
-		    // user is logged out
-		  }
-		});
-		$scope.email = $scope.form.email;
-		$scope.password = $scope.form.password;
-		auth.createUser($scope.form.email, $scope.form.password, function(error, user) {
+    // authenticate a user
+	$scope.register = function() {
+		angularFireAuth.createUser($scope.email, $scope.password, function(error, user) {
 		  if (!error) {
-		  	$location.path('/admin/');
-		  }
-		  else {
-		  	if ( $scope.error == 'Error: The specified email address is already in use') {
-		  		auth.login('password',$scope.email, $scope.password);
+		  	// login the user and redirect to the admin interface
+		  	// console.log("User Reg:", user);
+		  	$location.path('/admin');
+		  } else {
+		  	// The email is already in use, mabye?
+		  	if (error.code == 'EMAIL_TAKEN') {
+		  		$scope.error = "Email is already in use. Please login.";
+		  	}else {
+		  		$scope.error = "Registration Error: "  + error.code;
 		  	}
-		  	else console.log(error + ' ' + $scope.email + ' ' + $scope.password);
 		  }
 		});
 	}

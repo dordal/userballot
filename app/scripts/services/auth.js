@@ -25,7 +25,7 @@ userballotApp.service('userballotAuthSvc', ["angularFireAuth", "$location", "$ro
             case 'INVALID_PASSWORD':
                 $rootScope.error = "Invalid password";
             default:
-                $rootScope.error = "An error has occured, please try again.";
+                $rootScope.error = "An error has occurred, please try again.";
             break;
         }
     
