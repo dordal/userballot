@@ -6,30 +6,31 @@ userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, 
 
     // authenticate a user
     
-
+    $scope.loginerror = {message: 'OK'};
 	$scope.addMe = function() {
 		var chatRef = new Firebase('https://userballotdb.firebaseIO.com');
 		var auth = new FirebaseSimpleLogin(chatRef, function(error, user) {
 		  if (error) {
 		    // an error occurred while attempting login
-		    console.log(error);
+		    // $location.path('/login/');
+		    console.log('2: ' + error );
 		  } else if (user) {
-		 // 	auth.logout();
-		  } else {
-		    // user is logged out
-		  }
+		 	// $location.path('/admin/');
+		  } 
 		});
-		$scope.email = $scope.form.email;
-		$scope.password = $scope.form.password;
-		auth.createUser($scope.form.email, $scope.form.password, function(error, user) {
+		auth.createUser($scope.email, $scope.password, function(error, user) {
 		  if (!error) {
-		  	$location.path('/admin/');
+		  	// $location.path('/admin2/');
 		  }
 		  else {
-		  	if ( error == 'Error: The specified email address is already in use') {
-		  		auth.login('password',$scope.email, $scope.password);
+		  	// The email is already in use, mabye?
+		  	if (error.code == 'EMAIL_TAKEN')
+		  	{
+		  		$scope.loginerror.message = 'Email is already in use. Did you want to log in?';
 		  	}
-		  	else console.log(error + ' ' + $scope.email + ' ' + $scope.password);
+		  	else {
+		  		console.log('3: Error code=' + error.code);
+		  	}
 		  }
 		});
 	}
