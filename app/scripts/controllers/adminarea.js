@@ -39,6 +39,27 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 			$scope.site.id = siteId;
 
 	    });
+
+	    /*
+	    sitesRef.on('child_added', function(snapshot) {
+	    	var snapVal = snapshot.val();
+	    	if (snapshot.name() == 'messages') {
+	    		snapshot.ref().on('child_changed', function(messageSnapshot) {
+	    			var messageName = messageSnapshot.name();
+	    			$(".yes-" + messageName).css("background-color", "#00FF00");
+	    			$(".yes-" + messageName).animate({
+	    				backgroundColor: "#FFF"
+	    			}, 1000)
+	    		})
+	    	}
+		});
+		*/
+
+		 $scope.$watch('state', function(){
+            if ($scope.onStateChange){
+              $scope.onStateChange();
+            }
+        }, true);
 	});
 
 	// you would only submit if a valid user
@@ -88,8 +109,17 @@ var keyAt = function(obj, index) {
     }
 }
 
-userballotApp.filter('iif', function () {
-    return function(input, trueValue, falseValue) {
-        return input ? trueValue : falseValue;
-    };
+userballotApp.directive('highlightChanges', function(){
+  return {
+    link: function(scope, elm, attrs, ctrl) {
+      scope.$watch('value', function(){
+        var bgColor = $(elm).css('backgroundColor');
+        //$(elm).text(scope.value);
+        $(elm).css('backgroundColor', '#37AFD3');
+        $(elm).animate({
+          backgroundColor: "white"
+        }, 1000);
+      }, true);
+    }
+  };
 });
