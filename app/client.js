@@ -20,19 +20,36 @@ window.onload = function() {
 			data = req.responseText;
 			response = JSON.parse(data);
 
-			var selectedId = Math.floor(Math.random() * Object.keys(response.messages).length);
-			var i = 0;
-			// Dump the messages into an array, they're a bit easier to deal with
-			for (messageId in response.messages) {
-				if (i == selectedId) {
-					$ub.selectedMessage = response.messages[messageId];
-					$ub.selectedMessage.id = messageId;
-					break;
+			// create array of active messages only
+			var activeMessages = new Array();
+			if( response ){
+				
+				for (messageId in response.messages) {
+
+					var messageObject = response.messages[messageId];
+					// for some reason setting.id wasn't working
+					messageObject.hash = messageId;
+					
+					if( messageObject.active === 1 ){
+						activeMessages.push(messageObject);
+					}
 				}
-				i++;
 			}
-			
-			$ub.displayMessage();
+
+			// check to make sure there are any active messages
+			// before trying to access message properties
+			if( activeMessages.length > 0 ){
+
+				// select a random number based on the number of active messages
+				var selectedId = Math.floor(Math.random() * Object.keys(activeMessages).length);
+				
+				// select the message 
+				$ub.selectedMessage = activeMessages[selectedId];
+				$ub.selectedMessage.id = activeMessages[selectedId].hash;
+
+				// display the selected message
+				$ub.displayMessage();
+			}
 	    }
 	}
 
@@ -45,7 +62,7 @@ window.onload = function() {
  */
 $ub.displayMessage = function() {
 	var body = document.getElementsByTagName("body")[0];
-	var fragment = create('<div id="ub-container" style="z-index: 1000; padding: 30px 10px 35px; position: fixed; bottom: 0; left: 0; right: 0; background-color: #ffffff; color: #16a085; font-size: 18px; border-top: 10px solid #D8E0E5;"><div style="position: relative; max-width: 980px; margin: 0 auto;"><img src="http://app.userballot.com/img/question-flag.png" height="22" width="19" style="height: 22px; width: 19px; position: absolute; top: 0; left: 0;" /><span style="text-align: left; padding: 0 20px 0 50px;">' + $ub.selectedMessage.text + '</span><span style="position: absolute; right: 0;"><a style="text-align: center; background-color: #1abc9c; color: #ffffff; text-decoration: none; padding: 3px 10px; width: 60px; display: inline-block;" href="" id="ub-yes">Yes</a> <a style="text-align: center; background-color: #1abc9c; color: #ffffff; text-decoration: none; padding: 3px 10px; width: 60px; display: inline-block;" href="" id="ub-no">No</a></span></div></div>');
+	var fragment = create('<div id="ub-container" style="z-index: 1000; padding: 30px 10px 35px; height: 50px; position: fixed; bottom: 0; left: 0; right: 0; background-color: #ffffff; color: #16a085; font-size: 18px; border-top: 10px solid #D8E0E5;"><div style="text-align: left; position: relative; max-width: 980px; margin: 0 auto;"><img src="http://app.userballot.com/img/question-flag.png" height="22" width="19" style="height: 22px; width: 19px; position: absolute; top: 1px; left: 0;" /><span style="text-align: left;padding: 0 150px 0 50px; word-break: break-word; position: absolute; right: 45px;">' + $ub.selectedMessage.text + '</span><span style="position: absolute; right: 0;"><a style="text-align: center; background-color: #1abc9c; color: #ffffff; text-decoration: none; padding: 3px 10px; width: 60px; display: inline-block;" href="" id="ub-yes">Yes</a> <a style="text-align: center; background-color: #1abc9c; color: #ffffff; text-decoration: none; padding: 3px 10px; width: 60px; display: inline-block;" href="" id="ub-no">No</a></span></div></div>');
 	document.body.insertBefore(fragment, document.body.childNodes[0]);
 
 	document.getElementById("ub-yes").onclick = function(e) {
