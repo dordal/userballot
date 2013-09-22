@@ -32,5 +32,4 @@ userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, 
 		  }
 		});
 	}
-
 });

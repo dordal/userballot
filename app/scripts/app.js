@@ -3,10 +3,6 @@
 var userballotApp = angular.module('userballotApp', ['firebase'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
-      })
       .when('/login', {
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
@@ -15,7 +11,11 @@ var userballotApp = angular.module('userballotApp', ['firebase'])
         templateUrl: 'views/adminarea.html',
         controller: 'AdminAreaCtrl',
       })
+      .when('/signup', {
+        templateUrl: 'views/signup.html',
+        controller: 'SignupCtrl'
+      })
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/admin'
       });
   }]);
