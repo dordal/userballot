@@ -12,7 +12,6 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 
 	// get the logged in user's email
 	var loggedInEmail = user.email.replace(/\./g, ',');
-
 	// use this to query the appropriate user
 	var url = new Firebase("https://userballotdb.firebaseio.com/users/"+loggedInEmail);
 	var userPromise = angularFire(url, $scope, 'user');
@@ -51,6 +50,8 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 			$scope.site.messages[sitesRef.push().name()] = {
 	            text: $scope.question, yesVotes: 0, noVotes: 0, position: 0, active: 1
 	        };
+	    } else {
+			this.error = 'Dude you forgot to ask a question...';
 	    }
 
 	    $scope.question = '';
@@ -61,9 +62,19 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 		userballotAuthSvc.logout();
     };
 
+    // remove a message at a specific index based on 
+    // a click in the dom
     $scope.removeMessage = function ( index ) {
-    	console.log($scope.site.messages);
-		$scope.site.messages.splice( index, 1 );
+    	
+    	var keyAt = function(obj, index) {
+		    var i = 0;
+		    for (var key in obj) {
+		        if ((index || 0) === i++) return key;
+		    }
+		}
+    	var key = keyAt($scope.site.messages, index);
+    	$scope.site.messages[key] = null;
+		
 	};
 });
 
