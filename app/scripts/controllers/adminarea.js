@@ -54,7 +54,7 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 	$scope.question = '';
     };
 
-}]);
+});
 
 
 userballotApp.filter('iif', function () {
