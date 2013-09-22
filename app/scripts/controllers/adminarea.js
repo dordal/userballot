@@ -16,6 +16,8 @@ userballotApp.controller('AdminAreaCtrl', ["$scope", "$location", "angularFire",
 		var url = new Firebase("https://userballotdb.firebaseio.com/users/"+loggedInEmail);
 		var userPromise = angularFire(url, $scope, 'user');
 
+		var sitesRef;
+
 		// when this completes do something
 		userPromise.then(function(user) {
 			//console.log($scope.user);
@@ -28,7 +30,7 @@ userballotApp.controller('AdminAreaCtrl', ["$scope", "$location", "angularFire",
 			}
 
 			// get the specific site for the user from the database
-		    var sitesRef = new Firebase("https://userballotdb.firebaseio.com/sites/"+userSite);
+		    sitesRef = new Firebase("https://userballotdb.firebaseio.com/sites/"+userSite);
 		    var sitesPromise = angularFire(sitesRef, $scope, "site");
 
 		    // when this completes do something
@@ -39,7 +41,9 @@ userballotApp.controller('AdminAreaCtrl', ["$scope", "$location", "angularFire",
 
 		// you would only submit if a valid user
 	    $scope.submit = function() {
-			$scope.messages.push($scope.question);
+	    	$scope.site.messages[sitesRef.push().name()] = {
+	         	text: $scope.question, yesVotes: 0, noVotes: 0, position: 0, active: 1
+	        };
 	    };
 	});
 
