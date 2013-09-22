@@ -21,9 +21,9 @@ userballotApp.controller('AdminAreaCtrl', ["$scope", "$location", "angularFire",
 		// when this completes do something
 		userPromise.then(function(user) {
 			//console.log($scope.user);
-
+			var siteId;
 			// you can't access the site due to a random ID
-			for (var siteId in $scope.user.sites) {
+			for (siteId in $scope.user.sites) {
 				// reference to the users site
 				var userSite = $scope.user.sites[siteId];
 				break;
@@ -35,6 +35,8 @@ userballotApp.controller('AdminAreaCtrl', ["$scope", "$location", "angularFire",
 
 		    // when this completes do something
 		    sitesPromise.then(function(site) {
+		    	// Assign site ID for easy access
+		    	$scope.site.id = siteId;
 		    	console.log($scope.site.messages);
 		    });
 		});
@@ -51,3 +53,10 @@ userballotApp.controller('AdminAreaCtrl', ["$scope", "$location", "angularFire",
 		userballotAuthSvc.logout();
 	}
 }]);
+
+
+userballotApp.filter('iif', function () {
+   return function(input, trueValue, falseValue) {
+        return input ? trueValue : falseValue;
+   };
+});
