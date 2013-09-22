@@ -20,19 +20,36 @@ window.onload = function() {
 			data = req.responseText;
 			response = JSON.parse(data);
 
-			var selectedId = Math.floor(Math.random() * Object.keys(response.messages).length);
-			var i = 0;
-			// Dump the messages into an array, they're a bit easier to deal with
-			for (messageId in response.messages) {
-				if (i == selectedId) {
-					$ub.selectedMessage = response.messages[messageId];
-					$ub.selectedMessage.id = messageId;
-					break;
+			// create array of active messages only
+			var activeMessages = new Array();
+			if( response ){
+				for (messageId in response.messages) {
+					if( response.messages[messageId].active === 1 ){
+						activeMessages.push(response.messages[messageId])
+					}
 				}
-				i++;
 			}
-			
-			$ub.displayMessage();
+
+			// check to make sure there are any active messages
+			// before trying to access message properties
+			if( activeMessages.length > 0 ){
+
+				// select a random number based on the number of active messages
+				var selectedId = Math.floor(Math.random() * Object.keys(activeMessages).length);
+				var i = 0;
+				for (messageId in activeMessages) {
+					if (i == selectedId) {
+						// select the message 
+						$ub.selectedMessage = activeMessages[messageId];
+						$ub.selectedMessage.id = messageId;
+						break;
+					}
+					i++;
+				}
+				// display the selected message
+				$ub.displayMessage();
+
+			}
 	    }
 	}
 
