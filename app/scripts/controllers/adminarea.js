@@ -4,6 +4,7 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
     $scope.sites = [];
     $scope.messages = [];
     $scope.question = '';
+    $scope.error = null;
 
     // load everything on login
     $scope.$on("angularFireAuth:login", function(evt, user) {
@@ -42,17 +43,23 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 		});
 
 		// you would only submit if a valid user
-	    $scope.submit = function() {
-	    	$scope.site.messages[sitesRef.push().name()] = {
-	         	text: $scope.question, yesVotes: 0, noVotes: 0, position: 0, active: 1
+	$scope.submit = function() {
+
+	    if($scope.question) {
+		$scope.site.messages[sitesRef.push().name()] = {
+	            text: $scope.question, yesVotes: 0, noVotes: 0, position: 0, active: 1
 	        };
-		$scope.question = '';
-	    };
-	});
+	    } else {
+		this.error = 'Dude you for got to ask a question...';
+	    }
+
+	    $scope.question = '';
+	};
+    });
 
 	$scope.logout = function() {
 		userballotAuthSvc.logout();
-	}
+	};
 });
 
 

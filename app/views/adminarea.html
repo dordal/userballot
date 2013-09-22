@@ -38,8 +38,10 @@
 						</div>
 						<div class="card-wrap">
 							<h2 class="emphasis-heading">Ask a new question</h2>
-							<form ng-submit="submit()" ng-controller="AdminAreaCtrl">
-							<textarea class="topcoat-textarea" ng-model="question" name="text" rows="3" cols="70" placeholder="The simplest question you can ask is a yes or no question (140 characters max)"></textarea>
+							<form ng-submit="submit()" ng-controller="AdminAreaCtrl" name="questionSubmitForm">
+							<textarea class="topcoat-textarea" ng-model="question" name="text" rows="3" cols="70" placeholder="The simplest question you can ask is a yes or no question (140 characters max)" required></textarea>
+							<br>
+							<span class="error" ng-show="questionSubmitForm.text.$error.required">{{error}}</span>
 							<br><br>
 							<button class="topcoat-button--large--cta" id="save-question">Save</button>
 							</form>
