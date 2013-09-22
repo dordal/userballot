@@ -13,6 +13,7 @@ userballotApp.service('userballotAuthSvc', ["angularFireAuth", "$location", "$ro
     $rootScope.$on("angularFireAuth:logout", function(evt) {
        // User logged out.
        console.log("logged out");
+       $location.path('/login')
     });
     $rootScope.$on("angularFireAuth:error", function(evt, err) {
         // There was an error during authentication.
