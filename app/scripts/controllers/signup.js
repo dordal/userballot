@@ -17,9 +17,9 @@ userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, 
 		  	site.label = "Test";
 
 		  	site.messages = new Object();
-		  	site.messages['default1'] = createMessage("Would you find a mobile version of our site helpful?");
-		  	site.messages['default2'] = createMessage("Woud you recommend our software to others?");
-		  	site.messages['default3'] = createMessage("Do you think our site is easy to use?");
+		  	site.messages['default1'] = createMessage("Would you find a mobile version of our website helpful?");
+		  	site.messages['default2'] = createMessage("Would you recommend our products and service to others?");
+		  	site.messages['default3'] = createMessage("If we asked you to describe what we offer you, would that be easy to do?");
 
 		  	var sitesRef = new Firebase("https://userballotdb.firebaseio.com/sites");
 
