@@ -24,14 +24,14 @@
 		              <a class="main-nav-item" href="#" id="embedCodeShow">Embed code</a>
 					</div>
 					<div class="thirteen columns omega">
-						<div id="embedCodeProvider" class="card-wrap">
+						<div id="embedCodeProvider" class="card-wrap hide">
 							<a href="" class="close right">Hide</a>
 							<br class="clear" />
 							<h2 class="emphasis-heading">Copy and paste the following into your website</h2>
 
-							<h5>Add this code directly before the closing <code>body</code> tag.</h5>
+							<h5 style="margin: 0 0 5px">Add this code directly before the closing <code>body</code> tag.</h5>
 
-							<textarea readonly class="topcoat-textarea active" rows="5" cols="70" placeholder="">
+							<textarea readonly style="font-size: 12px;" class="topcoat-textarea active" rows="3" cols="70" placeholder="">
 <!-- UserBallot: Add this before the closing body tag  -->
 <script type="text/javascript">var $ub = window.$ub || {};$ub.siteId = '{{site.id}}';</script><script src="http://app.userballot.com/client.js"></script></textarea>
 
@@ -39,7 +39,7 @@
 						<div class="card-wrap">
 							<h2 class="emphasis-heading">Ask a new question</h2>
 							<form ng-submit="submit()" ng-controller="AdminAreaCtrl" name="questionSubmitForm">
-							<textarea class="topcoat-textarea" ng-model="question" name="text" rows="3" cols="70" placeholder="The simplest question you can ask is a yes or no question (140 characters max)" required></textarea>
+							<textarea class="topcoat-textarea" ng-model="question" name="text" rows="1" cols="70" placeholder="The simplest question you can ask is a yes or no question (140 characters max)" required></textarea>
 							<br><br>
 							<button class="topcoat-button--large--cta" id="save-question" ng-disabled="questionSubmitForm.text.$invalid">Save</button>
 							</form>
@@ -50,27 +50,28 @@
 							<!-- <a href="#">active</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">draft</a> -->
 
 							<div class="line-item" ng-repeat="message in site.messages">
+								<div class="line-item-controls left">
+									
+									<button class="topcoat-button--quiet" ng-click="selectActive($index)" ng:class="{true:'active', false:''}[message.active=='1']">Active</button>
+									<button class="topcoat-button--quiet" ng-click="selectDraft($index)" ng:class="{true:'active', false:''}[message.active=='0']">Draft</button>
+									<button class="topcoat-button--quiet" ng-click="editMessage($index)">Edit</button>
+									<button class="topcoat-button--quiet" ng-click="removeMessage($index)">Delete</button>
+
+								</div>
+								<br class="clear" />
 								<div class="question-wrap left" ng-hide="message.editing">
 									{{message.text}}
 								</div>
 								<div class="editMessage left" ng-show="message.editing">
 									Edit question:<br>
 									<textarea class="topcoat-textarea left" name="text" rows="3" ng-model="message.text" cols="60" update-model-on-blur>{{message.text}}</textarea><br>
-									<button class="topcoat-button--large--cta" id="update-question" ng-click="updateMessage($index)">Done</button>
-								</div>
-								<div class="line-item-controls right">
-									
-									<button class="topcoat-button--quiet" ng-click="selectActive($index)" ng:class="{true:'active', false:''}[message.active=='1']">Active</button>
-									<button class="topcoat-button--quiet" ng-click="selectDraft($index)" ng:class="{true:'active', false:''}[message.active=='0']">Draft</button>
-									<button class="topcoat-button--quiet" ng-click="removeMessage($index)">Remove</button>
-									<button class="topcoat-button--quiet" ng-click="editMessage($index)">Edit</button>
-
+									<button class="topcoat-button--large--cta" id="update-question" ng-click="updateMessage($index)">Update</button>
 								</div>
 								<!-- results pills -->
 								<br class="clear" />
 								<div class="line-item-results right">
-									<span class="result-label">Yes</span><span class="pill yes">{{message.yesVotes}}</span>
-									<span class="result-label">No</span><span class="pill no">{{message.noVotes}}</span>
+									<span class="result-label">Yes</span><span class="pill yes yes-{{message.id}}">{{message.yesVotes}}</span>
+									<span class="result-label">No</span><span class="pill no no-{{message.id}}">{{message.noVotes}}</span>
 								</div>
 								<br class="clear" />
 							</div>

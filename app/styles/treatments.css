@@ -11,7 +11,7 @@ body {
 	display: none;
 }
 .admin-bar {
-	color: #fff;
+	color: #fff;s
 	font-size: 13px;
 	padding: 20px 0 0 0;
 	text-align: right;
@@ -60,13 +60,13 @@ body {
 	background-color: #fff;
 	border-radius: 10px;
 	margin-bottom: 20px;
-	padding: 40px;
+	padding: 30px;
 }
 .content-wrap h2 {
 	color: #222;
 	font-weight: 300;
-	margin: 10px 0 25px;
-	font-size: 26px;
+	margin: 10px 0 15px;
+	font-size: 20px;
 	position: relative;
 	display: inline-block;
 	padding-right: 10px;
@@ -123,4 +123,5 @@ body {
 }
 .topcoat-button--quiet.active {
 	color: #16a085;
+	font-weight: bold;
 }
