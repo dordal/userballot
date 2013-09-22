@@ -20,7 +20,7 @@
 				<div class="row">
 					<div class="three columns alpha">
 		              <a class="main-nav-item" href="#">Dashboard</a>
-		              <a class="main-nav-item" href="#">Settings</a>
+		              <!-- <a class="main-nav-item" href="#">Settings</a> -->
 		              <a class="main-nav-item" href="#" id="embedCodeShow">Embed code</a>
 					</div>
 					<div class="thirteen columns omega">
@@ -28,12 +28,18 @@
 							<a href="" class="close right">Hide</a>
 							<br class="clear" />
 							<h2 class="emphasis-heading">Copy and paste the following into your website</h2>
-							<textarea class="topcoat-textarea active" rows="5" cols="70" placeholder=""><script type="text/javascript">var $ub = window.$Swft || {};$ub.siteId = '984915cc906d4f5f952258bd24c56a30';</script><script src="http://userballot/client.js"></script></textarea>
+
+							<h5>Add this code directly before the closing <code>body</code> tag.</h5>
+
+							<textarea class="topcoat-textarea active" rows="5" cols="70" placeholder="">
+<!-- UserBallot: Add this before the closing body tag  -->
+<script type="text/javascript">var $ub = window.$ub || {};$ub.siteId = '{{site.id}}';</script><script src="http://www.userballot.com/client.js"></script></textarea>
+
 						</div>
 						<div class="card-wrap">
 							<h2 class="emphasis-heading">Ask a new question</h2>
 							<form ng-submit="submit()" ng-controller="AdminAreaCtrl">
-							<textarea class="topcoat-textarea" ng-model="question" name="text" rows="3" cols="70" placeholder="The simplest question you can ask a user is a yes or no question"></textarea>
+							<textarea class="topcoat-textarea" ng-model="question" name="text" rows="3" cols="70" placeholder="The simplest question you can ask is a yes or no question (140 characters max)"></textarea>
 							<br><br>
 							<button class="topcoat-button--large--cta" id="save-question">Save</button>
 							</form>
@@ -42,59 +48,20 @@
 						<div class="card-wrap">
 							<h2>Manage your questions</h2>
 							<!-- <a href="#">active</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">draft</a> -->
-							
-							
-							<div class="line-item">
+
+							<div class="line-item" ng-repeat="message in site.messages">
 								<div class="question-wrap left">
-									Would a mobile version of our application significantly improve your work-flow?
+									{{message.text}}
 								</div>
 								<div class="line-item-controls right">
-									<button class="topcoat-button--quiet">Active</button>
-									<button class="topcoat-button--quiet active">Draft</button>
+									<button class="topcoat-button--quiet" ng-click="selectActive" ng:class="{true:'active', false:''}[message.active=='1']">Active</button>
+									<button class="topcoat-button--quiet" ng-click="selectDraft" ng:class="{true:'active', false:''}[message.active=='0']">Draft</button>
 								</div>
 								<!-- results pills -->
 								<br class="clear" />
 								<div class="line-item-results right">
-									<span class="result-label">Yes</span><span class="pill yes">54</span>
-									<span class="result-label">No</span><span class="pill no">33</span>
-								</div>
-								<br class="clear" />				
-							</div>
-
-
-
-							<div class="line-item">
-								<div class="question-wrap left">
-									Would having a better way to delete items in your profile be a win for you?
-								</div>
-								<div class="line-item-controls right">
-									<button class="topcoat-button--quiet active">Active</button>
-									<button class="topcoat-button--quiet">Draft</button>
-								</div>
-								<!-- results pills -->
-								<br class="clear" />
-								<div class="line-item-results right">
-									<span class="result-label">Yes</span><span class="pill yes">4</span>
-									<span class="result-label">No</span><span class="pill updated no">12</span>
-								</div>
-								<br class="clear" />
-							</div>
-							
-
-
-							<div class="line-item">
-								<div class="question-wrap left">
-									If you had access to a dedicated help section, would it solve a pain point that you have?
-								</div>
-								<div class="line-item-controls right">
-									<button class="topcoat-button--quiet active">Active</button>
-									<button class="topcoat-button--quiet">Draft</button>
-								</div>
-								<!-- results pills -->
-								<br class="clear" />
-								<div class="line-item-results right">
-									<span class="result-label">Yes</span><span class="pill yes">23</span>
-									<span class="result-label">No</span><span class="pill no">8</span>
+									<span class="result-label">Yes</span><span class="pill yes">{{message.yesVotes}}</span>
+									<span class="result-label">No</span><span class="pill no">{{message.noVotes}}</span>
 								</div>
 								<br class="clear" />
 							</div>
