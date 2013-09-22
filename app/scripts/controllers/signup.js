@@ -10,7 +10,7 @@ userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, 
 		angularFireAuth.createUser($scope.email, $scope.password, function(error, user) {
 		  if (!error) {
 		  	console.log("User reg successful.", user);
-		  	// $location.path('/admin2/');
+		  	$location.path('/admin/');
 		  } else {
 		  	// The email is already in use, mabye?
 		  	if (error.code == 'EMAIL_TAKEN')
