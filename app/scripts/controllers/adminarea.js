@@ -9,10 +9,10 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
     angularFireAuth.initialize(url, {scope: $scope, name: "user"});
 
     var user = $scope.user;
-    if (user == null) {
+    /*if (user == null) {
    		$location.path("/login");
    		return;      
-    }
+    }*/
 	//console.log('ADMIN AREA CTRL: User ID: ' + user.id + ', Provider: ' + user.provider);
 
 	// get the logged in user's email
