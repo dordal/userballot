@@ -3,7 +3,6 @@
 userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, angularFireAuth) {
     $scope.email = '';
     $scope.password = '';
-
     // authenticate a user
     
 
@@ -26,7 +25,7 @@ userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, 
 		  	$location.path('/admin/');
 		  }
 		  else {
-		  	if ( error == 'Error: The specified email address is already in use') {
+		  	if ( $scope.error == 'Error: The specified email address is already in use') {
 		  		auth.login('password',$scope.email, $scope.password);
 		  	}
 		  	else console.log(error + ' ' + $scope.email + ' ' + $scope.password);
