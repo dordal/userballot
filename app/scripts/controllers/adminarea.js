@@ -99,6 +99,17 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 		var key = keyAt($scope.site.messages, index);
     	$scope.site.messages[key].active = 1;
 	}
+	// open the message for editing
+	$scope.editMessage = function( index ){
+		var key = keyAt($scope.site.messages, index);
+		$scope.site.messages[key].editing = true;
+	}
+	// update the message
+	$scope.updateMessage = function( index ){
+		var key = keyAt($scope.site.messages, index);
+		console.log($scope.site.messages[key]);
+		$scope.site.messages[key].editing = false;
+	}
 
 });
 
@@ -120,6 +131,41 @@ userballotApp.directive('highlightChanges', function(){
           backgroundColor: "white"
         }, 1000);
       }, true);
+    }
+  };
+});
+
+userballotApp.directive('updateModelOnBlur', function() {
+  return {
+    restrict: 'A',
+    require: 'ngModel',
+    link: function(scope, elm, attr, ngModelCtrl)
+    {
+      if(attr.type === 'radio' || attr.type === 'checkbox')
+      {
+        return;
+      }
+
+      // Update model on blur only
+      elm.unbind('input').unbind('keydown').unbind('change');
+      var updateModel = function()
+      {
+        scope.$apply(function()
+        {
+          ngModelCtrl.$setViewValue(elm.val());
+        });
+      };
+      elm.bind('blur', updateModel);
+
+      // Not a textarea
+      if(elm[0].nodeName.toLowerCase() !== 'textarea')
+      {
+        // Update model on ENTER
+        elm.bind('keydown', function(e)
+        {
+          e.which == 13 && updateModel();
+        });
+      }
     }
   };
 });
