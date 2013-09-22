@@ -1,6 +1,6 @@
 'use strict';
 
-userballotApp.controller('LoginCtrl', ["$scope", "angularFire", "angularFireAuth", "userballotAuthSvc", function($scope, angularFire, angularFireAuth, userballotAuthSvc) {
+userballotApp.controller('LoginCtrl', function($scope, $location, angularFire, angularFireAuth, userballotAuthSvc) {
     $scope.email = '';
     $scope.password = '';
 
@@ -10,4 +10,4 @@ userballotApp.controller('LoginCtrl', ["$scope", "angularFire", "angularFireAuth
 	$scope.login = function() {
 		userballotAuthSvc.login($scope.email, $scope.password);
 	}
-}]);
+});
