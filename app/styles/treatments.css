@@ -1,5 +1,5 @@
 body {
-	background-color: #27ae60!important;
+	background-color: #19A755!important;
 }
 .left {
 	float: left;
@@ -86,6 +86,7 @@ body {
 	margin: 4px 10px 5px 0;
 }
 .result-label {
+	color: #7f8c8d;
 	margin: 0 10px;
 }
 .line-item-results .pill {
@@ -112,5 +113,5 @@ body {
 	cursor: pointer;
 }
 .topcoat-button--quiet.active {
-	color: #3498db;
+	color: #16a085;
 }
