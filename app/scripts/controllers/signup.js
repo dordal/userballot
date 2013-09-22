@@ -59,6 +59,6 @@ function createMessage(messageText) {
 	message['noVotes'] = 0;
 	message['yesVotes'] = 0;
 	message['position'] = 0;
-	message['active'] = 1;
+	message['active'] = 0;
 	return message;
 }
