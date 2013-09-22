@@ -1,6 +1,6 @@
 'use strict';
 
-userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFire, angularFireAuth, userballotAuthSvc) {
+userballotApp.controller('AdminAreaCtrl', ["$scope", "$location", "angularFire", "angularFireAuth", "userballotAuthSvc", function($scope, $location, angularFire, angularFireAuth, userballotAuthSvc) {
     $scope.sites = [];
     $scope.messages = [];
     $scope.question = '';
@@ -44,8 +44,6 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 	});
 
 	$scope.logout = function() {
-		angularFireAuth.logout();
-		$location.path("/login");
+		userballotAuthSvc.logout();
 	}
-
-});
+}]);

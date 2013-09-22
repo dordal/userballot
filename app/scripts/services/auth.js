@@ -26,4 +26,17 @@ userballotApp.service('userballotAuthSvc', ["angularFireAuth", "$location", "$ro
                     default:
                 }
     });
+
+    this.login = function(email, password) {
+        console.log("Logging in with", email, password);
+        angularFireAuth.login('password', {
+            email: email,
+            password: password
+        });
+    }
+
+    this.logout = function() {
+        angularFireAuth.logout();
+        $location.path("/login");        
+    }
 }]);
