@@ -58,6 +58,11 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
     $scope.logout = function() {
 		userballotAuthSvc.logout();
     };
+
+    $scope.removeMessage = function ( index ) {
+    	console.log($scope.site.messages);
+		$scope.site.messages.splice( index, 1 );
+	};
 });
 
 
