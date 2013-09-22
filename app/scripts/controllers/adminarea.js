@@ -48,10 +48,10 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 	    		$scope.site.messages = new Object();
 	    	}
 			$scope.site.messages[sitesRef.push().name()] = {
-	            text: $scope.question, yesVotes: 0, noVotes: 0, position: 0, active: 1
+	            text: $scope.question, yesVotes: 0, noVotes: 0, position: 0, active: 0
 	        };
 	    } else {
-			this.error = 'Dude you forgot to ask a question...';
+			this.error = 'Dude, you forgot to ask a question...';
 	    }
 
 	    $scope.question = '';
@@ -68,12 +68,12 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
     	var key = keyAt($scope.site.messages, index);
     	$scope.site.messages[key] = null;
 	};
-
+	// switch the active state to 0
 	$scope.selectDraft = function( index ){
 		var key = keyAt($scope.site.messages, index);
     	$scope.site.messages[key].active = 0;
 	}
-
+	// switch the active state to 1
 	$scope.selectActive = function( index ){
 		var key = keyAt($scope.site.messages, index);
     	$scope.site.messages[key].active = 1;
@@ -82,11 +82,11 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 });
 
 var keyAt = function(obj, index) {
-		    var i = 0;
-		    for (var key in obj) {
-		        if ((index || 0) === i++) return key;
-		    }
-		}
+    var i = 0;
+    for (var key in obj) {
+        if ((index || 0) === i++) return key;
+    }
+}
 
 userballotApp.filter('iif', function () {
     return function(input, trueValue, falseValue) {

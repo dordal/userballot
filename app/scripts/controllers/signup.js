@@ -16,6 +16,11 @@ userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, 
 		  	site.frequency = 10;
 		  	site.label = "Test";
 
+		  	site.messages = new Object();
+		  	site.messages['default1'] = createMessage("Would you find a mobile version of our website helpful?");
+		  	site.messages['default2'] = createMessage("Would you recommend our products and service to others?");
+		  	site.messages['default3'] = createMessage("If we asked you to describe what we offer you, would that be easy to do?");
+
 		  	var sitesRef = new Firebase("https://userballotdb.firebaseio.com/sites");
 
 	  		var siteId = sitesRef.push(site).name();
@@ -27,6 +32,7 @@ userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, 
 
 	  		var sitesObj = new Object();
 		  	sitesObj[siteId] = siteId;
+
 
 		  	var newUser = userRef.child(emailId);
 	  		newUser.set({email: user.email, sites: sitesObj})
@@ -46,3 +52,13 @@ userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, 
 		});
 	}
 });
+
+function createMessage(messageText) {
+	var message = new Object();
+	message['text'] = messageText;
+	message['noVotes'] = 0;
+	message['yesVotes'] = 0;
+	message['position'] = 0;
+	message['active'] = 0;
+	return message;
+}
