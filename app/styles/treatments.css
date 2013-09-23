@@ -74,6 +74,10 @@ body {
 .content-wrap h2.emphasis-heading {
 	color: #16a085;
 }
+.ask-new-question-input,
+.code-provider {
+	width: 90%;
+}
 .line-item {
 	/*background-color: #ecf0f1;*/
 	border: 1px solid #ecf0f1;

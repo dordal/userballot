@@ -23,7 +23,7 @@
 		              <!-- <a class="main-nav-item" href="#">Settings</a> -->
 		              <a class="main-nav-item" href="#" id="embedCodeShow">Embed code</a>
 					</div>
-					<div class="thirteen columns omega">
+					<div class="twelve columns omega">
 						<div id="embedCodeProvider" class="card-wrap hide">
 							<a href="" class="close right">Hide</a>
 							<br class="clear" />
@@ -31,7 +31,7 @@
 
 							<h5 style="margin: 0 0 5px">Add this code directly before the closing <code>body</code> tag.</h5>
 
-							<textarea readonly style="font-size: 12px;" class="topcoat-textarea active" rows="3" cols="70" placeholder="">
+							<textarea readonly style="font-size: 12px;" class="topcoat-textarea code-provider active" rows="3" cols="" placeholder="">
 <!-- UserBallot: Add this before the closing body tag  -->
 <script type="text/javascript">var $ub = window.$ub || {};$ub.siteId = '{{site.id}}';</script><script src="http://app.userballot.com/client.js"></script></textarea>
 
@@ -39,14 +39,14 @@
 						<div class="card-wrap">
 							<h2 class="emphasis-heading">Ask a new question</h2>
 							<form ng-submit="submit()" ng-controller="AdminAreaCtrl" name="questionSubmitForm">
-							<textarea class="topcoat-textarea" ng-model="question" name="text" rows="1" cols="70" placeholder="The simplest question you can ask is a yes or no question (140 characters max)" required></textarea>
+							<textarea class="topcoat-textarea ask-new-question-input" ng-model="question" name="text" rows="2" cols="" placeholder="The simplest question you can ask is a yes or no question (140 characters max)" required></textarea>
 							<br><br>
 							<button class="topcoat-button--large--cta" id="save-question" ng-disabled="questionSubmitForm.text.$invalid">Save</button>
 							</form>
 
 						</div>
 						<div class="card-wrap">
-							<h2>Manage your questions</h2>
+							<h2 class="emphasis-heading">Current questions</h2>
 							<!-- <a href="#">active</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">draft</a> -->
 
 							<div class="line-item" ng-repeat="message in site.messages">
