@@ -38,6 +38,11 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 			// Assign site ID for easy access
 			$scope.site.id = siteId;
 
+			// reset editing on new page loads
+			for( var message in $scope.site.messages ){
+				$scope.site.messages[message].editing = false;
+			}
+
 	    });
 
 	    
