@@ -8,8 +8,6 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 
     var user = $scope.user;
 
-	console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
-
 	// get the logged in user's email
 	var loggedInEmail = user.email.replace(/\./g, ',');
 	// use this to query the appropriate user
@@ -116,7 +114,6 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 	// update the message
 	$scope.updateMessage = function( index ){
 		var key = keyAt($scope.site.messages, index);
-		console.log($scope.site.messages[key]);
 		$scope.site.messages[key].editing = false;
 	}
 
