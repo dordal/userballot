@@ -37,7 +37,7 @@
 
 						</div>
 						<div class="card-wrap">
-							<h2 class="emphasis-heading">Ask a new question</h2>
+							<h2 class="emphasis-heading">Add a new question</h2>
 							<form ng-submit="submit()" ng-controller="AdminAreaCtrl" name="questionSubmitForm">
 							<textarea class="topcoat-textarea ask-new-question-input" ng-model="question" name="text" rows="2" cols="" placeholder="The simplest question you can ask is a yes or no question (140 characters max)" required></textarea>
 							<br><br>
@@ -46,7 +46,7 @@
 
 						</div>
 						<div class="card-wrap">
-							<h2 class="emphasis-heading">Current questions</h2>
+							<h2 class="emphasis-heading">Questions</h2>
 							<!-- <a href="#">active</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">draft</a> -->
 
 							<div class="line-item" ng-repeat="message in site.messages">
@@ -62,9 +62,9 @@
 								<div class="question-wrap left" ng-hide="message.editing">
 									{{message.text}}
 								</div>
+								<br class="clear" />
 								<div class="editMessage left" ng-show="message.editing">
-									Edit question:<br>
-									<textarea class="topcoat-textarea left" name="text" rows="3" ng-model="message.text" cols="60" update-model-on-blur>{{message.text}}</textarea><br>
+									<textarea class="topcoat-textarea" name="text" rows="3" ng-model="message.text" cols="60" update-model-on-blur>{{message.text}}</textarea><br><br>
 									<button class="topcoat-button--large--cta" id="update-question" ng-click="updateMessage($index)">Update</button>
 								</div>
 								<!-- results pills -->
