@@ -29,7 +29,13 @@ V. load page. A question should appear.
 VI. Vote on the question.
 VII. look at the question's results page. one of the counts should be  one.
 VIII. delete the question, site, and user.
-
+6. (for final depoyment)
+I. Edit a question
+7. (for final depoyment)
+I. load a page in the site. leave the question up.
+II. switch to another window and edit the question.
+III.switch back to the site. vote on the question. 
+IV. look at the admin page. The question should have the edited wording and the count should up by 1.
 --misc QA--
 test login (for demo and final depoyment)
 test registration (for final depoyment)
