@@ -35,6 +35,7 @@ body {
 	font-weight: 200; 
 	font-size: 25px; 
 	background-color: #2ecc71; 
+	text-align: center;
 	text-decoration: none;
 }
 .signup-btn:hover {
@@ -58,11 +59,11 @@ body {
 	position: relative;
 }
 .feature-block {
-	height: 550px;
+	height: 750px;
 }
 .feature-triple {
 	text-align: center;
-	width: 33%;
+	width: 313px;
 }
 .feature-triple img {
 	display: block;
@@ -87,6 +88,10 @@ body {
 	position: absolute;
 	right: 0;
 	text-align: center;
+}
+.footer a {
+	color: #999;
+	text-decoration: underline;
 }
 /* extent topcoat components */
 .topcoat-icon-button--large:hover {
