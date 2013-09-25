@@ -3,6 +3,7 @@ body {
 }
 .left {
 	float: left;
+	text-align: inherit;
 }
 .right {
 	float: right;
@@ -20,6 +21,11 @@ body {
 	cursor: pointer;
 	font-size: 13px;
 }
+.masthead {
+	background-color: #27ae60;
+	overflow: hidden;
+	padding: 0 0 100px;
+}
 .signup-btn {
 	display: block;
 	cursor: pointer; 
@@ -34,9 +40,6 @@ body {
 .signup-btn:hover {
 	background-color: #27DB73;
 }
-.content-wrap {
-	height: 900px;
-}
 .content-wrap h2 {
 	color: #222;
 	font-weight: 300;
@@ -48,6 +51,42 @@ body {
 }
 .content-wrap h2.emphasis-heading {
 	color: #16a085;
+}
+.page-wrap {
+	overflow: hidden;
+	padding-bottom: 200px;
+	position: relative;
+}
+.feature-block {
+	height: 550px;
+}
+.feature-triple {
+	text-align: center;
+	width: 33%;
+}
+.feature-triple img {
+	display: block;
+	margin: 0 auto;
+}
+.feature-triple h2 {
+	margin: 20px auto 0;
+}
+.feature-triple p {
+	color: #696F74; 
+	line-height: 26px;
+	max-width: 300px;
+}
+.footer {
+	background-color: #eee;
+	bottom: 0;
+	color: #999;
+	height: 50px;
+	left: 0;
+	font-size: 12px;
+	padding: 20px;
+	position: absolute;
+	right: 0;
+	text-align: center;
 }
 /* extent topcoat components */
 .topcoat-icon-button--large:hover {
