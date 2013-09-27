@@ -36,6 +36,9 @@ I. load a page in the site. leave the question up.
 II. switch to another window and edit the question.
 III.switch back to the site. vote on the question. 
 IV. look at the admin page. The question should have the edited wording and the count should up by 1.
+8.(for final depoyment)
+I. turn off debug mode for the site if on
+II. answer questions on the site, you should never get the same one twice
 --misc QA--
 test login (for demo and final depoyment)
 test registration (for final depoyment)
