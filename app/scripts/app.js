@@ -3,6 +3,10 @@
 var userballotApp = angular.module('userballotApp', ['firebase'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
+      .when('/loading', {
+        templateUrl: 'views/loading.html',
+        controller: "LoadingCtrl"
+      })
       .when('/login', {
         templateUrl: 'views/login.html',
         controller: 'LoginCtrl'
@@ -24,5 +28,5 @@ var userballotApp = angular.module('userballotApp', ['firebase'])
    // establish authentication
    .run(['angularFireAuth', '$rootScope', function(angularFireAuth, $rootScope) {
       var ref = new Firebase('https://userballotdb.firebaseio.com');
-      angularFireAuth.initialize(ref, {scope: $rootScope, name: "user", path: '/login'});
+      angularFireAuth.initialize(ref, {scope: $rootScope, name: "user", path: '/loading'});
    }]);
