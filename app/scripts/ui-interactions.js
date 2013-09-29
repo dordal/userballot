@@ -15,6 +15,7 @@ $(document).ready(function() {
 	$('body').delegate('.close', 'click', function(e) {
 		e.preventDefault();
 		$(this).parent().hide();
+		$('#helpBlockShow').toggleClass('open');
 	});
 	$('body').delegate('#save-question', 'click', function(e) {
 		$(this).siblings('textarea').text('');
