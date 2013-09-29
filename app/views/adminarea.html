@@ -20,20 +20,28 @@
 				<div class="row">
 					<div class="three columns alpha">
 		              <!-- <a class="main-nav-item" href="#">Dashboard</a> -->
-		              <!-- <a class="main-nav-item" href="#">Settings</a> -->
-		              <a class="main-nav-item" href="#" id="embedCodeShow">Embed code</a>
+		              <a class="main-nav-item" href="#" id="helpBlockShow">How it works</a>
 					</div>
 					<div class="twelve columns omega">
-						<div id="embedCodeProvider" class="card-wrap hide">
+						<div id="helpBlock" class="card-wrap hide">
 							<a href="" class="close right">Hide</a>
 							<br class="clear" />
-							<h2 class="emphasis-heading">Copy and paste the following into your website</h2>
 
-							<h5 style="margin: 0 0 5px">Add this code directly before the closing <code>body</code> tag.</h5>
+							<!-- step 1 -->
+							<h2 class="emphasis-heading instruction">First, copy and paste the following code into your site.</h2>
 
 							<textarea readonly style="font-size: 12px;" class="topcoat-textarea code-provider active" rows="3" cols="" placeholder="">
 <!-- UserBallot: Add this before the closing body tag  -->
 <script type="text/javascript">var $ub = window.$ub || {};$ub.siteId = '{{site.id}}';</script><script src="http://app.userballot.com/client.js"></script></textarea>
+
+							<strong class="small-instruction-text">Paste this code directly before the closing <code>body</code> tag of your site.</strong><br><br>
+
+							<!-- step 2 -->
+							<h2 class="emphasis-heading instruction">Now you're ready to start adding the questions you want answered.</h2>
+							<p>Make sure you ask simple yes or no questions, and keep them to the point. Once a question is answered by a user, it will not be shown to them again.</p>
+							<p><strong>Important:</strong> a question CAN'T be answered until you set it to <i>Active</i>.</p>
+							<p>That's it! <i>Active</i> questions will be visible to your users and the answers they provide will be reported to you in real-time.</p>
+
 
 						</div>
 						<div class="card-wrap">
@@ -46,7 +54,7 @@
 
 						</div>
 						<div class="card-wrap">
-							<h2 class="emphasis-heading">Questions</h2>
+							<h2 class="emphasis-heading">Current questions</h2>
 							<!-- <a href="#">active</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">draft</a> -->
 
 							<div class="line-item" ng-repeat="message in site.messages">

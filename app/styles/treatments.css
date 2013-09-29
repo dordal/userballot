@@ -62,28 +62,41 @@ body {
 	margin-bottom: 20px;
 	padding: 30px;
 }
+.card-wrap p {
+	line-height: 30px;
+}
 .content-wrap h2 {
 	color: #222;
 	font-weight: 300;
-	margin: 10px 0 15px;
+	margin: 10px 0 0;
 	font-size: 20px;
 	position: relative;
-	display: inline-block;
+	display: block;
 	padding-right: 10px;
 }
 .content-wrap h2.emphasis-heading {
-	color: #16a085;
+	color: #222;
+}
+.content-wrap h2.emphasis-heading.instruction {
+	color: #c0392b;
+	font-size: 17px;
 }
 .ask-new-question-input,
 .code-provider {
+	display: block;
+	margin: 20px 0 0;
 	width: 90%;
+}
+.small-instruction-text {
+	color: #333;
+	font-size: 12px;
 }
 .line-item {
 	/*background-color: #ecf0f1;*/
 	border: 1px solid #ecf0f1;
 	border-radius: 5px;
 	line-height: 25px;
-	margin-bottom: 20px;
+	margin-top: 20px;
 	overflow: hidden;
 	padding: 10px;
 }
