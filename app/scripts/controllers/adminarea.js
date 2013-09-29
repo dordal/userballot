@@ -43,23 +43,33 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 
 	    });
 
-	    
-	    sitesRef.on('child_added', function(snapshot) {
-	    	var snapVal = snapshot.val();
-	    	if (snapshot.name() == 'messages') {
-	    		snapshot.ref().on('child_changed', function(messageSnapshot, oldValue) {
-	    			setTimeout(function() {
-		    			var messageName = messageSnapshot.name();
-		    			var oldValue = oldValue;
-		    			$(".yes-" + messageName).css("background-color", "#D0E4EC");
-		    			$(".yes-" + messageName).animate({
-		    				backgroundColor: "#FFF"
-		    			}, 1000)
-		    		}, 50);
-	    		})
-	    	}
-		});
-		
+	    // Flash updates to the vote counts
+		$scope.$watch("site.messages", function(newMessages, oldMessages) {
+			if (oldMessages != null) {
+				var flashClass = "";
+				var messageName = "";
+
+				// Compare old messages to new messages. Figure out if the yes or no vote count was
+				// updated and flash the correct one
+				for (var message in newMessages) {
+					if (newMessages[message].yesVotes != oldMessages[message].yesVotes) {
+						flashClass = "yes";
+						messageName = message;
+					}
+					if (newMessages[message].noVotes != oldMessages[message].noVotes) {
+						flashClass = "no";
+						messageName = message;
+					}
+				}
+				if (flashClass != "") {
+	    			$("." + flashClass + "-" + messageName).css("background-color", "#19A755");
+	    			$("." + flashClass + "-" + messageName).animate({
+	    				backgroundColor: "#FFF"
+	    			}, 1000)
+
+				}
+			}
+		})
 
 		 $scope.$watch('state', function(){
             if ($scope.onStateChange){
