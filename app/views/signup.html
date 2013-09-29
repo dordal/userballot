@@ -4,21 +4,23 @@
     <img class="logo" src="img/userBallotLogoFullWhite.png" alt="" width="120"></a>
   </div>
 
-  <!-- error message -->
-  <div class="error" style="color: red;">{{error}}</div><br/>
-
   <form name="signup" ng-submit="register()" class="signup-form css-form" novalidate>
 
     <h3>Sign Up</h3>
 
     <div class="form-section-title">Your Details</div>
 
+    <!-- general error message -->
+    <div class="public-form-error-message">
+      {{error}}
+    </div>
+
     <!-- email address -->
     <input type="text" class="fresh-text-input signup-input-wide"  ng-model="email" name="uEmail" required placeholder="Email Address" /><br/>
 
     <!-- error message -->
-    <div ng-show="emailError">
-      <span style="font-size: small; color: red;">{{emailError}}</span>
+    <div ng-show="emailError" class="public-form-error-message">
+      {{emailError}}
     </div>
 
     <!-- password -->
@@ -31,8 +33,8 @@
     <input type="text" class="fresh-text-input signup-input-wide" ng-model="domain" required placeholder="Site URL" /><br/>
 
     <!-- error message -->
-    <div ng-show="domainError">
-      <span style="font-size: small; color: red;">{{domainError}}</span>
+    <div ng-show="domainError" class="public-form-error-message">
+      {{domainError}}
     </div>
 
     <br>

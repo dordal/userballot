@@ -32,29 +32,31 @@
     <img class="logo" src="img/userBallotLogoFullWhite.png" alt="" width="120"></a>
   </div>
 
-  <!-- error message -->
-  <div class="error" style="color:red; font-size:small;">{{error}}</div>
-
 	<form ng-submit="login()" class="login-form css-form">
 
     <h3>Log in</h3>
 
     <div class="form-section-title">Your Details</div>
 
+    <!-- general error message -->
+    <div class="public-form-error-message">
+      {{error}}
+    </div>
+
     <!-- email address -->
     <input type="text" class="fresh-text-input signup-input-wide"  ng-model="email" required placeholder="Email Address" /><br/>
 
     <!-- error message -->
-    <div ng-show="emailError">
-      <span style="font-size: small; color: red;">{{emailError}}</span>
+    <div ng-show="emailError" class="public-form-error-message">
+    	{{emailError}}
     </div>
 
     <!-- password -->
     <input type="password" class="fresh-text-input signup-input-wide"  ng-model="password" required placeholder="Password" /><br/>
 
     <!-- error message -->
-    <div ng-show="domainError">
-      <span style="font-size: small; color: red;">{{passwdError}}</span>
+    <div ng-show="domainError" class="public-form-error-message">
+    	{{passwdError}}
     </div>
 
     <br>

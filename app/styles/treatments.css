@@ -160,6 +160,10 @@ body {
 	-o-transition: border linear 0.2s,box-shadow linear 0.2s;
 	transition: border linear 0.2s,box-shadow linear 0.2s;
 }
+.public-form-error-message {
+	color: #FFEDA6;
+	padding-top: 10px;
+}
 .signup-form,
 .login-form {
 	margin: 0 auto 100px;
