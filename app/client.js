@@ -169,17 +169,31 @@ var docCookies = {
 $ub.UpdateCount = function(type) {
 
 	var voteType = type + "Votes"; 
-
+	
 	docCookies.setItem($ub.selectedMessage.id,type);
+	
+	reqRefresh = new XMLHttpRequest();
+	reqRefresh.open("GET", "https://userballotdb.firebaseio.com/sites/" + $ub.siteId + "/messages/" + $ub.selectedMessage.id + "/.json");
+	reqRefresh.onreadystatechange = function() {
+		tempID = $ub.selectedMessage.id;
+		if (reqRefresh.readyState==4 && reqRefresh.status==200) {
+			data = reqRefresh.responseText;
+			response = JSON.parse(data);
+			
+			$ub.selectedMessage = response;
+			$ub.selectedMessage.id = tempID;
+	
+			$ub.selectedMessage[voteType] = $ub.selectedMessage[voteType] + 1;
+			req = new XMLHttpRequest();
+			req.open("PATCH", "https://userballotdb.firebaseio.com/sites/" + $ub.siteId + "/messages/" + $ub.selectedMessage.id + "/.json");
 
-	$ub.selectedMessage[voteType] = $ub.selectedMessage[voteType] + 1;
-	req = new XMLHttpRequest();
-	req.open("PATCH", "https://userballotdb.firebaseio.com/sites/" + $ub.siteId + "/messages/" + $ub.selectedMessage.id + "/.json");
+			req.onreadystatechange = function() {
+				if (req.readyState==4 && req.status==200) {
+				}
+			}
 
-	req.onreadystatechange = function() {
-		if (req.readyState==4 && req.status==200) {
-	    }
+			req.send(JSON.stringify($ub.selectedMessage));
+		}
 	}
-
-	req.send(JSON.stringify($ub.selectedMessage));
+	reqRefresh.send();
 }
