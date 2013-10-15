@@ -103,6 +103,9 @@ img {
 	overflow: hidden;
 	padding: 10px;
 }
+.line-item-controls button {
+	cursor: pointer;
+}
 .question-wrap {
 	/*background-color: #F3F6F6;*/
 	border-radius: 5px;
