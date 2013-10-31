@@ -74,13 +74,13 @@ img {
         float: left;
 }
 .pages {
-        margin-top: 12px;
+        margin-top: 16px;
 }
 .pages a {
         position: relative;
         text-decoration: none;
         color: #323232;
-        font-family: Neou-Thin;
+        font-family: Neou-Bold;
         font-size: 14px;
         margin-left: 30px;
 }
