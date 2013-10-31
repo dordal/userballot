@@ -1,0 +1,239 @@
+body {
+        background-color: #fbfbfb!important;
+}
+img {
+        border: 0;
+}
+.left {
+        float: left;
+        text-align: inherit;
+}
+.right {
+        float: right;
+}
+.hide {
+        display: none;
+}
+.header {
+        height: 24px;
+}
+.signin-bar {
+        margin-left: 855px;
+        text-align: right;
+        padding-top: 1px;
+        float: left;
+        height: 23px;
+}
+.signin-bar a {
+        color: #a1a1a1;
+        cursor: pointer;
+        font-size: 13px;
+        text-decoration: none;
+}
+.signup-bar {
+        border: none; 
+        border-radius: 0 0 8px 8px; 
+        padding: 1px 5px 5px 5px; 
+        background-color: #2ecc71;
+        float: right;
+}
+.signup-bar a {
+        color: #fff; 
+        text-decoration: none;
+        font-size: 13px;
+        cursor: pointer; 
+}
+.signup-bar a:visited {
+        color: #fff;
+        text-decoration: none
+}
+.signup-bar:hover {
+        background-color: #27DB73;
+}
+.headerlogo {
+        margin-left: -30px;
+}
+.content-wrap h2 {
+        color: #222;
+        font-weight: 300;
+        margin: 10px 0 25px;
+        font-size: 26px;
+        position: relative;
+        display: inline-block;
+        padding-right: 10px;
+}
+.content-wrap h2.emphasis-heading {
+        color: #16a085;
+}
+.page-wrap {
+        overflow: hidden;
+        position: relative;
+}
+.logo {
+        width: 180px;
+        float: left;
+}
+.pages {
+        margin-top: 12px;
+}
+.pages a {
+        position: relative;
+        text-decoration: none;
+        color: #323232;
+        font-family: Neou-Thin;
+        font-size: 14px;
+        margin-left: 30px;
+}
+.ourproduct {
+        margin-right: -10px;
+}
+.ourstory {
+        margin-right: -10px;
+}
+.motto {
+        margin-top: 25px;
+        padding-bottom: 15px;
+        text-align: center;
+}
+h1 {
+        margin: 0;
+        padding: 0;
+        color: #2ecc71;
+        font-weight: 200;
+        font-size: 36px;
+        font-family: Lora;
+}
+#pulse {
+        color: #323232;
+        margin-top: -5px;
+}
+.masthead {
+        background-color: #f1f1f1;
+        overflow: hidden;
+        padding: 0 0 50px;
+}
+.demo {
+        float: left;
+        text-align: center;
+        padding-top: 20px;
+        margin-bottom: -20px;
+        margin-left: -60px;
+}
+.free {
+        font-family: Lora;
+        font-size: 25px;
+        color: #323232;
+        float: right;
+        margin-top: 100px;
+        text-align: center;
+}
+.signup-btn {
+        display: block;
+        cursor: pointer; 
+        border: none;
+        margin: 20px 130px 0 125px;
+        padding: 10px 30px; 
+        color: #fff; 
+        font-weight: 200; 
+        font-size: 20px; 
+        background-color: #2ecc71; 
+        text-align: center;
+        text-decoration: none;
+        float: right;
+        border-radius: 8px;
+
+}
+.signup-btn:hover {
+        background-color: #27DB73;
+}
+hr {
+        background-color: red;
+        padding: 0; margin: 0;
+        height: 2px;
+        border: none;
+}
+.feature-block {
+        height: 300px;
+}
+.feature-triple {
+        width: 960px;
+        font-family: Lora;
+}
+.feature-triple img {
+        display: block;
+        margin: 0 auto;
+        height: 90;
+        padding-top: 20px;
+        margin-left: 79px;
+}
+.feature-triple h2 {
+        margin: 20px auto 0;
+        color: #2ecc71;
+        margin-top: -10px
+}
+.feature-triple p {
+        color: #A1A1A1; 
+        line-height: 26px;
+        max-width: 200px;
+        margin-left: 50px;
+}
+.feature-triple-left {
+        float: left;
+        width: 320px;
+        text-align: center;
+}
+.feature-triple-right {
+        float: right;
+        width: 320px;
+        text-align: center;
+}
+.chance {
+        font-family: Lora;
+        font-size: 25px;
+        color: #323232;
+        text-align: center;
+        height: 100px;
+        padding-top: 30px
+}
+.icon-feature {
+        height: 100px;
+        padding-top: 30px;
+}
+.icon-feature-four  {
+        width: 480px;
+        display: block;
+        margin: 0 auto;
+}
+.icon-feature-left {
+        float: left;
+        width: 120px;
+        text-align: center;
+}
+.icon-feature-right {
+        float: right;
+        width: 120px;
+        text-align: center;
+}
+.footer {
+        background-color: #eee;
+        bottom: 0;
+        color: #999;
+        height: 36px;
+        left: 0;
+        font-size: 12px;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        vertical-align: middle 
+}
+.footer p {
+        text-align: center;
+        vertical-align: middle 
+}
+/* extent topcoat components */
+.topcoat-icon-button--large:hover {
+        cursor: pointer;
+}
+.topcoat-button--quiet.active {
+        color: #16a085;
+}
