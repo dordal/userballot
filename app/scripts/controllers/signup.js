@@ -14,14 +14,14 @@ userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, 
 	    var emailRegex = /[a-zA-Z0-9_.-]+@[A-Za-z0-9]+\.[a-zA-Z0-9]+/;
 	    var domainRegex = /((http|https)\:\/\/)?[a-zA-Z0-9_.-]+\.[a-zA-Z0-9]+/;
 	    var emailMatch = $scope.email.match(emailRegex);
-	    var domainMatch = $scope.domain.match(domainRegex);
+	    //var domainMatch = $scope.domain.match(domainRegex);
 
 	    $scope.emailError = null;
-	    $scope.domainError = null;
+	    //$scope.domainError = null;
 
-	    if (!error && emailMatch && domainMatch) {
+	    if (!error && emailMatch) {
 		var site = new Object();
-		site.domain = $scope.domain;
+		//site.domain = $scope.domain;
 		site.frequency = 10;
 		site.label = "Test";
 
@@ -49,12 +49,12 @@ userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, 
 	  	// login the user and redirect to the admin interface
 	  	// console.log("User Reg:", user);
 	  	$location.path('/admin');
-	    } else if ( !(emailMatch && domainMatch) || error.code === 'EMAIL_TAKEN' ) {
+	    } else if ( !(emailMatch) || error.code === 'EMAIL_TAKEN' ) {
 		if (!emailMatch)
 		    $scope.emailError = "Invalid email.";
 
-		if (!domainMatch)
-		    $scope.domainError = "Invalid domain.";
+		//if (!domainMatch)
+		//    $scope.domainError = "Invalid domain.";
 
 		if (error.code === 'EMAIL_TAKEN')
 		    $scope.emailError = "Email is already in use. Please login.";

@@ -27,15 +27,14 @@
     <input type="password" class="fresh-text-input signup-input-wide"  ng-model="password" required placeholder="Password" /><br/>
 
 
-    <div class="form-section-title">Site Details</div>
-
-    <!-- site url -->
+   <!-- site url 
+    <div class="form-section-title">Site Details</div> 
     <input type="text" class="fresh-text-input signup-input-wide" ng-model="domain" required placeholder="Site URL" /><br/>
 
-    <!-- error message -->
     <div ng-show="domainError" class="public-form-error-message">
       {{domainError}}
     </div>
+    error message -->
 
     <br>
     <input type="submit" class="topcoat-button--large signup-btn" ng-disabled="signup.$invalid" name="submit" value="Sign Up Now" /> 
