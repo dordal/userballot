@@ -21,7 +21,6 @@ img {
         margin-left: 855px;
         text-align: right;
         padding-top: 1px;
-        float: left;
         height: 23px;
 }
 .signin-bar a {
@@ -35,7 +34,6 @@ img {
         border-radius: 0 0 8px 8px; 
         padding: 1px 5px 5px 5px; 
         background-color: #2ecc71;
-        float: right;
 }
 .signup-bar a {
         color: #fff; 
@@ -53,25 +51,12 @@ img {
 .headerlogo {
         margin-left: -30px;
 }
-.content-wrap h2 {
-        color: #222;
-        font-weight: 300;
-        margin: 10px 0 25px;
-        font-size: 26px;
-        position: relative;
-        display: inline-block;
-        padding-right: 10px;
-}
-.content-wrap h2.emphasis-heading {
-        color: #16a085;
-}
 .page-wrap {
         overflow: hidden;
         position: relative;
 }
 .logo {
         width: 180px;
-        float: left;
 }
 .pages {
         margin-top: 16px;
@@ -80,15 +65,15 @@ img {
         position: relative;
         text-decoration: none;
         color: #323232;
-        font-family: Neou-Bold;
+        font-family: Neou-Thin;
         font-size: 14px;
         margin-left: 30px;
-}
-.ourproduct {
+        letter-spacing: 1px;
         margin-right: -10px;
 }
-.ourstory {
-        margin-right: -10px;
+.pages a:visited {
+        text-decoration: none;
+        color: #323232;
 }
 .motto {
         margin-top: 25px;
@@ -121,11 +106,12 @@ h1 {
 }
 .free {
         font-family: Lora;
-        font-size: 25px;
+        font-size: 22px;
         color: #323232;
         float: right;
-        margin-top: 100px;
+        margin-top: 110px;
         text-align: center;
+        margin-right: 28px;
 }
 .signup-btn {
         display: block;
@@ -156,36 +142,39 @@ hr {
         height: 300px;
 }
 .feature-triple {
-        width: 960px;
         font-family: Lora;
+        text-align: center;
 }
 .feature-triple img {
         display: block;
         margin: 0 auto;
         height: 90;
         padding-top: 20px;
-        margin-left: 79px;
 }
 .feature-triple h2 {
-        margin: 20px auto 0;
         color: #2ecc71;
-        margin-top: -10px
+        font-weight: 300;
+        margin: 0px 0 10px;
+        font-size: 26px;
+        position: relative;
+        display: inline-block;
+}
+.feature-triple h2.emphasis-heading {
+        color: #16a085;
 }
 .feature-triple p {
         color: #A1A1A1; 
         line-height: 26px;
-        max-width: 200px;
-        margin-left: 50px;
+        max-width: 180px;
+        margin: 10px 70px 0 70px;
 }
 .feature-triple-left {
         float: left;
         width: 320px;
-        text-align: center;
 }
 .feature-triple-right {
         float: right;
         width: 320px;
-        text-align: center;
 }
 .chance {
         font-family: Lora;
@@ -203,16 +192,15 @@ hr {
         width: 480px;
         display: block;
         margin: 0 auto;
+        text-align: center;
 }
 .icon-feature-left {
         float: left;
         width: 120px;
-        text-align: center;
 }
 .icon-feature-right {
         float: right;
         width: 120px;
-        text-align: center;
 }
 .footer {
         background-color: #eee;
@@ -223,10 +211,6 @@ hr {
         font-size: 12px;
         position: absolute;
         right: 0;
-        text-align: center;
-        vertical-align: middle 
-}
-.footer p {
         text-align: center;
         vertical-align: middle 
 }

@@ -62,9 +62,9 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 					}
 				}
 				if (flashClass != "") {
-	    			$("." + flashClass + "-" + messageName).css("background-color", "#19A755");
+	    			$("." + flashClass + "-" + messageName).css("background-color", "#fbfbfb");
 	    			$("." + flashClass + "-" + messageName).animate({
-	    				backgroundColor: "#FFF"
+	    				backgroundColor: "#323232"
 	    			}, 1000)
 
 				}
