@@ -14,13 +14,13 @@ img {
 	display: none;
 }
 .admin-bar {
-	color: #fff;s
+	color: #323232;s
 	font-size: 13px;
 	padding: 20px 0 0 0;
 	text-align: right;
 }
 .admin-bar a {
-	color: #fff;
+	color: #323232;
 }
 .action-message {
 	background-color: #222;
@@ -60,7 +60,7 @@ img {
 	text-decoration: none;
 }
 .card-wrap {
-	background-color: #fff;
+	background-color: #f1f1f1;
 	border-radius: 10px;
 	margin-bottom: 20px;
 	padding: 30px;
@@ -146,7 +146,7 @@ img {
 }
 .signup-block-wrap h3,
 .signup-block-wrap a {
-	color: #f9f9f9;
+	color: #323232;
 }
 .form-section-title {
 	border-top: 1px solid #B6E7AA;
