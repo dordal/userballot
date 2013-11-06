@@ -21,6 +21,7 @@ img {
 }
 .admin-bar a {
 	color: #323232;
+	text-decoration: none;
 }
 .action-message {
 	background-color: #222;
