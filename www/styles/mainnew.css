@@ -75,6 +75,9 @@ img {
         text-decoration: none;
         color: #323232;
 }
+.pages a:hover {
+        color: red;
+}
 .motto {
         margin-top: 25px;
         padding-bottom: 15px;
