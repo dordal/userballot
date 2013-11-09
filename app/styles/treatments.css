@@ -65,7 +65,7 @@ img {
 	background-color: #f1f1f1;
 	border-radius: 10px;
 	margin-bottom: 20px;
-	padding: 30px;
+	padding: 14px 30px 30px 30px;
 }
 .card-wrap p {
 	line-height: 30px;
@@ -100,7 +100,7 @@ img {
 	/*background-color: #ecf0f1;*/
 	border: 1px solid #ecf0f1;
 	border-radius: 5px;
-	margin-top: 13.5px;
+	margin-top: 9.5px;
 	overflow: hidden;
 	padding: 10px 0px 10px 0px;
 }
