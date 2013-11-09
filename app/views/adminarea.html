@@ -70,7 +70,6 @@
 									{{message.text}}
 								</div>
 								<br class="clear" />
-								<button disabled class="newbutton" id="update-question">Update</button>
 								<div class="editMessage left" ng-show="message.editing">
 									<textarea class="topcoat-textarea" name="text" rows="3" ng-model="message.text" cols="60" update-model-on-blur>{{message.text}}</textarea><br><br>
 									<button class="newbutton" id="update-question" ng-click="updateMessage($index)">Update</button>
