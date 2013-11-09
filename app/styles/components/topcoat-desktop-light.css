@@ -596,7 +596,9 @@
   border: 1px solid #a5a8a8;
   border-radius: 4px;
 }
-
+.topcoat-button--quiet {
+  color: #323232;
+}
 .topcoat-button:hover,
 .topcoat-button--quiet:hover,
 .topcoat-button--large:hover,
