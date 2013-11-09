@@ -111,7 +111,7 @@ img {
 	/*background-color: #F3F6F6;*/
 	border-radius: 4px;
 	/*margin-bottom: 10px;*/
-	padding: 20px 10px 16px 10px;
+	padding: 20px 10px 0px 10px;
 	width: 94.6875%;
 	word-wrap: break-word;
 	word-spacing: normal;
@@ -167,6 +167,7 @@ img {
 .newbutton:disabled {
 	opacity: 0.3;
 	cursor: auto;
+	margin-left: -10px;
 }
 .newbutton:disabled:hover {
 	background-color: #2ecc71;
@@ -181,7 +182,6 @@ img {
 	margin: 0px 32.58%;
 }
 .editMessage {
-	margin-top: -14px;
 	width: 100%;
 }
 /*End new selectors*/

@@ -204,7 +204,7 @@
 .topcoat-button--large--cta:focus,
 .topcoat-button-bar__button:focus,
 .topcoat-button-bar__button--large:focus {
-  border: 1px solid #0940fd;
+  border: 1px solid #a1a1a1;
   box-shadow: 0 0 0 2px #6fb5f1;
   outline: 0;
 }
@@ -618,7 +618,7 @@
 .topcoat-button--large--quiet:focus,
 .topcoat-button--cta:focus,
 .topcoat-button--large--cta:focus {
-  border: 1px solid #0940fd;
+  border: 1px solid #a1a1a1;
   box-shadow: 0 0 0 2px #6fb5f1;
   outline: 0;
 }
