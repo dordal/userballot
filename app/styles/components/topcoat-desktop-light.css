@@ -170,10 +170,10 @@
   line-height: 1.313rem;
   letter-spacing: 0;
   color: #454545;
-  text-shadow: 0 1px #fff;
+  text-shadow: none;
   vertical-align: top;
   background-color: #e5e9e8;
-  box-shadow: inset 0 1px #fff;
+  box-shadow: none;
   border: 1px solid #a5a8a8;
   border-radius: 4px;
 }
@@ -184,7 +184,7 @@
 .topcoat-button--large--quiet:hover,
 .topcoat-button-bar__button:hover,
 .topcoat-button-bar__button--large:hover {
-  background-color: #edf1f1;
+  background-color: #27db73;
 }
 
 .topcoat-button:active,
@@ -529,7 +529,7 @@
   color: inherit;
   background: transparent;
   border: none;
-  cursor: default;
+  cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -588,11 +588,11 @@
   font-size: 12px;
   line-height: 1.313rem;
   letter-spacing: 0;
-  color: #454545;
-  text-shadow: 0 1px #fff;
+  color: #fff;
+  text-shadow: none;
   vertical-align: top;
-  background-color: #e5e9e8;
-  box-shadow: inset 0 1px #fff;
+  background-color: #2ecc71;
+  box-shadow: none;
   border: 1px solid #a5a8a8;
   border-radius: 4px;
 }
@@ -648,9 +648,9 @@
 
 .topcoat-button--quiet:hover,
 .topcoat-button--large--quiet:hover {
-  text-shadow: 0 1px #fff;
+  text-shadow: none;
   border: 1px solid #a5a8a8;
-  box-shadow: inset 0 1px #fff;
+  box-shadow: none;
 }
 
 .topcoat-button--quiet:active,
@@ -684,8 +684,8 @@
 .topcoat-button--large,
 .topcoat-button--large--quiet {
   font-size: 0.875rem;
-  font-weight: 600;
-  line-height: 1.688rem;
+  /*font-weight: normal;
+  line-height: normal;*/
   padding: 0 0.875rem;
 }
 
@@ -2374,24 +2374,26 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .topcoat-textarea,
 .topcoat-textarea--large {
-  padding: 1rem;
-  font-size: 1rem;
-  font-weight: 400;
+  padding: 16px 10px;
+  font-size: 15px;
   border-radius: 4px;
   line-height: 1.313rem;
-  border: 1px solid #a5a8a8;
-  background-color: #d3d7d7;
-  box-shadow: inset 0 1px rgba(0,0,0,0.12);
-  color: #454545;
+  border: 1px solid #a1a1a1;
+  background-color: #fff;
+  box-shadow: none;
+  color: #323232;
   letter-spacing: 0;
+  text-align: center;
+  font-family: Helvetica;
+  width: 98.125%;
 }
 
 .topcoat-textarea:focus,
 .topcoat-textarea--large:focus {
-  background-color: #edf1f1;
-  color: #000;
-  border: 1px solid #0940fd;
-  box-shadow: 0 0 0 2px #6fb5f1;
+  background-color: #fff;
+  color: #323232;
+  border: 1px solid #a1a1a1;
+  box-shadow: none;
 }
 
 .topcoat-textarea:disabled::-webkit-input-placeholder {

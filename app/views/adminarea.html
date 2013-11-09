@@ -11,7 +11,7 @@
 					</div>
 					<!-- logo -->
 					<div class="thirteen columns omega">
-						<a href="http://app.userballot.com/"><img class="logo" src="img/userBallotLogoFullWhite.png" alt="" width="120"></a>
+						<a href="http://app.userballot.com/"><img class="logo" src="img/logo.png" alt="" width="120"></a>
 					</div>
 				</div>
 			</div>
@@ -20,7 +20,7 @@
 				<div class="row">
 					<div class="three columns alpha">
 		              <!-- <a class="main-nav-item" href="#">Dashboard</a> -->
-		              <a class="main-nav-item" href="#" id="helpBlockShow">How it works</a>
+		              <a class="main-nav-item" href="#" id="helpBlockShow">How It Works</a>
 					</div>
 					<div class="twelve columns omega">
 						<div id="helpBlock" class="card-wrap hide">
@@ -45,16 +45,15 @@
 
 						</div>
 						<div class="card-wrap">
-							<h2 class="emphasis-heading">Add a new question</h2>
+							<h2 class="emphasis-heading">Add a new question.</h2>
 							<form ng-submit="submit()" ng-controller="AdminAreaCtrl" name="questionSubmitForm">
 							<textarea class="topcoat-textarea ask-new-question-input" ng-model="question" name="text" rows="2" cols="" placeholder="Keep it simple and ask yes or no questions. (140 characters max)" required></textarea>
-							<br><br>
-							<button class="topcoat-button--large--cta" id="save-question" ng-disabled="questionSubmitForm.text.$invalid">Save</button>
+							<button class="newbutton" id="save-question" ng-disabled="questionSubmitForm.text.$invalid">Save</button>
 							</form>
 
 						</div>
 						<div class="card-wrap">
-							<h2 class="emphasis-heading">Current questions</h2>
+							<h2 class="emphasis-heading">Current Questions</h2>
 							<!-- <a href="#">active</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">draft</a> -->
 
 							<div class="line-item" ng-repeat="message in site.messages">
@@ -63,7 +62,7 @@
 									<button class="topcoat-button--quiet" ng-click="selectActive($index)" ng:class="{true:'active', false:''}[message.active=='1']">Active</button>
 									<button class="topcoat-button--quiet" ng-click="selectDraft($index)" ng:class="{true:'active', false:''}[message.active=='0']">Draft</button>
 									<button class="topcoat-button--quiet" ng-click="editMessage($index)">Edit</button>
-									<button class="topcoat-button--quiet" ng-click="removeMessage($index)">Delete</button>
+									<button class="topcoat-button--quiet delete" ng-click="removeMessage($index)">Delete</button>
 
 								</div>
 								<br class="clear" />
@@ -71,9 +70,10 @@
 									{{message.text}}
 								</div>
 								<br class="clear" />
+								<button disabled class="newbutton" id="update-question">Update</button>
 								<div class="editMessage left" ng-show="message.editing">
 									<textarea class="topcoat-textarea" name="text" rows="3" ng-model="message.text" cols="60" update-model-on-blur>{{message.text}}</textarea><br><br>
-									<button class="topcoat-button--large--cta" id="update-question" ng-click="updateMessage($index)">Save</button>
+									<button class="newbutton" id="update-question" ng-click="updateMessage($index)">Update</button>
 								</div>
 								<!-- results pills -->
 								<br class="clear" />
