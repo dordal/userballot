@@ -15,31 +15,30 @@ img {
         display: none;
 }
 .header {
-        height: 24px;
+        height: 26px;
 }
 .signin-bar {
-        margin-left: 855px;
+        margin-left: 87.86%;
         text-align: right;
-        padding-top: 1px;
-        height: 23px;
+        padding-top: 2.5px;
 }
 .signin-bar a {
         color: #a1a1a1;
         cursor: pointer;
-        font-size: 13px;
         text-decoration: none;
+        font-family: Helvetica-Light;
 }
 .signup-bar {
         border: none; 
         border-radius: 0 0 8px 8px; 
-        padding: 1px 5px 5px 5px; 
+        padding: 2.5px 5px 5px 5px; 
         background-color: #2ecc71;
 }
 .signup-bar a {
         color: #fff; 
         text-decoration: none;
-        font-size: 13px;
         cursor: pointer; 
+        font-family: Helvetica-Light;
 }
 .signup-bar a:visited {
         color: #fff;
@@ -59,21 +58,20 @@ img {
         width: 180px;
 }
 .pages {
-        margin-top: 16px;
+        margin: 16px auto 0px;
 }
 .pages a {
         position: relative;
         text-decoration: none;
-        color: #323232;
-        font-family: Neou-Thin;
-        font-size: 14px;
+        color: #a1a1a1;
+        font-family: Helvetica-Light;
         margin-left: 30px;
         letter-spacing: 1px;
         margin-right: -10px;
 }
 .pages a:visited {
         text-decoration: none;
-        color: #323232;
+        color: #a1a1a1;
 }
 .pages a:hover {
         color: red;
@@ -84,52 +82,46 @@ img {
         text-align: center;
 }
 h1 {
-        margin: 0;
-        padding: 0;
+        margin-bottom: -12px;
         color: #2ecc71;
-        font-weight: 200;
-        font-size: 36px;
-        font-family: Lora;
+        font-weight: 500;
+        font-size: 26px;
+        font-family: Helvetica;
 }
-#pulse {
+.motto p {
         color: #323232;
-        margin-top: -5px;
+}
+.weight {
+        font-weight: 500;
 }
 .masthead {
         background-color: #f1f1f1;
         overflow: hidden;
-        padding: 0 0 50px;
 }
 .demo {
-        float: left;
-        text-align: center;
-        padding-top: 20px;
-        margin-bottom: -20px;
-        margin-left: -60px;
+        max-width: 350px;
 }
 .free {
-        font-family: Lora;
-        font-size: 22px;
+        font-family: Helvetica;
+        font-size: 20px;
         color: #323232;
-        float: right;
-        margin-top: 110px;
+        margin-top: 50px;
         text-align: center;
-        margin-right: 28px;
 }
 .signup-btn {
         display: block;
         cursor: pointer; 
         border: none;
-        margin: 20px 130px 0 125px;
+        margin: 20px auto;
         padding: 10px 30px; 
         color: #fff; 
         font-weight: 200; 
-        font-size: 20px; 
+        font-size: 16px; 
         background-color: #2ecc71; 
         text-align: center;
         text-decoration: none;
-        float: right;
         border-radius: 8px;
+        font-family: Helvetica-Light;
 
 }
 .signup-btn:hover {
@@ -145,7 +137,7 @@ hr {
         height: 300px;
 }
 .feature-triple {
-        font-family: Lora;
+        font-family: Helvetica;
         text-align: center;
 }
 .feature-triple img {
@@ -156,17 +148,16 @@ hr {
 }
 .feature-triple h2 {
         color: #2ecc71;
-        font-weight: 300;
+        font-weight: 500;
         margin: 0px 0 10px;
         font-size: 26px;
         position: relative;
         display: inline-block;
-}
-.feature-triple h2.emphasis-heading {
-        color: #16a085;
+        line-height: 10px;
 }
 .feature-triple p {
-        color: #A1A1A1; 
+        font-family: Helvetica-Light;
+        color: #a1a1a1; 
         line-height: 26px;
         max-width: 180px;
         margin: 10px 70px 0 70px;
@@ -180,12 +171,12 @@ hr {
         width: 320px;
 }
 .chance {
-        font-family: Lora;
-        font-size: 25px;
+        font-family: Helvetica;
+        font-size: 26px;
         color: #323232;
         text-align: center;
-        height: 100px;
-        padding-top: 30px
+        padding-top: 0px;
+        line-height: 0px;
 }
 .icon-feature {
         height: 100px;
@@ -223,4 +214,33 @@ hr {
 }
 .topcoat-button--quiet.active {
         color: #16a085;
+}
+.fresh-text-input {
+        display: inline-block;
+        min-height: 35px;
+        margin: 6px 24.02%%;
+        padding: 6px 9px;
+        font-size: 16px;
+        line-height: 28px;
+        color: #a1a1a1;
+        vertical-align: middle;
+        background-color: #FFF;
+        border: 1px solid #2ecc71;
+        text-align: center;
+        font-family: Helvetica-Light;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+        -webkit-transition: border linear,box-shadow linear;
+        -webkit-transition-delay: 0.2s,0.2s;
+        -moz-transition: border linear 0.2s,box-shadow linear 0.2s;
+        -o-transition: border linear 0.2s,box-shadow linear 0.2s;
+        transition: border linear 0.2s,box-shadow linear 0.2s;
+}
+.public-form-error-message {
+        color: #000;
+        padding-top: 10px;
+}
+.test {
+        max-height: 293px
 }

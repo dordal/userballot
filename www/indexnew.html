@@ -38,19 +38,17 @@
 <body>
     <div class="container">
         <div class="header">
-            <div class="signin-bar left"><a href="http://app.userballot.com/#/login">Sign In</a></div>
-            <div class="signup-bar right"><a href="http://app.userballot.com/#/signup">Sign Up</a></div> 
+            <div class="signin-bar left"><a href="http://app.userballot.com/#/login">sign in</a></div>
+            <div class="signup-bar right"><a href="http://app.userballot.com/#/signup">sign up</a></div> 
         </div>
         <div class="headerlogo">
             <a href="http://userballot.com/">
             <img class="logo left" src="img/logo.png" alt=""></a>
         </div>
         <div class="pages">
-            <a href="http://userballot.com/ourproduct/">Our Product</a>
-            <a href="file:///Users/alexanderross/Documents/ourstory.html">Our Story</a>
-            <a href="http://userballot.com/pricing/">Pricing</a>
-            <a href="http://userballot.com/support/">Support</a>
-            <a href="http://userballot.com/contact/">Contact</a>
+            <a href="http://userballot.com/ourproduct/">our product</a>
+            <a href="file:///Users/alexanderross/Documents/ourstory.html">our story</a>
+            <a href="http://userballot.com/support/">support</a>
         </div>
     </div>  
     <div class="row"></div>    
@@ -58,7 +56,7 @@
         <div class="twelve columns alpha">
             <div class="motto">
                 <h1>Make better decisions.</h1>
-                <p id="pulse">Find <strong>the pulse of your users</strong> through simple yes and no questions.</p>
+                <p>Find the <span class="weight">pulse</span> of your users through simple yes and no questions.</p>
             </div>
         </div>      
         <!-- masthead -->
@@ -66,12 +64,27 @@
             <div class="container content-wrap">
                 <div class="sixteen columns">
                     <div class="row">
-                        <div class="eight columns alpha">
+                        <div class="eight columns alpha omega test">
                             <img class="demo" src="img/screens.png" alt=""/>
                         </div>
-                        <div class="eight columns omega">
-                            <p class="free">Signing up is <strong>free</strong> and always will be!</p>
-                            <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started!</a>
+                        <div class="eight columns alpha omega">
+                            <p class="free">Signing up is <span class="weight">free</span> and always will be!</p>
+                            <!--<a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started!</a>-->
+                            <form name="signup" ng-submit="register()" class="signup-form css-form" novalidate>
+                                <!-- general error message -->
+                                <!--<div class="public-form-error-message">
+                                {{error}}
+                                </div>-->
+                                <!-- email address -->
+                                <input type="text" class="fresh-text-input signup-input-wide"  ng-model="email" name="uEmail" required placeholder="Email Address" /><br/>
+                                <!-- error message -->
+                                <!--<div ng-show="emailError" class="public-form-error-message">
+                                {{emailError}}
+                                </div>-->
+                                <!-- password -->
+                                <input type="password" class="fresh-text-input signup-input-wide"  ng-model="password" required placeholder="Password" /><br/>
+                                <input type="submit" class="signup-btn" ng-disabled="signup.$invalid" name="submit" value="Sign Up" />
+                            </form>     
                         </div>
                     </div>
                 </div>
@@ -129,5 +142,31 @@
             <p>&copy;UserBallot.com</p>
         </div>
     </div>
-</body>
+        
+        <script src="scripts/jquery-2.0.3.min.js"></script>
+        <script src="scripts/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="scripts/vendor/angular.js"></script>
+        <script src="//cdn.firebase.com/v0/firebase.js"></script>
+        <script src="//cdn.firebase.com/v0/firebase-simple-login.js"></script>
+        <script src="//cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js"></script>
+
+        <!-- build:js scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/services/auth.js"></script>
+        <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/controllers/loading.js"></script>
+        <script src="scripts/controllers/signup.js"></script>
+        <script src="scripts/controllers/adminarea.js"></script>
+        <script src="scripts/ui-interactions.js"></script>
+        <!-- endbuild -->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+
+    </body>
 </html>
