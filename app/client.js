@@ -64,7 +64,8 @@ $ub.displayMessage = function() {
 	var is_muted = docCookies.hasItem("mute");
 	if ( !is_muted ) { 
 
-		var html = "<div id='ub-container' style='z-index: 1000; padding: 30px 10px 35px; height: 50px; position: fixed; bottom: 0; left: 0; right: 0; background-color: #ffffff; color: #16a085; font-size: 18px; border-top: 10px solid #D8E0E5;'>"+
+		var html = ""+
+			"<div id='ub-container' style='z-index: 1000; padding: 30px 10px 35px; height: 50px; position: fixed; bottom: 0; left: 0; right: 0; background-color: #ffffff; color: #16a085; font-size: 18px; border-top: 10px solid #D8E0E5;'>"+
 			"	<div style='text-align: left; position: relative; max-width: 980px; margin: 0 auto;'>"+
 			"		<img src='http://app.userballot.com/img/question-flag.png' height='22' width='19' style='height: 22px; width: 19px; position: absolute; top: 1px; left: 0;' />"+
 			"		<span id='message-text' style='text-align: left;padding: 0 150px 0 50px; word-break: break-word; position: absolute; left: 0; right: 45px;'>" + $ub.selectedMessage.text + "</span>"+
@@ -73,6 +74,8 @@ $ub.displayMessage = function() {
 			"			<a style='text-align: center; background-color: #1abc9c; color: #ffffff; text-decoration: none; padding: 3px 10px; width: 60px; display: inline-block;' href='' id='ub-no'>No</a>"+
 			"		</span>"+
 			"	</div>"+
+			"   <div style='position: absolute; top: 98px; left: 10px; font-size:10px'><a href='' id='ub-mute'>Don't show this again</a></div>"+
+			"   <div style='position: absolute; top: 98px; right: 10px; font-size:10px'>Powered by <a href='http://www.userballot.com'>userballot.com</a></div>"+
 			"</div>";
 
 
@@ -88,7 +91,8 @@ $ub.displayMessage = function() {
 
 			document.getElementById("ub-yes").onclick = function(e) {
 				e.preventDefault();
-				$ub.UpdateCount("yes");
+				$ub.UpdateCount("yesVotes");
+				docCookies.setItem($ub.selectedMessage.id,"yes");
 
 				document.getElementById("ub-yes").style.display="none";
 				document.getElementById("ub-no").style.display="none";
@@ -100,7 +104,8 @@ $ub.displayMessage = function() {
 			}
 			document.getElementById("ub-no").onclick = function(e) {
 				e.preventDefault();
-				$ub.UpdateCount("no");
+				$ub.UpdateCount("noVotes");
+				docCookies.setItem($ub.selectedMessage.id,"no");
 				
 				document.getElementById("ub-yes").style.display="none";
 				document.getElementById("ub-no").style.display="none";
@@ -111,6 +116,20 @@ $ub.displayMessage = function() {
 				}, 500);
 			}
 
+			document.getElementById("ub-mute").onclick = function(e) {
+				e.preventDefault();
+				$ub.UpdateCount("mute");
+				$ub.setMuteCookie();
+
+				document.getElementById("ub-yes").style.display="none";
+				document.getElementById("ub-no").style.display="none";
+				document.getElementById("message-text").innerHTML = "Okay...";
+
+				setTimeout(function() {
+					$ub.closeMessage();
+				}, 500);
+			}
+			$ub.UpdateCount("views");
 		}, 1500)
 	}
 }
@@ -179,10 +198,6 @@ var docCookies = {
 };
 
 $ub.UpdateCount = function(type) {
-
-	var voteType = type + "Votes"; 
-	
-	docCookies.setItem($ub.selectedMessage.id,type);
 	
 	reqRefresh = new XMLHttpRequest();
 	reqRefresh.open("GET", "https://userballotdb.firebaseio.com/sites/" + $ub.siteId + "/messages/" + $ub.selectedMessage.id + "/.json");
@@ -195,17 +210,22 @@ $ub.UpdateCount = function(type) {
 			$ub.selectedMessage = response;
 			$ub.selectedMessage.id = tempID;
 	
-			$ub.selectedMessage[voteType] = $ub.selectedMessage[voteType] + 1;
+			if (isNaN($ub.selectedMessage[type])) {
+				$ub.selectedMessage[type] = 0;
+			}
+
+			$ub.selectedMessage[type] = $ub.selectedMessage[type] + 1;
+			
 			req = new XMLHttpRequest();
 			req.open("PATCH", "https://userballotdb.firebaseio.com/sites/" + $ub.siteId + "/messages/" + $ub.selectedMessage.id + "/.json");
 
 			req.onreadystatechange = function() {
 				if (req.readyState==4 && req.status==200) {
 				}
-			}
+			};
 
 			req.send(JSON.stringify($ub.selectedMessage));
 		}
-	}
+	};
 	reqRefresh.send();
-}
+};
