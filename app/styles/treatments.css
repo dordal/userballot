@@ -40,7 +40,7 @@ img {
 	padding: 0 40px;
 }
 .content-wrap {
-	height: 900px;
+	padding-bottom: 200px;
 }
 .main-nav-item {
 	background-color: #2ecc71;
@@ -62,7 +62,8 @@ img {
 	text-decoration: none;
 }
 .card-wrap {
-	background-color: #f1f1f1;
+	background-color: #f9f9f9;
+	border: 5px solid #FFF;
 	border-radius: 10px;
 	margin-bottom: 20px;
 	padding: 14px 30px 30px 30px;
@@ -175,6 +176,7 @@ img {
 	margin: 0px 32.58%;
 }
 .editMessage {
+	margin-bottom: 30px;
 	width: 100%;
 }
 /*End new selectors*/
