@@ -72,6 +72,8 @@ function createMessage(messageText) {
     message['text'] = messageText;
     message['noVotes'] = 0;
     message['yesVotes'] = 0;
+    message['views'] = 0;
+    message['mute'] = 0;
     message['position'] = 0;
     message['active'] = 0;
     return message;

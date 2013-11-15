@@ -60,6 +60,10 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 						flashClass = "no";
 						messageName = message;
 					}
+					if (newMessages[message].mute != oldMessage[message].mute) {
+						flashClass = "mute";
+						messageName = message;
+					}
 				}
 				if (flashClass != "") {
 	    			$("." + flashClass + "-" + messageName).css("background-color", "#fbfbfb");
@@ -85,7 +89,7 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 	    		$scope.site.messages = new Object();
 	    	}
 			$scope.site.messages[sitesRef.push().name()] = {
-	            text: $scope.question, yesVotes: 0, noVotes: 0, position: 0, active: 0
+	            text: $scope.question, yesVotes: 0, noVotes: 0, position: 0, active: 0, views: 0, mute: 0
 	        };
 	    } else {
 			this.error = 'Dude you forgot to ask a question...';
@@ -120,6 +124,15 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 	$scope.editMessage = function( index ){
 		var key = keyAt($scope.site.messages, index);
 		$scope.site.messages[key].editing = true;
+	}
+
+	// reset all the count fields to 0 
+	$scope.resetMessageCount = function( index ) {
+		var key = keyAt($scope.site.messages, index);
+		$scope.site.messages[key].mute = 0;
+		$scope.site.messages[key].views = 0;
+		$scope.site.messages[key].yesVotes = 0;
+		$scope.site.messages[key].noVotes = 0;
 	}
 	// update the message
 	$scope.updateMessage = function( index ){

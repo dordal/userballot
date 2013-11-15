@@ -78,6 +78,14 @@
 								<!-- results pills -->
 								<br class="clear" />
 								<div class="line-item-results right">
+									<button class="topcoat-button--quiet" ng-click="resetMessageCount($index)">Reset</button>
+								</div>
+								<br class="clear" />
+								<div class="line-item-results left">
+									<span class="result-label">Viewed</span><span class="pill no views-{{message.id}}">{{message.views + 0}}</span>
+									<span class="result-label">Muted</span><span class="pill no mute-{{message.id}}">{{message.mute + 0}}</span>
+								</div>
+								<div class="line-item-results right">
 									<span class="result-label">Yes</span><span class="pill yes yes-{{message.id}}">{{message.yesVotes}}</span>
 									<span class="result-label">No</span><span class="pill no no-{{message.id}}">{{message.noVotes}}</span>
 								</div>
