@@ -60,7 +60,7 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 						flashClass = "no";
 						messageName = message;
 					}
-					if (newMessages[message].mute != oldMessage[message].mute) {
+					if (newMessages[message].mute != oldMessages[message].mute) {
 						flashClass = "mute";
 						messageName = message;
 					}
@@ -89,7 +89,7 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 	    		$scope.site.messages = new Object();
 	    	}
 			$scope.site.messages[sitesRef.push().name()] = {
-	            text: $scope.question, yesVotes: 0, noVotes: 0, position: 0, active: 0, views: 0, mute: 0
+	            text: $scope.question, yesVotes: 0, noVotes: 0, position: 0, active: 0, views: 0, mute: 0, updated: new Date()
 	        };
 	    } else {
 			this.error = 'Dude you forgot to ask a question...';
@@ -112,12 +112,16 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 	// switch the active state to 0
 	$scope.selectDraft = function( index ){
 		var key = keyAt($scope.site.messages, index);
+		var old = $scope.site.messages[key].active;
     	$scope.site.messages[key].active = 0;
+    	$scope.updateTimestamps(index, 'draft', (old != 0));
 	}
 	// switch the active state to 1
 	$scope.selectActive = function( index ){
 		var key = keyAt($scope.site.messages, index);
+		var old = $scope.site.messages[key].active;
     	$scope.site.messages[key].active = 1;
+    	$scope.updateTimestamps(index, 'active', true, (old != 1));
 	}
 
 	// open the message for editing
@@ -129,17 +133,51 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 	// reset all the count fields to 0 
 	$scope.resetMessageCount = function( index ) {
 		var key = keyAt($scope.site.messages, index);
+		var old = $scope.site.messages[key].active;
 		$scope.site.messages[key].mute = 0;
 		$scope.site.messages[key].views = 0;
 		$scope.site.messages[key].yesVotes = 0;
 		$scope.site.messages[key].noVotes = 0;
+		$scope.updateTimestamps(index, 'reset', (old == 1));
 	}
 	// update the message
 	$scope.updateMessage = function( index ){
 		var key = keyAt($scope.site.messages, index);
 		$scope.site.messages[key].editing = false;
+		$scope.updateTimestamps(index, 'update');
 	}
 
+	$scope.updateTimestamps = function( index, action, isChange) {
+		console.log("yup");
+		var key = keyAt($scope.site.messages, index);
+		var ts = new Date();
+		switch (action) {
+        case 'active':
+          if (isChange) {
+	        $scope.site.messages[key].startdate = ts;
+	        $scope.site.messages[key].enddate = null;	
+          }      
+          break;
+        case 'draft':
+          if (isChange) {
+          	$scope.site.messages[key].enddate = ts;	
+          }
+          break;
+        case 'reset':
+          if (isChange) {
+            $scope.site.messages[key].startdate = ts;	
+          }
+          else {
+            $scope.site.messages[key].startdate = null;	
+          }
+          $scope.site.messages[key].enddate = null;
+          break;
+        case 'update':
+          break;
+        }
+
+        $scope.site.messages[key].updated = ts;
+	}
 
 });
 

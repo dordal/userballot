@@ -90,7 +90,7 @@
 									<span class="result-label">No</span><span class="pill no no-{{message.id}}">{{message.noVotes}}</span>
 								</div>
 								<br class="clear" />
-								<div class="timestamp"><strong>Start:</strong> November 4th, 2013&nbsp;&nbsp;&nbsp;&nbsp;<strong>End:</strong> November 7th, 2013&nbsp;&nbsp;&nbsp;&nbsp;<strong>Last Update:</strong> November 10th, 2013</div>
+								<div class="timestamp"><strong>Start:</strong> {{message.startdate | date:'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;<strong>End:</strong> {{message.enddate | date: 'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;<strong>Last Update:</strong> {{message.updated | date:'medium'}}</div>
 							</div>
 
 						</div>
