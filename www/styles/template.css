@@ -1,0 +1,140 @@
+body {
+        background: url('img/texture.png');
+        background-size: 350px;
+}
+img {
+        border: 0;
+}
+.left {
+        float: left;
+        text-align: inherit;
+}
+.right {
+        float: right;
+}
+.hide {
+        display: none;
+}
+.superheader {
+        background-color: #2ecc71;
+        padding-bottom: 20px;
+        box-shadow: 2px 2px 1px #000;
+        width: auto;
+}
+.header {
+        height: 1.625em;
+}
+.signin-bar {
+        margin-left: 86.92%;
+        text-align: right;
+        padding-top: 2.5px;
+}
+.signin-bar a {
+        color: #ffffff;
+        cursor: pointer;
+        text-decoration: none;
+        font-family: Helvetica-Light;
+}
+.signin-bar a:hover {
+        color: #75ffaf;  
+}
+.signup-bar a {
+        float: left;
+        text-align: center;
+        border: none;
+        border-radius: 0 0 8px 8px;
+        padding: 2.5px 5px 5px 5px;
+        height: 18px;
+        width: 60px;
+        background-color: #fff;
+        color: #303140; 
+        text-decoration: none;
+        cursor: pointer; 
+        font-family: Helvetica;
+}
+.signup-bar a:visited {
+        color: #303140;
+        text-decoration: none
+}
+.signup-bar a:hover {
+        background-color: #75ffaf;
+}
+.headerlogo {
+        margin-left: -30px;
+}
+.logo {
+        width: 180px;
+        margin-bottom: 15px;
+        float: left;
+}
+.pages {
+        margin: 0.813em 13.5em 0px;
+        text-align: center;
+}
+.pages a {
+        position: relative;
+        text-decoration: none;
+        color: #ffffff;
+        font-family: Helvetica-Light;
+        letter-spacing: 1px;
+}
+.pages a:visited {
+        text-decoration: none;
+        color: #ffffff;
+}
+.pages a:hover {
+        color: #75ffaf;
+}
+.page-padded {
+        margin-left: 2.813em;
+}
+.page-wrap {
+        overflow: hidden;
+        position: relative;
+}
+.whitespace {
+        height: 113px;
+        text-align: center;
+}
+h1 {
+        margin: 0;
+        padding: 25px 0 0 0;
+        color: #2ecc71;
+        font-weight: 500;
+        font-size: 30px;
+        font-family: Helvetica-Light;
+}
+.whitespace p {
+        color: #303140;
+        font-size: 20px;
+        margin-top: -5px;
+}
+.masthead {
+        background: linear-gradient(#fbfbfb, #eaeaea);
+        height: 700px;
+        box-shadow: 0px 2px 6px #7d7d7d;
+}
+.text {
+        margin: 0 70px 70px 70px;
+        text-indent: 20px;
+        text-align: justify;
+        color: #323232;
+}
+.text p {
+        padding-bottom: 20px;
+}
+.feature-block {
+        height: 300px;
+}
+.footer {
+        background-color: #eee;
+        bottom: 0;
+        color: #999;
+        height: 50px;
+        left: 0;
+        font-size: 12px;
+        right: 0;
+        text-align: center;
+        vertical-align: bottom; 
+        padding-top: 15px;
+}

@@ -1,5 +1,6 @@
 body {
-        background-color: #fbfbfb!important;
+        background: url('img/texture.png');
+        background-size: 350px;
 }
 img {
         border: 0;
@@ -14,38 +15,49 @@ img {
 .hide {
         display: none;
 }
+.superheader {
+        background-color: #2ecc71;
+        padding-bottom: 20px;
+        box-shadow: 2px 2px 1px #000;
+        width: auto;
+}
 .header {
-        height: 26px;
+        height: 1.625em;
 }
 .signin-bar {
-        margin-left: 87.86%;
+        margin-left: 86.92%;
         text-align: right;
         padding-top: 2.5px;
 }
 .signin-bar a {
-        color: #a1a1a1;
+        color: #ffffff;
         cursor: pointer;
         text-decoration: none;
         font-family: Helvetica-Light;
 }
-.signup-bar {
-        border: none; 
-        border-radius: 0 0 8px 8px; 
-        padding: 2.5px 5px 5px 5px; 
-        background-color: #2ecc71;
+.signin-bar a:hover {
+        color: #75ffaf;  
 }
 .signup-bar a {
-        color: #fff; 
+        float: left;
+        text-align: center;
+        border: none;
+        border-radius: 0 0 8px 8px;
+        padding: 2.5px 5px 5px 5px;
+        height: 18px;
+        width: 60px;
+        background-color: #fff;
+        color: #303140; 
         text-decoration: none;
         cursor: pointer; 
-        font-family: Helvetica-Light;
+        font-family: Helvetica;
 }
 .signup-bar a:visited {
-        color: #fff;
+        color: #303140;
         text-decoration: none
 }
-.signup-bar:hover {
-        background-color: #27DB73;
+.signup-bar a:hover {
+        background-color: #75ffaf;
 }
 .headerlogo {
         margin-left: -30px;
@@ -56,28 +68,32 @@ img {
 }
 .logo {
         width: 180px;
+        margin-bottom: 15px;
+        float: left;
 }
 .pages {
-        margin: 16px auto 0px;
+        margin: 0.813em 13.5em 0px;
+        text-align: center;
 }
 .pages a {
         position: relative;
         text-decoration: none;
-        color: #a1a1a1;
+        color: #ffffff;
         font-family: Helvetica-Light;
-        margin-left: 30px;
         letter-spacing: 1px;
-        margin-right: -10px;
 }
 .pages a:visited {
         text-decoration: none;
-        color: #a1a1a1;
+        color: #ffffff;
 }
 .pages a:hover {
-        color: red;
+        color: #75ffaf;
+}
+.page-padded {
+        margin-left: 2.813em;
 }
 .motto {
-        margin-top: 25px;
+        margin-top: 50px;
         padding-bottom: 15px;
         text-align: center;
 }
@@ -85,28 +101,36 @@ h1 {
         margin-bottom: -12px;
         color: #2ecc71;
         font-weight: 500;
-        font-size: 26px;
-        font-family: Helvetica;
+        font-size: 30px;
+        font-family: Helvetica-Light;
 }
 .motto p {
-        color: #323232;
+        color: #303140;
+        font-size: 20px;
+        width: 350px;
+        margin: auto;
+        padding-top: 25px;
 }
 .weight {
         font-weight: 500;
 }
 .masthead {
-        background-color: #f1f1f1;
-        overflow: hidden;
+        background: linear-gradient(#fbfbfb, #eaeaea);
+        height: 500px;
+        margin-top: -180px;
+        box-shadow: 0px 2px 6px #7d7d7d;
 }
 .demo {
         max-width: 350px;
+        padding-top: 180px;
 }
 .free {
         font-family: Helvetica;
         font-size: 20px;
-        color: #323232;
+        color: #303140;
         margin-top: 50px;
         text-align: center;
+        padding-top: 180px;
 }
 .signup-btn {
         display: block;
@@ -114,8 +138,7 @@ h1 {
         border: none;
         margin: 20px auto;
         padding: 10px 30px; 
-        color: #fff; 
-        font-weight: 200; 
+        color: #fff;  
         font-size: 16px; 
         background-color: #2ecc71; 
         text-align: center;
@@ -127,14 +150,9 @@ h1 {
 .signup-btn:hover {
         background-color: #27DB73;
 }
-hr {
-        background-color: red;
-        padding: 0; margin: 0;
-        height: 2px;
-        border: none;
-}
+
 .feature-block {
-        height: 300px;
+        height: 455px;
 }
 .feature-triple {
         font-family: Helvetica;
@@ -143,44 +161,33 @@ hr {
 .feature-triple img {
         display: block;
         margin: 0 auto;
+        margin-top: -5px;
+        margin-bottom: -17px;
         height: 90;
         padding-top: 20px;
 }
-.feature-triple h2 {
-        color: #2ecc71;
-        font-weight: 500;
-        margin: 0px 0 10px;
-        font-size: 26px;
-        position: relative;
-        display: inline-block;
-        line-height: 10px;
+.feature-triple h1 {
+        margin-bottom: 12px;
 }
 .feature-triple p {
         font-family: Helvetica-Light;
         color: #a1a1a1; 
-        line-height: 26px;
-        max-width: 180px;
-        margin: 10px 70px 0 70px;
-}
-.feature-triple-left {
-        float: left;
-        width: 320px;
-}
-.feature-triple-right {
-        float: right;
-        width: 320px;
+        line-height: 25px;
+        margin: 0.5em 2.2em 0 2.2em;
+        word-spacing:-1px;
+        font-size: 20px;
 }
 .chance {
         font-family: Helvetica;
-        font-size: 26px;
-        color: #323232;
+        font-size: 20px;
+        color: #303140;
         text-align: center;
-        padding-top: 0px;
-        line-height: 0px;
+        margin-top: 60px;
 }
 .icon-feature {
-        height: 100px;
+        height: 36px;
         padding-top: 30px;
+        padding-bottom: 30px;
 }
 .icon-feature-four  {
         width: 480px;
@@ -192,21 +199,23 @@ hr {
         float: left;
         width: 120px;
 }
-.icon-feature-right {
-        float: right;
-        width: 120px;
-}
 .footer {
         background-color: #eee;
         bottom: 0;
         color: #999;
-        height: 36px;
+        height: 50px;
         left: 0;
         font-size: 12px;
-        position: absolute;
         right: 0;
         text-align: center;
-        vertical-align: middle 
+        vertical-align: bottom; 
+        padding-top: 15px;
+}
+.test {
+        max-height: 293px
+}
+.bottom {
+        width: auto;
 }
 /* extent topcoat components */
 .topcoat-icon-button--large:hover {
@@ -215,10 +224,11 @@ hr {
 .topcoat-button--quiet.active {
         color: #16a085;
 }
+/*text input*/
 .fresh-text-input {
         display: inline-block;
         min-height: 35px;
-        margin: 6px 24.02%%;
+        margin: 6px 24.02%;
         padding: 6px 9px;
         font-size: 16px;
         line-height: 28px;
@@ -240,7 +250,4 @@ hr {
 .public-form-error-message {
         color: #000;
         padding-top: 10px;
-}
-.test {
-        max-height: 293px
 }
