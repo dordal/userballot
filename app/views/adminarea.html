@@ -47,7 +47,7 @@
 						<div class="card-wrap">
 							<h2 class="emphasis-heading">Add a new question</h2>
 							<form ng-submit="submit()" ng-controller="AdminAreaCtrl" name="questionSubmitForm">
-							<textarea class="topcoat-textarea ask-new-question-input" ng-model="question" name="text" rows="2" cols="" placeholder="Keep it simple and ask yes or no questions. (140 characters max)" required></textarea>
+							<textarea class="topcoat-textarea ask-new-question-input" ng-model="question" name="text" rows="2" cols="" ng-maxlength="140" placeholder="Keep it simple and ask yes or no questions. (140 characters max)" required></textarea>
 							<button class="newbutton" id="save-question" ng-disabled="questionSubmitForm.text.$invalid">Save</button>
 							</form>
 
@@ -75,7 +75,7 @@
 								</div>
 								<br class="clear" />
 								<div class="editMessage left" ng-show="message.editing">
-									<textarea class="topcoat-textarea" name="text" rows="3" ng-model="message.text" cols="60" update-model-on-blur>{{message.text}}</textarea><br><br>
+									<textarea class="topcoat-textarea" name="text" rows="3" ng-model="message.text" cols="60" ng-maxlength="140" update-model-on-blur>{{message.text}}</textarea><br><br>
 									<button class="newbutton" id="update-question" ng-click="updateMessage($index)">Update</button>
 									
 								</div>
