@@ -170,7 +170,6 @@ img {
 .newbutton:disabled {
 	opacity: 0.3;
 	cursor: auto;
-	margin-left: -10px;
 }
 .newbutton:disabled:hover {
 	background-color: #2ecc71;
