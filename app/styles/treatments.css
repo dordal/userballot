@@ -44,7 +44,7 @@ img {
 }
 .main-nav-item {
 	background-color: #2ecc71;
-	border-radius: 5px;
+	border-radius: 2px;
 	color: #fff;
 	display: block;
 	margin-bottom: 10px;
@@ -63,7 +63,7 @@ img {
 }
 .card-wrap {
 	background-color: #f9f9f9;
-	border: 5px solid #e1e1e1;
+	border: 1px solid #e1e1e1;
 	border-radius: 10px;
 	margin-bottom: 20px;
 	padding: 14px 30px 30px 30px;
@@ -92,6 +92,7 @@ img {
 	display: block;
 	margin: 24px 0 24px;
 	height: 97px;
+	text-align: left;
 }
 .small-instruction-text {
 	color: #333;
@@ -113,14 +114,15 @@ img {
 	cursor: pointer;
 }
 .question-wrap {
+	background-color: #fff;
 	border-radius: 4px;
-	padding: 20px 10px 0px 10px;
-	width: 94.6875%;
+	display: block;
+	margin-top: 20px;
+	padding: 5px 10px 0;
 	word-wrap: break-word;
 	word-spacing: normal;
 	font-family: Helvetica-Light;
 	font-size: 15px;
-	text-align: center;
 	border: 1px solid transparent;
 	text-indent: -0.5px;
 	line-height: 1.313rem;
@@ -156,7 +158,7 @@ img {
 .newbutton {
 	margin: 0px;
 	border: none;
-	border-radius: 6px;
+	border-radius: 2px;
 	background-color: #2ecc71;
 	color: #fff;
 	padding: 10px 28px;
@@ -221,7 +223,6 @@ img {
 	background-color: #FFF;
 	border: 1px solid #CCD0D6;
 	border-radius: 4px;
-	text-align: center;
 	font-family: Helvetica-Light;
 	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
@@ -244,10 +245,16 @@ img {
 }
 .signup-btn,
 .login-btn {
+	border: none;
 	font-size: 18px;
 	margin: 40px 0 0;
 	padding: 15px 0;
 	width: 331px;
+}
+.signup-btn:hover,
+.login-btn:hover {
+	background-color: #2ECC71;
+	border: none;
 }
 /* extent topcoat components */
 .topcoat-icon-button--large:hover {
@@ -256,6 +263,5 @@ img {
 .topcoat-button--quiet.active {
 	background-color: #fff;
 	border: 1px solid #CED6D8;
-	color: #2ecc71;
 	font-family: Helvetica-Bold;
 }

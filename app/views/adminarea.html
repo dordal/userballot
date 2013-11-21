@@ -69,7 +69,7 @@
 								</div>
 								<br class="clear" />
 								
-								<div class="question-wrap left" ng-hide="message.editing">
+								<div class="question-wrap" ng-hide="message.editing">
 									{{message.text}}
 								   <br><br><button disabled class="newbutton left hide" id="update-question">Update</button>
 								</div>
@@ -82,15 +82,15 @@
 								<!-- results pills -->
 								<br class="clear" />
 								<div class="line-item-results left">
-									<span class="result-label">Viewed</span><span class="pill no views-{{message.id}}">{{message.views + 0}}</span>
-									<span class="result-label">Muted</span><span class="pill no mute-{{message.id}}">{{message.mute + 0}}</span>
-								</div>
-								<div class="line-item-results right">
 									<span class="result-label">Yes</span><span class="pill yes yes-{{message.id}}">{{message.yesVotes}}</span>
 									<span class="result-label">No</span><span class="pill no no-{{message.id}}">{{message.noVotes}}</span>
 								</div>
+								<div class="line-item-results right">
+									<span class="result-label">Viewed</span><span class="pill no views-{{message.id}}">{{message.views + 0}}</span>
+									<span class="result-label">Muted</span><span class="pill no mute-{{message.id}}">{{message.mute + 0}}</span>
+								</div>
 								<br class="clear" />
-								<div class="timestamp"><strong>Start:</strong> {{message.startdate | date:'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;<strong>End:</strong> {{message.enddate | date: 'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;<strong>Last Update:</strong> {{message.updated | date:'medium'}}</div>
+								<div class="timestamp">Start: {{message.startdate | date:'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;End: {{message.enddate | date: 'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;Last Update: {{message.updated | date:'medium'}}</div>
 							</div>
 
 						</div>
