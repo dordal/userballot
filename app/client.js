@@ -84,8 +84,8 @@ $ub.displayMessage = function() {
 		setTimeout(function() {
 			document.body.appendChild(fragment, document.body);
 			if (window.jQuery) {
-				$("#ub-container").css("display", "none");
-				$("#ub-container").fadeIn();
+				jQuery("#ub-container").css("display", "none");
+				jQuery("#ub-container").fadeIn();
 			} 
 
 			document.getElementById("ub-yes").onclick = function(e) {
@@ -139,7 +139,7 @@ $ub.setMuteCookie = function() {
 
 $ub.closeMessage = function() {
 	if (window.jQuery) {
-		$("#ub-container").slideUp();
+		jQuery("#ub-container").slideUp();
 	} else {
 		var element = document.getElementById("ub-container");
 		document.getElementById("ub-container").style.display="none";

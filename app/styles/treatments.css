@@ -104,6 +104,18 @@ img {
 	margin: 50px 0 0;
 	text-align: center;
 }
+.charcount {
+	color: #999;
+	font-size: 10px;
+	margin: 4px 14px -16px;
+	text-align: right;
+}
+.charcount-error {
+	color: red;
+	font-size: 10px;
+	margin: 4px 14px -16px;
+	text-align: right;
+}
 .line-item {
 	border-top: 1px solid #CED6D8;
 	margin-top: 9.5px;
@@ -172,7 +184,6 @@ img {
 .newbutton:disabled {
 	opacity: 0.3;
 	cursor: auto;
-	margin-left: -10px;
 }
 .newbutton:disabled:hover {
 	background-color: #2ecc71;

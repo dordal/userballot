@@ -47,6 +47,8 @@
 						<div class="card-wrap">
 							<h2 class="emphasis-heading">Add a new question</h2>
 							<form ng-submit="submit()" ng-controller="AdminAreaCtrl" name="questionSubmitForm">
+							<div class="charcount" ng-show="questionSubmitForm.text.$valid">{{question.length}} / 140</div>
+							<div class="charcount-error" ng-show="questionSubmitForm.text.$error.maxlength">Question is too long!</div>
 							<textarea class="topcoat-textarea ask-new-question-input" ng-model="question" name="text" rows="2" cols="" ng-maxlength="140" placeholder="Keep it simple and ask yes or no questions. (140 characters max)" required></textarea>
 							<button class="newbutton" id="save-question" ng-disabled="questionSubmitForm.text.$invalid">Save</button>
 							</form>
