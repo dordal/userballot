@@ -155,13 +155,15 @@ h1 {
         background-color: #eee;
         bottom: 0;
         color: #999;
-        height: 50px;
+        height: auto;
         left: 0;
         font-size: 12px;
         right: 0;
         text-align: center;
         vertical-align: bottom; 
+        position: fixed;
 }
 .footer p {
         padding-top: 18px;
+        padding-bottom: 18px
 }
