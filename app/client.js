@@ -98,7 +98,7 @@ $ub.displayMessage = function( allowmute, frequency ) {
 			document.getElementById("ub-yes").onclick = function(e) {
 				e.preventDefault();
 
-				$ub.UpdateCount("yesVotes");
+				$ub.updateCount("yesVotes");
 				docCookies.setItem($ub.selectedMessage.id,"yes",10 * 365 * 24 * 60 * 60,window.location.host);
 				docCookies.setItem('ub-vote-' + window.location.host,"voted",frequency * 24 * 60 * 60, window.location.host);
 
@@ -115,7 +115,7 @@ $ub.displayMessage = function( allowmute, frequency ) {
 			document.getElementById("ub-no").onclick = function(e) {
 				e.preventDefault();
 
-				$ub.UpdateCount("noVotes");
+				$ub.updateCount("noVotes");
 				docCookies.setItem($ub.selectedMessage.id,"no",10 * 365 * 24 * 60 * 60,window.location.host);
 				docCookies.setItem('ub-vote-' + window.location.host,"voted",frequency * 24 * 60 * 60, window.location.host);
 
