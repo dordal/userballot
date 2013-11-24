@@ -64,7 +64,7 @@ $ub.displayMessage = function( allowmute, frequency ) {
 	// Check to see the last time that we voted
 	var vote_cookie = docCookies.hasItem('ub-vote-' + window.location.host);
 	var is_muted = docCookies.hasItem("mute");
-	if (( !is_muted ) && ( !vote_cookie )) { 
+	if (( !is_muted ) && ( !vote_cookie )) {
 
 		var html = ""+
 			"<div id='ub-container' style='z-index: 1000; padding: 20px 10px 15px; height: 40px; position: fixed; bottom: 0; left: 0; right: 0; background-color: #fbfbfb; color: #323232; font-size: 16px; border-top: 2px solid #D8E0E5;'>"+
@@ -75,12 +75,12 @@ $ub.displayMessage = function( allowmute, frequency ) {
 			"			<a style='text-align: center; background-color: #2ecc71; color: #ffffff; text-decoration: none; padding: 5px 10px; width: 60px; display: inline-block;' href='' id='ub-no'>No</a>"+
 			"		</span>"+
 			"	</div>";
-		if ( allowmute == 1 ) {
+		if ( allowmute !== 0 ) {
 			html += "<div style='position: absolute; bottom: 5px; left: 10px; font-size:10px'> <a href='' id='ub-mute'>Don't show this again</a></div>";
 		} else {
 			html += "<a href='' id='ub-mute'></a>";
 		}
-			html += 
+			html +=
 			"   <div style='position: absolute; bottom: 5px; right: 10px; font-size:10px'>Powered by <a href='http://www.userballot.com'>userballot.com</a></div>"+
 			"</div>";
 
