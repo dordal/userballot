@@ -21,10 +21,10 @@ window.onload = function() {
 			response = JSON.parse(data);
 
 			// create array of active messages only
-			var activeMessages = new Array();
+			var activeMessages = [];
 			if( response ){
 				
-				for (messageId in response.messages) {
+				for (var messageId in response.messages) {
 
 					var messageObject = response.messages[messageId];
 					// for some reason setting.id wasn't working
@@ -50,12 +50,12 @@ window.onload = function() {
 				// display the selected message
 				$ub.displayMessage();
 			}
-	    }
-	}
+		}
+	};
 
 	req.send();
 
-}
+};
 
 /**
  * displayMessage(): Adds the message to the DOM and displays it
@@ -86,11 +86,11 @@ $ub.displayMessage = function() {
 			if (window.jQuery) {
 				jQuery("#ub-container").css("display", "none");
 				jQuery("#ub-container").fadeIn();
-			} 
+			}
 
 			document.getElementById("ub-yes").onclick = function(e) {
 				e.preventDefault();
-				$ub.UpdateCount("yesVotes");
+				$ub.updateCount("yesVotes");
 				docCookies.setItem($ub.selectedMessage.id,"yes");
 
 				document.getElementById("ub-yes").style.display="none";
@@ -100,10 +100,11 @@ $ub.displayMessage = function() {
 				setTimeout(function() {
 					$ub.closeMessage();
 				}, 500);
-			}
+			};
+
 			document.getElementById("ub-no").onclick = function(e) {
 				e.preventDefault();
-				$ub.UpdateCount("noVotes");
+				$ub.updateCount("noVotes");
 				docCookies.setItem($ub.selectedMessage.id,"no");
 				
 				document.getElementById("ub-yes").style.display="none";
@@ -113,11 +114,11 @@ $ub.displayMessage = function() {
 				setTimeout(function() {
 					$ub.closeMessage();
 				}, 500);
-			}
+			};
 
 			document.getElementById("ub-mute").onclick = function(e) {
 				e.preventDefault();
-				$ub.UpdateCount("mute");
+				$ub.updateCount("mute");
 				$ub.setMuteCookie();
 
 				document.getElementById("ub-yes").style.display="none";
@@ -127,15 +128,17 @@ $ub.displayMessage = function() {
 				setTimeout(function() {
 					$ub.closeMessage();
 				}, 500);
-			}
-			$ub.UpdateCount("views");
-		}, 1500)
+			};
+
+			$ub.updateCount("views");
+			$ub.updateUrlList();
+		}, 1500);
 	}
-}
+};
 
 $ub.setMuteCookie = function() {
 	docCookies.setItem('mute','yes');
-}
+};
 
 $ub.closeMessage = function() {
 	if (window.jQuery) {
@@ -144,7 +147,7 @@ $ub.closeMessage = function() {
 		var element = document.getElementById("ub-container");
 		document.getElementById("ub-container").style.display="none";
 	}
-}
+};
 
 function create(htmlStr) {
     var frag = document.createDocumentFragment(),
@@ -154,7 +157,7 @@ function create(htmlStr) {
         frag.appendChild(temp.firstChild);
     }
     return frag;
-}
+};
 
 var docCookies = {
   getItem: function (sKey) {
@@ -196,7 +199,7 @@ var docCookies = {
   }
 };
 
-$ub.UpdateCount = function(type) {
+$ub.updateCount = function(type) {
 	
 	reqRefresh = new XMLHttpRequest();
 	reqRefresh.open("GET", "https://userballotdb.firebaseio.com/sites/" + $ub.siteId + "/messages/" + $ub.selectedMessage.id + "/.json");
@@ -224,6 +227,46 @@ $ub.UpdateCount = function(type) {
 			};
 
 			req.send(JSON.stringify($ub.selectedMessage));
+		}
+	};
+	reqRefresh.send();
+};
+
+$ub.updateUrlList = function() {
+	alert("update url list");
+	var reqRefresh = new XMLHttpRequest();
+	reqRefresh.open("GET", "https://userballotdb.firebaseio.com/sites/" + $ub.siteId + "/urls/.json");
+	reqRefresh.onreadystatechange = function() {
+		if (reqRefresh.readyState==4 && reqRefresh.status==200) {
+			data = reqRefresh.responseText;
+			response = JSON.parse(data);
+
+			var urls = [];
+			var found = false;
+			var currentUrl = window.location.href;
+			if (response !== null) {
+				urls = response;
+				for (var urlIdx in urls) {
+					if (currentUrl == urls[urlIdx]) {
+						found = true;
+					}
+				}
+				if (!found) {
+					urls.push(currentUrl);
+				}
+			} else {
+				urls.push(currentUrl);
+			}
+
+			console.log(urls);
+			req = new XMLHttpRequest();
+			req.open("PATCH", "https://userballotdb.firebaseio.com/sites/" + $ub.siteId + "/urls/.json");
+
+			req.onreadystatechange = function() {
+				if (req.readyState==4 && req.status==200) {
+				}
+			};
+			req.send(JSON.stringify(urls));
 		}
 	};
 	reqRefresh.send();
