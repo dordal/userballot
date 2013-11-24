@@ -99,7 +99,9 @@
 								<br class="clear" />
 								<div class="line-item-results left">
 									<span class="result-label">Viewed</span><span class="pill no views-{{message.id}}">{{message.views + 0}}</span>
-									<span class="result-label">Muted</span><span class="pill no mute-{{message.id}}">{{message.mute + 0}}</span>
+									<span ng-show="site.allowmute=='1'">
+										<span class="result-label">Muted</span><span class="pill no mute-{{message.id}}">{{message.mute + 0}}</span>
+									</span>
 								</div>
 								<div class="line-item-results right">
 									<span class="result-label">Yes</span><span class="pill yes yes-{{message.id}}">{{message.yesVotes}}</span>
