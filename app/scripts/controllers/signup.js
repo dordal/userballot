@@ -23,6 +23,7 @@ userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, 
 		var site = new Object();
 		//site.domain = $scope.domain;
 		site.frequency = 10;
+		site.allowmute = 1; // Allow muting questions by default
 		site.label = "Test";
 
 		site.messages = new Object();
