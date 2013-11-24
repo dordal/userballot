@@ -48,7 +48,7 @@ window.onload = function() {
 				$ub.selectedMessage.id = activeMessages[selectedId].hash;
 
 				// display the selected message
-				$ub.displayMessage();
+				$ub.displayMessage( response.allowmute, response.frequency );
 			}
 		}
 	};
@@ -60,9 +60,11 @@ window.onload = function() {
 /**
  * displayMessage(): Adds the message to the DOM and displays it
  */
-$ub.displayMessage = function() {
+$ub.displayMessage = function( allowmute, frequency ) {
+	// Check to see the last time that we voted
+	var vote_cookie = docCookies.hasItem('ub-vote-' + window.location.host);
 	var is_muted = docCookies.hasItem("mute");
-	if ( !is_muted ) { 
+	if (( !is_muted ) && ( !vote_cookie )) { 
 
 		var html = ""+
 			"<div id='ub-container' style='z-index: 1000; padding: 20px 10px 15px; height: 40px; position: fixed; bottom: 0; left: 0; right: 0; background-color: #fbfbfb; color: #323232; font-size: 16px; border-top: 2px solid #D8E0E5;'>"+
@@ -72,8 +74,13 @@ $ub.displayMessage = function() {
 			"			<a style='text-align: center; background-color: #2ecc71; color: #ffffff; text-decoration: none; padding: 5px 10px; width: 60px; display: inline-block;' href='' id='ub-yes'>Yes</a> "+
 			"			<a style='text-align: center; background-color: #2ecc71; color: #ffffff; text-decoration: none; padding: 5px 10px; width: 60px; display: inline-block;' href='' id='ub-no'>No</a>"+
 			"		</span>"+
-			"	</div>"+
-			"   <div style='position: absolute; bottom: 5px; left: 10px; font-size:10px'><a href='' id='ub-mute'>Don't show this again</a></div>"+
+			"	</div>";
+		if ( allowmute == 1 ) {
+			html += "<div style='position: absolute; bottom: 5px; left: 10px; font-size:10px'> <a href='' id='ub-mute'>Don't show this again</a></div>";
+		} else {
+			html += "<a href='' id='ub-mute'></a>";
+		}
+			html += 
 			"   <div style='position: absolute; bottom: 5px; right: 10px; font-size:10px'>Powered by <a href='http://www.userballot.com'>userballot.com</a></div>"+
 			"</div>";
 
@@ -90,8 +97,11 @@ $ub.displayMessage = function() {
 
 			document.getElementById("ub-yes").onclick = function(e) {
 				e.preventDefault();
-				$ub.updateCount("yesVotes");
-				docCookies.setItem($ub.selectedMessage.id,"yes");
+
+				$ub.UpdateCount("yesVotes");
+				docCookies.setItem($ub.selectedMessage.id,"yes",10 * 365 * 24 * 60 * 60,window.location.host);
+				docCookies.setItem('ub-vote-' + window.location.host,"voted",frequency * 24 * 60 * 60, window.location.host);
+
 
 				document.getElementById("ub-yes").style.display="none";
 				document.getElementById("ub-no").style.display="none";
@@ -104,9 +114,11 @@ $ub.displayMessage = function() {
 
 			document.getElementById("ub-no").onclick = function(e) {
 				e.preventDefault();
-				$ub.updateCount("noVotes");
-				docCookies.setItem($ub.selectedMessage.id,"no");
-				
+
+				$ub.UpdateCount("noVotes");
+				docCookies.setItem($ub.selectedMessage.id,"no",10 * 365 * 24 * 60 * 60,window.location.host);
+				docCookies.setItem('ub-vote-' + window.location.host,"voted",frequency * 24 * 60 * 60, window.location.host);
+
 				document.getElementById("ub-yes").style.display="none";
 				document.getElementById("ub-no").style.display="none";
 				document.getElementById("message-text").innerHTML = "Thank you!";
@@ -137,8 +149,9 @@ $ub.displayMessage = function() {
 };
 
 $ub.setMuteCookie = function() {
-	docCookies.setItem('mute','yes');
-};
+	docCookies.setItem('mute','yes',10 * 365 * 24 * 60 * 60,window.location.host);
+}
+
 
 $ub.closeMessage = function() {
 	if (window.jQuery) {
@@ -157,7 +170,7 @@ function create(htmlStr) {
         frag.appendChild(temp.firstChild);
     }
     return frag;
-};
+}
 
 var docCookies = {
   getItem: function (sKey) {
@@ -230,10 +243,10 @@ $ub.updateCount = function(type) {
 		}
 	};
 	reqRefresh.send();
+
 };
 
 $ub.updateUrlList = function() {
-	alert("update url list");
 	var reqRefresh = new XMLHttpRequest();
 	reqRefresh.open("GET", "https://userballotdb.firebaseio.com/sites/" + $ub.siteId + "/urls/.json");
 	reqRefresh.onreadystatechange = function() {
@@ -258,7 +271,6 @@ $ub.updateUrlList = function() {
 				urls.push(currentUrl);
 			}
 
-			console.log(urls);
 			req = new XMLHttpRequest();
 			req.open("PATCH", "https://userballotdb.firebaseio.com/sites/" + $ub.siteId + "/urls/.json");
 
