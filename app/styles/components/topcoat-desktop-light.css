@@ -2385,7 +2385,6 @@ input[type="search"]::-webkit-search-cancel-button {
   box-shadow: none;
   color: #323232;
   letter-spacing: 0;
-  text-align: center;
   font-family: Helvetica;
   width: 98.125%;
 }

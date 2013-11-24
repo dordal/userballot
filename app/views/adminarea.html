@@ -106,7 +106,11 @@
 									<span class="result-label">No</span><span class="pill no no-{{message.id}}">{{message.noVotes}}</span>
 								</div>
 								<br class="clear" />
-								<div class="timestamp"><strong>Start:</strong> {{message.startdate | date:'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;<strong>End:</strong> {{message.enddate | date: 'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;<strong>Last Update:</strong> {{message.updated | date:'medium'}}</div>
+								<div class="timestamp">
+									<span ng-show="message.startdate"><strong>Start:</strong> {{message.startdate | date:'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;</span>
+									<span ng-show="message.enddate"><strong>End:</strong> {{message.enddate | date: 'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;</span>
+									<span ng-show="message.updated"><strong>Last Update:</strong> {{message.updated | date:'medium'}}</span>
+								</div>
 							</div>
 
 						</div>

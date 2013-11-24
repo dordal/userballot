@@ -132,7 +132,7 @@ img {
 	word-spacing: normal;
 	font-family: Helvetica-Light;
 	font-size: 15px;
-	text-align: center;
+	/*text-align: center; TF NOTE -- I think this looks much better left aligned.*/
 	border: 1px solid transparent;
 	text-indent: -0.5px;
 	line-height: 1.313rem;
