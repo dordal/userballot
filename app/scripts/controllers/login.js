@@ -9,7 +9,6 @@ userballotApp.controller('LoginCtrl', function($scope, $location, angularFire, a
 
     // Handle login button submit
     $scope.login = function() {
-        console.log("Logging in with", $scope.email, $scope.password);
         angularFireAuth.login('password', {
             email: $scope.email,
             password: $scope.password
