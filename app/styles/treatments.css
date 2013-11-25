@@ -244,7 +244,7 @@ img {
 	transition: border linear 0.2s,box-shadow linear 0.2s;
 }
 .public-form-error-message {
-	color: #FFEDA6;
+	color: #FF0000;
 	padding-top: 10px;
 }
 .signup-form,
