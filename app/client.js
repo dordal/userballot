@@ -75,7 +75,7 @@ $ub.displayMessage = function( allowmute, frequency ) {
 			"			<a style='text-align: center; background-color: #2ecc71; color: #ffffff; text-decoration: none; padding: 5px 10px; width: 60px; display: inline-block;' href='' id='ub-no'>No</a>"+
 			"		</span>"+
 			"	</div>";
-		if ( allowmute !== 0 ) {
+		if ( allowmute == 1 ) {
 			html += "<div style='position: absolute; bottom: 5px; left: 10px; font-size:10px'> <a href='' id='ub-mute'>Don't show this again</a></div>";
 		} else {
 			html += "<a href='' id='ub-mute'></a>";
