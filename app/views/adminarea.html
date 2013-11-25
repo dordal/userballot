@@ -21,6 +21,7 @@
 					<div class="three columns alpha">
 		              <!-- <a class="main-nav-item" href="#">Dashboard</a> -->
 		              <a class="main-nav-item" href="#" id="helpBlockShow">How It Works</a>
+		              <a class="main-nav-item" href="#" id="settingsBlockShow">Settings</a>
 					</div>
 					<div class="twelve columns omega">
 						<div id="helpBlock" class="card-wrap hide">
@@ -44,6 +45,23 @@
 
 
 						</div>
+						<div id="settingsBlock" class="card-wrap hide">
+							<a href="" class="close right">Hide</a>
+							<br class="clear" />
+
+							<h2 class="emphasis-heading">Site Settings</h2>
+							<div class="line-item">
+								<form name="sitesettings">
+								Wait how many days between asking someone a question? <div class="right"><input ng-model="site.frequency" maxlength="3" type="number" ngMinimum="0"/> days.</form></div>
+							</div>	
+							<div class="line-item">
+							Can your site users "mute" the questions to hide them forever?
+								<div class="line-item-results right">
+									<button class="topcoat-button--quiet" ng-click="setAllowMute(true)" ng:class="{true:'active', false:''}[site.allowmute=='1']">Yes</button>
+									<button class="topcoat-button--quiet" ng-click="setAllowMute(false)" ng:class="{true:'active', false:''}[site.allowmute=='0']">No</button>
+								</div>	
+							</div>
+						</div>						
 						<div class="card-wrap">
 							<h2 class="emphasis-heading">Add a new question</h2>
 							<form ng-submit="submit()" ng-controller="AdminAreaCtrl" name="questionSubmitForm">
@@ -52,21 +70,6 @@
 							<textarea class="topcoat-textarea ask-new-question-input" ng-model="question" name="text" rows="2" cols="" ng-maxlength="140" placeholder="Keep it simple and ask yes or no questions. (140 characters max)" required></textarea>
 							<button class="newbutton" id="save-question" ng-disabled="questionSubmitForm.text.$invalid">Save</button>
 							</form>
-
-						</div>
-						<div class="card-wrap">
-							<h2 class="emphasis-heading">Site Settings</h2>
-							<div class="line-item">
-							<form name="sitesettings">
-							Wait how many days between asking someone a question? <div class="right"><input ng-model="site.frequency" maxlength="3" type="number" ngMinimum="0"/> days.</form></div>
-							</div>	
-							<div class="line-item">
-							Can your site users "mute" the questions to hide them forever?
-							<div class="line-item-results right">
-								<button class="topcoat-button--quiet" ng-click="setAllowMute(true)" ng:class="{true:'active', false:''}[site.allowmute=='1']">Yes</button>
-								<button class="topcoat-button--quiet" ng-click="setAllowMute(false)" ng:class="{true:'active', false:''}[site.allowmute=='0']">No</button>
-							</div>	
-							</div>
 						</div>
 						<div class="card-wrap">
 							<h2 class="emphasis-heading">Current Questions</h2>
