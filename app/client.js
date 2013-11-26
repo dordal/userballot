@@ -237,7 +237,7 @@ $ub.updateCount = function(type) {
 				if (req.readyState==4 && req.status==200) {
 				}
 			};
-			var updateStr = '{"' + type + '":"' + count + '"}';
+			var updateStr = '{"' + type + '":' + count + '}';
 			req.send(updateStr);
 		}
 	};
