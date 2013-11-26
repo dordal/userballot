@@ -224,7 +224,7 @@ $ub.updateCount = function(type) {
 
 			count = response;
 	
-			if (isNaN(count)) {
+			if (isNaN(count) || count === undefined) {
 				count = 0;
 			}
 
