@@ -11,14 +11,14 @@
 					</div>
 					<!-- logo -->
 					<div class="thirteen columns omega">
-						<a href="http://app.userballot.com/"><img class="logo" src="img/logo.png" alt="" width="120"></a>
+						<a href="http://app.userballot.com/"><img class="logo" src="img/betaapp.svg" alt="" width="120"></a>
 					</div>
 				</div>
 			</div>
 			<!-- Give column value in word form (one, two..., twelve) -->
 			<div class="sixteen columns">
 				<div class="row">
-					<div class="three columns alpha">
+					<div class="three columns alpha" style="margin-top:15px">
 		              <!-- <a class="main-nav-item" href="#">Dashboard</a> -->
 		              <a class="main-nav-item" href="#" id="helpBlockShow">How It Works</a>
 		              <a class="main-nav-item" href="#" id="settingsBlockShow">Settings</a>
@@ -63,28 +63,28 @@
 							</div>
 						</div>						
 						<div class="card-wrap">
-							<h2 class="emphasis-heading">Add a new question</h2>
+							<h2 class="emphasis-heading">Add a new question.</h2>
 							<form ng-submit="submit()" ng-controller="AdminAreaCtrl" name="questionSubmitForm">
 							<div class="charcount" ng-show="questionSubmitForm.text.$valid">{{question.length}} / 140</div>
 							<div class="charcount-error" ng-show="questionSubmitForm.text.$error.maxlength">Question is too long!</div>
-							<textarea class="topcoat-textarea ask-new-question-input" ng-model="question" name="text" rows="2" cols="" ng-maxlength="140" placeholder="Keep it simple and ask yes or no questions. (140 characters max)" required></textarea>
+							<textarea class="topcoat-textarea ask-new-question-input" ng-model="question" name="text" rows="2" cols="" ng-maxlength="140" placeholder="Keep it simple and ask a yes or no question. (140 characters or less)" required></textarea>
 							<button class="newbutton" id="save-question" ng-disabled="questionSubmitForm.text.$invalid">Save</button>
 							</form>
 						</div>
-						<div class="card-wrap">
-							<h2 class="emphasis-heading">Current Questions</h2>
+						<div>
+							<h2 class="emphasis-heading" id="questions">Current Questions</h2>
 							<!-- <a href="#">active</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">draft</a> -->
 
-							<div class="line-item" ng-repeat="message in site.messages">
+							<div class="line-item card-wrap" ng-repeat="message in site.messages">
 									
-								<div class="left">
-									<button class="topcoat-button--quiet" ng-click="selectActive($index)" ng:class="{true:'active', false:''}[message.active=='1']">Active</button>
-									<button class="topcoat-button--quiet" ng-click="selectDraft($index)" ng:class="{true:'active', false:''}[message.active=='0']">Draft</button>
+								<div class="left" style="margin-left:2.5%">
+									<button class="topcoat-button--quiet outline" ng-click="selectActive($index)" ng:class="{true:'active', false:''}[message.active=='1']">Active</button>
+									<button class="topcoat-button--quiet outline" ng-click="selectDraft($index)" ng:class="{true:'active', false:''}[message.active=='0']">Draft</button>
 								</div>
-								<div class="right">
-									<button class="topcoat-button--quiet" ng-click="editMessage($index)">Edit</button>
-									<button class="topcoat-button--quiet delete" ng-click="removeMessage($index)">Delete</button>
-									<button class="topcoat-button--quiet" ng-click="resetMessageCount($index)">Reset</button>
+								<div class="right" style="margin-right:2.5%;">
+									<button class="topcoat-button--quiet outline" ng-click="editMessage($index)">Edit</button>
+									<button class="topcoat-button--quiet outline" ng-click="resetMessageCount($index)">Reset</button>
+									<button class="topcoat-button--quiet delete outline" ng-click="removeMessage($index)" style="color:red; font-weight:500">Delete</button>
 								</div>
 								<br class="clear" />
 								
