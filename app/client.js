@@ -67,16 +67,15 @@ $ub.displayMessage = function( allowmute, frequency ) {
 	if (( !is_muted ) && ( !vote_cookie )) {
 
 		var html = ""+
-			"<div id='ub-container' style='z-index: 1000; padding: 15px 10px 15px; height: 40px; position: fixed; bottom: 0; left: 0; right: 0; background-color: #fbfbfb; color: #323232; font-size: 16px; border-top: 5px solid #D8E0E5;'>"+
-			"	<div style='position: relative; max-width: 1024px; margin: 0 auto;'>"+
-			"		<img src='img/questionflag.png' height='22' width='19' style='height: 22px; width: 19px; position: absolute; top: 8px; left: 145px;' />"+
-			"		<span id='message-text' style='text-align: center; padding-top: 5px; word-break: break-word; position: absolute; left: 0; right: 0; margin: 0 19%'>" + $ub.selectedMessage.text + "</span>"+
-			"		<span style='position: absolute; right: 0'>"+
+			"<div id='ub-container' style='z-index: 1000; padding: 20px 10px 15px; height: 40px; position: fixed; bottom: 0; left: 0; right: 0; background-color: #fbfbfb; color: #323232; font-size: 16px; border-top: 2px solid #D8E0E5;'>"+
+			"	<div style='text-align: left; position: relative; max-width: 1024px; margin: 0 auto;'>"+
+			"		<span id='message-text' style='text-align: left;padding: 5px 150px 0 0; word-break: break-word; position: absolute; left: 0; right: 45px;'>" + $ub.selectedMessage.text + "</span>"+
+			"		<span style='position: absolute; right: 0;'>"+
 			"			<a style='text-align: center; background-color: #2ecc71; color: #ffffff; text-decoration: none; padding: 5px 10px; width: 60px; display: inline-block;' href='' id='ub-yes'>Yes</a> "+
 			"			<a style='text-align: center; background-color: #2ecc71; color: #ffffff; text-decoration: none; padding: 5px 10px; width: 60px; display: inline-block;' href='' id='ub-no'>No</a>"+
 			"		</span>"+
 			"	</div>";
-		if ( allowmute == 1 ) {
+		if ( allowmute !== 0 ) {
 			html += "<div style='position: absolute; bottom: 5px; left: 10px; font-size:10px'> <a href='' id='ub-mute'>Don't show this again</a></div>";
 		} else {
 			html += "<a href='' id='ub-mute'></a>";
@@ -225,7 +224,7 @@ $ub.updateCount = function(type) {
 
 			count = response;
 	
-			if (isNaN(count) || count === undefined) {
+			if (isNaN(count)) {
 				count = 0;
 			}
 
@@ -238,7 +237,7 @@ $ub.updateCount = function(type) {
 				if (req.readyState==4 && req.status==200) {
 				}
 			};
-			var updateStr = '{"' + type + '":' + count + '}';
+			var updateStr = '{"' + type + '":"' + count + '"}';
 			req.send(updateStr);
 		}
 	};
