@@ -67,7 +67,7 @@ $ub.displayMessage = function( allowmute, frequency ) {
 	if (( !is_muted ) && ( !vote_cookie )) {
 
 		var html = ""+
-			"<div id='ub-container' style='z-index: 1000; padding: 20px 10px 15px; height: 40px; position: fixed; bottom: 0; left: 0; right: 0; background-color: #fbfbfb; color: #323232; font-size: 16px; border-top: 2px solid #D8E0E5;'>"+
+			"<div id='ub-container' style='z-index: 1000; padding: 20px 10px 15px; height: 43px; position: fixed; bottom: 0; left: 0; right: 0; background-color: #fbfbfb; color: #323232; font-size: 16px; border-top: 2px solid #D8E0E5;'>"+
 			"	<div style='text-align: left; position: relative; max-width: 1024px; margin: 0 auto;'>"+
 			"		<span id='message-text' style='text-align: left;padding: 5px 150px 0 0; word-break: break-word; position: absolute; left: 0; right: 45px;'>" + $ub.selectedMessage.text + "</span>"+
 			"		<span style='position: absolute; right: 0;'>"+
@@ -75,13 +75,13 @@ $ub.displayMessage = function( allowmute, frequency ) {
 			"			<a style='text-align: center; background-color: #2ecc71; color: #ffffff; text-decoration: none; padding: 5px 10px; width: 60px; display: inline-block;' href='' id='ub-no'>No</a>"+
 			"		</span>"+
 			"	</div>";
-		if ( allowmute !== 0 ) {
+		if ( allowmute == 1 ) {
 			html += "<div style='position: absolute; bottom: 5px; left: 10px; font-size:10px'> <a href='' id='ub-mute'>Don't show this again</a></div>";
 		} else {
 			html += "<a href='' id='ub-mute'></a>";
 		}
-			html +=
-			"   <div style='position: absolute; bottom: 5px; right: 10px; font-size:10px'>Powered by <a href='http://www.userballot.com'>userballot.com</a></div>"+
+			html += "" +
+			"   <div style='position: absolute; bottom: 5px; right: 10px; font-size:10px'><a href='http://www.userballot.com'><img style='width:110px' src='http://www.userballot.com/img/powered.svg'/></a></div>"+
 			"</div>";
 
 
