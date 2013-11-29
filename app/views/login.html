@@ -22,14 +22,15 @@
     <div ng-show="emailError" class="public-form-error-message">
     	{{emailError}}
     </div>
+    <!-- error message -->
+    <div ng-show="passwdError" class="public-form-error-message">
+      {{passwdError}}
+    </div>
 
     <!-- password -->
     <input type="password" class="fresh-text-input signup-input-wide"  ng-model="password" required placeholder="Password" /><br/>
 
-    <!-- error message -->
-    <div ng-show="domainError" class="public-form-error-message">
-    	{{passwdError}}
-    </div>
+
 
     <input type="submit" class="topcoat-button--large login-btn" name="submit" value="Sign In" />
 
