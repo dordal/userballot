@@ -2388,7 +2388,6 @@ input[type="search"]::-webkit-search-cancel-button {
   font-family: Helvetica;
   width: 95%;
   margin: 2.5% 2.5% 2.5% 2.5%;
-  text-align: center;
   position:relative;
   height:84px;
 }
