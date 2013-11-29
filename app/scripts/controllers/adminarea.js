@@ -64,11 +64,15 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 						flashClass = "mute";
 						messageName = message;
 					}
+					if (newMessages[message].views != oldMessages[message].views) {
+						flashClass = "views";
+						messageName = message;
+					}
 				}
 				if (flashClass != "") {
-	    			$("." + flashClass + "-" + messageName).css("background-color", "#fbfbfb");
+	    			$("." + flashClass + "-" + messageName).css("background-color", "#eee");
 	    			$("." + flashClass + "-" + messageName).animate({
-	    				backgroundColor: "#323232"
+	    				backgroundColor: "#ffffff"
 	    			}, 1000)
 
 				}
