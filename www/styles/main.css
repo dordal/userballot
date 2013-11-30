@@ -201,6 +201,9 @@ h1 {
         float: left;
         width: 120px;
 }
+.social-media {
+        height: 35px;
+}
 .footer {
         background-color: #eee;
         bottom: 0;

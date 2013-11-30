@@ -2376,7 +2376,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .topcoat-textarea,
 .topcoat-textarea--large {
-  padding: 16px 10px;
+  padding: 20px 10px 10px 10px;
   font-size: 15px;
   border-radius: 4px;
   line-height: 1.313rem;
@@ -2386,7 +2386,10 @@ input[type="search"]::-webkit-search-cancel-button {
   color: #323232;
   letter-spacing: 0;
   font-family: Helvetica;
-  width: 98.125%;
+  width: 95%;
+  margin: 2.5% 2.5% 2.5% 2.5%;
+  position:relative;
+  height:84px;
 }
 
 .topcoat-textarea:focus,

@@ -1,7 +1,7 @@
 <div class="signup-block-wrap center">
   <!-- logo -->
   <div style="padding: 50px 0 0 10px;"><a href="http://userballot.com/">
-    <img class="logo" src="img/logo.png" alt="" width="120"></a>
+    <img class="logo" src="img/betaapp.svg" alt="" width="120"></a>
   </div>
 
 	<form ng-submit="login()" class="login-form css-form">
@@ -22,14 +22,15 @@
     <div ng-show="emailError" class="public-form-error-message">
     	{{emailError}}
     </div>
+    <!-- error message -->
+    <div ng-show="passwdError" class="public-form-error-message">
+      {{passwdError}}
+    </div>
 
     <!-- password -->
     <input type="password" class="fresh-text-input signup-input-wide"  ng-model="password" required placeholder="Password" /><br/>
 
-    <!-- error message -->
-    <div ng-show="domainError" class="public-form-error-message">
-    	{{passwdError}}
-    </div>
+
 
     <input type="submit" class="topcoat-button--large login-btn" name="submit" value="Sign In" />
 

@@ -61,6 +61,9 @@ img {
 	color: #fff;
 	text-decoration: none;
 }
+.card-wrap.active {
+	background-color: #fff;
+}
 .card-wrap {
 	background-color: #f9f9f9;
 	border: 1px solid #e1e1e1;
@@ -135,7 +138,6 @@ img {
 	word-spacing: normal;
 	font-family: Helvetica-Light;
 	font-size: 15px;
-	/*text-align: center; TF NOTE -- I think this looks much better left aligned.*/
 	border: 1px solid transparent;
 	text-indent: -0.5px;
 	line-height: 1.313rem;
@@ -146,7 +148,7 @@ img {
 }
 .result-label {
 	color: #a1a1a1;
-	margin: 0 10px;
+	margin: 0 16px;
 	font-size: 21px;
 }
 .line-item-results .pill {
@@ -246,7 +248,7 @@ img {
 	transition: border linear 0.2s,box-shadow linear 0.2s;
 }
 .public-form-error-message {
-	color: #FFEDA6;
+	color: #FF0000;
 	padding-top: 10px;
 }
 .signup-form,

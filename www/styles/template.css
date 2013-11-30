@@ -161,9 +161,6 @@ h1 {
         right: 0;
         text-align: center;
         vertical-align: bottom; 
-        position: fixed;
-}
-.footer p {
         padding-top: 18px;
-        padding-bottom: 18px
+        padding-bottom: 18px;
 }

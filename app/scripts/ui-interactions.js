@@ -9,8 +9,16 @@ $(document).ready(function() {
 			$('#helpBlock').show();
 			$('#helpBlock textarea').select();
 		}
-
-
+	});
+	$('body').delegate('#settingsBlockShow', 'click', function(e) {
+		e.preventDefault();
+		if ($(this).hasClass('open')) {
+			$(this).toggleClass('open');
+			$('#settingsBlock').hide();
+		} else {
+			$(this).toggleClass('open');
+			$('#settingsBlock').show();
+		}
 	});
 	$('body').delegate('.close', 'click', function(e) {
 		e.preventDefault();
