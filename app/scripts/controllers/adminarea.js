@@ -103,6 +103,15 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 		userballotAuthSvc.logout();
     };
 
+    // Turn muting ability off for site
+    $scope.setAllowMute = function( muteFlag ) {
+    	if (muteFlag) {
+    		$scope.site.allowmute = 1;
+    	} else {
+    		$scope.site.allowmute = 0;
+    	}
+    };
+
     // remove a message at a specific index based on 
     // a click in the dom
     $scope.removeMessage = function ( index ) {

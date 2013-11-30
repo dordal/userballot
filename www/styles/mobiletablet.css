@@ -5,18 +5,6 @@
         .icon-feature-left {
                 width: 75px;
         }
-        .masthead {
-                height: 800px;
-        }
-        .demo {
-                max-width: 300px
-        }
-        .feature-block {
-                height: 1015px;
-        }
-        .fresh-text-input {
-                margin: 6px 30.5px;
-        }
         .header {
                 padding-top: 20px;
         }
@@ -53,24 +41,18 @@
                 margin: 0 auto;
                 padding: 25px 60px 30px 60px;
         }
+        .motto p {
+                width: auto;
+                font-size: 18px;
+        }
+        .free {
+            margin-top: 15px
+        }
 }
 /*mobile landscape*/
     @media only screen and (min-width: 480px) and (max-width: 767px) {
         .icon-feature-left {
                 width: 105px;
-        }
-        .masthead {
-                height: 800px;
-        }
-        .demo {
-                max-width: 350px;
-                margin: 0 35px;
-        }
-        .feature-block {
-                height: 930px;
-        }
-        .fresh-text-input {
-                margin: 6px 90.5px;
         }
         .signin-bar {
                 margin-left: 290px;
@@ -92,17 +74,11 @@
 }
 /*tablet!*/
     @media only screen and (min-width: 768px) and (max-width: 959px) {
-        .feature-block {
-                height: 444px;
-        }
         .feature-triple h1 {
                 font-size: 24px
         }
         .feature-triple p {
                 font-size: 16px;
-        }
-        .fresh-text-input {
-                margin: 6px 62.5px;
         }
         .header {
                 padding-top: 15px;
@@ -140,3 +116,75 @@
                 margin-left: -10px
         }
 }
+/*high-res!*/
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 301dpi) { 
+        .demo {
+            width: inherit;
+            height: 300px;
+            background-size: 350px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background: url(img/demo@2x.png);
+        }
+}
+    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 244dpi) and (max-resolution: 300dpi)  {
+        .demo {
+            background: url(img/demo244.png);
+            width: inherit;
+            height: 300px;
+            background-size: 350px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }    
+    @media only screen and (-webkit-min-device-pixel-ratio: 0.75), only screen and (max-resolution: 149dpi) {
+        .demo {
+            background: url(img/demo72.png);
+            width: inherit;
+            height: 300px;
+            background-size: 350px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }  
+    @media only screen and (max-width: 767px) and (min-resolution: 301dpi), only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
+        .demo {
+            width: inherit;
+            height: 300px;
+            background-size: 300px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background: url(img/demo@2x.png);
+        }
+    }
+    @media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 767px) and (min-resolution: 244dpi) and (max-resolution: 300dpi)  {
+        .demo {
+            background: url(img/demo244.png);
+            width: inherit;
+            height: 300px;
+            background-size: 300px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }    
+    @media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 0.75), only screen and (max-width: 767px) and (max-resolution: 149dpi) {
+        .demo {
+            background: url(img/demo72.png);
+            width: inherit;
+            height: 300px;
+            background-size: 300px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }  
+
+/*Safari-only*/
+@media only screen and (max-width: 959px) {
+    :root .signup-bar a {
+        font-size: 17px;
+    }
+    :root .signin-bar {
+        font-size: 17px;
+    }
+}
+

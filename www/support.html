@@ -4,7 +4,7 @@
         <!-- Basic Page Needs
     ================================================== -->
         <meta charset="utf-8">
-        <title>UserBallot | Our Story</title>
+        <title>UserBallot | Support</title>
         <meta name="description" content="">
         <meta name="author" content="">
 
@@ -23,6 +23,10 @@
             <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
 
+        <!--SVG-VGL converter library for <IE 9-->
+        <script src="svg2vml.js"></script>
+        <script>var vectorModel = new VectorModel();</script>
+        
         <!-- Favicons
         ================================================== -->
         <link rel="shortcut icon" href="img/Check Icon.png">
@@ -39,13 +43,13 @@
                     <div class="signup-bar right"><a href="http://app.userballot.com/#/signup">sign up</a></div> 
                 </div>
                 <div class="headerlogo">
-                    <a href="http://userballot.com/">
-                    <img class="logo left" src="img/logo.png" alt=""></a>
+                    <a href="index.html">
+                    <img class="logo left" src="img/beta.svg" alt=""></a>
                 </div>
                 <div class="pages">
-                    <a class="page-default" href="http://userballot.com/ourproduct/">our product</a>
-                    <a class="page-padded" href="file:///Users/alexanderross/Documents/ourstory.html">our story</a>
-                    <a class="page-padded" href="http://userballot.com/support/">support</a>
+                    <a class="page-default" href="ourproduct.html">our product</a>
+                    <a class="page-padded" href="ourstory.html">our story</a>
+                    <a class="page-padded current-page" href="support.html">support</a>
                 </div>
             </div>
         </div>      
@@ -53,21 +57,37 @@
     	    <div class="masthead">
                 <div class="twelve columns alpha">
                     <div class="page-title">
-                        <h1>Our Story</h1>
-                    </div>
-                </div> 
-   		        <div class="container">
-                    <div class="text">
-                        <p>It started with a simple idea, and a common goal - to help website owners gather reliable data from their users without compromising the look and feel of their website. We found that it was a huge challenge to collect feedback that we could rely on, and use to gain direction in our own projects. The way other companies worked was either too obtrusive, or didn’t give us the right direction. Many people felt this pain, and when David Ordal presented our idea at Startup Weekend Tri-Valley, the team seemed to almost instantaneously form around it.</p>
-                        <p>Each member of the team had something valuable to add, with developers and designers all complementing each other’s skill sets beautifully. It seemed that we had the perfect team to execute the idea. The idea flourished, and the team won first place that weekend. Since then, the project moved forward, constantly improving the user interface, and refining the product.</p>
-                        <p>UserBallot is about helping website owners, both big and small, gather the ever valuable data that can help them refine their product and user experience, and keep people coming back for more. That’s what we aim to accomplish.</p>
+                        <h1>Support</h1>
                     </div>
                 </div>
+            </div>     
+   		    <div class="container">
+                <div class="text support">
+                    <p class="best" style="margin-bottom: 8px; font-size:18px">We value your feedback!</p>
+                    <p style="margin: 0 35px 20px; padding-top: 0px">For any bug reports, media inquiries, or if you just want to let us know how you feel, please email us at:</p>
+                    <p class="best"><a href="mailto:info@userballot.com">info@userballot.com</a></p>
+                </div>
             </div>
-            <div class="container content-wrap feature-block">
-            </div>    
+            <div class="container">
+                <div class="content-wrap icon-feature sixteen columns">
+                    <div class="icon-feature-four">
+                        <div class="icon-feature-left">
+                            <a href="https://www.facebook.com/pages/Userballot/587625811299982"><img src="img/facebook.png" alt=""></a>
+                        </div>
+                        <div class="icon-feature-left">
+                            <a href="https://plus.google.com/b/100033594081784228442/100033594081784228442/about"><img src="img/gplus2.png" alt=""></a>
+                        </div>
+                        <div class="icon-feature-left">
+                            <a href="http://www.linkedin.com/company/3350090?trk=tyah&trkInfo=tas%3Auserballot"><img src="img/linkedin.png" alt=""></a>
+                        </div>
+                        <div class="icon-feature-left">
+                            <a href="https://twitter.com/UserBallot"><img src="img/twitter.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>                         
             <!-- footer -->
-            <div class="footer">
+            <div class="footer"; style="position: fixed">
                 <p>&copy;UserBallot.com</p>
             </div>
         </div>
@@ -81,4 +101,3 @@
         </script>
     </body>
 </html>
-

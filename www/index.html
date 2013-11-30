@@ -3,12 +3,12 @@
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-<head>
 
+<head>
     <!-- Basic Page Needs
   ================================================== -->
     <meta charset="utf-8">
-    <title>UserBallot | Ask simple yes or no questions and get answers</title>
+    <title>UserBallot</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -21,80 +21,119 @@
     <link rel="stylesheet" href="styles/grid/skeleton.css">
     <link rel="stylesheet" href="styles/components/topcoat-desktop-light.css">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/stylesheet.css">
+    <link rel="stylesheet" href="styles/mobiletablet.css">
 
-    <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <!--<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>-->
+    <!--SVG-VGL converter library for <IE 9-->
+    <!--<script src="svg2vml.js"></script>
+    <script>var vectorModel = new VectorModel();</script>
+    <script src="css3-mediaqueries.js"></script>-->
 
     <!-- Favicons
     ================================================== -->
-    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="shortcut icon" href="img/Check Icon.png">
     <!-- <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"> -->
 
 </head>
-        <body>
-                <div class="page-wrap">
-                        <div class="login-bar"><a href="http://app.userballot.com/#/login">Login</a></div>
 
-                                <!-- masthead -->
-                                <div class="masthead">
-                                        <div class="container content-wrap">
-                                                <div class="sixteen columns">
-                                                        <div class="row">
-                                                                <div class="three columns alpha">
-                                                              <a href="http://userballot.com/"><img class="logo" src="img/userBallotLogoFullWhite.png" alt=""></a>
-                                                                </div>
-                                                        </div>
-                                                        <div class="row" id="row-left">
-                                                                <div class="twelve columns alpha">
-                                                              <h1>Make better decisions.</h1>
-                                                              <p id="pulse">Find <strong>the pulse of your users</strong> through simple yes and no questions</p>
-                                                                </div>
-                                                                <div class="four columns omega">
-                                                                        <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started</a>
-                                                                        <div id="free">It's free!</div>
-                                                                </div>
-                                                        </div>
-                                                </div>
-                                        </div>
-                                </div>
-                        
-                                <!-- The container is a centered 960px -->
-                                <div class="container content-wrap feature-block">
-                                        
-                                        <div class="sixteen columns">
-                                                <div class="row">
-                                                        <div id="questions">Ask the right questions, the right way.</div>
-                                                        <p id="explanation">Asking the right questions will help your team make better decisions earlier in the process of developing ideas and features.</p>
-                                                </div>
-                                                <div class="row">
-                                                        <div class="feature-triple-left">
-                                                                <img src="img/icons/Clipboard@2x.png" alt="">
-                                                                <h2>Simplicity is key.</h2>
-                                                                <p>Direct answers helps you better understand the pulse of your users.</p>
-                                                        </div>
-                                                        <div class="feature-triple-left">
-                                                                <img src="img/icons/Map@2x.png" alt="">
-                                                                <h2>Answers in real-time.</h2>
-                                                                <p>Answers are reported in real-time so feedback comes quick.</p>
-                                                        </div>
-                                                        <div class="feature-triple-left">
-                                                                <img src="img/icons/Watches@2x.png" alt="">
-                                                                <h2>Working in minutes.</h2>
-                                                                <p>Just paste a small snippet of code into your site and it just works!</p>
-                                                        </div>
-                                                </div>
-                                        </div>
-                                </div>
-                                <!-- footer -->
-                                <div class="footer">
-                                        <a href="http://twitter.com/userballot" target="_blank">Twitter</a>
-                                        <br><br>&copy; UserBallot.com
-                                </div>
+<body>
+
+    <div class="superheader">
+        <div class="container">
+            <div class="header">
+                <div class="signin-bar left"><a href="http://app.userballot.com/#/login">sign in</a></div>
+                <div class="signup-bar right"><a href="http://app.userballot.com/#/signup">sign up</a></div> 
+            </div>
+            <div class="headerlogo">
+                <a href="index.html">
+                <img class="logo" src="img/beta.svg" alt=""></a>
+            </div>
+            <div class="pages">
+                <a class="page-default" href="ourproduct.html">our product</a>
+                <a class="page-padded" href="ourstory.html">our story</a>
+                <a class="page-padded" href="support.html">support</a>
+            </div>
+        </div>
+    </div>        
+    <div class="page-wrap">        
+        <!-- masthead -->
+        <div class="masthead">
+        <div class="twelve columns alpha">
+            <div class="motto">
+                <h1>Make better decisions.</h1>
+                <p>Find the <span class="weight">pulse</span> of your users through simple yes and no questions.</p>
+            </div>
+        </div>
+            <div class="container content-wrap">
+                <div class="sixteen columns">
+                    <div class="row">
+                        <div class="eight columns alpha omega">
+                            <div class="demo"></div>
                         </div>
-                        
-        </body>
+                        <div class="eight columns alpha omega">
+                            <p class="free">Signing up is <span class="weight">free</span> and always will be!</p>
+                            <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- The container is a centered 960px -->
+        <div class="bottom">
+            <div class="container content-wrap feature-block">
+                    <div class="row">
+                        <div class="feature-triple">
+                            <div class="one-third column left">
+                                <img src="img/scale.svg" class="vector" alt="">
+                                <h1>Simplicity is key.</h1>
+                                <p>Direct answers help you better understand the pulse of your users.</p>
+                            </div>
+                            <div class="one-third column left">
+                                <img src="img/chart.svg" class="vector" alt="">
+                                <h1>Answers in real-time.</h1>
+                                <p>Actually see updates the second someone answers a question.</p>
+                            </div>
+                            <div class="one-third column left">
+                                <img src="img/clock.svg" class="clock" alt="">
+                                <h1>Working in minutes.</h1>
+                                <p>Just copy and paste a small piece of code and you're done!</p>
+                            </div>
+                        </div>
+                    </div>
+                <div class="chance">Don't leave anything to chance.</div>         
+                <div class="content-wrap icon-feature sixteen columns">
+                        <div class="icon-feature-four">
+                            <div class="icon-feature-left">
+                                <a href="https://www.facebook.com/pages/Userballot/587625811299982"><img src="img/facebook.png" alt=""></a>
+                            </div>
+                            <div class="icon-feature-left">
+                                <a href="https://plus.google.com/b/100033594081784228442/100033594081784228442/about"><img src="img/gplus2.png" alt=""></a>
+                            </div>
+                            <div class="icon-feature-left">
+                                <a href="http://www.linkedin.com/company/3350090?trk=tyah&trkInfo=tas%3Auserballot"><img src="img/linkedin.png" alt=""></a>
+                            </div>
+                            <div class="icon-feature-left">
+                                <a href="https://twitter.com/UserBallot"><img src="img/twitter.png" alt=""></a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>     
+        <!-- footer -->
+        <div class="footer">
+            <p>&copy;UserBallot.com</p>
+        </div>
+    </div>
+    <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-45967588-1', 'userballot.com');
+          ga('send', 'pageview');
+    </script>
+    </body>
 </html>

@@ -55,6 +55,20 @@
 
 						</div>
 						<div class="card-wrap">
+							<h2 class="emphasis-heading">Site Settings</h2>
+							<div class="line-item">
+							<form name="sitesettings">
+							Wait how many days between asking someone a question? <div class="right"><input ng-model="site.frequency" maxlength="3" type="number" ngMinimum="0"/> days.</form></div>
+							</div>	
+							<div class="line-item">
+							Can your site users "mute" the questions to hide them forever?
+							<div class="line-item-results right">
+								<button class="topcoat-button--quiet" ng-click="setAllowMute(true)" ng:class="{true:'active', false:''}[site.allowmute=='1']">Yes</button>
+								<button class="topcoat-button--quiet" ng-click="setAllowMute(false)" ng:class="{true:'active', false:''}[site.allowmute=='0']">No</button>
+							</div>	
+							</div>
+						</div>
+						<div class="card-wrap">
 							<h2 class="emphasis-heading">Current Questions</h2>
 							<!-- <a href="#">active</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">draft</a> -->
 
@@ -83,7 +97,7 @@
 								</div>
 								<!-- results pills -->
 								<br class="clear" />
-								<div class="line-item-results left">
+								<div class="line-item-results right">
 									<span class="result-label">Yes</span><span class="pill yes yes-{{message.id}}">{{message.yesVotes}}</span>
 									<span class="result-label">No</span><span class="pill no no-{{message.id}}">{{message.noVotes}}</span>
 								</div>
@@ -92,7 +106,11 @@
 									<span class="result-label">Muted</span><span class="pill no mute-{{message.id}}">{{message.mute + 0}}</span>
 								</div>
 								<br class="clear" />
-								<div class="timestamp">Start: {{message.startdate | date:'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;End: {{message.enddate | date: 'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;Last Update: {{message.updated | date:'medium'}}</div>
+								<div class="timestamp">
+									<span ng-show="message.startdate"><strong>Start:</strong> {{message.startdate | date:'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;</span>
+									<span ng-show="message.enddate"><strong>End:</strong> {{message.enddate | date: 'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;</span>
+									<span ng-show="message.updated"><strong>Last Update:</strong> {{message.updated | date:'medium'}}</span>
+								</div>
 							</div>
 
 						</div>

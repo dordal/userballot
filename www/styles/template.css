@@ -33,7 +33,7 @@ img {
         color: #ffffff;
         cursor: pointer;
         text-decoration: none;
-        font-family: Helvetica-Light;
+        font-family: Helvetica-Light, Helvetica;
 }
 .signin-bar a:hover {
         color: #75ffaf;  
@@ -50,7 +50,6 @@ img {
         color: #303140; 
         text-decoration: none;
         cursor: pointer; 
-        font-family: Helvetica;
 }
 .signup-bar a:visited {
         color: #303140;
@@ -75,12 +74,11 @@ img {
         position: relative;
         text-decoration: none;
         color: #ffffff;
-        font-family: Helvetica-Light;
+        font-family: Helvetica-Light, Helvetica;
         letter-spacing: 1px;
 }
 .pages a:visited {
         text-decoration: none;
-        color: #ffffff;
 }
 .pages a:hover {
         color: #75ffaf;
@@ -88,53 +86,84 @@ img {
 .page-padded {
         margin-left: 2.813em;
 }
+.current-page {
+        color: #75ffaf;
+}
+.current-page:visited {
+        color: #75ffaf;
+}
 .page-wrap {
         overflow: hidden;
         position: relative;
 }
-.whitespace {
-        height: 113px;
+.page-title {
+        height: auto;
         text-align: center;
 }
 h1 {
         margin: 0;
-        padding: 25px 0 0 0;
+        padding: 30px 0 30px 0;
         color: #2ecc71;
         font-weight: 500;
         font-size: 30px;
-        font-family: Helvetica-Light;
-}
-.whitespace p {
-        color: #303140;
-        font-size: 20px;
-        margin-top: -5px;
+        font-family: Helvetica-Light, Helvetica;
 }
 .masthead {
         background: linear-gradient(#fbfbfb, #eaeaea);
-        height: 700px;
+        height: auto;
         box-shadow: 0px 2px 6px #7d7d7d;
 }
 .text {
-        margin: 0 70px 70px 70px;
-        text-indent: 20px;
+        padding: 15px 0;
+        margin: 0 10%;
+        text-indent: 30px;
         text-align: justify;
         color: #323232;
 }
 .text p {
-        padding-bottom: 20px;
+        padding-top: 15px;
 }
-.feature-block {
-        height: 300px;
+.support {
+        text-align: center;
+        text-indent: 0px;
+}
+.best {
+        font-weight: 500;
+}
+.best a {
+        text-decoration: none;
+        color: inherit;
+}
+.best a:visited {
+        text-decoration: none;
+}
+.icon-feature {
+        height: 36px;
+        padding-bottom: 30px;
+}
+.icon-feature-four  {
+        width: 480px;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+}
+.icon-feature-left {
+        float: left;
+        width: 120px;
 }
 .footer {
         background-color: #eee;
         bottom: 0;
         color: #999;
-        height: 50px;
+        height: auto;
         left: 0;
         font-size: 12px;
         right: 0;
         text-align: center;
         vertical-align: bottom; 
-        padding-top: 15px;
+        position: fixed;
+}
+.footer p {
+        padding-top: 18px;
+        padding-bottom: 18px
 }
