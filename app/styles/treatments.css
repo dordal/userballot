@@ -68,12 +68,7 @@ img {
 	background-color: #fff;
 }*/
 .card-wrap {
-<<<<<<< HEAD
 	background-color: #f3f3f3;
-=======
-	background-color: #f9f9f9;
-	border: 1px solid #e1e1e1;
->>>>>>> ef9c9bc7cc11f1d1af160657a3fb0feb54e7092a
 	border-radius: 10px;
 	margin-bottom: 20px;
 }
@@ -108,11 +103,8 @@ img {
 	margin: 24px 0 24px;
 	height: 97px;
 <<<<<<< HEAD
+<<<<<<< HEAD
 }*/
-=======
-	text-align: left;
-}
->>>>>>> ef9c9bc7cc11f1d1af160657a3fb0feb54e7092a
 .small-instruction-text {
 	color: #333;
 	font-size: 12px;
@@ -138,22 +130,17 @@ img {
 .line-item {
 	margin-top: 9.5px;
 	overflow: hidden;
-	padding: 30px 0 5px 0px;
+	padding: 20px 0 5px 0px;
 }
 .line-item-controls button {
 	cursor: pointer;
 }
 .question-wrap {
-	background-color: #fff;
 	border-radius: 4px;
-<<<<<<< HEAD
-	padding: 20px 10px 0px 10px;
+	padding: 50px 10px 0px 10px;
 	width: 94.6875%;
-=======
 	display: block;
 	margin-top: 20px;
-	padding: 5px 10px 0;
->>>>>>> ef9c9bc7cc11f1d1af160657a3fb0feb54e7092a
 	word-wrap: break-word;
 	word-spacing: normal;
 	font-family: Helvetica-Light;
@@ -302,9 +289,11 @@ img {
 	cursor: pointer;
 }
 .topcoat-button--quiet.active {
+	color: #2ecc71;
 	background-color: #fff;
 	border: 1px solid #CED6D8;
-	font-family: Helvetica-Bold;
+	font-family: Helvetica;
+	font-weight: 400;
 }
 #navigation li ul {
 
