@@ -214,11 +214,15 @@ h1 {
         right: 0;
         text-align: center;
         vertical-align: bottom;
-        position: fixed; 
 }
 @media only screen and (max-width: 959px) {
         .footer {
                 position: relative;
+        }
+}
+@media only screen and (min-height: 654px) {
+        .footer {
+                position: fixed;
         }
 }
 .footer p {
