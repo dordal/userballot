@@ -143,7 +143,7 @@ img {
 	margin-top: 20px;
 	word-wrap: break-word;
 	word-spacing: normal;
-	font-family: Helvetica-Light;
+	font-family: Helvetica-Light, Helvetica;
 	font-size: 15px;
 	text-align: left;
 	border: 1px solid transparent;
@@ -189,7 +189,7 @@ img {
 	color: #fff;
 	padding: 10px 28px;
 	font-size: 14px;
-	font-family: Helvetica-Light;
+	font-family: Helvetica-Light, Helvetica;
 	cursor: pointer;
 	margin-left: 2.5%;
 	margin-bottom: 2.5%;
@@ -251,7 +251,7 @@ img {
 	background-color: #FFF;
 	border: 1px solid #CCD0D6;
 	border-radius: 4px;
-	font-family: Helvetica-Light;
+	font-family: Helvetica-Light, Helvetica;
 	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 	-moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
