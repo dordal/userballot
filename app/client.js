@@ -67,7 +67,7 @@ $ub.displayMessage = function( allowmute, frequency ) {
 	if (( !is_muted ) && ( !vote_cookie )) {
 
 		var html = ""+
-			"<div id='ub-container' style='z-index: 1000; padding: 20px 10px 15px; height: 43px; position: fixed; bottom: 0; left: 0; right: 0; background-color: #fbfbfb; color: #323232; font-size: 16px; border-top: 2px solid #D8E0E5;'>"+
+			"<div id='ub-container' style='z-index: 1000; padding: 20px 10px 15px; height: 33px; position: fixed; bottom: 0; left: 0; right: 0; background-color: #fbfbfb; color: #323232; font-size: 16px; border-top: 2px solid #D8E0E5;'>"+
 			"	<div style='text-align: left; position: relative; max-width: 1024px; margin: 0 auto;'>"+
 			"		<span id='message-text' style='text-align: left;padding: 5px 150px 0 0; word-break: break-word; position: absolute; left: 0; right: 45px;'>" + $ub.selectedMessage.text + "</span>"+
 			"		<span style='position: absolute; right: 0;'>"+

@@ -22,41 +22,30 @@ img {
         width: auto;
 }
 .header {
-        height: 1.625em;
+        height: 30px;
+        position: relative;
 }
-.signin-bar {
-        margin-left: 86.92%;
-        text-align: right;
-        padding-top: 2.5px;
+.header a:hover {
+        color: #75FFAF;
 }
-.signin-bar a {
-        color: #ffffff;
-        cursor: pointer;
-        text-decoration: none;
-        font-family: Helvetica-Light, Helvetica;
-}
-.signin-bar a:hover {
-        color: #75ffaf;  
-}
-.signup-bar a {
-        float: left;
-        text-align: center;
-        border: none;
-        border-radius: 0 0 8px 8px;
-        padding: 2.5px 5px 5px 5px;
-        height: 18px;
-        width: 60px;
+.signup-btn-top {
         background-color: #fff;
-        color: #303140; 
+        border-radius: 0 0 3px 3px;
+        color: #2ECC71;
+        padding: 10px 30px;
+        position: absolute;
+        right: 80px;
         text-decoration: none;
-        cursor: pointer; 
 }
-.signup-bar a:visited {
-        color: #303140;
-        text-decoration: none
+a.signup-btn-top:hover {
+        color: #2ECC71;
 }
-.signup-bar a:hover {
-        background-color: #75ffaf;
+.signin-btn-top {
+        color: #fff;
+        padding-top: 10px;
+        position: absolute;
+        right: 0;
+        text-decoration: none;
 }
 .headerlogo {
         margin-left: -30px;
@@ -66,8 +55,7 @@ img {
         position: relative;
 }
 .logo {
-        width: 180px;
-        margin-bottom: 15px;
+        width: 130px;
         float: left;
 }
 .pages {
@@ -92,24 +80,25 @@ img {
         margin-left: 2.813em;
 }
 .motto {
-        padding-bottom: 15px;
+        padding-bottom: 45px;
         text-align: center;
 }
 h1 {
-        color: #2ecc71;
-        font-weight: 500;
-        font-size: 30px;
-        font-family: Helvetica-Light, Helvetica;
+        color: #303140;
+        font-size: 35px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+        line-height: 55px;
         margin: 0;
         padding-top: 30px;
 }
 .motto p {
-        color: #303140;
+        color: #5E5E5E;
         font-size: 20px;
-        width: 350px;
+        /*width: 350px;*/
         margin: auto;
-        padding-top: 7px;
-        height: auto;
+        padding-top: 20px;
+        line-height: 30px;
 }
 .weight {
         font-weight: 500;
@@ -128,24 +117,29 @@ h1 {
         background-position: center;
 }
 .free {
-        font-size: 20px;
-        color: #303140;
-        margin-top: 90px;
+        color: #5E5E5E;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+        /*width: 350px;*/
+        margin: auto;
+        padding-top: 10px;
+        height: auto;
         text-align: center;
 }
 .signup-btn {
         display: block;
         cursor: pointer; 
         border: none;
-        margin: 20px auto;
-        padding: 8px 26px;
-        width: 100px; 
+        margin: 50px auto 0;
+        padding: 20px 30px;
+        width: 200px; 
         color: #fff;  
         font-size: 18px; 
         background-color: #2ecc71; 
         text-align: center;
         text-decoration: none;
-        border-radius: 8px;
+        border-radius: 3px;
+        text-transform: uppercase;
 }
 .signup-btn:hover {
         background-color: #27DB73;
@@ -168,7 +162,7 @@ h1 {
         margin: 0 auto;
 }
 .feature-triple h1 {
-        margin-bottom: 12px;
+        font-size: 22px;
         padding-top: 10px;
 }
 .feature-triple p {
@@ -177,18 +171,24 @@ h1 {
         line-height: 25px;
         margin: 0.5em 2.2em 0 2.2em;
         word-spacing:-1px;
-        font-size: 20px;
+        font-size: 17px;
 }
 .chance {
         font-family: Helvetica;
-        font-size: 20px;
+        font-size: 30px;
         color: #303140;
         text-align: center;
-        margin-top: 60px;
+        margin-top: 40px;
+        font-family: 'Open Sans', sans-serif;
+        line-height: 40px;
+}
+.subheader {
+        color: #5E5E5E;
+        font-size: 20px;
 }
 .icon-feature {
         height: 36px;
-        padding-top: 30px;
+        padding-top: 100px;
         padding-bottom: 30px;
 }
 .icon-feature-four  {
