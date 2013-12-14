@@ -67,17 +67,21 @@ $ub.displayMessage = function( allowmute, frequency ) {
 	if (( !is_muted ) && ( !vote_cookie )) {
 		mobile = $ub.mobilecheck;
 		var padding = "20px 10px 15px";
+		var textPadding = "5px 150px 0 0";
+		var buttonWidth = "60px";
 		if (mobile) {
 			padding = "5px 10px 15px";
+			textPadding = "0 65px 0 0";
+			buttonWidth = "30px";
 		}
 
 		var html = ""+
 			"<div id='ub-container' style='z-index: 1000; padding: " + padding + "; height: 43px; position: fixed; bottom: 0; left: 0; right: 0; background-color: #fbfbfb; color: #323232; font-size: 16px; border-top: 2px solid #D8E0E5;'>"+
 			"	<div style='text-align: left; position: relative; max-width: 1024px; margin: 0 auto;'>"+
-			"		<span id='message-text' style='text-align: left;padding: 5px 150px 0 0; word-break: break-word; position: absolute; left: 0; right: 45px;'>" + $ub.selectedMessage.text + "</span>"+
+			"		<span id='message-text' style='text-align: left;padding: " + textPadding + "; word-break: break-word; position: absolute; left: 0; right: 45px;'>" + $ub.selectedMessage.text + "</span>"+
 			"		<span style='position: absolute; right: 0;'>"+
-			"			<a style='text-align: center; background-color: #2ecc71; color: #ffffff; text-decoration: none; padding: 5px 10px; width: 60px; display: inline-block;' href='' id='ub-yes'>Yes</a> "+
-			"			<a style='text-align: center; background-color: #2ecc71; color: #ffffff; text-decoration: none; padding: 5px 10px; width: 60px; display: inline-block;' href='' id='ub-no'>No</a>"+
+			"			<a style='text-align: center; background-color: #2ecc71; color: #ffffff; text-decoration: none; padding: 5px 10px; width: " + buttonWidth + "; display: inline-block;' href='' id='ub-yes'>Yes</a> "+
+			"			<a style='text-align: center; background-color: #2ecc71; color: #ffffff; text-decoration: none; padding: 5px 10px; width: " + buttonWidth + "; display: inline-block;' href='' id='ub-no'>No</a>"+
 			"		</span>"+
 			"	</div>";
 		if ( allowmute == 1 ) {
