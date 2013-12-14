@@ -70,7 +70,7 @@ $ub.displayMessage = function( allowmute, frequency ) {
 		var textPadding = "5px 150px 0 0";
 		var buttonWidth = "60px";
 		if (mobile) {
-			padding = "5px 10px 15px";
+			padding = "10px 10px 15px";
 			textPadding = "0 65px 0 0";
 			buttonWidth = "30px";
 		}
