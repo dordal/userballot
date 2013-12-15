@@ -1,0 +1,103 @@
+<?php
+/**
+ * displays the help pages for the userballot module
+ * @param  string 	$path the path where help is displayed
+ * @param  array 	$arg  Array that holds the current path as returned from arg() function
+ * @return string   the html that is displayed in the help page
+ */
+function userballot_help($path,$arg) {
+	switch ($path) {
+		case "admin/help#userballot":
+			$html = '<div>';
+			$html .= "<p>" . t("Add UserBallot user feedback to your Drupal site. UserBallot helps you find the <strong>pulse</strong> of your users through <em>simple yes or no questions</em>.") . "</p>";
+			$html .= t("To get started:");
+			$html .= "<ol>";
+			$html .= "<li>" . t("<a href='@ubsignup'>Sign up for a UserBallot account</a>",array("@ubsignup" => "http://app.userballot.com/#/signup")) . "</li>";
+			$html .= "<li>" . t("Get your site ID (found by clicking \"how it works\" on your UserBallot admin page)") . "</li>";
+			$html .= "<li>" . t("Go to the UserBallot for Drupal module configuration page, and save your site ID.") . "</li>";
+			$html .= "</ol>";
+			$html .= '</div>';
+			return $html;
+		break;
+	}
+}
+
+/**
+ * defines the "menu items" (registered paths) for config 
+ * pages and such
+ * @return array array of "menu items"
+ */
+function userballot_menu() {
+	$items = array();
+	// the admin page defined
+	$items['admin/config/content/userballot'] = array(
+		'title' => 'UserBallot for Drupal config',
+		'description' => 'Configuration for the UserBallot for Drupal module',
+		'page callback' => 'drupal_get_form',
+		'page arguments' => array('userballot_admin_settings_form'),
+		'access arguments' => array('access administration pages'),
+		'type' => MENU_NORMAL_ITEM,
+	);
+
+	return $items;
+
+}
+
+/**
+ * the form for the UB admin page where we define a field 
+ * to save the site ID
+ * @return object the site ID form object
+ */
+function userballot_admin_settings_form() {
+	$form = array();
+	// fieldset wrapper
+	$form['userballot_settings'] = array(
+		'#type' => 'fieldset',
+		'#title' => t('UserBallot settings'),
+		'#collapsible' => TRUE,
+		'#collapsed' => FALSE,
+	);
+	// the site ID field
+	$form['userballot_settings']['site_id'] = array(
+		'#type' => 'textfield',
+		'#title' => t('Site ID'),
+		'#default_value' => variable_get('site_id', ''),
+		'#size' => 21,
+		'#maxlength' => 30,
+		'#description' => t("The site ID specific to <a href='@ubacct' target='_blank'>your UserBallot account</a>.",array("@ubacct" => "http://app.userballot.com/#/admin")),
+		'#required' => TRUE,
+	);
+	// checkbox to allow it to be shown in admin pages if so desired
+	$form['userballot_settings']['show_admin'] = array(
+		'#type' => 'checkbox', 
+		'#default_value' => variable_get('show_admin', ''),
+		'#title' => t('Show on admin pages.'),
+		'#description' => t("Note: this only affects /admin URLs, not modal display of admin panels")
+	);
+	return system_settings_form($form);
+}
+
+/**
+ * hook_init always runs, so we will use it to make sure the
+ * JS is put at the bottom of the page assuming there is a site_id 
+ * and we are not on an admin page
+ * @return void
+ */
+function userballot_init() {
+	
+	$siteId = variable_get('site_id', '');
+	$showAdmin = variable_get('show_admin', '');
+
+	// if we are not on an admin page or the user has set the
+	// "Show on admin pages" checkbox we could inject the UB JS
+	if( !path_is_admin(current_path()) || $showAdmin == 1 ){
+		// but only if the site_id stored in the db has been set to a value
+		if( $siteId !== '' ){
+			// create the UB config js using the site_id var stored in the db
+			$ubConfig = 'var $ub = window.$ub || {};$ub.siteId = "'.$siteId.'";';
+			// load the js in the correct order
+			drupal_add_js($ubConfig, array('type' => 'inline', 'scope' => 'footer'));
+			drupal_add_js('http://app.userballot.com/client.js', array('type' => 'external', 'scope' => 'footer'));
+		}
+	}
+}
