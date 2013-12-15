@@ -5,7 +5,12 @@
 //
 // We switch based on the hostname the site is running under (APP_DOMAIN).
 //
-// NOTE: IF YOU ADD A DOMAIN HERE, YOU MUST ALSO ADD IT TO CLIENT.JS
+// NOTE: client.js DOES NOT use this environment file and is hard-coded to 
+// the production DB ( userballotdb.firebaseio.com ). We can't easily switch
+// there because window.location.hostname returns the name of the site the 
+// embed is running on, not something like app.userballot.com. Therefore, if 
+// you need to test voting on a staging domain, you should temporarily change 
+// the UB_FIREBASE_DOMAIN constant to whatever database you need.
 //
 var APP_DOMAIN = window.location.hostname;
 var FIREBASE_DOMAIN;
