@@ -14,12 +14,11 @@ switch ($_SERVER['HTTP_HOST']) {
 	// Production
 	case 'www.userballot.com':
 		define('GA_USERAGENT', 'UA-45967588-1');
-
+		define('UB_APP_DOMAIN', 'http://app.userballot.com');
 	break;
-
-
 	// Everybody Else
 	default:
 		define('GA_USERAGENT', 'UA-45967588-3');
+		define('UB_APP_DOMAIN', 'http://app-staging.userballot.com');
 	
 }
