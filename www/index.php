@@ -9,60 +9,20 @@
 
 <head>
     <!-- Basic Page Needs
-  ================================================== -->
+    ================================================== -->
     <meta charset="utf-8">
-    <title>UserBallot</title>
+    <title>UserBallot - Quick Website Feedback</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Mobile Specific Metas
-  ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!-- CSS
-  ================================================== -->
-    <link rel="stylesheet" href="styles/grid/skeleton.css">
-    <link rel="stylesheet" href="styles/components/topcoat-desktop-light.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/mobiletablet.css">
-
-    <!--<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>-->
-    <!--SVG-VGL converter library for <IE 9-->
-    <!--<script src="svg2vml.js"></script>
-    <script>var vectorModel = new VectorModel();</script>
-    <script src="css3-mediaqueries.js"></script>-->
-
-    <!-- Favicons
-    ================================================== -->
-    <link rel="shortcut icon" href="img/Check Icon.png">
-    <!-- <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"> -->
-
-    <!-- fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
-
+    <?php
+        include('inc/head.php');
+    ?>
 </head>
-
-<body>
-
-    <div class="superheader">
-        <div class="container">
-            <div class="header">
-                <a class="signin-btn-top" href="http://app.userballot.com/#/login">sign in</a>
-                <a class="signup-btn-top" href="http://app.userballot.com/#/signup">sign up</a>
-            </div>
-            <div class="headerlogo">
-                <a href="index.html">
-                <img class="logo" src="img/beta.svg" alt=""></a>
-            </div>
-            <div class="pages">
-                <a class="page-default" href="ourproduct.html">our product</a>
-                <a class="page-padded" href="ourstory.html">our story</a>
-                <a class="page-padded" href="support.html">support</a>
-            </div>
-        </div>
-    </div>        
+<body class="home">
+    <?php
+        include('inc/topnav.php');
+    ?>
     <div class="page-wrap">        
         <!-- masthead -->
         <div class="masthead">
@@ -145,5 +105,5 @@
     </script>
 <!-- UserBallot: Add this before the closing body tag  -->
 <script type="text/javascript">var $ub = window.$ub || {};$ub.siteId = '-J9G9EIDUHVaZMRqI3M-';</script><script src="http://app.userballot.com/client.js"></script>
-    </body>
+</body>
 </html>

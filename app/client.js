@@ -9,10 +9,10 @@
  * This is done so that we keep the load on user's site extremely light
  */
 
-window.onload = function() {
+// change if needed for testing
+var UB_FIREBASE_DOMAIN = "https://userballotdb.firebaseio.com/";
 
-	// change if needed for testing
-	var UB_FIREBASE_DOMAIN = "https://userballotdb.firebaseio.com/";
+window.onload = function() {
 
 	// Call Firebase and get back a list of messages for this site
 	req = new XMLHttpRequest();
