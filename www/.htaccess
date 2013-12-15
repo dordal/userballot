@@ -4,18 +4,6 @@ RewriteEngine On
 RewriteCond %{HTTP_HOST} ^userballot\.com [NC]
 RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# don't rewrite images, CSS or JS
-RewriteCond %{REQUEST_URI} !^/image
-RewriteRule \.(css|jpe?g|gif|png|js|ico|xml)$ - [L]
-
 # Rewrite index.php, index.html, etc.
 RewriteCond %{THE_REQUEST} ^GET\ .*/index\.(php|html|shtml)\ HTTP
 RewriteRule ^(.*)index\.(php|html|shtml)$ /$1 [R=301,L]
-
-# 301 Redirect all URLs that don't end in / to one that does. This is for SEO;
-# we want to use one or the other, but not both (duplicate content issues). Only
-# do this for GET requests that don't have a query string.
-RewriteCond %{QUERY_STRING} !.
-RewriteCond %{REQUEST_URI} ^/[^\.]+[^/]$
-RewriteCond %{REQUEST_METHOD} GET
-RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1/ [R=301,L]
