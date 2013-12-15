@@ -30,12 +30,12 @@ userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, 
 					site.messages['default2'] = createMessage("Would you recommend our products and service to others?");
 					site.messages['default3'] = createMessage("If we asked you to describe what we offer you, would that be easy to do?");
 
-					var sitesRef = new Firebase("https://userballotdb.firebaseio.com/sites");
+					var sitesRef = new Firebase(FIREBASE_DOMAIN + "/sites");
 
 					var siteId = sitesRef.push(site).name();
 
 					var emailId = user.email.replace(/\./g, ',');
-					var userRef = new Firebase("https://userballotdb.firebaseio.com/users/");
+					var userRef = new Firebase(FIREBASE_DOMAIN + "/users/");
 
 					var userPromise = angularFire(sitesRef, $scope, 'users');
 
@@ -61,7 +61,7 @@ userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, 
 					$scope.error = "Registration Error: "  + error.code;
 				}
 			}
-			// log in manaully, set noLogin to true
+			// log in manually, set noLogin to true
 		}, true);
 	};
 });

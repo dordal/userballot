@@ -11,7 +11,7 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 	// get the logged in user's email
 	var loggedInEmail = user.email.replace(/\./g, ',');
 	// use this to query the appropriate user
-	var url = new Firebase("https://userballotdb.firebaseio.com/users/"+loggedInEmail);
+	var url = new Firebase(FIREBASE_DOMAIN + "/users/"+loggedInEmail);
 	var userPromise = angularFire(url, $scope, 'user');
 
 	var sitesRef;
@@ -28,7 +28,7 @@ userballotApp.controller('AdminAreaCtrl', function($scope, $location, angularFir
 	    }
 
 	    // get the specific site for the user from the database
-	    sitesRef = new Firebase("https://userballotdb.firebaseio.com/sites/"+userSite);
+	    sitesRef = new Firebase(FIREBASE_DOMAIN + "/sites/"+userSite);
 	    var sitesPromise = angularFire(sitesRef, $scope, "site");
 
 	    // when this completes we have the site ID
