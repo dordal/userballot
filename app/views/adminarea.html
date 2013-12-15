@@ -53,11 +53,11 @@
 								<strong>Settings</strong>
 								<div class="line-item">
 									<form name="sitesettings">
-									Wait how many days between asking someone a question? <div class="right"><input ng-model="site.frequency" maxlength="3" type="number" ngMinimum="0"/> days.</form></div>
+									Wait how many days between asking someone a question? <div class="right"><input style="width: 50px;" ng-model="site.frequency" maxlength="3" type="number" ngMinimum="0"/> days.</form></div>
 								</div>	
 								<div class="line-item">
-								Can your site users "mute" the questions to hide them forever?
-									<div class="line-item-results right">
+								Allow people to mute questions, hiding all future questions from them?
+									<div class="right">
 										<button class="topcoat-button--quiet" ng-click="setAllowMute(true)" ng:class="{true:'active', false:''}[site.allowmute=='1']">Yes</button>
 										<button class="topcoat-button--quiet" ng-click="setAllowMute(false)" ng:class="{true:'active', false:''}[site.allowmute=='0']">No</button>
 									</div>	
