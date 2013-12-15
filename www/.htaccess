@@ -1,8 +1,6 @@
 # Add www. if we don't have it. Production only
-<IfDefine PRODUCTION>
-RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteCond %{HTTP_HOST} ^userballot\.com [NC]
 RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-</IfDefine>
 
 # don't rewrite images, CSS or JS
 RewriteCond %{REQUEST_URI} !^/image

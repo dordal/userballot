@@ -1,3 +1,6 @@
+<?php
+    include('inc/environment.php');
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -137,7 +140,7 @@
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-          ga('create', 'UA-45967588-1', 'userballot.com');
+          ga('create', '<?php echo GA_USERAGENT ?>', 'userballot.com');
           ga('send', 'pageview');
     </script>
 <!-- UserBallot: Add this before the closing body tag  -->

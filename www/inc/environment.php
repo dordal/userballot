@@ -12,10 +12,12 @@
 // for now.
 switch ($_SERVER['HTTP_HOST']) {
 	// Production
-	case 'app.userballot.com':
-		define('GA_USERAGENT', 'UA-45967588-2');
+	case 'www.userballot.com':
+		define('GA_USERAGENT', 'UA-45967588-1');
 
 	break;
+
+
 	// Everybody Else
 	default:
 		define('GA_USERAGENT', 'UA-45967588-3');
