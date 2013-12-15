@@ -30,7 +30,7 @@ function embed_ub(){
 	$siteId = get_option('ub_site_id');
 
 	if( siteId != '' ){
-		echo '<script type="text/javascript">var $ub = window.$ub || {};$ub.siteId = "'.$siteId.'";</script><script src="http://app-dev-jware.userballot.com/client.js"></script>';
+		echo '<script type="text/javascript">var $ub = window.$ub || {};$ub.siteId = "'.$siteId.'";</script><script src="http://app.userballot.com/client.js"></script>';
 	}
 }
 add_action( 'wp_footer', 'embed_ub' );
