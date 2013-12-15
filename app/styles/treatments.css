@@ -74,7 +74,7 @@ img {
 	font-size: 14px;
 }
 .section-header-med {
-	font-size: 15px;
+	font-size: 13px;
 	padding-left: 10px;
 	text-transform: uppercase;
 }
@@ -108,10 +108,10 @@ img {
 	padding-top: 15px;
 }
 .content-wrap .emphasis-heading {
-	color: #c0392b;
+	color: #333;
 	font-size: 15px;
+	font-weight: bold;
 	padding: 20px 20px 0;
-	text-transform: uppercase;
 }
 .content-wrap h2.emphasis-heading.instruction {
 	color: #c0392b;
