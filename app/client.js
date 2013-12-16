@@ -15,10 +15,7 @@ var UB_FIREBASE_DOMAIN = "http://userballotdb-staging.firebaseio.com";
 window.onload = function() {
 
 	// Call Firebase and get back a list of messages for this site
-	req = $ub.createCrossDomainRequest();
-	req.open("GET", UB_FIREBASE_DOMAIN + "/sites/" + $ub.siteId + "/.json", true);
-
-	req.onreadystatechange = function() {
+	req = $ub.createCrossDomainRequest("GET", UB_FIREBASE_DOMAIN + "/sites/" + $ub.siteId + "/.json", function(req) {
 		if (req.readyState==4 && req.status==200) {
 			data = req.responseText;
 			response = JSON.parse(data);
@@ -54,10 +51,7 @@ window.onload = function() {
 				$ub.displayMessage( response.allowmute, response.frequency );
 			}
 		}
-	};
-
-	req.send();
-
+	});
 };
 
 /**
@@ -315,14 +309,21 @@ $ub.windowWidth = function() {
     return x;
 };
 
-$ub.createCrossDomainRequest = function(url) {
+$ub.createCrossDomainRequest = function(method, url, callback) {
     var request;
     if (window.XDomainRequest) {
-    	alert("new x-domain request");
         request = new window.XDomainRequest();
+        req.onload = function() {
+			callback(request);
+        };
     }
     else {
         request = new XMLHttpRequest();
-    }
-    return new XMLHttpRequest();
+        req.onreadystatechange = function() {
+			callback(request);
+        };
+	}
+	request.open(method, url, true);
+	request.send();
+    return request;
 };
