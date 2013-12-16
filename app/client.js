@@ -12,7 +12,7 @@
 window.onload = function() {
 
 	// Call Firebase and get back a list of messages for this site
-	req = new XMLHttpRequest();
+	req = $ub.createCrossDomainRequest();
 	req.open("GET", "https://userballotdb.firebaseio.com/sites/" + $ub.siteId + "/.json");
 
 	req.onreadystatechange = function() {
@@ -223,7 +223,7 @@ var docCookies = {
 
 $ub.updateCount = function(type) {
 	
-	reqRefresh = new XMLHttpRequest();
+	reqRefresh = $ub.createCrossDomainRequest();
 	reqRefresh.open("GET", "https://userballotdb.firebaseio.com/sites/" + $ub.siteId + "/messages/" + $ub.selectedMessage.id + "/" + type + "/.json");
 	reqRefresh.onreadystatechange = function() {
 		tempID = $ub.selectedMessage.id;
@@ -239,7 +239,7 @@ $ub.updateCount = function(type) {
 
 			count++;
 			
-			req = new XMLHttpRequest();
+			req = $ub.createCrossDomainRequest();
 			req.open("PATCH", "https://userballotdb.firebaseio.com/sites/" + $ub.siteId + "/messages/" + $ub.selectedMessage.id +  "/.json");
 
 			req.onreadystatechange = function() {
@@ -255,7 +255,7 @@ $ub.updateCount = function(type) {
 };
 
 $ub.updateUrlList = function() {
-	var reqRefresh = new XMLHttpRequest();
+	var reqRefresh = $ub.createCrossDomainRequest();
 	reqRefresh.open("GET", "https://userballotdb.firebaseio.com/sites/" + $ub.siteId + "/urls/.json");
 	reqRefresh.onreadystatechange = function() {
 		if (reqRefresh.readyState==4 && reqRefresh.status==200) {
@@ -279,7 +279,7 @@ $ub.updateUrlList = function() {
 				urls.push(currentUrl);
 			}
 
-			req = new XMLHttpRequest();
+			req = $ub.createCrossDomainRequest();
 			req.open("PATCH", "https://userballotdb.firebaseio.com/sites/" + $ub.siteId + "/urls/.json");
 
 			req.onreadystatechange = function() {
@@ -305,4 +305,15 @@ $ub.windowWidth = function() {
     g = d.getElementsByTagName('body')[0],
     x = w.innerWidth || e.clientWidth || g.clientWidth;
     return x;
+};
+
+$ub.createCrossDomainRequest = function(url) {
+    var request;
+    if (window.XDomainRequest) {
+        request = new window.XDomainRequest();
+    }
+    else {
+        request = new XMLHttpRequest();
+    }
+    return request;
 };
