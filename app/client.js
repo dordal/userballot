@@ -324,5 +324,5 @@ $ub.createCrossDomainRequest = function(url) {
     else {
         request = new XMLHttpRequest();
     }
-    return request;
+    return new XMLHttpRequest();
 };
