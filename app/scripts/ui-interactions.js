@@ -8,6 +8,7 @@ $(document).ready(function() {
 			$('#questionsWrap').show();
 		} else {
 			$('#settingsBlock').hide();
+			$('#settingsBlockShow').removeClass('open');
 			$(this).toggleClass('open');
 			$('#helpBlock').show();
 			$('#helpBlock textarea').select();
@@ -23,6 +24,7 @@ $(document).ready(function() {
 		} else {
 			$(this).toggleClass('open');
 			$('#helpBlock').hide();
+			$('#helpBlockShow').removeClass('open');
 			$('.ask-new-question').removeClass('highlight');
 			$('#settingsBlock').show();
 			$('#questionsWrap').show();

@@ -9,11 +9,14 @@
  * This is done so that we keep the load on user's site extremely light
  */
 
+// change if needed for testing
+var UB_FIREBASE_DOMAIN = "https://userballotdb.firebaseio.com/";
+
 window.onload = function() {
 
 	// Call Firebase and get back a list of messages for this site
 	req = $ub.createCrossDomainRequest();
-	req.open("GET", "https://userballotdb.firebaseio.com/sites/" + $ub.siteId + "/.json");
+	req.open("GET", UB_FIREBASE_DOMAIN + "/sites/" + $ub.siteId + "/.json");
 
 	req.onreadystatechange = function() {
 		if (req.readyState==4 && req.status==200) {
@@ -223,8 +226,10 @@ var docCookies = {
 
 $ub.updateCount = function(type) {
 	
+
 	reqRefresh = $ub.createCrossDomainRequest();
-	reqRefresh.open("GET", "https://userballotdb.firebaseio.com/sites/" + $ub.siteId + "/messages/" + $ub.selectedMessage.id + "/" + type + "/.json");
+	reqRefresh.open("GET", UB_FIREBASE_DOMAIN + "/sites/" + $ub.siteId + "/messages/" + $ub.selectedMessage.id + "/" + type + "/.json");
+
 	reqRefresh.onreadystatechange = function() {
 		tempID = $ub.selectedMessage.id;
 		if (reqRefresh.readyState==4 && reqRefresh.status==200) {
@@ -240,7 +245,7 @@ $ub.updateCount = function(type) {
 			count++;
 			
 			req = $ub.createCrossDomainRequest();
-			req.open("PATCH", "https://userballotdb.firebaseio.com/sites/" + $ub.siteId + "/messages/" + $ub.selectedMessage.id +  "/.json");
+			req.open("PATCH", UB_FIREBASE_DOMAIN + "/sites/" + $ub.siteId + "/messages/" + $ub.selectedMessage.id +  "/.json");
 
 			req.onreadystatechange = function() {
 				if (req.readyState==4 && req.status==200) {
@@ -255,8 +260,10 @@ $ub.updateCount = function(type) {
 };
 
 $ub.updateUrlList = function() {
+
 	var reqRefresh = $ub.createCrossDomainRequest();
-	reqRefresh.open("GET", "https://userballotdb.firebaseio.com/sites/" + $ub.siteId + "/urls/.json");
+	reqRefresh.open("GET", UB_FIREBASE_DOMAIN + "/sites/" + $ub.siteId + "/urls/.json");
+
 	reqRefresh.onreadystatechange = function() {
 		if (reqRefresh.readyState==4 && reqRefresh.status==200) {
 			data = reqRefresh.responseText;
@@ -279,8 +286,9 @@ $ub.updateUrlList = function() {
 				urls.push(currentUrl);
 			}
 
+
 			req = $ub.createCrossDomainRequest();
-			req.open("PATCH", "https://userballotdb.firebaseio.com/sites/" + $ub.siteId + "/urls/.json");
+			req.open("PATCH", UB_FIREBASE_DOMAIN + "/sites/" + $ub.siteId + "/urls/.json");
 
 			req.onreadystatechange = function() {
 				if (req.readyState==4 && req.status==200) {

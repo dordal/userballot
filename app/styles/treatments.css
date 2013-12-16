@@ -81,7 +81,7 @@ img {
 .card-wrap {
 	background-color: #f3f3f3;
 	border: 1px solid #D5D5D5;
-	border-radius: 10px;
+	border-radius: 3px;
 	margin-bottom: 20px;
 }
 .card-wrap.highlight {
@@ -119,7 +119,6 @@ img {
 }
 .info-wrap {
 	background-color: #FFF;
-	border: 1px solid #AAA;
 	padding: 30px;
 }
 .code-provider {
@@ -162,11 +161,12 @@ img {
 button:active,
 button:focus {
 	border: none;
+	outline: none;
 }
 .question-wrap {
 	background-color: #fff;
 	border-radius: 4px;
-	padding: 10px;
+	padding: 10px 20px 10px 10px ;
 	display: block;
 	margin: 20px;
 	word-wrap: break-word;
@@ -207,11 +207,7 @@ button:focus {
 	text-transform: uppercase;
 }
 .line-item-results .pill {
-	border-radius: 5px;
-	font-size: 20px;
-	padding: 10px 0 0px 10px;
-	text-align: center;
-	min-width: 50px;
+	font-size: 18px;
 }
 .line-item-results .updated.pill {
 	background-color: #2ecc71;
@@ -335,9 +331,7 @@ button:focus {
 	color: #2ecc71;
 	background-color: #fff;
 	border: 1px solid #CED6D8;
+	box-shadow: none;
 	font-family: Helvetica;
 	font-weight: 400;
-}
-#navigation li ul {
-
 }

@@ -83,13 +83,25 @@ a.signup-btn-top:hover {
         text-align: center;
 }
 h1 {
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+}
+.home h1 {
         color: #303140;
         font-size: 35px;
-        font-family: 'Open Sans', sans-serif;
         font-weight: 600;
         line-height: 55px;
-        margin: 0;
-        padding-top: 30px;
+        padding-top: 40px;
+}
+.page h1 {
+        padding: 20px 0;
+        color: #2ecc71;
+        font-weight: 500;
+        font-size: 30px;
+}
+.page .page-title {
+    height: auto;
+    text-align: center;
 }
 .motto p {
         color: #5E5E5E;
@@ -185,6 +197,30 @@ h1 {
         color: #5E5E5E;
         font-size: 20px;
 }
+.text {
+        padding: 15px 0;
+        margin: 0 10%;
+        text-indent: 30px;
+        text-align: justify;
+        color: #323232;
+}
+.text p {
+        padding-top: 15px;
+}
+.support {
+        text-align: center;
+        text-indent: 0px;
+}
+.best {
+        font-weight: 500;
+}
+.best a {
+        text-decoration: none;
+        color: inherit;
+}
+.best a:visited {
+        text-decoration: none;
+}
 .icon-feature {
         height: 36px;
         padding-top: 100px;
@@ -207,14 +243,22 @@ h1 {
         background-color: #eee;
         bottom: 0;
         color: #999;
-        height: 100px;
         left: 0;
         font-size: 12px;
         right: 0;
         text-align: center;
+}
+.home .footer {
+        height: 100px;
         vertical-align: bottom;
         padding: 10px;
 }
+.page .footer {
+        padding-top: 18px;
+        padding-bottom: 18px;
+        position: fixed;
+}
+
 #rackspace {
         height: 40px;
         width: auto;

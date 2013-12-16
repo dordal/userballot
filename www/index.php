@@ -1,3 +1,6 @@
+<?php
+    include('inc/environment.php');
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
@@ -6,67 +9,27 @@
 
 <head>
     <!-- Basic Page Needs
-  ================================================== -->
+    ================================================== -->
     <meta charset="utf-8">
-    <title>UserBallot</title>
+    <title>UserBallot - Quick Website Feedback</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Mobile Specific Metas
-  ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    <!-- CSS
-  ================================================== -->
-    <link rel="stylesheet" href="styles/grid/skeleton.css">
-    <link rel="stylesheet" href="styles/components/topcoat-desktop-light.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/mobiletablet.css">
-
-    <!--<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>-->
-    <!--SVG-VGL converter library for <IE 9-->
-    <!--<script src="svg2vml.js"></script>
-    <script>var vectorModel = new VectorModel();</script>
-    <script src="css3-mediaqueries.js"></script>-->
-
-    <!-- Favicons
-    ================================================== -->
-    <link rel="shortcut icon" href="img/Check Icon.png">
-    <!-- <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png"> -->
-
-    <!-- fonts -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
-
+    <?php
+        include('inc/head.php');
+    ?>
 </head>
-
-<body>
-
-    <div class="superheader">
-        <div class="container">
-            <div class="header">
-                <a class="signin-btn-top" href="http://app.userballot.com/#/login">sign in</a>
-                <a class="signup-btn-top" href="http://app.userballot.com/#/signup">sign up</a>
-            </div>
-            <div class="headerlogo">
-                <a href="index.html">
-                <img class="logo" src="img/beta.svg" alt=""></a>
-            </div>
-            <div class="pages">
-                <a class="page-default" href="ourproduct.html">our product</a>
-                <a class="page-padded" href="ourstory.html">our story</a>
-                <a class="page-padded" href="support.html">support</a>
-            </div>
-        </div>
-    </div>        
+<body class="home">
+    <?php
+        include('inc/topnav.php');
+    ?>
     <div class="page-wrap">        
         <!-- masthead -->
         <div class="masthead">
         <div class="twelve columns alpha">
             <div class="motto">
                 <h1>We help you make better decisions before it's too late.</h1>
-                <p>Find the <strong>pulse</strong> of your users through unobtrusive yes or no questions. Gather important feedback <br>from your users on new ideas and features before you waste valuable time and money.</p>
+                <p>Find the <strong>pulse</strong> of your users with unobtrusive yes or no questions. Easily collect important feedback <br>on new ideas before you waste valuable time and money going in the wrong direction.</p>
             </div>
         </div>
             <div class="container content-wrap">
@@ -137,10 +100,10 @@
           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-          ga('create', 'UA-45967588-1', 'userballot.com');
+          ga('create', '<?php echo GA_USERAGENT ?>', 'userballot.com');
           ga('send', 'pageview');
     </script>
 <!-- UserBallot: Add this before the closing body tag  -->
 <script type="text/javascript">var $ub = window.$ub || {};$ub.siteId = '-J9G9EIDUHVaZMRqI3M-';</script><script src="http://app.userballot.com/client.js"></script>
-    </body>
+</body>
 </html>
