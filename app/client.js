@@ -313,13 +313,13 @@ $ub.createCrossDomainRequest = function(method, url, callback) {
     var request;
     if (window.XDomainRequest) {
         request = new window.XDomainRequest();
-        req.onload = function() {
+        request.onload = function() {
 			callback(request);
         };
     }
     else {
         request = new XMLHttpRequest();
-        req.onreadystatechange = function() {
+        request.onreadystatechange = function() {
 			callback(request);
         };
 	}
