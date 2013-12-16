@@ -318,6 +318,7 @@ $ub.windowWidth = function() {
 $ub.createCrossDomainRequest = function(url) {
     var request;
     if (window.XDomainRequest) {
+    	alert("new x-domain request");
         request = new window.XDomainRequest();
     }
     else {
