@@ -10,7 +10,7 @@
  */
 
 // change if needed for testing
-var UB_FIREBASE_DOMAIN = "https://userballotdb.firebaseio.com/";
+var UB_FIREBASE_DOMAIN = "https://userballotdb-staging.firebaseio.com/";
 
 window.onload = function() {
 
