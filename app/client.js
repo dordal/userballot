@@ -16,7 +16,7 @@ window.onload = function() {
 
 	// Call Firebase and get back a list of messages for this site
 	req = $ub.createCrossDomainRequest();
-	req.open("GET", UB_FIREBASE_DOMAIN + "/sites/" + $ub.siteId + "/.json");
+	req.open("GET", UB_FIREBASE_DOMAIN + "/sites/" + $ub.siteId + "/.json", true);
 
 	req.onreadystatechange = function() {
 		if (req.readyState==4 && req.status==200) {
