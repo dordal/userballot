@@ -9,8 +9,8 @@
  * This is done so that we keep the load on user's site extremely light
  */
 
-// change if needed for testing
-var UB_FIREBASE_DOMAIN = "https://userballotdb-staging.firebaseio.com/";
+// change if needed for testing (no trailing slash)
+var UB_FIREBASE_DOMAIN = "http://userballotdb-staging.firebaseio.com";
 
 window.onload = function() {
 
