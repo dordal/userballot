@@ -10,7 +10,7 @@
  */
 
 // change if needed for testing (no trailing slash)
-var UB_FIREBASE_DOMAIN = "http://userballotdb-staging.firebaseio.com";
+var UB_FIREBASE_DOMAIN = "https://userballotdb-staging.firebaseio.com";
 
 window.onload = function() {
 
