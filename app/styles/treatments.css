@@ -46,32 +46,28 @@ img {
 	padding-bottom: 200px;
 }
 .main-nav-item {
-	background-color: #2ecc71;
-	border-radius: 2px;
-	color: #fff;
+	background-color: #ddd;
+	border: 2px solid #ddd;
+	border-radius: 3px;
+	color: #4d4d4d;
 	display: block;
 	margin-bottom: 10px;
 	padding: 15px 0;
 	text-align: center;
 	text-decoration: none;
 	font-size: 14px;
+}
+.main-nav-item.active {
+	background-color: #fff;
+	border: 2px solid #fff;
+	border-radius: 2px;
+	color: #222;
+	display: block;
 }
 .main-nav-item:hover {
-	background-color: #27db73;
+	background-color: #fff;
+	border: 2px solid #fff;
 	cursor: pointer;
-}
-.main-nav-item a {
-	color: #fff;
-	text-decoration: none;
-}
-.secondary-nav-item {
-	color: #2ecc71;
-	display: block;
-	margin-bottom: 10px;
-	padding: 15px 0;
-	text-align: center;
-	text-decoration: none;
-	font-size: 14px;
 }
 .section-header-med {
 	font-size: 13px;

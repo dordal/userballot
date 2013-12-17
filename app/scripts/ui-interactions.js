@@ -1,4 +1,9 @@
 $(document).ready(function() {
+	$('body').delegate('.main-nav-item', 'click', function(e) {
+		e.preventDefault();
+		$('.main-nav-item').removeClass('active');
+		$(this).addClass('active')
+	});
 	$('body').delegate('#helpBlockShow', 'click', function(e) {
 		e.preventDefault();
 		if ($(this).hasClass('open')) {
@@ -6,11 +11,13 @@ $(document).ready(function() {
 			$('#helpBlock').hide();
 			$('.ask-new-question').removeClass('highlight');
 			$('#questionsWrap').show();
+			$('.main-nav-item').removeClass('active');
 		} else {
 			$('#settingsBlock').hide();
 			$('#settingsBlockShow').removeClass('open');
 			$(this).toggleClass('open');
 			$('#helpBlock').show();
+			$('.ask-new-question').show();
 			$('#helpBlock textarea').select();
 			$('.ask-new-question').addClass('highlight');
 			$('#questionsWrap').hide();
@@ -21,22 +28,28 @@ $(document).ready(function() {
 		if ($(this).hasClass('open')) {
 			$(this).toggleClass('open');
 			$('#settingsBlock').hide();
+			$('.main-nav-item').removeClass('active');
+			$('.ask-new-question').show();
+			$('#questionsWrap').show();
 		} else {
 			$(this).toggleClass('open');
 			$('#helpBlock').hide();
 			$('#helpBlockShow').removeClass('open');
-			$('.ask-new-question').removeClass('highlight');
+			$('.ask-new-question').removeClass('highlight').hide();
 			$('#settingsBlock').show();
-			$('#questionsWrap').show();
+			$('#questionsWrap').hide();
 		}
 	});
 	$('body').delegate('.close', 'click', function(e) {
 		e.preventDefault();
 		$('#settingsBlock').hide();
 		$('#helpBlock').hide();
-		$('#helpBlockShow').toggleClass('open');
+		$('#helpBlockShow').removeClass('open');
+		$('#settingsBlockShow').removeClass('open');
 		$('.ask-new-question').removeClass('highlight');
+		$('.ask-new-question').show();
 		$('#questionsWrap').show();
+		$('.main-nav-item').removeClass('active');
 	});
 	$('body').delegate('#save-question', 'click', function(e) {
 		$(this).siblings('textarea').text('');
