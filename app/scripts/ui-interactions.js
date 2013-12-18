@@ -37,14 +37,7 @@ $(document).ready(function() {
 	});
 	$('body').delegate('.close', 'click', function(e) {
 		e.preventDefault();
-		$('#settingsBlock').hide();
-		$('#helpBlock').hide();
-		$('#helpBlockShow').removeClass('open');
-		$('#settingsBlockShow').removeClass('open');
 		$('.ask-new-question').removeClass('highlight');
-		$('.ask-new-question').show();
-		$('#questionsWrap').show();
-		$('.main-nav-item').removeClass('active');
 	});
 	$('body').delegate('#save-question', 'click', function(e) {
 		$(this).siblings('textarea').text('');
