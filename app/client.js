@@ -228,6 +228,7 @@ $ub.updateCount = function(type) {
 	
 	reqRefresh = new XMLHttpRequest();
 	reqRefresh.open("GET", UB_FIREBASE_DOMAIN + "/sites/" + $ub.siteId + "/messages/" + $ub.selectedMessage.id + "/" + type + "/.json");
+
 	reqRefresh.onreadystatechange = function() {
 		tempID = $ub.selectedMessage.id;
 		if (reqRefresh.readyState==4 && reqRefresh.status==200) {
@@ -260,6 +261,7 @@ $ub.updateCount = function(type) {
 $ub.updateUrlList = function() {
 	var reqRefresh = new XMLHttpRequest();
 	reqRefresh.open("GET", UB_FIREBASE_DOMAIN + "/sites/" + $ub.siteId + "/urls/.json");
+
 	reqRefresh.onreadystatechange = function() {
 		if (reqRefresh.readyState==4 && reqRefresh.status==200) {
 			data = reqRefresh.responseText;
@@ -309,3 +311,4 @@ $ub.windowWidth = function() {
     x = w.innerWidth || e.clientWidth || g.clientWidth;
     return x;
 };
+
