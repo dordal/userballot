@@ -1,9 +1,4 @@
 $(document).ready(function() {
-	$('body').delegate('.main-nav-item', 'click', function(e) {
-		e.preventDefault();
-		$('.main-nav-item').removeClass('active');
-		$(this).addClass('active')
-	});
 	$('body').delegate('#helpBlockShow', 'click', function(e) {
 		e.preventDefault();
 		if ($(this).hasClass('open')) {

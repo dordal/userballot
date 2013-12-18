@@ -3,7 +3,7 @@
  *
  * AdminAreaCtrl defines the possible actions within the main UB interface
  * in that it provides control to setup, settings, and the main question
- * creation and incoming data related interface
+ * creation and incoming data related view
  *
  */
 
@@ -94,6 +94,9 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 				$scope.onStateChange();
 			}
 		}, true);
+
+		// set the default admin area state
+		$scope.adminViewState('setup');
 	});
 
 	// you would only submit if a valid user
@@ -215,6 +218,28 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 		var i = 0;
 		for (var key in obj) {
 			if ((index || 0) === i++) return key;
+		}
+	};
+
+
+	/**
+	 * adminViewState provides a way to keep track of the
+	 * admin area state based on a string passed in
+	 * 
+	 * @param  {string} stateFlag - currently one of:
+	 * "questions", "setup", or "settings"
+	 * @return {void}   no direct return
+	 * 
+	 */
+	$scope.adminViewState = function( stateFlag ) {
+
+		$scope.adminView = {};
+
+		// default
+		$scope.adminView.state = 'questions';
+		// iotherwise set it to whatever was passed in
+		if( stateFlag ){
+			$scope.adminView.state = stateFlag;
 		}
 	};
 }

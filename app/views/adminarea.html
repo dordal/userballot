@@ -20,11 +20,12 @@
 				<div class="row">
 					<div class="three columns alpha" style="margin-top:15px">
 		              <!-- <a class="main-nav-item" href="#">Dashboard</a> -->
-		              <a class="main-nav-item" href="#" id="helpBlockShow">Setup</a>
-		              <a class="main-nav-item" href="#" id="settingsBlockShow">Settings</a>
+		              <a class="main-nav-item" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Setup</a>
+		              <a class="main-nav-item" ng-class="{active: adminView.state=='questions'}" ng-click="adminViewState('questions')">Questions</a>
+		              <a class="main-nav-item" ng-class="{active: adminView.state=='settings'}" ng-click="adminViewState('settings')">Settings</a>
 					</div>
 					<div class="twelve columns omega">
-						<div id="helpBlock" class="card-wrap hide">
+						<div id="helpBlock" class="card-wrap" ng-show="adminView.state=='setup'">
 							<div class="info-wrap">
 								<a href="" class="close right">Hide</a>
 								<br class="clear" />
@@ -46,7 +47,7 @@
 								<p><a href="" class="close">Click here</a> when you are ready to start asking questions.</p>
 							</div>
 						</div>
-						<div id="settingsBlock" class="card-wrap hide">
+						<div id="settingsBlock" class="card-wrap" ng-show="adminView.state=='settings'">
 							<div class="info-wrap">
 								<a href="" class="close right">Hide</a>
 								<br class="clear" />
@@ -63,75 +64,77 @@
 									</div>	
 								</div>
 							</div>
-						</div>						
-						<div class="card-wrap ask-new-question">
-							<!-- <h2 class="emphasis-heading">Add a new question</h2> -->
-							<br>
-							<div class="emphasis-heading">Ask a new question</div>
-							<form ng-submit="submit()" ng-controller="AdminAreaCtrl" name="questionSubmitForm">
-							<div class="charcount" ng-show="questionSubmitForm.text.$valid">{{question.length}} / 140</div>
-							<div class="charcount-error" ng-show="questionSubmitForm.text.$error.maxlength">Question is too long!</div>
-							<textarea class="topcoat-textarea ask-new-question-input" ng-model="question" name="text" rows="2" cols="" ng-maxlength="140" placeholder="Keep it simple and ask a yes or no question. (140 characters or less)" required style="margin-bottom:2.5%;"></textarea>
-							<button class="newbutton" id="save-question" ng-disabled="questionSubmitForm.text.$invalid">Save</button>
-							</form>
 						</div>
-						<div>
-							<div id="questionsWrap">
-								<div id="questions" class="section-header-med">Current Questions</div>
-								<!-- <a href="#">active</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">draft</a> -->
+						<div id="questionsBlock" ng-show="adminView.state=='questions'">
+							<div class="card-wrap ask-new-question">
+								<!-- <h2 class="emphasis-heading">Add a new question</h2> -->
+								<br>
+								<div class="emphasis-heading">Ask a new question</div>
+								<form ng-submit="submit()" ng-controller="AdminAreaCtrl" name="questionSubmitForm">
+								<div class="charcount" ng-show="questionSubmitForm.text.$valid">{{question.length}} / 140</div>
+								<div class="charcount-error" ng-show="questionSubmitForm.text.$error.maxlength">Question is too long!</div>
+								<textarea class="topcoat-textarea ask-new-question-input" ng-model="question" name="text" rows="2" cols="" ng-maxlength="140" placeholder="Keep it simple and ask a yes or no question. (140 characters or less)" required style="margin-bottom:2.5%;"></textarea>
+								<button class="newbutton" id="save-question" ng-disabled="questionSubmitForm.text.$invalid">Save</button>
+								</form>
+							</div>
+							<div>
+								<div id="questionsWrap">
+									<div id="questions" class="section-header-med">Current Questions</div>
+									<!-- <a href="#">active</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">draft</a> -->
 
-								<!-- <div class="line-item card-wrap" ng:class="{true:'active', false:''}[message.active=='1']" ng-repeat="message in site.messages"> -->
-								<div class="line-item card-wrap" ng-repeat="message in site.messages">
-									<div class="timestamp">
-										<span ng-show="message.startdate"><strong>Started:</strong> {{message.startdate | date:'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;</span>
-										<span ng-show="message.enddate"><strong>Ended:</strong> {{message.enddate | date: 'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;</span>
-										<span ng-show="message.updated"><strong>Last Updated:</strong> {{message.updated | date:'medium'}}</span>
-									</div>
-										
-									<div class="left" style="margin-left:2.5%; padding-left:0.563rem;">
-										<button class="topcoat-button--quiet outline" ng-click="selectActive($index)" ng:class="{true:'active', false:''}[message.active=='1']">Active</button>
-										<button class="topcoat-button--quiet outline" ng-click="selectDraft($index)" ng:class="{true:'active', false:''}[message.active=='0']">Draft</button>
-									</div>
-									<div class="right" style="margin-right:2.5%;">
-										<button class="topcoat-button--quiet outline" ng-click="editMessage($index)">Edit</button>
-										<button class="topcoat-button--quiet delete outline" ng-click="removeMessage($index)">Delete</button>
-									</div>
-									<br class="clear" />
-									<div class="header-small center">question</div>
-									<div class="question-wrap" ng-hide="message.editing">
-										{{message.text}}
-									   <br><br><button disabled class="newbutton left hide" id="update-question">Update</button>
-									</div>
-									<br class="clear" />
-									<div class="editMessage left" ng-show="message.editing">
-										<textarea class="topcoat-textarea" name="text" rows="3" ng-model="message.text" cols="60" ng-maxlength="140" update-model-on-blur>{{message.text}}</textarea><br><br>
-										<button class="newbutton" id="update-question" ng-click="updateMessage($index)">Update</button>
-										
-									</div>
-									<!-- results -->
-									<div class="right" style="margin-right:2.5%;">
-										<button class="topcoat-button--quiet outline" ng-click="resetMessageCount($index)">Reset</button>
-									</div>
-									<br class="clear" />
-									<div class="header-small center">results</div>
-									<div class="results-wrap">
-										<div class="line-item-results">
-											<span class="result-label">Views:</span><span class="pill no views-{{message.id}}">{{message.views}}</span>
+									<!-- <div class="line-item card-wrap" ng:class="{true:'active', false:''}[message.active=='1']" ng-repeat="message in site.messages"> -->
+									<div class="line-item card-wrap" ng-repeat="message in site.messages">
+										<div class="timestamp">
+											<span ng-show="message.startdate"><strong>Started:</strong> {{message.startdate | date:'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;</span>
+											<span ng-show="message.enddate"><strong>Ended:</strong> {{message.enddate | date: 'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;</span>
+											<span ng-show="message.updated"><strong>Last Updated:</strong> {{message.updated | date:'medium'}}</span>
 										</div>
-										<div class="line-item-results" ng-show="site.allowmute=='1' && message.mute > 0">
-											<span class="result-label">Muted:</span><span class="pill no mute-{{message.id}}">{{message.mute}}</span>
+											
+										<div class="left" style="margin-left:2.5%; padding-left:0.563rem;">
+											<button class="topcoat-button--quiet outline" ng-click="selectActive($index)" ng:class="{true:'active', false:''}[message.active=='1']">Active</button>
+											<button class="topcoat-button--quiet outline" ng-click="selectDraft($index)" ng:class="{true:'active', false:''}[message.active=='0']">Draft</button>
 										</div>
-										<div class="line-item-results">
-											<span class="result-label">Yes:</span><span class="pill yes yes-{{message.id}}">{{message.yesVotes}}</span>
-										</div>
-										<div class="line-item-results">
-											<span class="result-label">No:</span><span class="pill no no-{{message.id}}">{{message.noVotes}}</span>
+										<div class="right" style="margin-right:2.5%;">
+											<button class="topcoat-button--quiet outline" ng-click="editMessage($index)">Edit</button>
+											<button class="topcoat-button--quiet delete outline" ng-click="removeMessage($index)">Delete</button>
 										</div>
 										<br class="clear" />
+										<div class="header-small center">question</div>
+										<div class="question-wrap" ng-hide="message.editing">
+											{{message.text}}
+										   <br><br><button disabled class="newbutton left hide" id="update-question">Update</button>
+										</div>
+										<br class="clear" />
+										<div class="editMessage left" ng-show="message.editing">
+											<textarea class="topcoat-textarea" name="text" rows="3" ng-model="message.text" cols="60" ng-maxlength="140" update-model-on-blur>{{message.text}}</textarea><br><br>
+											<button class="newbutton" id="update-question" ng-click="updateMessage($index)">Update</button>
+											
+										</div>
+										<!-- results -->
+										<div class="right" style="margin-right:2.5%;">
+											<button class="topcoat-button--quiet outline" ng-click="resetMessageCount($index)">Reset</button>
+										</div>
+										<br class="clear" />
+										<div class="header-small center">results</div>
+										<div class="results-wrap">
+											<div class="line-item-results">
+												<span class="result-label">Views:</span><span class="pill no views-{{message.id}}">{{message.views}}</span>
+											</div>
+											<div class="line-item-results" ng-show="site.allowmute=='1' && message.mute > 0">
+												<span class="result-label">Muted:</span><span class="pill no mute-{{message.id}}">{{message.mute}}</span>
+											</div>
+											<div class="line-item-results">
+												<span class="result-label">Yes:</span><span class="pill yes yes-{{message.id}}">{{message.yesVotes}}</span>
+											</div>
+											<div class="line-item-results">
+												<span class="result-label">No:</span><span class="pill no no-{{message.id}}">{{message.noVotes}}</span>
+											</div>
+											<br class="clear" />
+										</div>
 									</div>
 								</div>
-							</div>
 
+							</div>
 						</div>
 					</div>
 					<br class="clear" />
