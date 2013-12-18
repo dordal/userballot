@@ -20,8 +20,8 @@
 				<div class="row">
 					<div class="three columns alpha" style="margin-top:15px">
 		              <!-- <a class="main-nav-item" href="#">Dashboard</a> -->
+		              <a class="main-nav-item" ng-class="{active: adminView.state=='questions'}" ng-click="adminViewState('questions')">Dashboard</a>
 		              <a class="main-nav-item" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Setup</a>
-		              <a class="main-nav-item" ng-class="{active: adminView.state=='questions'}" ng-click="adminViewState('questions')">Questions</a>
 		              <a class="main-nav-item" ng-class="{active: adminView.state=='settings'}" ng-click="adminViewState('settings')">Settings</a>
 					</div>
 					<div class="twelve columns omega">
@@ -38,10 +38,11 @@
 								<br><br>
 								<!-- step 2 -->
 								<strong>Step 2</strong>
-								<p>Create your first question using the "Add a new question" section of your admin area, which is now highlighted below.</p>
+								<p>Create your first question using the "Ask a new question" section of your admin area, which is now highlighted below.</p>
 								<br>
 								<strong>A few things to remember.</strong>
-								<p>Make sure you ask simple yes or no questions and keep them short (140 characters or less). Questions are shown to a visitor only once.</p>
+								<p>Make sure you ask simple yes or no questions and keep them short (140 characters or less).</p>
+								<p>Questions are shown to a visitor only once.</p>
 								<p>Only questions that are set to 'active' will be shown to your visitors.</p>
 								<br>
 								<p><a ng-click="adminViewState('questions')" href="" class="close">Click here</a> when you are ready to start asking questions.</p>
@@ -54,14 +55,14 @@
 								<strong>Settings</strong>
 								<div class="line-item">
 									<form name="sitesettings">
-									How many days between showing each question to a visitor? <div class="right"><input style="width: 50px;" ng-model="site.frequency" maxlength="3" type="number" ngMinimum="0"/> days.</form></div>
+										<p>How many days between showing each question to a visitor?</p> 
+										<input style="width: 50px;" ng-model="site.frequency" maxlength="3" type="number" ngMinimum="0"/> days.
+									</form>
 								</div>	
 								<div class="line-item">
-								Allow people to mute questions, hiding all future questions from them?
-									<div class="right">
-										<button class="topcoat-button--quiet" ng-click="setAllowMute(true)" ng:class="{true:'active', false:''}[site.allowmute=='1']">Yes</button>
-										<button class="topcoat-button--quiet" ng-click="setAllowMute(false)" ng:class="{true:'active', false:''}[site.allowmute=='0']">No</button>
-									</div>	
+									<p>Allow people to mute questions, hiding all future questions from them?</p>
+									<button class="topcoat-button--quiet" ng-click="setAllowMute(true)" ng:class="{true:'active', false:''}[site.allowmute=='1']">Yes</button>
+									<button class="topcoat-button--quiet" ng-click="setAllowMute(false)" ng:class="{true:'active', false:''}[site.allowmute=='0']">No</button>	
 								</div>
 							</div>
 						</div>

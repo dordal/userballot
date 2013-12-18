@@ -75,7 +75,7 @@ img {
 	text-transform: uppercase;
 }
 .card-wrap {
-	background-color: #f3f3f3;
+	background-color: #F7F7F7;
 	border: 1px solid #D5D5D5;
 	border-radius: 3px;
 	margin-bottom: 20px;
@@ -115,7 +115,7 @@ img {
 }
 .info-wrap {
 	background-color: #FFF;
-	padding: 30px;
+	padding: 30px 30px 50px;
 }
 .code-provider {
 	margin: 0;
@@ -164,7 +164,7 @@ button:focus {
 	border-radius: 4px;
 	padding: 10px 20px 10px 10px ;
 	display: block;
-	margin: 20px;
+	margin: 10px 20px;
 	word-wrap: break-word;
 	word-spacing: normal;
 	font-family: Helvetica-Light, Helvetica;
@@ -185,7 +185,7 @@ button:focus {
 	margin: 10px 20px 20px;
 }
 .line-item-results {
-	background-color: #f9f9f9;
+	background-color: #fff;
 	margin-bottom: 1px;
 	padding: 5px 0 5px 20px;
 }
