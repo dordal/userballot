@@ -2,7 +2,7 @@
         <div class="container">
             <div class="header">
                 <a class="signin-btn-top" href="<?php echo UB_APP_DOMAIN ?>/#/login">sign in</a>
-                <a class="signup-btn-top" href="<?php echo UB_APP_DOMAIN ?>/#/signup">sign up - free</a>
+                <a class="signup-btn-top" href="<?php echo UB_APP_DOMAIN ?>/#/signup">sign up free</a>
             </div>
             <div class="headerlogo">
                 <a href="/">
