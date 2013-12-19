@@ -96,7 +96,14 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 		}, true);
 
 		// set the default admin area state
-		$scope.adminViewState('setup');
+		if ($scope.user.firstVisit === undefined || $scope.user.firstVisit == true) {
+			$scope.adminViewState('setup');
+			$scope.user.firstVisit = false;
+		} else {
+			$scope.adminViewState('questions');
+			
+		}
+		
 	});
 
 	// you would only submit if a valid user
