@@ -28,8 +28,8 @@
         <div class="masthead">
         <div class="twelve columns alpha">
             <div class="motto">
-                <h1>We help you make better decisions before it's too late.</h1>
-                <p>Find the <strong>pulse</strong> of your users with unobtrusive yes or no questions. Easily collect important feedback <br>on new ideas before you waste valuable time and money going in the wrong direction.</p>
+                <h1>Make better business decisions before it's too late.</h1>
+                <p>Quickly validate ideas, products and services with your target audience <strong>before</strong> you waste <br>valuable time and money going in the wrong direction.</p>
             </div>
         </div>
             <div class="container content-wrap">
