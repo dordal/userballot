@@ -2,6 +2,10 @@
   ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <!-- JS
+  ================================================== -->
+    <script src="http://app.userballot.com/scripts/jquery-2.0.3.min.js"></script>
+
     <!-- CSS
   ================================================== -->
     <link rel="stylesheet" href="styles/grid/skeleton.css">
