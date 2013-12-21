@@ -18,10 +18,10 @@
 			<!-- Give column value in word form (one, two..., twelve) -->
 			<div class="sixteen columns">
 				<div class="row">
-					<div class="three columns alpha" style="margin-top:15px">
+					<div class="three columns alpha main-nav">
 		              <!-- <a class="main-nav-item" href="#">Dashboard</a> -->
-		              <a class="main-nav-item" ng-class="{active: adminView.state=='questions'}" ng-click="adminViewState('questions')">Dashboard</a>
-		              <a class="main-nav-item" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Setup</a>
+		              <a class="main-nav-item" ng-class="{active: adminView.state=='questions'}" ng-click="adminViewState('questions')">Control Center</a>
+		              <a class="main-nav-item" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Get Started</a>
 		              <a class="main-nav-item" ng-class="{active: adminView.state=='settings'}" ng-click="adminViewState('settings')">Settings</a>
 					</div>
 					<div class="twelve columns omega">
@@ -100,7 +100,6 @@
 											<button class="topcoat-button--quiet delete outline" ng-click="removeMessage($index)">Delete</button>
 										</div>
 										<br class="clear" />
-										<div class="header-small center">question</div>
 										<div class="question-wrap" ng-hide="message.editing">
 											{{message.text}}
 										   <br><br><button disabled class="newbutton left hide" id="update-question">Update</button>
