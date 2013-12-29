@@ -144,7 +144,6 @@ img {
 .line-item {
 	margin-top: 9.5px;
 	overflow: hidden;
-	padding: 20px 0 5px 0px;
 }
 .line-item-controls button {
 	cursor: pointer;
