@@ -114,6 +114,9 @@ $ub.displayMessage = function( allowmute, frequency ) {
 				docCookies.setItem($ub.selectedMessage.id,"yes",10 * 365 * 24 * 60 * 60,window.location.host);
 				docCookies.setItem('ub-vote-' + window.location.host,"voted",frequency * 24 * 60 * 60, window.location.host);
 
+                req = new XMLHttpRequest();
+            	req.open("GET", "http://www.connordev.com/userballot/visit.php?siteId=" + $ub.siteId);
+                req.send();
 
 				document.getElementById("ub-yes").style.display="none";
 				document.getElementById("ub-no").style.display="none";
@@ -131,6 +134,10 @@ $ub.displayMessage = function( allowmute, frequency ) {
 				docCookies.setItem($ub.selectedMessage.id,"no",10 * 365 * 24 * 60 * 60,window.location.host);
 				docCookies.setItem('ub-vote-' + window.location.host,"voted",frequency * 24 * 60 * 60, window.location.host);
 
+                req = new XMLHttpRequest();
+            	req.open("GET", "http://www.connordev.com/userballot/visit.php?siteId=" + $ub.siteId);
+                req.send();
+                
 				document.getElementById("ub-yes").style.display="none";
 				document.getElementById("ub-no").style.display="none";
 				document.getElementById("message-text").innerHTML = "Thank you!";
