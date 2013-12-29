@@ -137,7 +137,7 @@ $ub.displayMessage = function( allowmute, frequency ) {
                 req = new XMLHttpRequest();
             	req.open("GET", "http://www.connordev.com/userballot/visit.php?siteId=" + $ub.siteId);
                 req.send();
-                
+
 				document.getElementById("ub-yes").style.display="none";
 				document.getElementById("ub-no").style.display="none";
 				document.getElementById("message-text").innerHTML = "Thank you!";
