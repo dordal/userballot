@@ -66,11 +66,11 @@
 								</div>
 							</div>
 						</div>
-						<div id="questionsBlock" ng-show="adminView.state=='questions'">
+						<div style="background=#999999" id="questionsBlock" ng-show="adminView.state=='questions'">
 							<div class="card-wrap ask-new-question">
 								<!-- <h2 class="emphasis-heading">Add a new question</h2> -->
 								<br>
-								<div class="emphasis-heading">Ask a new question</div>
+								<div style="color=#fbfbfb" class="emphasis-heading">Ask a new question</div>
 								<form ng-submit="submit()" ng-controller="AdminAreaCtrl" name="questionSubmitForm">
 								<div class="charcount" ng-show="questionSubmitForm.text.$valid">{{question.length}} / 140</div>
 								<div class="charcount-error" ng-show="questionSubmitForm.text.$error.maxlength">Question is too long!</div>
