@@ -170,12 +170,15 @@ button:focus {
 }
 .header-small {
 	color: #999;
-	font-size: 11px;
+	font-size: 12px;
 	text-transform: uppercase;
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	word-spacing: 55px;
 }
 .results-wrap {
-	border-radius: 3px;
-	margin: 10px 20px 20px;
+	margin: 4.5px;
 }
 .line-item-results {
 	background-color: #fff;
@@ -187,9 +190,9 @@ button:focus {
 	color: #a1a1a1;
 	display: inline-block;
 	font-size: 15px;
-	margin-right: 20px;
+	margin-right: 0px;
 	text-align: right;
-	width: 40px;
+	margin-top: 29px;
 }
 .mini-label {
 	font-size: 11px;
@@ -328,4 +331,23 @@ button:focus {
 .delete	{
 	color: red;
 	font-weight: normal;
+}
+#answer-display {
+		background-image: url(/app/img/pill.svg);
+		background-size: 100%;
+		width: 175px;
+		background-repeat: no-repeat;
+		color: #fff;
+		font-size: 24px;
+		height: 33px;
+		display: inline-block;
+}
+.vote {
+	padding:28px;
+	display:inline-block;
+	margin-top: -25px;
+}
+.reset {
+	width: 100%;
+	text-align: center;
 }
