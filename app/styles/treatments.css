@@ -333,7 +333,7 @@ button:focus {
 	font-weight: normal;
 }
 #answer-display {
-		background-image: url(/app/img/pill.svg);
+		background-image: url(img/pill.svg);
 		background-size: 100%;
 		width: 175px;
 		background-repeat: no-repeat;
