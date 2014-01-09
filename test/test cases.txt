@@ -39,6 +39,15 @@ IV. look at the admin page. The question should have the edited wording and the 
 8.(for final depoyment)
 I. turn off debug mode for the site if on
 II. answer questions on the site, you should never get the same one twice
+9. (for final depoyment)
+for each distribution platform
+I. create complex page using that platform (i.e. Install a lot of plugins)
+II. note how it's working
+III. install userballot wordpress plugin
+IV. everything should work the same as step II and there should be a question at the bottom
+10. (for final depoyment)
+I. create a url targeted question
+II. goto the site the url target question. the url targeted question should apper on that page and only on that page
 --misc QA--
 test login (for demo and final depoyment)
 test registration (for final depoyment)
