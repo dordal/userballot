@@ -26,9 +26,16 @@
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='settings'}" ng-click="adminViewState('settings')">Settings</a>
 						</div>
 					</div>
+
 					<div class="sixteen columns omega">
-						<div id="helpBlock" class="card-wrap" ng-show="adminView.state=='setup'">
-							<div class="info-wrap">
+						<div ng-show="adminView.state=='setup'">
+						<div id="cmscontainer">
+							<div class="three-columns alpha cms">Self Start</div>
+							<div class="three-columns alpha cms">Wordpress</div>
+							<div class="three-columns alpha cms">Drupal</div>
+							<div class="three-columns alpha cms">Shopify</div>
+						</div>
+							<div class="card-wrap info-wrap thirteen columns" style="margin:0px;">
 								<!--<a href="" class="close right">Hide</a>-->
 								<br class="clear" />
 
@@ -51,7 +58,7 @@
 							</div>
 						</div>
 						<div id="settingsBlock" class="card-wrap" ng-show="adminView.state=='settings'">
-							<div class="info-wrap">
+							<div style="margin-left:112px" class="card-wrap info-wrap thirteen columns">
 								<!--<a href="" class="close right">Hide</a>-->
 								<br class="clear" />
 								<strong>Settings</strong>
@@ -69,7 +76,7 @@
 							</div>
 						</div>
 						<div id="questionsBlock" ng-show="adminView.state=='questions'">
-							<div style="background: #b9b9b9; margin-left: 115px;" class="card-wrap ask-new-question">
+							<div style="background: #b9b9b9; margin-left: 112px;" class="card-wrap ask-new-question">
 								<!-- <h2 class="emphasis-heading">Add a new question</h2> -->
 								<br>
 								<div style="color: #fbfbfb; text-align:center;" class="emphasis-heading">Ask a new question!</div>

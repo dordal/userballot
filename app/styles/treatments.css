@@ -115,8 +115,9 @@ img {
 	font-size: 17px;
 }
 .info-wrap {
-	background-color: #FFF;
+	background-color: #eaeaea;
 	padding: 30px 30px 50px;
+	float:left;
 }
 .code-provider {
 	margin: 0;
@@ -373,4 +374,20 @@ button:focus {
 	font-size: 14px;
 	float: left;
 	margin-right: 15px;
+}
+.cms {
+	background-color: #2ecc71;
+	border-radius: 3px;
+	color: #fff;
+	display: block;
+	margin-bottom: 10px;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 14px;
+	margin-right: 15px;
+}
+#cmscontainer {
+	float: left;
+	width: 12.5%;
 }
