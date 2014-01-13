@@ -44,6 +44,9 @@ img {
 }
 .main-nav {
 	margin-top: 31px;
+	margin: auto;
+	margin-left: 29%;
+	margin-right: 1px;
 }
 .main-nav-item {
 	background-color: #2ecc71;
@@ -51,10 +54,13 @@ img {
 	color: #fff;
 	display: block;
 	margin-bottom: 10px;
-	padding: 15px 0;
+	padding: 10px 0px;
+	width: 25%;
 	text-align: center;
 	text-decoration: none;
 	font-size: 14px;
+	float: left;
+	margin-right: 15px;
 }
 .main-nav-item.active {
 	background-color: #2ecc71;
@@ -102,7 +108,7 @@ img {
 .content-wrap .emphasis-heading {
 	color: #323232;
 	font-size: 21px;
-	padding: 5px 20px 0;
+	padding: 5px 25px 0;
 }
 .content-wrap h2.emphasis-heading.instruction {
 	color: #c0392b;
@@ -114,10 +120,13 @@ img {
 }
 .code-provider {
 	margin: 0;
-	padding: 5px;}
+	padding: 5px;
+}
 #questions {
 	margin-top: 40px;
 	margin-bottom: 15px;
+	margin-left: 100px;
+	text-align: center;
 }
 .small-instruction-text {
 	color: #333;
@@ -350,4 +359,18 @@ button:focus {
 .reset {
 	width: 100%;
 	text-align: center;
+}
+.analytics {
+	float: left;
+	background-color: #2ecc71;
+	border-radius: 3px;
+	color: #fff;
+	display: block;
+	margin-bottom: 10px;
+	padding: 10px 20px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 14px;
+	float: left;
+	margin-right: 15px;
 }
