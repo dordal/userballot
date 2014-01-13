@@ -16,7 +16,7 @@ img {
 .admin-bar {
 	color: #323232;
 	font-size: 14px;
-	padding: 20px 80px 0 0;
+	padding: 20px 20px 0 0;
 	text-align: right;
 }
 .admin-bar a {
@@ -390,4 +390,90 @@ button:focus {
 #cmscontainer {
 	float: left;
 	width: 12.5%;
+}
+#settings2 {
+	margin-left: 112px;
+}
+.logo {
+	margin-left: -4px !important;
+	text-align: center;
+}
+
+
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    #cmscontainer {
+    	width: 15%
+    }
+    .card-wrap {
+    	width: 575px !important;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .main-nav-item {
+    	width: 100%;
+    	margin-left: 0px;
+    	float: none;
+    }
+    .main-nav {
+    	margin-left: 26.9%;
+    }
+    .cms {
+    	float: left;
+    	margin-right: 6px;
+    	padding: 10px 8px;
+    }
+    #cmscontainer {
+    	margin-top: 20px;
+    	width: auto;
+    	margin-left: 27%;
+    }
+    #settings2 {
+    	margin-left: 0px;
+    }
+    .card-wrap p {
+    	padding-left: 15px;
+    }
+    .logo {
+    	margin-left: 62px !important;
+    }
+    .admin-bar {
+    	margin-left: 130px;
+    	text-align: center;
+    }
+    strong {
+    	padding-left: 15px;
+    }
+}
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+    .main-nav-item {
+    	float: none;
+    	width: 88.5%;
+    	margin-left: 12%;
+    }
+    .cms {
+    	float: left;
+    	margin-right: 6px;
+    	padding: 10px 8px;
+    }
+    #cmscontainer {
+    	margin-top: 20px;
+    	width: auto;
+    }
+    .info-wrap {
+    	padding-left: 0px;
+    }
+    #settings2 {
+    	margin-left: 0px;
+    }
+    .card-wrap p {
+    	padding-left: 15px;
+    }
+    .logo {
+    	margin-left: 62px !important;
+    }
+    strong {
+    	padding-left: 15px;
+    }
 }
