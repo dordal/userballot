@@ -398,6 +398,10 @@ button:focus {
 	margin-left: -4px !important;
 	text-align: center;
 }
+#ask {
+    background: #b9b9b9;
+    margin-left: 12%;
+}
 
 
 
@@ -408,6 +412,9 @@ button:focus {
     .card-wrap {
     	width: 575px !important;
     }
+    #ask {
+    	margin-left: 15%;
+    }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -417,7 +424,7 @@ button:focus {
     	float: none;
     }
     .main-nav {
-    	margin-left: 26.9%;
+    	margin-left: 0px;
     }
     .cms {
     	float: left;
@@ -436,11 +443,17 @@ button:focus {
     	padding-left: 15px;
     }
     .logo {
-    	margin-left: 62px !important;
+    	margin-left: 5px !important;
     }
     .admin-bar {
-    	margin-left: 130px;
+    	padding: 20px 0px;
     	text-align: center;
+    }
+    .analytics {
+    	float: none;
+    }
+    #ask {
+    	margin-left: 0px;
     }
     strong {
     	padding-left: 15px;
@@ -448,9 +461,12 @@ button:focus {
 }
 @media only screen and (min-width: 0px) and (max-width: 479px) {
     .main-nav-item {
+    	width: 100%;
+    	margin-left: 0px;
     	float: none;
-    	width: 88.5%;
-    	margin-left: 12%;
+    }
+    .main-nav {
+    	margin-left: 0px;
     }
     .cms {
     	float: left;
@@ -471,7 +487,21 @@ button:focus {
     	padding-left: 15px;
     }
     .logo {
-    	margin-left: 62px !important;
+    	margin-left: 5px !important;
+    }
+    .analytics {
+    	float: none;
+    	margin-right: 0px;
+    }
+    #questions {
+    	margin-left: 0px;
+    }
+    .admin-bar {
+    	padding: 20px 0px;
+    	text-align: center;
+    }
+    #ask {
+    	margin-left: 0px;
     }
     strong {
     	padding-left: 15px;
