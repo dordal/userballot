@@ -35,42 +35,44 @@
 							<div class="three-columns alpha cms">Drupal</div>
 							<div class="three-columns alpha cms">Shopify</div>
 						</div>
-							<div class="card-wrap info-wrap thirteen columns" style="margin:0px;">
+							<div class="card-wrap info-wrap thirteen columns" id="steps" style="margin:0px;">
 								<!--<a href="" class="close right">Hide</a>-->
-								<br class="clear" />
-
 								<!-- step 1 -->
+								<div class="title">Let's get started!</div>
+								<br><br>
 								<strong>Step 1</strong>
 								<p>Copy and paste the following code directly before the closing body tag of your site.</p>
 
 								<textarea readonly class="topcoat-textarea code-provider active" rows="3" cols="" placeholder=""><!-- UserBallot: Add this before the closing body tag  --><script type="text/javascript">var $ub = window.$ub || {};$ub.siteId = '{{site.id}}';</script><script src="http://app.userballot.com/client.js"></script></textarea>
 								<br><br>
 								<!-- step 2 -->
+								<br>
 								<strong>Step 2</strong>
 								<p>Create your first question using the "Ask a new question" section of your admin area.</p>
 								<br>
 								<strong>A few things to remember.</strong>
 								<p>Make sure you ask simple yes or no questions and keep them short (140 characters or less).</p>
 								<p>Questions are shown to a visitor only once.</p>
-								<p>Only questions that are set to <strong>active</strong> will be shown to your visitors.</p>
+								<p>Only questions that are set to <span style="color:#2ecc71;font-weight:bold;">active</span> will be shown to your visitors.</p>
 								<br>
-								<p><a ng-click="adminViewState('questions')" href="" class="close">Click here</a> when you are ready to start asking questions.</p>
+								<p><a ng-click="adminViewState('questions')" href="" class="close">Click here</a> when you are ready to start asking questions!</p>
 							</div>
 						</div>
 						<div id="settingsBlock" class="card-wrap" ng-show="adminView.state=='settings'">
 							<div id="settings2" class="card-wrap info-wrap thirteen columns">
 								<!--<a href="" class="close right">Hide</a>-->
-								<br class="clear" />
-								<strong>Settings</strong>
+								<div class="title">Site Settings</div>
+								<br>
 								<div class="line-item">
 									<form name="sitesettings">
 										<p>How many days between showing each question to a visitor?</p> 
-										<input style="width: 50px;" ng-model="site.frequency" maxlength="3" type="number" ngMinimum="0"/> days.
+										<input id="days" ng-model="site.frequency" maxlength="3" type="number" ngMinimum="0"/> days.
 									</form>
 								</div>	
+								<br>
 								<div class="line-item">
 									<p>Allow people to mute questions, hiding all future questions from them?</p>
-									<button class="topcoat-button--quiet" ng-click="setAllowMute(true)" ng:class="{true:'active', false:''}[site.allowmute=='1']">Yes</button>
+									<button class="topcoat-button--quiet" id="yes" ng-click="setAllowMute(true)" ng:class="{true:'active', false:''}[site.allowmute=='1']">Yes</button>
 									<button class="topcoat-button--quiet" ng-click="setAllowMute(false)" ng:class="{true:'active', false:''}[site.allowmute=='0']">No</button>	
 								</div>
 							</div>
@@ -110,12 +112,16 @@
 												<button class="topcoat-button--quiet outline" ng-click="editMessage($index)">Edit</button>
 												<button class="topcoat-button--quiet delete outline" ng-click="removeMessage($index)">Delete</button>
 											</div>
-											<br class="clear" />
+											<br class="clear" /><br>
+											<div class="header-small center">
+												<span id="yes-no">Question</span>
+											</div>
 											<div class="question-wrap" ng-hide="message.editing">
 											{{message.text}}
 										   	<br><br><button disabled class="newbutton left hide" id="update-question">Update</button>
 											</div>
 											<br class="clear" />
+
 											<div class="editMessage left" ng-show="message.editing">
 												<textarea class="topcoat-textarea" name="text" rows="3" ng-model="message.text" cols="60" ng-maxlength="140" update-model-on-blur>{{message.text}}</textarea><br><br>
 												<button class="newbutton" id="update-question" ng-click="updateMessage($index)">Update</button>

@@ -381,7 +381,8 @@ button:focus {
 	color: #fff;
 	display: block;
 	margin-bottom: 10px;
-	padding: 10px 20px;
+	padding: 10px 0px;
+	width: 97px;
 	text-align: center;
 	text-decoration: none;
 	font-size: 14px;
@@ -392,15 +393,21 @@ button:focus {
 	width: 12.5%;
 }
 #settings2 {
-	margin-left: 112px;
+	margin-left: 117.5px;
 }
 .logo {
 	margin-left: -4px !important;
 	text-align: center;
 }
+.title {
+	font-size: 21px;
+}
 #ask {
     background: #b9b9b9;
     margin-left: 12%;
+}
+#days {
+	width: 40px;
 }
 
 
@@ -411,6 +418,9 @@ button:focus {
     }
     .card-wrap {
     	width: 575px !important;
+    }
+    .main-nav {
+    	margin-left: 31%;
     }
     #ask {
     	margin-left: 15%;
@@ -428,16 +438,19 @@ button:focus {
     }
     .cms {
     	float: left;
-    	margin-right: 6px;
-    	padding: 10px 8px;
+    	padding: 10px 0px;
+    	width: 21%;
     }
     #cmscontainer {
     	margin-top: 20px;
-    	width: auto;
-    	margin-left: 27%;
+    	width: 100%;
+    	margin-left: 11.5px;
     }
     #settings2 {
     	margin-left: 0px;
+    }
+    .card-wrap {
+    	margin-bottom: 40px;
     }
     .card-wrap p {
     	padding-left: 15px;
@@ -451,10 +464,34 @@ button:focus {
     }
     .analytics {
     	float: none;
+    	margin-right: 0px;
+    }
+    .code-provider {
+    	margin: 0 0 0 10px;
+    }
+    .title {
+    	padding-left: 15px;
     }
     #ask {
     	margin-left: 0px;
     }
+    #questions {
+    	margin-left: 0px;
+    }
+    #settings2 {
+    	padding-left: 0px;
+    	padding-right: 0px; 
+    }
+    #steps {
+    	padding-right: 0px;
+    	padding-left: 0px;
+    }
+    #days {
+    	margin-left: 15px;
+    }
+    #yes {
+		margin-left: 15px;
+	}
     strong {
     	padding-left: 15px;
     }
@@ -472,6 +509,7 @@ button:focus {
     	float: left;
     	margin-right: 6px;
     	padding: 10px 8px;
+    	width: 21%;
     }
     #cmscontainer {
     	margin-top: 20px;
@@ -483,6 +521,9 @@ button:focus {
     #settings2 {
     	margin-left: 0px;
     }
+    .card-wrap {
+    	margin-bottom: 40px;
+    }
     .card-wrap p {
     	padding-left: 15px;
     }
@@ -493,16 +534,37 @@ button:focus {
     	float: none;
     	margin-right: 0px;
     }
+    .code-provider {
+    	margin: 5px;
+    }
+
     #questions {
     	margin-left: 0px;
+    }
+    #settings2 {
+    	padding-left: 0px;
+    	padding-right: 0px; 
     }
     .admin-bar {
     	padding: 20px 0px;
     	text-align: center;
     }
+    .title {
+    	padding-left: 15px;
+    }
     #ask {
     	margin-left: 0px;
     }
+    #steps {
+    	padding-right: 0px;
+    	padding-left: 0px;
+    }
+    #days {
+    	margin-left: 15px;
+    }
+    #yes {
+		margin-left: 15px;
+	}
     strong {
     	padding-left: 15px;
     }
