@@ -509,11 +509,12 @@ button:focus {
     	float: left;
     	margin-right: 6px;
     	padding: 10px 8px;
-    	width: 21%;
+    	width: 63px;
     }
     #cmscontainer {
     	margin-top: 20px;
     	width: auto;
+    	margin-left: 8%;
     }
     .info-wrap {
     	padding-left: 0px;
