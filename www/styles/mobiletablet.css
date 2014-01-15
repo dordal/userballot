@@ -8,20 +8,20 @@
         .header {
                 padding-top: 20px;
         }
-        .signin-btn-top {
-                position: relative;
-                float: right;
-                margin-right: 23%;
+        .signin-bar {
+                margin-left: 66px;
+                padding-top: 5px;
                 font-size: 18px;
+        }
+        .signin-bar a {
                 padding: 5px 10px 10px 10px;
                 border-radius: 8px;
                 background-color: transparent;
         }
-        .signup-btn-top {
-                position: relative;
-                float: left;
-                margin-left: 23%;
-                right: 0;
+        .signup-bar {
+                margin-right: 73px
+        }
+        .signup-bar a {
                 border-radius: 8px;
                 padding: 5px 10px 10px 10px;
                 font-size: 18px;
@@ -33,7 +33,6 @@
                 margin: 0 auto;
                 text-align: center;
                 font-size: 18px;
-                padding-bottom: 30px;
         }
         .page-padded {
                 margin-left: 1.025em;
@@ -44,38 +43,22 @@
         }
         .motto p {
                 width: auto;
-        }
-        .motto h1 {
-                line-height: normal;
+                font-size: 18px;
         }
         .free {
-                margin-top: 5px;
-                padding-bottom: 40px;
+            margin-top: 15px
         }
-        .chance {
-                padding-bottom: 45px;
-        }
-        .home h1 {
-                line-height: normal 
-        }
-        .feature-triple p {
-                padding-bottom: 30px;
-        }
-        .icon-feature {
-                padding-top: 50px;
-        }    
-    }
+}
 /*mobile landscape*/
     @media only screen and (min-width: 480px) and (max-width: 767px) {
         .icon-feature-left {
                 width: 105px;
         }
-        .signin-btn-top {
-                margin-right: 30%;
-                right: 3.5px;
+        .signin-bar {
+                margin-left: 290px;
         }
-        .signup-btn-top {
-                margin-left: 30%;
+        .signup-bar {
+                margin-right: -25px;
         }
         .headerlogo {
                 margin: 0 auto;
@@ -91,20 +74,29 @@
 }
 /*tablet!*/
     @media only screen and (min-width: 768px) and (max-width: 959px) {
+        .feature-triple h1 {
+                font-size: 24px
+        }
         .feature-triple p {
                 font-size: 16px;
         }
-        .signin-btn-top {
+        .header {
+                padding-top: 15px;
+        }
+        .signin-bar {
+                margin-left: 615px;
                 font-size: 18px;
+                padding-top: 5px;
+        }
+        .signin-bar a {
                 padding: 5px 10px 10px 10px;
-                border-radius: 0 0 8px 8px;
+                border-radius: 8px;
                 background-color: transparent;
         }
-        .signup-btn-top {
+        .signup-bar a {
                 font-size: 18px;
-                border-radius: 0 0 8px 8px;
+                border-radius: 8px;
                 padding: 5px 10px 10px 10px;
-                right: 80px;
         }
         .pages {
                 font-size: 18px;
@@ -116,9 +108,6 @@
         }
         .headerlogo {
                 margin-left: 0px;
-        }
-        .home h1 {
-                line-height: normal
         }
 }
 /*logo issue!*/
@@ -190,9 +179,12 @@
     }  
 
 /*Safari-only*/
-/*@media only screen and (max-width: 959px) {
-    :root .signin-btn-top {
+@media only screen and (max-width: 959px) {
+    :root .signup-bar a {
         font-size: 17px;
     }
-}*/
+    :root .signin-bar {
+        font-size: 17px;
+    }
+}
 
