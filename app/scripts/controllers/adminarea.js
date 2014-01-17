@@ -147,8 +147,11 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 	// remove a message at a specific index based on 
 	// a click in the dom
 	$scope.removeMessage = function ( index ) {
-		var key = $scope.keyAt($scope.site.messages, index);
-		$scope.site.messages[key] = null;
+		if (confirm('Are you sure you want to delete this question?')){
+			var key = $scope.keyAt($scope.site.messages, index);
+			$scope.site.messages[key] = null;
+		}else{
+		}
 	};
 
 	// switch the active state to 0
@@ -175,13 +178,16 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 
 	// reset all the count fields to 0 
 	$scope.resetMessageCount = function( index ) {
-		var key = $scope.keyAt($scope.site.messages, index);
-		var old = $scope.site.messages[key].active;
-		$scope.site.messages[key].mute = 0;
-		$scope.site.messages[key].views = 0;
-		$scope.site.messages[key].yesVotes = 0;
-		$scope.site.messages[key].noVotes = 0;
-		$scope.updateTimestamps(index, 'reset', (old == 1));
+		if (confirm('Are you sure you want to reset this question?')){
+			var key = $scope.keyAt($scope.site.messages, index);
+			var old = $scope.site.messages[key].active;
+			$scope.site.messages[key].mute = 0;
+			$scope.site.messages[key].views = 0;
+			$scope.site.messages[key].yesVotes = 0;
+			$scope.site.messages[key].noVotes = 0;
+			$scope.updateTimestamps(index, 'reset', (old == 1));
+		}else{
+		}
 	};
 
 	// update the message
