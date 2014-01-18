@@ -11,7 +11,7 @@
     <!-- Basic Page Needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>UserBallot - Quick Website Feedback</title>
+    <title>UserBallot</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -26,12 +26,12 @@
     <div class="page-wrap">        
         <!-- masthead -->
         <div class="masthead">
-        <div class="twelve columns alpha">
-            <div class="motto">
-                <h1>Make better business decisions before it's too late.</h1>
-                <p>Quickly validate ideas, products and services with your target audience <strong>before</strong> you waste <br>valuable time and money going in the wrong direction.</p>
-            </div>
-        </div>
+            <div class="container twelve columns">
+                <div class="motto">
+                    <h1>Make better decisions.</h1>
+                    <p>Quickly validate ideas, products and services with your target audience <strong>before</strong> you waste valuable time and money going in the wrong direction.</p>
+                </div>
+            </div>    
             <div class="container content-wrap">
                 <div class="sixteen columns">
                     <div class="row">
@@ -39,8 +39,8 @@
                             <div class="demo"></div>
                         </div>
                         <div class="eight columns alpha omega">
-                            <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started Today</a>
-                            <p class="free">Sign Up Free!</p>
+                            <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started!</a>
+                            <p class="free">Sign Up <strong>Free!</strong></p>
                         </div>
                     </div>
                 </div>
