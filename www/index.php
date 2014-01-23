@@ -87,7 +87,16 @@
                         </div>
                 </div>
             </div>
-        </div>     
+        </div>
+        <!-- <div class="bottom" style="background-color: #a1a1a1; width: 100%;">
+            <div class="container content-wrap feature-block">
+                <div class="row">
+                    <div>
+                        <h1>test content</h1>
+                    </div>
+                </div>
+            </div>
+        </div> -->     
         <!-- footer -->
         <div class="footer">
             <img src="img/rackspace.svg" id="rackspace"></img>
