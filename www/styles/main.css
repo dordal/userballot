@@ -21,11 +21,14 @@ img {
         width: auto;
 }
 .header {
-        height: 30px;
+        height: 20px;
         position: relative;
 }
 .signin-btn-top:hover {
         color: #75FFAF;
+        transition: color .25s ease-in-out;
+        -moz-transition: color .25s ease-in-out;
+        -webkit-transition: color .25s ease-in-out;
 }
 .signup-btn-top {
         background-color: #fff;
@@ -37,8 +40,10 @@ img {
         text-decoration: none;
 }
 .signup-btn-top:hover {
-        color: #323232;
-        background-color: #75ffaf
+        background-color: #75ffaf;
+        transition: background .25s ease-in-out;
+        -moz-transition: background .25s ease-in-out;
+        -webkit-transition: background .25s ease-in-out;
 }
 .signin-btn-top {
         color: #fff;
@@ -57,7 +62,7 @@ img {
 .logo {
         width: 155px;
         float: left;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
 }
 .pages {
         margin: 13px 0 0 200px;
@@ -75,6 +80,9 @@ img {
 }
 .pages a:hover {
         color: #75ffaf;
+        transition: color .25s ease-in-out;
+        -moz-transition: color .25s ease-in-out;
+        -webkit-transition: color .25s ease-in-out;
 }
 .page-padded {
         margin-left: 2.813em;
@@ -150,9 +158,22 @@ h1 {
         text-align: center;
         text-decoration: none;
         border-radius: 3px;
+        box-shadow: 1px 1px 1px #444;
 }
 .signup-btn:hover {
         background-color: #27DB73;
+        transition: background .25s ease-in-out;
+        -moz-transition: background .25s ease-in-out;
+        -webkit-transition: background .25s ease-in-out;
+}
+.signup-btn-top {
+        box-shadow: 1px 1px 1px #444;
+}
+.signup-btn-top:hover {
+        background-color: #27DB73;
+        transition: background .25s ease-in-out;
+        -moz-transition: background .25s ease-in-out;
+        -webkit-transition: background .25s ease-in-out;
 }
 .feature-block {
         height: auto;
@@ -235,9 +256,18 @@ h1 {
         float: left;
         width: 120px;
 }
+
 .social-media {
         height: 35px;
 }
+
+.social-media:hover {
+        opacity: .5;
+        transition: .25s ease-in-out;
+        -moz-transition: .25s ease-in-out;
+        -webkit-transition: .25s ease-in-out;
+}
+
 .footer {
         background-color: #eee;
         bottom: 0;

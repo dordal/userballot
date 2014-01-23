@@ -61,16 +61,20 @@ img {
 	font-size: 14px;
 	float: left;
 	margin-right: 15px;
+	box-shadow:  1px 1px 1px #444;
 }
 .main-nav-item.active {
-	background-color: #2ecc71;
-	border-radius: 2px;
+	background-color: #3EF089;
+	border-radius: 3px;
 	color: #fff;
 	display: block;
 }
 .main-nav-item:hover {
 	background-color: #27db73;
 	cursor: pointer;
+	transition: background .25s ease-in-out;
+    -moz-transition: background .25s ease-in-out;
+    -webkit-transition: background .25s ease-in-out;
 }
 .section-header-med {
 	font-size: 21px;
@@ -79,7 +83,7 @@ img {
 .card-wrap {
 	background-color: #eaeaea;
 	/* border: 1px solid #D5D5D5; */
-	border-radius: 3px;
+	border-radius: 0 3px 3px 3px;
 	margin-bottom: 20px;
 }
 .card-wrap.highlight {
@@ -237,7 +241,7 @@ button:focus {
 	margin-bottom: 2.5%;
 }
 .newbutton:hover {
-	background-color: #27db73
+	background-color: #27db73;
 }
 .newbutton:disabled {
 	opacity: 0.3;
@@ -249,6 +253,11 @@ button:focus {
 #save-question {
 	padding: 10px 36px;
 	margin-bottom: 18px;
+}
+#save-question:hover {
+	transition: background .25s ease-in-out;
+    -moz-transition: background .25s ease-in-out;
+    -webkit-transition: background .25s ease-in-out;
 }
 .line-item-controls {
 	margin: 0px 32.58%;
@@ -363,8 +372,8 @@ button:focus {
 }
 .analytics {
 	float: left;
-	background-color: #2ecc71;
-	border-radius: 3px;
+	background-color: #b9b9b9;
+	border-radius: 3px 0 0 3px;
 	color: #fff;
 	display: block;
 	margin-bottom: 10px;
@@ -373,20 +382,36 @@ button:focus {
 	text-decoration: none;
 	font-size: 14px;
 	float: left;
-	margin-right: 15px;
+}
+.analytics:active {
+	background-color: #2ecc71;
+	color: #a1a1a1;
+}
+.analytics:hover {
+	background-color: #27db73;
+	transition: background .25s ease-in-out;
+    -moz-transition: background .25s ease-in-out;
+    -webkit-transition: background .25s ease-in-out;
 }
 .cms {
-	background-color: #2ecc71;
-	border-radius: 3px;
+	background-color: #b9b9b9;
+	border-radius: 3px 0 0 3px;
 	color: #fff;
 	display: block;
 	margin-bottom: 10px;
 	padding: 10px 0px;
-	width: 97px;
 	text-align: center;
 	text-decoration: none;
 	font-size: 14px;
-	margin-right: 15px;
+}
+.cms:hover {
+	background-color: #27db73;
+	transition: background .25s ease-in-out;
+    -moz-transition: background .25s ease-in-out;
+    -webkit-transition: background .25s ease-in-out;
+}
+.cms:active {
+	background-color: #eaeaea;
 }
 #cmscontainer {
 	float: left;
@@ -404,7 +429,7 @@ button:focus {
 }
 #ask {
     background: #b9b9b9;
-    margin-left: 12%;
+    margin-left: 97px;
 }
 #days {
 	width: 40px;
@@ -476,6 +501,7 @@ button:focus {
     .analytics {
     	float: none;
     	margin-right: 0px;
+    	background-color: #2ecc71;
     }
     .code-provider {
     	margin: 0 0 0 10px;
@@ -549,6 +575,7 @@ button:focus {
     .analytics {
     	float: none;
     	margin-right: 0px;
+    	background-color: #2ecc71;
     }
     .code-provider {
     	margin: 5px;

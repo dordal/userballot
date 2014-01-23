@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles/treatments.css">
+	<style type="text/css">
+		* {
+			font-family: Helvetica, sans-serif;
+		}
+		.container {
+			width: 878px;
+			height: 317px;
+			background-color: #eaeaea;
+			border-radius: 3px;
+		}
+		.selectContainer {
+			width: 20%;
+			left: 0;
+			padding: 20px;
+		}
+		.selector {
+			text-align: center;
+			color: #323232;
+		}
+		.selector2 {
+
+		}
+		.result-label {
+			background-color: rgba(255,255,255,0);
+		}
+		.key {
+			float: left;
+			width: 260px;
+			height: 30px;
+			margin: 0px;
+			padding: 20px 0;
+		}
+		.keyText {
+			float: left;
+			color: #a1a1a1;
+			font-weight: lighter;
+			padding: 2px 8px 0 0;
+		}
+		.box {
+			width: 10px;
+			height: 10px;
+			border-radius: 100%;
+			float: left;
+			margin: 6px 8px 0 8px;
+		}
+		.graphDisplayContainer {
+			float: right;
+			width: 590px;
+			height: 270px;
+			margin: 20px;
+		}
+		.verticalContainer {
+			float: left;
+			width: 60px;
+			height: 80%;
+			margin-top: 6.5%;
+		}
+		.vertical {
+			text-align: right;
+			color: #a1a1a1;
+		}
+		.graphDisplay {
+			width: 526px;
+			height: 237px;
+			border-left: 1px solid #a1a1a1;
+			border-bottom: 1px solid #a1a1a1;
+			float: right;
+			border-radius: 0 0 0 3px;
+			position: relative;
+		}
+		.bottomGraph table{
+			padding-left: 25px;
+		}
+		.bottomGraph td {
+			padding-left: 8px;
+			color: #a1a1a1;
+			font-size: 14px; margin-top: 3px;
+			width: 60px;
+			vertical-align: top;
+			text-align: center;
+
+		}
+		.graphBar {
+			bottom: 0px;
+			position: absolute;
+			width: 10%;
+			height: 80%;
+			text-align: center;
+			vertical-align: center;
+			font-weight: lighter;
+			font-size: 12px;
+		}
+		.graphDisplay td {
+			padding: 35px;
+			float: right;
+
+		}
+		.total {
+			height: 100%;
+		}
+		.bar {
+			/*border: 1px solid #323232;
+			box-sizing:border-box;
+ 			-moz-box-sizing:border-box;
+  			-webkit-box-sizing:border-box;*/
+  			background-color: #797979;
+			width: 100%;
+			border-radius: 3px 3px 0 0;
+			color: #fff;
+		}
+		.bar2 {
+			background-color: #ef3b39;
+			width: 100%;
+			color: #fff;
+		}
+		.bar3 {
+			background-color: #41b874;
+			width: 100%;
+			color: #fff;
+		}
+		.text {
+			display:inline-block; 
+			vertical-align:middle;
+			height: 100%;
+			margin-top: 2px;
+			padding: 0 3px;
+			letter-spacing: 1px;
+		}
+		.result-label {
+			margin-top: 19px;
+		}
+		#analytics {
+			width: 100%;
+		}
+		#filter {
+			width: 100%;
+			margin-top: 20px;
+		}
+		select {
+			width: 100%;
+		}
+	</style>
+</head>
+<body style="background-color: #fbfbfb">
+	<div>
+		<div class="container">
+			<div class="graphDisplayContainer">
+				<div class="verticalContainer">
+					<div class="vertical">14</div>
+				</div>
+				<div class="graphDisplay"> 
+					<table>
+						<tb>
+							<tr>
+								<td>
+									<div class="graphBar">
+										<div class="total">
+											<div class="bar" style="height: 34%;">
+												<div class="text">5</div>
+											</div>
+											<div class="bar2" style="height: 20%;">
+												<div class="text">3</div>
+											</div>
+											<div class="bar3" style="height: 46%;">
+												<div class="text">6</div>
+											</div>
+										</div>
+									</div>
+								</td>
+								<td>
+									<div class="graphBar">
+										<div class="total">
+											<div class="bar" style="height: 34%;">
+												<div class="text">5</div>
+											</div>
+											<div class="bar2" style="height: 20%;">
+												<div class="text">3</div>
+											</div>
+											<div class="bar3" style="height: 46%;">
+												<div class="text">6</div>
+											</div>
+										</div>
+									</div>
+								</td>
+							</tr>
+						</tb>
+					</table>
+				</div>
+				<div class="bottomGraph" style="width: 526px; height: 40px;">
+					<table>
+						<tb>
+							<tr>
+								<td>
+									<div>Returning</div>
+								</td>
+								<td>
+									<div>Non-Returning</div>
+								</td>
+							</tr>
+						</tb>	
+					</table>
+				</div>
+			</div>
+			<div class="selectContainer">
+				<div class="selector" id="analytics">Analytics</div>
+					<select>
+						<option id="overview">Overview</option>
+						<option id="responseTime">Response Time</option>
+						<option id="location">Location</option>
+						<option id="device">Device</option>
+						<option id="operatingSystem">Operating System</option>
+					</select>
+				<div>
+					<div class="selector" id="filter">Filter</div>
+					<select>
+						<option id="all">All</option>
+						<option id="yes">Yes</option>
+						<option id="no">No</option>
+						<option id="answered">Answered</option>
+						<option id="didntAnswer">Didn't Answer</option>
+						<option id="newUsers">New</option>
+						<option id="returningUsers">Returning Users</option>
+					</select>
+				</div>
+				<div class="key">
+					<div class="box" style="background-color: #41b874; border-right: 1px solid #a1a1a1;"></div>
+					<div class="keyText" style="border-right: 1px solid #a1a1a1;">Yes</div>
+					<div class="box" style="background-color: #ef3b39; border-left: 1px solid #a1a1a1;"></div>					
+					<div class="keyText" style="border-right: 1px solid #a1a1a1;">No</div>
+					<div class="box" style="background-color: #797979"></div>
+					<div class="keyText">Didn't Answer</div>
+				</div>
+					
+				<div>
+					<div class="header-small center">
+						<span id="yes-no">Yes</span>
+						<span id="yes-no">No</span>
+					</div>
+					<div style="text-align:center;">
+						<div id="answer-display" style="background-image: url(img/pill.svg);">
+							<div class="vote" style="padding-top: 0; padding-bottom: 0; margin-top: 3px;">
+								<div class="pill yes yes-{{message.id}}" style="padding-right: 3px; padding-left: 2px;">0</div>
+							</div>
+							<div class="vote" style="padding-top: 0; padding-bottom: 0; margin-top: 3px;">
+								<div class="pill no no-{{message.id}}">0</div>
+							</div>													
+					<div>
+						<div style="text-align: center; font-size: 20px;">
+							<span class="result-label" style="padding-right: 5px; font-size: 20px; font-weight: lighter;">Total Views:</span><span class="no views-{{message.id}}" style="color: #323232;">0</span>
+						</div>	
+					</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</body>
+</html>

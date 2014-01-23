@@ -39,7 +39,7 @@
                             <div class="demo"></div>
                         </div>
                         <div class="eight columns alpha omega">
-                            <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started!</a>
+                            <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started Today!</a>
                             <p class="free">Sign Up <strong>Free!</strong></p>
                         </div>
                     </div>
