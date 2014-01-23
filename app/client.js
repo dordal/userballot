@@ -81,7 +81,7 @@ $ub.displayMessage = function( allowmute, frequency ) {
 		}
 
 		var html = ""+
-			//"<style>@media only screen and (min-width: 0px) and (max-width: 959px) {#ub-container{padding:40px 10px 20px;}#message-text{margin-top:-15px;}}</style>"//
+			//"<head><style>@media only screen and (min-width: 0px) and (max-width: 959px) {#ub-container{padding:40px 10px 20px;}#message-text{margin-top:-15px;}}</style></head>"//
 			"<div id='ub-container' style='z-index: 1000; padding: " + padding + "; height: 43px; position: fixed; bottom: 0; left: 0; right: 0; background-color: #fbfbfb; color: #323232; font-size: 16px; border-top: 2px solid #D8E0E5;'>"+
 			"	<div style='text-align: left; position: relative; max-width: 1024px; margin: 0 auto;'>"+
 			"		<span id='message-text' style='text-align: left;padding: " + textPadding + "; word-break: break-word; position: absolute; left: 0; right: 45px;'>" + $ub.selectedMessage.text + "</span>"+
