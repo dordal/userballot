@@ -324,16 +324,20 @@ button:focus {
 }
 .signup-btn,
 .login-btn {
-	border: none;
+	border: none !important;
 	font-size: 18px;
 	margin: 40px auto 0;
 	padding: 15px 0;
 	width: 100%;
+	box-shadow: 1px 1px 1px #444;
 }
 .signup-btn:hover,
 .login-btn:hover {
-	background-color: #2ECC71;
-	border: none;
+	background-color: #27db73;
+	transition: background .25s ease-in-out;
+    -moz-transition: background .25s ease-in-out;
+    -webkit-transition: background .25s ease-in-out;
+	border: none !important;
 }
 /* extent topcoat components */
 .topcoat-icon-button--large:hover {
