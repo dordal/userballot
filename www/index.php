@@ -28,8 +28,8 @@
         <div class="masthead">
             <div class="container five columns innerMasthead">
                 <div class="motto">
-                    <h1>Make better decisions.</h1>
-                    <p>Quickly validate ideas, products, and services using yes or no questions <strong>before</strong> you waste valuable time and money.</p>
+                    <h1>Get the pulse of your visitors.</h1>
+                    <p>Easily validate new ideas, products, and services using yes or no questions <strong>before</strong> you waste valuable time and money.</p>
                 </div>
                 <div class="five columns alpha omega" style="float: right">
                     <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started Today!</a>

@@ -138,11 +138,12 @@ h1 {
 }
 
 .masthead {
-        background: url(img/background2.jpg);
-        background-position: center;
+        background: url(img/crowd.png);
+        background-position: 50% 80%;
         /*background: linear-gradient(#fbfbfb, #eaeaea);*/
         height: auto;
-        border-bottom: 5px solid #a1a1a1;
+        width: 100%;
+        border-bottom: 5px solid #2ecc71;
 }
 
 .masthead h1{
