@@ -26,22 +26,23 @@
     <div class="page-wrap">        
         <!-- masthead -->
         <div class="masthead">
-            <div class="container twelve columns">
+            <div class="container five columns innerMasthead">
                 <div class="motto">
                     <h1>Make better decisions.</h1>
-                    <p>Quickly validate ideas, products and services with your target audience <strong>before</strong> you waste valuable time and money going in the wrong direction.</p>
+                    <p>Quickly validate ideas, products, and services using yes or no questions <strong>before</strong> you waste valuable time and money.</p>
+                </div>
+                <div class="five columns alpha omega" style="float: right">
+                    <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started Today!</a>
+                    <p class="free">Sign Up <strong>Free!</strong></p>
                 </div>
             </div>    
             <div class="container content-wrap">
                 <div class="sixteen columns">
                     <div class="row">
-                        <div class="eight columns alpha omega">
+                        <!-- <div class="eight columns alpha omega">
                             <div class="demo"></div>
-                        </div>
-                        <div class="eight columns alpha omega">
-                            <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started Today!</a>
-                            <p class="free">Sign Up <strong>Free!</strong></p>
-                        </div>
+                        </div> -->
+                        
                     </div>
                 </div>
             </div>
@@ -66,7 +67,7 @@
                             <div class="one-third column left">
                                 <img src="img/clock.svg" class="clock" alt="">
                                 <h1>Working in minutes.</h1>
-                                <p>Paste a small bit of code into your site and it works!</p>
+                                <p>Copy and paste 3 lines of code into your site and it just works!</p>
                             </div>
                         </div>
                     </div>         

@@ -1,5 +1,4 @@
 /*Media Queries*/
-
 /*mobile portrait*/
     @media only screen and (max-width: 767px) {
         .icon-feature-left {
@@ -44,9 +43,11 @@
         }
         .motto p {
                 width: auto;
+                text-align: justify;
         }
         .motto h1 {
                 line-height: normal;
+                text-align: center;
         }
         .free {
                 margin-top: 5px;
