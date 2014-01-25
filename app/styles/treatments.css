@@ -306,7 +306,7 @@ button:focus {
 	margin-right: 10px;
 	font-family: Helvetica-Light, Helvetica;
 	text-align: left;
-	-webkit-appearence: none;
+	-webkit-appearance: none;
 	-webkit-transition: border linear,box-shadow linear;
 	-webkit-transition-delay: 0.2s,0.2s;
 	-moz-transition: border linear 0.2s,box-shadow linear 0.2s;
