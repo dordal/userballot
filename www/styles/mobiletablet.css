@@ -1,4 +1,5 @@
 /*Media Queries*/
+
 /*mobile portrait*/
     @media only screen and (max-width: 767px) {
         .icon-feature-left {
@@ -6,9 +7,6 @@
         }
         .header {
                 padding-top: 20px;
-        }
-        .signup-btn {
-            margin: 0 auto 0;
         }
         .signin-btn-top {
                 position: relative;
@@ -41,16 +39,14 @@
                 margin-left: 1.025em;
         }
         .logo {
-                margin: 0 auto 0 15px;
-                padding: 15px 60px 30px 60px;
+                margin: 0 auto;
+                padding: 25px 60px 30px 60px;
         }
         .motto p {
-                width: 95%;
-                text-align: justify;
+                width: auto;
         }
         .motto h1 {
                 line-height: normal;
-                text-align: center;
         }
         .free {
                 margin-top: 5px;
@@ -89,16 +85,12 @@
                 text-align: center;
         }
         .logo {
-                margin: 0 auto 0 15px;
+                margin: 0 auto;
                 padding: 15px 120px 30px 120px;
         }
 }
 /*tablet!*/
     @media only screen and (min-width: 768px) and (max-width: 959px) {
-        .signup-btn {
-            margin: 85px 10px 0 0;
-            padding: 20px 10px;
-        }
         .feature-triple p {
                 font-size: 16px;
         }
@@ -128,14 +120,6 @@
         .home h1 {
                 line-height: normal
         }
-}
-@media only screen and (min-width: 960px) and (max-width: 1079px) {
-    .logo {
-        margin-left: 2%;
-    }
-    .motto {
-        margin-left: 2%;
-    }
 }
 /*logo issue!*/
     @media only screen and (min-width: 960px) and (max-width: 1030px) {

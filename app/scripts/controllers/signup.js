@@ -74,7 +74,7 @@ function createMessage(messageText) {
 	message['views'] = 0;
 	message['mute'] = 0;
 	message['position'] = 0;
-	message['active'] = 1; //questions active by default
+	message['active'] = 0;
 	return message;
 }
 

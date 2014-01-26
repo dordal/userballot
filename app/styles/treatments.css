@@ -306,7 +306,6 @@ button:focus {
 	margin-right: 10px;
 	font-family: Helvetica-Light, Helvetica;
 	text-align: left;
-	-webkit-appearance: none;
 	-webkit-transition: border linear,box-shadow linear;
 	-webkit-transition-delay: 0.2s,0.2s;
 	-moz-transition: border linear 0.2s,box-shadow linear 0.2s;
@@ -325,21 +324,16 @@ button:focus {
 }
 .signup-btn,
 .login-btn {
-	border: none !important;
+	border: none;
 	font-size: 18px;
 	margin: 40px auto 0;
 	padding: 15px 0;
 	width: 100%;
-	box-shadow: 1px 1px 1px #444;
-	-webkit-appearence: none;
 }
 .signup-btn:hover,
 .login-btn:hover {
-	background-color: #27db73;
-	transition: background .25s ease-in-out;
-    -moz-transition: background .25s ease-in-out;
-    -webkit-transition: background .25s ease-in-out;
-	border: none !important;
+	background-color: #2ECC71;
+	border: none;
 }
 /* extent topcoat components */
 .topcoat-icon-button--large:hover {
