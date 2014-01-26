@@ -6,7 +6,7 @@
             </div>
             <div class="headerlogo">
                 <a href="/">
-                <img class="logo" src="img/beta.svg" alt=""></a>
+                <img class="logo" src="img/logo.svg" alt=""></a>
             </div>
             <div class="pages">
                 <a class="page-default" href="/ourproduct.php">our product</a>

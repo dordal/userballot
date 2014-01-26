@@ -52,7 +52,7 @@
 								<p>Create your first question using the "Ask a new question" section of your admin area.</p>
 								<br>
 								<strong>A few things to remember.</strong>
-								<p>Make sure you ask simple yes or no questions and keep them short (140 characters or less).</p>
+								<p>Make sure you ask simple yes or no questions and keep them short (99 characters or less).</p>
 								<p>Questions are shown to a visitor only once.</p>
 								<p>Only questions that are set to <span style="color:#2ecc71;font-weight:bold;">active</span> will be shown to your visitors.</p>
 								<br>
@@ -84,9 +84,9 @@
 								<br>
 								<div style="color: #fbfbfb; text-align:center;" class="emphasis-heading">Ask a new question!</div>
 								<form ng-submit="submit()" ng-controller="AdminAreaCtrl" name="questionSubmitForm">
-								<div class="charcount" ng-show="questionSubmitForm.text.$valid">{{question.length}} / 140</div>
+								<div class="charcount" ng-show="questionSubmitForm.text.$valid">{{question.length}} / 99</div>
 								<div class="charcount-error" ng-show="questionSubmitForm.text.$error.maxlength">Question is too long!</div>
-								<textarea class="topcoat-textarea ask-new-question-input" ng-model="question" name="text" rows="2" cols="" ng-maxlength="140" placeholder="Keep it simple and ask a yes or no question. (140 characters or less)" required style="margin-bottom:2.5%;"></textarea>
+								<textarea class="topcoat-textarea ask-new-question-input" ng-model="question" name="text" rows="2" cols="" ng-maxlength="99" placeholder="Keep it simple and ask a yes or no question. (99 characters or less)" required style="margin-bottom:2.5%;"></textarea>
 								<button class="newbutton" id="save-question" ng-disabled="questionSubmitForm.text.$invalid">Save</button>
 								</form>
 							</div>
@@ -97,7 +97,7 @@
 
 									<!-- <div class="line-item card-wrap" ng:class="{true:'active', false:''}[message.active=='1']" ng-repeat="message in site.messages"> -->
 									<div ng-repeat="message in site.messages">
-										<div class="three-columns alpha analytics">Analytics</div>
+										<a class="three-columns alpha analytics">Analytics</a>
 										<div class="line-item card-wrap">
 											<div class="timestamp">
 												<span ng-show="message.startdate"><strong>Started:</strong> {{message.startdate | date:'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;</span>
