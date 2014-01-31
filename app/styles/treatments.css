@@ -298,7 +298,10 @@ button:focus {
 	font-size: 1.1em;
 	line-height: 28px;
 	color: #262936;
-	width: 100%;
+	width: calc(100% - 10px);
+	width: -webkit-calc(100% - 10px);
+	width: -moz-calc(100% - 10px);
+	width: -o-calc(100% - 10px);
 	vertical-align: middle;
 	background-color: #fff;
 	border: 1px solid #CCD0D6;
@@ -306,7 +309,11 @@ button:focus {
 	margin-right: 10px;
 	font-family: Helvetica-Light, Helvetica;
 	text-align: left;
-	-webkit-appearance: none;
+	-webkit-transition: border linear,box-shadow linear;
+	-webkit-transition-delay: 0.2s,0.2s;
+	-moz-transition: border linear 0.2s,box-shadow linear 0.2s;
+	-o-transition: border linear 0.2s,box-shadow linear 0.2s;
+	transition: border linear 0.2s,box-shadow linear 0.2s;
 }
 .public-form-error-message {
 	color: #FF0000;
@@ -326,6 +333,10 @@ button:focus {
 	padding: 15px 0;
 	width: 100%;
 	box-shadow: 1px 1px 1px #444;
+	cursor: pointer;
+	background-color: #2ecc71;
+	color: #fff;
+	border-radius: 3px;
 	-webkit-appearence: none;
 }
 .signup-btn:hover,
@@ -334,6 +345,7 @@ button:focus {
 	transition: background .25s ease-in-out;
     -moz-transition: background .25s ease-in-out;
     -webkit-transition: background .25s ease-in-out;
+    -webkit-appearence: none;
 	border: none !important;
 }
 /* extent topcoat components */
