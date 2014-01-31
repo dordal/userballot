@@ -88,7 +88,7 @@
                             </div>
                             <div id="double-right">
                                 <div class="analytics-container"><img class="analytics-icons" src="img/focus.svg"></div>
-                                <h1>Focus on what's important.</h1>
+                                <h1>Focus on what's essential.</h1>
                                 <p>Use our analytics to focus on the answers <strong>you</strong> care about.</p>
                             </div>
                         </div>
