@@ -96,7 +96,7 @@
             padding: 15px 120px 30px 120px;
         }
         #double {
-            width: 400px;
+            width: 100%;
             height: 600px;
         }
         #thirdBar {
@@ -104,15 +104,20 @@
         }
         #double-right {
             height: 55%;
+            width: 100%;
         }
         #double-left {
             height: 55%;
+            width: 100%
+        }
+        #double p {
+            width: 360px;
         }
 }
 
 @media only screen and (max-width: 480px) {
     #double {
-        width: 400px;
+        width: 320px;
         height: 600px;
     }
     #thirdBar {
@@ -120,11 +125,11 @@
     }
     #double-right {
         height: 55%;
-        width: 300px;
+        width: 100%;
     }
     #double-left {
         height: 55%;
-        width: 304px;
+        width: 100%;
     }
     .icon-feature-four {
         width: 304px;

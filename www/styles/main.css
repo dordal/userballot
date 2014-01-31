@@ -394,4 +394,6 @@ h1 {
         width: 85%;
         font-size: 17px;
         text-align: center;
+        margin-top: 16px;
+        line-height: 25px;
 }
