@@ -307,11 +307,6 @@ button:focus {
 	font-family: Helvetica-Light, Helvetica;
 	text-align: left;
 	-webkit-appearance: none;
-	-webkit-transition: border linear,box-shadow linear;
-	-webkit-transition-delay: 0.2s,0.2s;
-	-moz-transition: border linear 0.2s,box-shadow linear 0.2s;
-	-o-transition: border linear 0.2s,box-shadow linear 0.2s;
-	transition: border linear 0.2s,box-shadow linear 0.2s;
 }
 .public-form-error-message {
 	color: #FF0000;

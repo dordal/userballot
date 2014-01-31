@@ -52,7 +52,6 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 			}
 
 		});
-
 		// Flash updates to the vote counts
 		$scope.$watch("site.messages", function(newMessages, oldMessages) {
 			if (oldMessages != null) {
@@ -112,12 +111,17 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 		if($scope.question) {
 			if ($scope.site.messages == undefined) {
 				$scope.site.messages = {};
+
 			}
+			// if (itemPosition === undefined) {
+			// 	var itemPosition = 1;
+			// };
+			// var itemPosition = itemPosition + 2;
 			$scope.site.messages[$scope.sitesRef.push().name()] = {
 				text: $scope.question,
 				yesVotes: 0,
 				noVotes: 0,
-				position: 0,
+				position: 0, //itemPosition,
 				active: 1, //questions active by default
 				views: 0,
 				mute: 0,
