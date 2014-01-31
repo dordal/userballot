@@ -71,8 +71,29 @@
                             </div>
                         </div>
                     </div>         
-                <div class="content-wrap icon-feature sixteen columns">
-                        <div class="icon-feature-four">
+            </div>
+        </div>
+        <div class="bottom" id="thirdBar">
+            <div class="content-wrap feature-block">
+                <div>
+                    <div>
+                        <h1 id="see">See <strong>who</strong> is answering your questions.</h1>
+                    </div>
+                    <div id="doubleContainer">
+                        <div id="double">
+                            <div id="double-left">
+                                <div class="analytics-container"><img class="analytics-icons" src="img/location.svg"></div>
+                                <h1>See important demographics.</h1>
+                                <p>See who has been answering your questions so you can know <strong>your</strong> audience.</p>
+                            </div>
+                            <div id="double-right">
+                                <div class="analytics-container"><img class="analytics-icons" src="img/focus.svg"></div>
+                                <h1>Focus on what's important.</h1>
+                                <p>Use our analytics to focus on the answers <strong>you</strong> care about.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="icon-feature-four">
                             <div class="icon-feature-left">
                                 <a href="https://www.facebook.com/pages/Userballot/587625811299982"><img src="img/facebook.svg" alt="" class="social-media"></a>
                             </div>
@@ -86,15 +107,6 @@
                                 <a href="https://twitter.com/UserBallot"><img src="img/twitter.svg" alt="" class="social-media"></a>
                             </div>
                         </div>
-                </div>
-            </div>
-        </div>
-        <div class="bottom" style="background-color: #a1a1a1; width: 100%;">
-            <div class="container content-wrap feature-block">
-                <div class="row">
-                    <div>
-                        <h1>test content</h1>
-                    </div>
                 </div>
             </div>
         </div>

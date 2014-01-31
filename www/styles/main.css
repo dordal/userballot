@@ -138,7 +138,7 @@ h1 {
 }
 
 .masthead {
-        background: url(img/crowd.png);
+        background: #232323 url(img/crowd.png);
         background-position: 50% 80%;
         /*background: linear-gradient(#fbfbfb, #eaeaea);*/
         height: auto;
@@ -295,9 +295,13 @@ h1 {
 
 .social-media {
         height: 35px;
+        border-radius: 100%;
+        border: 1px solid transparent;
 }
 
 .social-media:hover {
+        border-radius: 100%;
+        border: 1px solid #fff;
         opacity: .5;
         transition: .25s ease-in-out;
         -moz-transition: .25s ease-in-out;
@@ -341,4 +345,53 @@ h1 {
 }
 .topcoat-button--quiet.active {
         color: #16a085;
+}
+#thirdBar {
+        background: #323232;
+        width: 100%;
+        border-top: 5px solid #2ecc71;
+        height: 500px;
+}
+#see {
+        color: #fff;
+        text-align: center;
+        font-weight: lighter;
+        padding-bottom: 40px;
+}
+#double {
+        width: 800px;
+        height: 300px;
+        margin: auto;
+}
+#double-left {
+        width: 400px;
+        height: 100%;
+        float: left;
+}
+#double-right {
+        width: 400px;
+        height: 100%;
+        float: left;
+}
+.analytics-container {
+        width: auto;
+        margin: auto;
+        text-align: center;
+}
+.analytics-icons {
+        height: 110px;
+        width: auto;
+}
+#double h1 {
+        color: #2ecc71;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 600;
+}
+#double p {
+        color: #fff;
+        margin: auto;
+        width: 85%;
+        font-size: 17px;
+        text-align: center;
 }
