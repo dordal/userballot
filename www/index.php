@@ -31,7 +31,7 @@
                     <h1>Get the pulse of your visitors.</h1>
                     <p>Easily validate new ideas, products, and services using yes or no questions <strong>before</strong> you waste valuable time and money.</p>
                 </div>
-                <div class="five columns alpha omega" style="float: right">
+                <div class="five columns alpha omega" id="button-padding" style="float: right">
                     <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started Today!</a>
                     <p class="free">Sign Up <strong>Free!</strong></p>
                 </div>

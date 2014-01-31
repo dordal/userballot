@@ -180,6 +180,27 @@
             height: 30%;
             width: 370px;
         }
+        .motto p {
+            padding-left: 10px;
+        }
+        .motto h1 {
+            padding-left: 10px;
+        }
+        #button-padding {
+            padding-right: 15px;
+        }
+/*odd spacing fix*/
+@media only screen and (min-width: 810px) and (max-width: 959px) {
+    .motto p {
+        padding-left: 0px;
+    }
+    .motto h1 {
+        padding-left: 0px;
+    }
+    #button-padding {
+        padding-right: 0px;
+    }
+}
 }
 @media only screen and (min-width: 960px) and (max-width: 1079px) {
     .logo {
