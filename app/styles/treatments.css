@@ -309,6 +309,15 @@ button:focus {
 	margin-right: 10px;
 	font-family: Helvetica-Light, Helvetica;
 	text-align: left;
+	-webkit-appearence: none;
+	/* testing*/
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+    background: -o-linear-gradient(bottom, #fff 0%);
+    background: -moz-linear-gradient(bottom, #fff 0%);
+    background: -webkit-linear-gradient(bottom, #fff 0%);
+    background: -ms-linear-gradient(bottom, #fff 0%);
+    background: linear-gradient(to bottom, #fff 0%);
+
 	-webkit-transition: border linear,box-shadow linear;
 	-webkit-transition-delay: 0.2s,0.2s;
 	-moz-transition: border linear 0.2s,box-shadow linear 0.2s;
@@ -337,7 +346,14 @@ button:focus {
 	background-color: #2ecc71;
 	color: #fff;
 	border-radius: 3px;
-	-webkit-appearence: none;
+	/* testing*/
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+    background: -o-linear-gradient(bottom, #fff 0%);
+    background: -moz-linear-gradient(bottom, #fff 0%);
+    background: -webkit-linear-gradient(bottom, #fff 0%);
+    background: -ms-linear-gradient(bottom, #fff 0%);
+    background: linear-gradient(to bottom, #fff 0%);
+	/*-webkit-appearence: none;*/
 }
 .signup-btn:hover,
 .login-btn:hover {
