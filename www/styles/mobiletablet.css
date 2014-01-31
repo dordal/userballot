@@ -120,14 +120,14 @@
     }
     #double-right {
         height: 55%;
-        width: 100%;
+        width: 300px;
     }
     #double-left {
         height: 55%;
-        width: 100%;
+        width: 304px;
     }
     .icon-feature-four {
-        width: 300px;
+        width: 304px;
     }
 }
 /*tablet!*/
