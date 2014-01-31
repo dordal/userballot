@@ -49,7 +49,7 @@
         </div>
         <!-- The container is a centered 960px -->
         <div class="bottom">
-            <div class="container content-wrap feature-block">
+            <div class="container content-wrap feature-block" style="padding-bottom: 40px;">
                     <div class="row">
                         <h1 class="chance">Don't leave important decisions to chance!</h1>
                         <p class="subheader center">Getting simple, easy to understand feedback from your users is key to making the right decisions.</p>
