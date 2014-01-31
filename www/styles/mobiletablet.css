@@ -189,6 +189,9 @@
         #button-padding {
             padding-right: 15px;
         }
+        .logo {
+            padding-left: 10px;
+        }
 /*odd spacing fix*/
 @media only screen and (min-width: 810px) and (max-width: 959px) {
     .motto p {
@@ -199,6 +202,9 @@
     }
     #button-padding {
         padding-right: 0px;
+    }
+    .logo {
+        padding-left: 0px;
     }
 }
 }
