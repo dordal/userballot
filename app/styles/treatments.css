@@ -384,14 +384,16 @@ button:focus {
 		width: 175px;
 		background-repeat: no-repeat;
 		color: #fff;
-		font-size: 24px;
+		font-size: 20px;
 		height: 33px;
 		display: inline-block;
+		text-align: center;
 }
 .vote {
-	padding:28px;
-	display:inline-block;
-	margin-top: -25px;
+	height: 33px;
+	width: 50%;
+	float: left;
+	margin-top: 5px;
 }
 .reset {
 	width: 100%;
@@ -461,7 +463,9 @@ button:focus {
 #days {
 	width: 40px;
 }
-
+#ub-container {
+	background-color: black !important;
+}
 
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {

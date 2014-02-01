@@ -357,6 +357,7 @@ h1 {
         text-align: center;
         font-weight: lighter;
         padding-bottom: 40px;
+        text-shadow: 1px 1px 1px #000;
 }
 #double {
         width: 800px;
