@@ -463,9 +463,6 @@ button:focus {
 #days {
 	width: 40px;
 }
-#ub-container {
-	background-color: black !important;
-}
 
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {

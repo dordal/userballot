@@ -65,6 +65,24 @@
 								<div class="title">Site Settings</div>
 								<br>
 								<div class="line-item">
+									<p>What color would you like to use in your UserBallots?</p>
+									<script type="text/javascript">        
+										$(document).ready(
+											function() {
+												$("#custom").spectrum({
+    												preferredFormat: "hex",
+    												showInput: true,
+    												clickoutFiresChange: true,
+    												chooseText: "I like it!",
+    												showInitial: true,
+    												showInput: true
+												});
+											});
+									</script>
+									<input type='text' id="custom" value="#2ecc71" ng-model="site.hue"/>
+									<input ng-model="site.hue" />
+								</div>
+								<div class="line-item">
 									<form name="sitesettings">
 										<p>How many days between showing each question to a visitor?</p> 
 										<input id="days" ng-model="site.frequency" maxlength="3" type="number" ngMinimum="0"/> days.

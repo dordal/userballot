@@ -22,6 +22,7 @@ userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, 
 				angularFireAuth.login("password", {email: $scope.email, password: $scope.password}).then(function() {
 					var site = {};
 					//site.domain = $scope.domain;
+					site.hue = "#2ecc71"; // questions are "userballot green" by default
 					site.frequency = 10;
 					site.allowmute = 0; // dis-allow muting questions by default
 					

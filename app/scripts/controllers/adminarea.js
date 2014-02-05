@@ -52,6 +52,7 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 			}
 
 		});
+
 		// Flash updates to the vote counts
 		$scope.$watch("site.messages", function(newMessages, oldMessages) {
 			if (oldMessages != null) {
@@ -133,7 +134,6 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 		}
 		$scope.question = '';
 	};
-
 
 	$scope.logout = function() {
 		userballotAuthSvc.logout();

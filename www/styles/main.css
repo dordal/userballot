@@ -311,6 +311,7 @@ h1 {
 .footer {
         background-color: #eee;
         bottom: 0;
+        position: absolute;
         color: #999;
         left: 0;
         font-size: 12px;

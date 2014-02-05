@@ -32,15 +32,23 @@
             </div>
         </div>     
 		    <div class="container">
-            <div class="text" style="text-indent: 0px">
-                <p>UserBallot is a new one-touch feedback gathering tool based around yes or no questions that lets website owners get real time answers from more of your customers than ever before. All <span class="best">you</span> need to do is copy and paste a few lines of code into your website!</p>
-                <p>By making simple questions that only require one touch to answer, you will have a larger portion of your audience giving you feedback, allowing you to make better decisions about what <span class="best">you</span> care about.</p>
-                <p>We start you off with some sample questions so you don’t get stumped, but you can ask your users <span class="best">anything</span> you’d like!</p>
-                <p>Beyond the questions, our built in analytics give you <span class="best">powerful</span> insight into what your audience is into!</p>
-                <br>
-                <p class="best"; style="text-align: center">Best of all, while it’s in beta, UserBallot is free! Give us a try today!</p>
-            </div>
-        </div>             
+                <div class="sectionContainer" style="width=100%; height: 200px; margin-top: 60px;">
+                    <div style="width:33%; height:100%; background-color: #323232; float:left;"></div>
+                    <div style="width:66%; height:100%; float:right;">UserBallot is a new one-touch feedback gathering tool based around yes or no questions that lets website owners get real time answers from more of your customers than ever before. All <span class="best">you</span> need to do is copy and paste a few lines of code into your website!</div>
+                </div>
+                <div class="sectionContainer" style="width=100%; height: 200px; margin-top: 60px;">
+                    <div style="width:66%; height:100%; float:left; text-align: right;">By making simple questions that only require one touch to answer, you will have a larger portion of your audience giving you feedback, allowing you to make better decisions about what <span class="best">you</span> care about.</div>
+                    <div style="width:33%; height:100%; background-color: #323232; float:right;"></div>
+                </div>
+                <div class="sectionContainer" style="width=100%; height: 200px; margin-top: 60px;">
+                    <div style="width:33%; height:100%; background-color: #323232; float:left;"></div>
+                    <div style="width:66%; height:100%; float:right;">We start you off with some sample questions so you don’t get stumped, but you can ask your users <span class="best">anything</span> you’d like!</div>
+                </div>
+                <div class="sectionContainer" style="width=100%; height: 200px; margin-top: 60px;">
+                    <div style="width:66%; height:100%; float:left; text-align:right;">Beyond the questions, our built in analytics give you <span class="best">powerful</span> insight into what your audience is into!</div>
+                    <div style="width:33%; height:100%; background-color: #323232; float:right;"></div>
+                </div>
+            </div>             
         <!-- footer -->
         <div class="footer">
             &copy;UserBallot.com
