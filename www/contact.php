@@ -45,11 +45,11 @@
                         </form>
                     </div>
                 <p style="margin: 0 0px 20px; padding-top: 0px; text-align: center; margin-top: 20px;">For other miscellaneous inquiries, please email us at:</p>
-                <p class="best" style="text-align: center; margin-bottom: 100px;"><a href="mailto:info@userballot.com">info@userballot.com</a></p>
+                <p class="best" style="text-align: center; margin-bottom: 350px;"><a href="mailto:info@userballot.com">info@userballot.com</a></p>
             </div>
         </div>                        
         <!-- footer -->
-        <div class="footer" style="position: fixed !important">
+        <div class="footer" style="position: relative !important">
             &copy;UserBallot.com
         </div>
     </div>

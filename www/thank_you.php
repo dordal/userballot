@@ -10,6 +10,6 @@
 <body style="text-align: center;">
 <h1 style="margin-top: 50px;">Thanks for your feedback!</h1>
 <p>We appreciate that you took the time to send us your feedback. We will get back to you as soon as we can!</p>
-<p><a href="contact.php">Back to Support Page</a></p>
+<p><a href="contact.php">Back to Contact Page</a></p>
 </body>
 </html>

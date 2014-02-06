@@ -9,7 +9,7 @@
 </head>
 <body style="text-align:center;">
 <h1 style="margin-top: 50px;">Oops!</h1>
-<p>Please ensure you have completed both fields before submitting the form. </p>
+<p>Please ensure you have completed all three fields before submitting the form. </p>
 <p>Also ensure that there is only one email address.</p>
 <p><a href="JavaScript:history.go(-1);">Back</a></p>
 </body>
