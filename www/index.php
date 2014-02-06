@@ -38,11 +38,7 @@
             </div>    
             <div class="container content-wrap">
                 <div class="sixteen columns">
-                    <div class="row">
-                        <!-- <div class="eight columns alpha omega">
-                            <div class="demo"></div>
-                        </div> -->
-                        
+                    <div class="row">  
                     </div>
                 </div>
             </div>
@@ -67,13 +63,14 @@
                             <div class="one-third column left">
                                 <img src="img/clock.svg" class="clock" alt="">
                                 <h1>Working in minutes.</h1>
-                                <p>Copy and paste 3 lines of code into your site and it just works!</p>
+                                <p>Copy and paste 2 lines of code into your site and it just works!</p>
                             </div>
                         </div>
                     </div>         
             </div>
         </div>
-        <div class="bottom" id="thirdBar">
+        <!-- To be added with analytics-->
+        <!-- <div class="bottom" id="thirdBar">
             <div class="content-wrap feature-block">
                 <div>
                     <div>
@@ -84,7 +81,7 @@
                             <div id="double-left">
                                 <div class="analytics-container"><img class="analytics-icons" src="img/location.svg"></div>
                                 <h1>See important demographics.</h1>
-                                <p>See who has been answering your questions so you can know <strong>your</strong> audience.</p>
+                                <p>Know your audience.<br>Be <strong>driven</strong> by response.</p>
                             </div>
                             <div id="double-right">
                                 <div class="analytics-container"><img class="analytics-icons" src="img/focus.svg"></div>
@@ -94,22 +91,22 @@
                         </div>
                     </div>
                     <div class="icon-feature-four">
-                            <div class="icon-feature-left">
-                                <a href="https://www.facebook.com/pages/Userballot/587625811299982"><img src="img/facebook.svg" alt="" class="social-media"></a>
-                            </div>
-                            <div class="icon-feature-left">
-                                <a href="https://plus.google.com/b/100033594081784228442/100033594081784228442/about"><img src="img/google+.svg" alt="" class="social-media"></a>
-                            </div>
-                            <div class="icon-feature-left">
-                                <a href="http://www.linkedin.com/company/3350090?trk=tyah&trkInfo=tas%3Auserballot"><img src="img/linkedin.svg" alt="" class="social-media"></a>
-                            </div>
-                            <div class="icon-feature-left">
-                                <a href="https://twitter.com/UserBallot"><img src="img/twitter.svg" alt="" class="social-media"></a>
-                            </div>
+                        <div class="icon-feature-left">
+                            <a href="https://www.facebook.com/pages/Userballot/587625811299982"><img src="img/facebook.svg" alt="" class="social-media"></a>
                         </div>
+                        <div class="icon-feature-left">
+                            <a href="https://plus.google.com/b/100033594081784228442/100033594081784228442/about"><img src="img/google+.svg" alt="" class="social-media"></a>
+                        </div>
+                        <div class="icon-feature-left">
+                            <a href="http://www.linkedin.com/company/3350090?trk=tyah&trkInfo=tas%3Auserballot"><img src="img/linkedin.svg" alt="" class="social-media"></a>
+                        </div>
+                        <div class="icon-feature-left">
+                            <a href="https://twitter.com/UserBallot"><img src="img/twitter.svg" alt="" class="social-media"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- footer -->
         <div class="footer">
             <img src="img/rackspace.svg" id="rackspace"></img>

@@ -68,6 +68,47 @@
         .icon-feature {
             padding-top: 50px;
         }    
+        .sectionContainer {
+            height: 300px;
+            width: 100%;
+            margin-top: 0;
+        }
+        .left-image {
+            height: 50%;
+            width: 100%;
+            float: left;
+            margin: 0;
+            display: none;
+            height: 0;
+        }
+        .right-image {
+            height: 50%;
+            width: 100%;
+            float: left;
+            margin: 0;
+            display: none;
+            height: 0;
+        }
+        .left-text {
+            height: 50%;
+            width: 100%;
+            float: left;
+            text-align: justify;
+            margin: 0;
+        }
+        .right-text {
+            height: 50%;
+            width: 100%;
+            float: left;
+            text-align: justify;
+            margin: 0;
+        }
+        #settingUp {
+            margin-top: 40px;
+        }
+        #commentBoxContainer {
+            width: 100%;
+        }
     }
 /*mobile landscape*/
     @media only screen and (min-width: 480px) and (max-width: 767px) {
