@@ -3,42 +3,43 @@
 /*mobile portrait*/
     @media only screen and (max-width: 767px) {
         .icon-feature-left {
-                width: 75px;
+            width: 75px;
         }
         .header {
-                padding-top: 20px;
+            padding-top: 20px;
         }
         .signin-btn-top {
-                position: relative;
-                float: right;
-                margin-right: 23%;
-                font-size: 18px;
-                padding: 5px 10px 10px 10px;
-                border-radius: 8px;
-                background-color: transparent;
+            position: relative;
+            float: right;
+            margin-right: 23%;
+            font-size: 18px;
+            padding: 5px 10px 10px 10px;
+            border-radius: 8px;
+            background-color: transparent;
         }
         .signup-btn-top {
-                position: relative;
-                float: left;
-                margin-left: 23%;
-                right: 0;
-                border-radius: 8px;
-                padding: 5px 10px 10px 10px;
-                font-size: 18px;
+            position: relative;
+            float: left;
+            margin-left: 23%;
+            right: 0;
+            border-radius: 8px;
+            padding: 5px 10px 10px 10px;
+            font-size: 18px;
         }
         .headerlogo {
-                margin: 0 auto;
+            margin: 0 auto;
         }
         .pages {
-                margin: 0 auto;
-                text-align: center;
-                font-size: 18px;
-                padding-bottom: 30px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 18px;
+            padding-bottom: 30px;
         }
         .page-padded {
-                margin-left: 1.025em;
+            margin-left: 1.025em;
         }
         .logo {
+<<<<<<< HEAD
                 margin: 0 auto;
                 padding: 25px 60px 30px 60px;
         }
@@ -47,84 +48,226 @@
         }
         .motto h1 {
                 line-height: normal;
+=======
+            margin: 0 auto 0 15px;
+            padding: 15px 60px 30px 60px;
+        }
+        .motto p {
+            width: 95%;
+            text-align: justify;
+        }
+        .motto h1 {
+            line-height: normal;
+            text-align: center;
+>>>>>>> Staging
         }
         .free {
-                margin-top: 5px;
-                padding-bottom: 40px;
+            margin-top: 5px;
+            padding-bottom: 40px;
         }
         .chance {
-                padding-bottom: 45px;
+            padding-bottom: 45px;
         }
         .home h1 {
-                line-height: normal 
+            line-height: normal 
         }
         .feature-triple p {
-                padding-bottom: 30px;
+            padding-bottom: 30px;
         }
         .icon-feature {
-                padding-top: 50px;
+            padding-top: 50px;
         }    
+        .sectionContainer {
+            height: 300px;
+            width: 100%;
+            margin-top: 0;
+        }
+        .left-image {
+            height: 50%;
+            width: 100%;
+            float: left;
+            margin: 0;
+            display: none;
+            height: 0;
+        }
+        .right-image {
+            height: 50%;
+            width: 100%;
+            float: left;
+            margin: 0;
+            display: none;
+            height: 0;
+        }
+        .left-text {
+            height: 50%;
+            width: 100%;
+            float: left;
+            text-align: justify;
+            margin: 0;
+        }
+        .right-text {
+            height: 50%;
+            width: 100%;
+            float: left;
+            text-align: justify;
+            margin: 0;
+        }
+        #settingUp {
+            margin-top: 40px;
+        }
+        #commentBoxContainer {
+            width: 100%;
+        }
     }
 /*mobile landscape*/
     @media only screen and (min-width: 480px) and (max-width: 767px) {
         .icon-feature-left {
-                width: 105px;
+            width: 105px;
+        }
+        .icon-feature-four {
+            width: 420px;
         }
         .signin-btn-top {
-                margin-right: 30%;
-                right: 3.5px;
+            margin-right: 30%;
+            right: 3.5px;
         }
         .signup-btn-top {
-                margin-left: 30%;
+            margin-left: 30%;
         }
         .headerlogo {
-                margin: 0 auto;
+            margin: 0 auto;
         }
         .pages {
-                margin: 0 auto;
-                text-align: center;
+            margin: 0 auto;
+            text-align: center;
         }
         .logo {
+<<<<<<< HEAD
                 margin: 0 auto;
                 padding: 15px 120px 30px 120px;
+=======
+            margin: 0 auto 0 15px;
+            padding: 15px 120px 30px 120px;
         }
+        #double {
+            width: 100%;
+            height: 600px;
+        }
+        #thirdBar {
+            height: 900px;
+        }
+        #double-right {
+            height: 55%;
+            width: 100%;
+        }
+        #double-left {
+            height: 55%;
+            width: 100%
+        }
+        #double p {
+            width: 360px;
+>>>>>>> Staging
+        }
+}
+
+@media only screen and (max-width: 480px) {
+    #double {
+        width: 320px;
+        height: 600px;
+    }
+    #thirdBar {
+        height: 950px;
+    }
+    #double-right {
+        height: 55%;
+        width: 100%;
+    }
+    #double-left {
+        height: 55%;
+        width: 100%;
+    }
+    .icon-feature-four {
+        width: 304px;
+    }
 }
 /*tablet!*/
     @media only screen and (min-width: 768px) and (max-width: 959px) {
         .feature-triple p {
-                font-size: 16px;
+            font-size: 16px;
         }
         .signin-btn-top {
-                font-size: 18px;
-                padding: 5px 10px 10px 10px;
-                border-radius: 0 0 8px 8px;
-                background-color: transparent;
+            font-size: 18px;
+            padding: 5px 10px 10px 10px;
+            border-radius: 0 0 8px 8px;
+            background-color: transparent;
         }
         .signup-btn-top {
-                font-size: 18px;
-                border-radius: 0 0 8px 8px;
-                padding: 5px 10px 10px 10px;
-                right: 80px;
+            font-size: 18px;
+            border-radius: 0 0 8px 8px;
+            padding: 5px 10px 10px 10px;
+            right: 80px;
         }
         .pages {
-                font-size: 18px;
-                margin: 0 auto;
-                padding: 10px 200px 0 200px;
+            font-size: 18px;
+            margin: 0 auto;
+            padding: 10px 200px 0 200px;
         }
         .page-padded {
-                margin-left: 1.5em;
+            margin-left: 1.5em;
         }
         .headerlogo {
-                margin-left: 0px;
+            margin-left: 0px;
         }
         .home h1 {
-                line-height: normal
+            line-height: normal
         }
+        #double {
+            width: 740px;
+            height: 300px;
+        }
+        #thirdBar {
+            height: 500px;
+        }
+        #double-right {
+            height: 30%;
+            width: 370px;
+        }
+        #double-left {
+            height: 30%;
+            width: 370px;
+        }
+        .motto p {
+            padding-left: 10px;
+        }
+        .motto h1 {
+            padding-left: 10px;
+        }
+        #button-padding {
+            padding-right: 15px;
+        }
+        .logo {
+            padding-left: 10px;
+        }
+/*odd spacing fix*/
+@media only screen and (min-width: 810px) and (max-width: 959px) {
+    .motto p {
+        padding-left: 0px;
+    }
+    .motto h1 {
+        padding-left: 0px;
+    }
+    #button-padding {
+        padding-right: 0px;
+    }
+    .logo {
+        padding-left: 0px;
+    }
+}
 }
 /*logo issue!*/
     @media only screen and (min-width: 960px) and (max-width: 1030px) {
         .headerlogo {
-                margin-left: -10px
+            margin-left: -10px
         }
 }
 /*high-res!*/

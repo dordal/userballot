@@ -294,11 +294,14 @@ button:focus {
 .fresh-text-input {
 	display: inline-block;
 	min-height: 42px;
-	padding: 6px 0;
+	padding: 6px 0 6px 10px;
 	font-size: 1.1em;
 	line-height: 28px;
 	color: #262936;
-	width: 100%;
+	width: calc(100% - 10px);
+	width: -webkit-calc(100% - 10px);
+	width: -moz-calc(100% - 10px);
+	width: -o-calc(100% - 10px);
 	vertical-align: middle;
 	background-color: #fff;
 	border: 1px solid #CCD0D6;
@@ -306,6 +309,17 @@ button:focus {
 	margin-right: 10px;
 	font-family: Helvetica-Light, Helvetica;
 	text-align: left;
+<<<<<<< HEAD
+=======
+	/* mobile safari fixes */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
+    background: -o-linear-gradient(bottom, #fff 0%);
+    background: -moz-linear-gradient(bottom, #fff 0%);
+    background: -webkit-linear-gradient(bottom, #fff 0%);
+    background: -ms-linear-gradient(bottom, #fff 0%);
+    background: linear-gradient(to bottom, #fff 0%);
+
+>>>>>>> Staging
 	-webkit-transition: border linear,box-shadow linear;
 	-webkit-transition-delay: 0.2s,0.2s;
 	-moz-transition: border linear 0.2s,box-shadow linear 0.2s;
@@ -329,11 +343,35 @@ button:focus {
 	margin: 40px auto 0;
 	padding: 15px 0;
 	width: 100%;
+<<<<<<< HEAD
 }
 .signup-btn:hover,
 .login-btn:hover {
 	background-color: #2ECC71;
 	border: none;
+=======
+	box-shadow: 1px 1px 1px #444;
+	cursor: pointer;
+	background-color: #2ecc71;
+	color: #fff;
+	border-radius: 3px;
+	/* mobile safari fixes */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2ecc71));
+    background: -o-linear-gradient(bottom, #2ecc71 0%);
+    background: -moz-linear-gradient(bottom, #2ecc71 0%);
+    background: -webkit-linear-gradient(bottom, #2ecc71 0%);
+    background: -ms-linear-gradient(bottom, #2ecc71 0%);
+    background: linear-gradient(to bottom, #2ecc71 0%);
+}
+.signup-btn:hover,
+.login-btn:hover {
+	background-color: #27db73;
+	transition: background .25s ease-in-out;
+    -moz-transition: background .25s ease-in-out;
+    -webkit-transition: background .25s ease-in-out;
+    -webkit-appearence: none;
+	border: none !important;
+>>>>>>> Staging
 }
 /* extent topcoat components */
 .topcoat-icon-button--large:hover {
@@ -357,14 +395,16 @@ button:focus {
 		width: 175px;
 		background-repeat: no-repeat;
 		color: #fff;
-		font-size: 24px;
+		font-size: 20px;
 		height: 33px;
 		display: inline-block;
+		text-align: center;
 }
 .vote {
-	padding:28px;
-	display:inline-block;
-	margin-top: -25px;
+	height: 33px;
+	width: 50%;
+	float: left;
+	margin-top: 5px;
 }
 .reset {
 	width: 100%;
@@ -434,7 +474,6 @@ button:focus {
 #days {
 	width: 40px;
 }
-
 
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {

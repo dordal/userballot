@@ -16,7 +16,7 @@
     </div>
 
     <!-- email address -->
-    <input type="text" class="fresh-text-input signup-input-wide"  ng-model="email" name="uEmail" required placeholder="&nbsp Email Address" /><br/>
+    <input type="text" class="fresh-text-input signup-input-wide"  ng-model="email" name="uEmail" required placeholder="Email Address" /><br/>
 
     <!-- error message -->
     <div ng-show="emailError" class="public-form-error-message">
@@ -24,7 +24,7 @@
     </div>
 
     <!-- password -->
-    <input type="password" class="fresh-text-input signup-input-wide"  ng-model="password" required placeholder="&nbsp Password" /><br/>
+    <input type="password" class="fresh-text-input signup-input-wide"  ng-model="password" required placeholder="Password" /><br/>
 
 
    <!-- site url 
@@ -36,11 +36,11 @@
     </div>
     error message -->
 
-    <input type="submit" class="topcoat-button--large signup-btn" ng-disabled="signup.$invalid" name="submit" value="Sign Up" /> 
+    <input type="submit" class="signup-btn" ng-disabled="signup.$invalid" name="submit" value="Sign Up" /> 
 
   </form>
 
-  <br><br>
+  <br>
   <a ng-href="/#/login">Already have an account?</a> 
 
   <br class="clear" />

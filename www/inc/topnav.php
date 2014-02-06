@@ -11,7 +11,7 @@
             <div class="pages">
                 <a class="page-default" href="/ourproduct.php">our product</a>
                 <a class="page-padded" href="/ourstory.php">our story</a>
-                <a class="page-padded" href="/support.php">support</a>
+                <a class="page-padded" href="/contact.php">contact</a>
             </div>
         </div>
     </div>

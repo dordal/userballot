@@ -28,12 +28,22 @@
         <div class="masthead">
             <div class="container twelve columns">
                 <div class="motto">
+<<<<<<< HEAD
                     <h1>Make better decisions.</h1>
                     <p>Quickly validate ideas, products and services with your target audience <strong>before</strong> you waste valuable time and money going in the wrong direction.</p>
+=======
+                    <h1>Get the pulse of your visitors.</h1>
+                    <p>Easily validate new ideas, products, and services using yes or no questions <strong>before</strong> you waste valuable time and money.</p>
+                </div>
+                <div class="five columns alpha omega" id="button-padding" style="float: right">
+                    <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started Today!</a>
+                    <p class="free">Sign Up <strong>Free!</strong></p>
+>>>>>>> Staging
                 </div>
             </div>    
             <div class="container content-wrap">
                 <div class="sixteen columns">
+<<<<<<< HEAD
                     <div class="row">
                         <div class="eight columns alpha omega">
                             <div class="demo"></div>
@@ -42,13 +52,16 @@
                             <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started Today!</a>
                             <p class="free">Sign Up <strong>Free!</strong></p>
                         </div>
+=======
+                    <div class="row">  
+>>>>>>> Staging
                     </div>
                 </div>
             </div>
         </div>
         <!-- The container is a centered 960px -->
         <div class="bottom">
-            <div class="container content-wrap feature-block">
+            <div class="container content-wrap feature-block" style="padding-bottom: 40px;">
                     <div class="row">
                         <h1 class="chance">Don't leave important decisions to chance!</h1>
                         <p class="subheader center">Getting simple, easy to understand feedback from your users is key to making the right decisions.</p>
@@ -66,28 +79,58 @@
                             <div class="one-third column left">
                                 <img src="img/clock.svg" class="clock" alt="">
                                 <h1>Working in minutes.</h1>
+<<<<<<< HEAD
                                 <p>Paste a small bit of code into your site and it works!</p>
+=======
+                                <p>Copy and paste 2 lines of code into your site and it just works!</p>
+>>>>>>> Staging
                             </div>
                         </div>
                     </div>         
-                <div class="content-wrap icon-feature sixteen columns">
-                        <div class="icon-feature-four">
-                            <div class="icon-feature-left">
-                                <a href="https://www.facebook.com/pages/Userballot/587625811299982"><img src="img/facebook.svg" alt="" class="social-media"></a>
+            </div>
+<<<<<<< HEAD
+        </div>     
+=======
+        </div>
+        <!-- To be added with analytics-->
+        <!-- <div class="bottom" id="thirdBar">
+            <div class="content-wrap feature-block">
+                <div>
+                    <div>
+                        <h1 id="see">See <strong>who</strong> is answering your questions.</h1>
+                    </div>
+                    <div id="doubleContainer">
+                        <div id="double">
+                            <div id="double-left">
+                                <div class="analytics-container"><img class="analytics-icons" src="img/location.svg"></div>
+                                <h1>See important demographics.</h1>
+                                <p>Know your audience.<br>Be <strong>driven</strong> by response.</p>
                             </div>
-                            <div class="icon-feature-left">
-                                <a href="https://plus.google.com/b/100033594081784228442/100033594081784228442/about"><img src="img/google+.svg" alt="" class="social-media"></a>
-                            </div>
-                            <div class="icon-feature-left">
-                                <a href="http://www.linkedin.com/company/3350090?trk=tyah&trkInfo=tas%3Auserballot"><img src="img/linkedin.svg" alt="" class="social-media"></a>
-                            </div>
-                            <div class="icon-feature-left">
-                                <a href="https://twitter.com/UserBallot"><img src="img/twitter.svg" alt="" class="social-media"></a>
+                            <div id="double-right">
+                                <div class="analytics-container"><img class="analytics-icons" src="img/focus.svg"></div>
+                                <h1>Focus on what's essential.</h1>
+                                <p>Use our analytics to focus on the answers <strong>you</strong> care about.</p>
                             </div>
                         </div>
+                    </div>
+                    <div class="icon-feature-four">
+                        <div class="icon-feature-left">
+                            <a href="https://www.facebook.com/pages/Userballot/587625811299982"><img src="img/facebook.svg" alt="" class="social-media"></a>
+                        </div>
+                        <div class="icon-feature-left">
+                            <a href="https://plus.google.com/b/100033594081784228442/100033594081784228442/about"><img src="img/google+.svg" alt="" class="social-media"></a>
+                        </div>
+                        <div class="icon-feature-left">
+                            <a href="http://www.linkedin.com/company/3350090?trk=tyah&trkInfo=tas%3Auserballot"><img src="img/linkedin.svg" alt="" class="social-media"></a>
+                        </div>
+                        <div class="icon-feature-left">
+                            <a href="https://twitter.com/UserBallot"><img src="img/twitter.svg" alt="" class="social-media"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>     
+        </div> -->
+>>>>>>> Staging
         <!-- footer -->
         <div class="footer">
             <img src="img/rackspace.svg" id="rackspace"></img>

@@ -11,12 +11,15 @@
     <!-- Basic Page Needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>UserBallot | Support</title>
+    <title>UserBallot | Contact</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
     <?php
         include('inc/head.php');
+    ?>
+    <?php
+        include('send_mail.php')
     ?>
 </head>
 <body class="page">
@@ -27,19 +30,26 @@
 	    <div class="masthead">
             <div class="twelve columns alpha">
                 <div class="page-title">
-                    <h1>Support</h1>
+                    <h1>Contact</h1>
                 </div>
             </div>
         </div>     
 		    <div class="container">
-            <div class="text support">
-                <p class="best" style="margin-bottom: 8px; font-size:18px">We value your feedback!</p>
-                <p style="margin: 0 35px 20px; padding-top: 0px">For any bug reports, media inquiries, or if you just want to let us know how you feel, please email us at:</p>
-                <p class="best"><a href="mailto:info@userballot.com">info@userballot.com</a></p>
+                    <h1 style="text-align:center;">We value your feedback!</h1>
+                    <div class="container">
+                        <form action="send_mail.php" method="post" id="commentBoxContainer">
+                            <input class="commentBox fresh-text-input" placeholder="Email" name="email_address">
+                            <input type="text" class="commentBox fresh-text-input" placeholder="Subject" name="subject">
+                            <textarea type="text" class="commentBox fresh-text-input" id="comment" placeholder="Comment" name="comments"></textarea>
+                            <input type="submit" class="commentBox fresh-text-input" id="submit" value="Submit" style="text-align: center; font-weight: normal; font-size: 22px;"></input>
+                        </form>
+                    </div>
+                <p style="margin: 0 0px 20px; padding-top: 0px; text-align: center; margin-top: 20px;">For other miscellaneous inquiries, please email us at:</p>
+                <p class="best" style="text-align: center; margin-bottom: 350px;"><a href="mailto:info@userballot.com">info@userballot.com</a></p>
             </div>
         </div>                        
         <!-- footer -->
-        <div class="footer">
+        <div class="footer" style="position: relative !important">
             &copy;UserBallot.com
         </div>
     </div>
