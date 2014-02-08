@@ -128,7 +128,7 @@ h1 {
         background: linear-gradient(#fbfbfb, #eaeaea);
 =======
         background: #232323 url(img/crowd.png);
-        background-position: 50% 90%;
+        background-position: center;
         background-attachment: fixed;
 >>>>>>> Staging
         height: auto;
