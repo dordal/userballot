@@ -85,6 +85,7 @@ img {
 	/* border: 1px solid #D5D5D5; */
 	border-radius: 0 3px 3px 3px;
 	margin-bottom: 20px;
+	margin-left: 97px; /*without analytics only*/
 }
 .card-wrap.highlight {
 	background-color: #FFFEE4!important;
@@ -424,7 +425,8 @@ button:focus {
 	background-color: #b9b9b9;
 	border-radius: 3px 0 0 3px;
 	color: #fff;
-	display: block;
+	/*display: block; analytics*/
+	display: none;
 	margin-bottom: 10px;
 	padding: 10px 20px;
 	text-align: center;
@@ -446,7 +448,8 @@ button:focus {
 	background-color: #b9b9b9;
 	border-radius: 3px 0 0 3px;
 	color: #fff;
-	display: block;
+	/*display: block; analytics*/
+	display: none;
 	margin-bottom: 10px;
 	padding: 10px 0px;
 	text-align: center;
@@ -467,7 +470,7 @@ button:focus {
 	width: 12.5%;
 }
 #settings2 {
-	margin-left: 117.5px;
+	/*margin-left: 117.5px; analytics*/
 }
 .logo {
 	margin-left: -4px !important;
@@ -570,6 +573,8 @@ button:focus {
     #steps {
     	padding-right: 0px;
     	padding-left: 0px;
+    	margin-left: 107px !important; /*0px with analytics
+    	margin: 0px;*/
     }
     #days {
     	margin-left: 15px;

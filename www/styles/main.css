@@ -139,7 +139,7 @@ h1 {
 
 .masthead {
         background: #232323 url(img/crowd.png);
-        background-position: 50% 90%;
+        background-position: center;
         background-attachment: fixed;
         height: auto;
         width: 100%;

@@ -44,7 +44,7 @@
                             <input type="submit" class="commentBox fresh-text-input" id="submit" value="Submit" style="text-align: center; font-weight: normal; font-size: 22px;"></input>
                         </form>
                     </div>
-                <p style="margin: 0 0px 20px; padding-top: 0px; text-align: center; margin-top: 20px;">For other miscellaneous inquiries, please email us at:</p>
+                <p style="margin: 0 0px 20px; padding-top: 0px; text-align: center; margin-top: 20px;">For other general inquiries, please email us at:</p>
                 <p class="best" style="text-align: center; margin-bottom: 350px;"><a href="mailto:info@userballot.com">info@userballot.com</a></p>
             </div>
         </div>                        
