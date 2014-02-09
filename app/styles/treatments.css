@@ -291,6 +291,22 @@ button:focus {
 	margin: 20px 0 0;
 	width: 310px;
 }
+.fresh-text-input.cc-input {
+	width: 252px;
+	float: left;
+}
+.fresh-text-input.cvc-input {
+	width: 49px;
+	float: left;
+}
+.fresh-text-input.month-input {
+	width: 75px;
+	float: left;
+}
+.fresh-text-input.year-input {
+	width: 75px;
+	float: left;
+}
 .fresh-text-input {
 	display: inline-block;
 	min-height: 42px;
@@ -327,6 +343,9 @@ button:focus {
 	color: #FF0000;
 	padding-top: 10px;
 }
+.signup-btn:disabled, .login-btn:disabled {
+	background-color: #ccc !important;
+}
 .signup-form,
 .login-form {
 	margin: auto;
@@ -346,7 +365,7 @@ button:focus {
 	color: #fff;
 	border-radius: 3px;
 	/* mobile safari fixes */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2ecc71));
+	/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2ecc71));*/
     background: -o-linear-gradient(bottom, #2ecc71 0%);
     background: -moz-linear-gradient(bottom, #2ecc71 0%);
     background: -webkit-linear-gradient(bottom, #2ecc71 0%);
@@ -362,6 +381,7 @@ button:focus {
     -webkit-appearence: none;
 	border: none !important;
 }
+
 /* extent topcoat components */
 .topcoat-icon-button--large:hover {
 	cursor: pointer;

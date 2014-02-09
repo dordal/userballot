@@ -61,6 +61,7 @@
         <script src="//cdn.firebase.com/v0/firebase.js"></script>
         <script src="//cdn.firebase.com/v0/firebase-simple-login.js"></script>
         <script src="//cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js"></script>
+        <script src="https://js.stripe.com/v2/"></script>
 
         <!-- build:js scripts/scripts.js -->
         <script src="scripts/app.js"></script>
@@ -69,6 +70,7 @@
         <script src="scripts/controllers/loading.js"></script>
         <script src="scripts/controllers/signup.js"></script>
         <script src="scripts/controllers/adminarea.js"></script>
+        <script src="scripts/controllers/order.js"></script>
         <script src="scripts/ui-interactions.js"></script>
         <script src="spectrum/spectrum.js"></script>
         <!-- endbuild -->
