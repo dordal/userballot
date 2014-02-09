@@ -486,6 +486,9 @@ button:focus {
 #days {
 	width: 40px;
 }
+#steps {
+	margin-left: 107px;
+}
 
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
@@ -494,6 +497,7 @@ button:focus {
     }
     .card-wrap {
     	width: 575px !important;
+    	margin-left: 110px; /*analytics*/
     }
     .main-nav {
     	margin-left: 25%;
@@ -538,6 +542,7 @@ button:focus {
     }
     .card-wrap {
     	margin-bottom: 40px;
+    	margin-left: 0px; /*analytics*/
     }
     .card-wrap p {
     	padding-left: 15px;
@@ -573,8 +578,7 @@ button:focus {
     #steps {
     	padding-right: 0px;
     	padding-left: 0px;
-    	margin-left: 107px !important; /*0px with analytics
-    	margin: 0px;*/
+    	margin: 0px;
     }
     #days {
     	margin-left: 15px;
@@ -618,6 +622,7 @@ button:focus {
     }
     .card-wrap {
     	margin-bottom: 40px;
+    	margin-left: 0px; /*analytics*/
     }
     .card-wrap p {
     	padding-left: 15px;
@@ -654,6 +659,7 @@ button:focus {
     #steps {
     	padding-right: 0px;
     	padding-left: 0px;
+    	margin: 0px;
     }
     #days {
     	margin-left: 15px;
