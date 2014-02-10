@@ -1,45 +1,37 @@
-USERBALLOT™
+=== UserBallot for WordPress ===
 
-Short Description
+Contributors: userballot
+Tags: user feedback, feedback, surveys, analytics, poll, userballot
+Requires at least: 3.0
+Tested up to: 3.7.1
+Stable tag: trunk
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-UserBallot is a simple decision support tool that allows online businesses to collect directional feedback from all of their site visitor and therefore make better business decisions.
+This plugin helps you add UserBallot user feedback to your  WordPress site. UserBallot is a simple decision support tool that allows online businesses to collect directional feedback from their site visitors, in turn helping them make better business decisions.
 
-Long Description
+== Description ==
 
-UserBallot is a simple decision support tool that allows online businesses to collect directional feedback from all of their site visitors and use it to make better business decisions.  Installing UserBallot on your site will allow you to easily deploy yes or no questions to your site visitors and start seeing the results of their feedback fast.  
+The "UserBallot for WordPress" plugin helps you add UserBallot user feedback to your WordPress site. UserBallot is a simple decision support tool that allows online businesses to collect directional feedback their site visitors and use it to make better business decisions.  Installing UserBallot on your site will allow you to easily deploy yes or no questions to your site visitors and immediately start seeing the results of their feedback.
 
-Are yes or no questions a good idea?
+*Are yes or no questions a good idea?*
 Yes! By creating short yes or no questions that only require one touch to answer, your site visitors are more likely to answer them. This gives you the information you need to make better decisions!
 
-Requires WP _ and PHP _ 
+*Features:*
+* Create simple yes or no feedback questions based on UserBallot suggestions, or your own ideas.
+* Set the frequency at which questions are served to individual site visitors.
+* See responses to questions in real time!
+* Gain direction from your customers before spending a lot of time creating and delivering products and services to them.
+* Understand more about the users answering your questions thanks to analytics.
+* Get many more features that are currently under constructionwithout upgrading the plugin.
 
-Create simple yes or no feedback questions based on our suggestions we provide, or your own ideas.
-Determine the number of days between questions served to individual site visitors.
-See responses to questions in real time!
-Gain direction from your customers before spending a lot of time creating and delivering products and services to your customers.
-Understand more about the users answering your questions with analytics such as their location, operating system, and devices.
-See how your questions are performing in terms of response rate and compare them to other questions.
-
-Coming Soon
-
-Ability to format question appearance to match your website
-Even stronger analytics
-
-Try us FREE!
+**Try us FREE!**
 Give us a try! We don’t require a credit card when you sign up, so you can see how powerful  UserBallot can really be.  Once you have discovered the power we add to important decision making, you can subscribe to our service at an extremely affordable monthly rate!
 
 More Information…
 To find out more visit us at UserBallot.com or on our Facebook, Google+, Twitter or LinkedIn!
 
-Userballot Website
 
-UserBallot_Facebook
-
-UserBallot_Google+
-
-UserBallot_Twitter
-
-UserBallot_LinkedIn
 
 
 USERBALLOT
