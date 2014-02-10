@@ -62,7 +62,7 @@ header( "Location: $error_page" );
 // If we passed all previous tests, send the email then redirect to the thank you page.
 else {
 mail( "$webmaster_email", "Feedback from $email_address: $subject",
-  $comments, "From: info@userballot.com" );
+  $comments, "From: feedback@userballot.com" );
 header( "Location: $thankyou_page" );
 }
 ?>
