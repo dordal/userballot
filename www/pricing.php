@@ -31,7 +31,7 @@
 	        	<ul  style="width: 500px">
 	        		<li>
 	        			<h2>Price plan 1</h2>
-	        			<button style="float:right" plan="1" type="button" class="plan-button topcoat-button--large--cta">Order Now</button>
+	        			<button style="float:right" plan="test-plan-1" type="button" class="plan-button topcoat-button--large--cta">Order Now</button>
 	        			<p>Features</p>
 	        			<ul>
 							<li>This and that</li>
@@ -40,7 +40,7 @@
       				</li>
 	        		<li>
 	        			<h2>Price plan 2</h2>
-	        			<button style="float:right" plan="2" type="button" class="plan-button topcoat-button--large--cta">Order Now</button>
+	        			<button style="float:right" plan="test-plan-2" type="button" class="plan-button topcoat-button--large--cta">Order Now</button>
 	        			<p>Features</p>
 	        			<ul>
 							<li>More good stuff</li>

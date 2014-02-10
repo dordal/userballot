@@ -1,6 +1,6 @@
 'use strict';
 
-userballotApp.controller('OrderCtrl', function($scope, $location, $http, angularFire, angularFireAuth, userballotAuthSvc) {
+userballotApp.controller('OrderCtrl', function($scope, $location, $http, $routeParams, angularFire, angularFireAuth, userballotAuthSvc) {
 	$scope.formData = {};
 	$scope.generalError = null;
 	$scope.emailError = null;
@@ -37,7 +37,7 @@ userballotApp.controller('OrderCtrl', function($scope, $location, $http, angular
 			var token = response.id;
 			// Insert the token into the form so it gets submitted to the server
 			$scope.formData.stripeToken = token;
-			$scope.formData.plan = 'test-plan-1';
+			$scope.formData.plan = $routeParams.plan;
 			
 			// Submit the form the order processor
 			$http({
@@ -50,7 +50,12 @@ userballotApp.controller('OrderCtrl', function($scope, $location, $http, angular
 				// Yay, we've saved our token and set up the subscription. If the user is authenticated, associated the
 				// plan ID in firebase. Otherwise, we need to create a new account and associate the plan ID.
 				console.log(data);
-				alert("Subscription successful!");
+				if (data.success) {
+					alert("Hooray! The order has gone through");
+				} else {
+					$scope.generalError = data.error;
+					$scope.submitting = false;
+				}
 			});
 		}
 		$scope.$apply();
