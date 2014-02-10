@@ -8,14 +8,15 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin helps you add UserBallot user feedback to your  WordPress site. UserBallot is a simple decision support tool that allows online businesses to collect directional feedback from their site visitors, in turn helping them make better business decisions.
+Easily add UserBallot simple user feedback to your site.
 
 == Description ==
 
 The UserBallot for WordPress plugin helps you add UserBallot user feedback to your WordPress site. UserBallot is a simple decision support tool that allows online businesses to collect directional feedback their site visitors and use it to make better business decisions.  Installing UserBallot on your site will allow you to easily deploy yes or no questions to your site visitors and immediately start seeing the results of their feedback.
 
 *Are yes or no questions a good idea?*
-Yes! By creating short yes or no questions that only require one touch to answer, your site visitors are more likely to answer them. This gives you the information you need to make better decisions!
+
+Yes! By creating short yes or no questions that only require one touch to answer, your site visitors are more likely to answer them. This gives you the information you need to help you make better decisions!
 
 *Features:*
 
@@ -27,7 +28,7 @@ Yes! By creating short yes or no questions that only require one touch to answer
 * Get many more features that are currently under constructionwithout upgrading the plugin.
 
 **Try us FREE!**
-Give us a try! We don’t require a credit card when you sign up, so you can see how powerful  UserBallot can really be.  Once you have discovered the power we add to important decision making, you can subscribe to our service at an extremely affordable monthly rate!
+We don’t require a credit card when you sign up, so you can see how powerful  UserBallot can really be.  Once you have discovered the power we add to important decision making, you can subscribe to our service at an extremely affordable monthly rate!
 
 More Information…
 To find out more visit us at [UserBallot.com](http://www.userballot.com) or on our [Facebook](https://www.facebook.com/pages/UserBallot/587625811299982), [Google+](https://plus.google.com/u/0/100033594081784228442/posts), [Twitter](https://twitter.com/UserBallot) or [LinkedIn](http://www.linkedin.com/company/userballot)!
@@ -36,11 +37,11 @@ To find out more visit us at [UserBallot.com](http://www.userballot.com) or on o
 
 To get started:
 
-1) Activate the plugin in your WordPress admin panel
-2) [Sign up for a UserBallot account](https://app.userballot.com/#/signup)
-3) Get your UserBallot site ID (found by clicking "Get Started")
-4) Go to the UserBallot for WordPress configuration page in your WP admin panel, and save your site ID.
-5) Start getting feedback from your users
+1. Activate the plugin in your WordPress admin panel
+2. [Sign up for a UserBallot account](http://app.userballot.com/#/signup)
+3. Get your UserBallot site ID (found by clicking "Get Started")
+4. Go to the UserBallot for WordPress configuration page in your WP admin panel, and save your site ID.
+5. Start getting feedback from your users
 
 == Frequently Asked Questions ==
 
