@@ -122,13 +122,8 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 				text: $scope.question,
 				yesVotes: 0,
 				noVotes: 0,
-<<<<<<< HEAD
-				position: 0,
-				active: 0,
-=======
 				position: 0, //itemPosition,
 				active: 1, //questions active by default
->>>>>>> Staging
 				views: 0,
 				mute: 0,
 				updated: new Date()
@@ -187,7 +182,7 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 
 	// reset all the count fields to 0 
 	$scope.resetMessageCount = function( index ) {
-		if (confirm('Are you sure you want to reset this question?')){
+		if (confirm("Are you sure you want to reset this question's answers?")){
 			var key = $scope.keyAt($scope.site.messages, index);
 			var old = $scope.site.messages[key].active;
 			$scope.site.messages[key].mute = 0;

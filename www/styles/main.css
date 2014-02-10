@@ -17,8 +17,8 @@ img {
 }
 .superheader {
         background-color: #2ecc71;
-        box-shadow: 2px 2px 1px #000;
         width: auto;
+        border-bottom: 5px solid #17994E;
 }
 .header {
         height: 20px;
@@ -84,17 +84,35 @@ img {
         -moz-transition: color .25s ease-in-out;
         -webkit-transition: color .25s ease-in-out;
 }
+
 .page-padded {
         margin-left: 2.813em;
 }
+
 .motto {
         padding-bottom: 45px;
-        text-align: center;
+        text-align: left;
+        float: left;
 }
+
+.motto p {
+        color: #fff;
+        font-size: 18px;
+        margin: auto;
+        padding-top: 20px;
+        line-height: 30px;
+        width: 500px;
+        text-shadow: 1px 1px 1px #323232;
+}
+.motto p strong {
+        letter-spacing: .5px;
+}
+
 h1 {
         font-family: 'Open Sans', sans-serif;
         margin: 0;
 }
+
 .home h1 {
         color: #323232;
         font-size: 32px;
@@ -102,37 +120,41 @@ h1 {
         line-height: 55px;
         padding-top: 40px;
 }
+
 .page h1 {
         padding: 20px 0;
         color: #2ecc71;
         font-weight: 500;
         font-size: 30px;
 }
+
 .page .page-title {
         height: auto;
         text-align: center;
 }
-.motto p {
-        color: #5e5e5e;
-        font-size: 18px;
-        margin: auto;
-        padding-top: 20px;
-        line-height: 30px;
-        width: 600px;
-}
+
 .weight {
         font-weight: 500;
 }
+
 .masthead {
-<<<<<<< HEAD
-        background: linear-gradient(#fbfbfb, #eaeaea);
-=======
         background: #232323 url(img/crowd.png);
         background-position: center;
         background-attachment: fixed;
->>>>>>> Staging
         height: auto;
-        box-shadow: 0px 2px 6px #7d7d7d;
+        width: 100%;
+        border-bottom: 5px solid #2ecc71;
+}
+
+.masthead h1{
+        color: rgba(255,255,255,1);
+        text-shadow: 1px 1px 1px #323232;
+}
+.masthead p{
+        color: #fff;
+}
+.innerMasthead{
+        padding: 80px 0;
 }
 .demo {
         width: inherit;
@@ -141,21 +163,28 @@ h1 {
         background-size: 350px;
         background-repeat: no-repeat;
         background-position: center;
+        display: none;
 }
 .free {
-        color: #5E5E5E;
-        font-family: 'Open Sans', sans-serif;
+        font-family: Helvetica, sans-serif;
         font-size: 13.5px;
         margin: auto;
         padding-top: 5px;
         height: auto;
         text-align: center;
+        text-shadow: 1px 1px 1px #323232;
+}
+
+.free strong {
+        letter-spacing: .5px;
 }
 .signup-btn {
+        font-weight: 500;
+        letter-spacing: .5px;
         display: block;
         cursor: pointer; 
         border: none;
-        margin: 50px auto 0;
+        margin: 85px auto 0;
         padding: 20px 30px;
         width: 200px; 
         color: #fff;  
@@ -177,6 +206,7 @@ h1 {
 }
 .signup-btn-top:hover {
         background-color: #27DB73;
+        color: #fff;
         transition: background .25s ease-in-out;
         -moz-transition: background .25s ease-in-out;
         -webkit-transition: background .25s ease-in-out;
@@ -219,7 +249,7 @@ h1 {
         line-height: 40px;
 }
 .subheader {
-        color: #5E5E5E;
+        color: #a1a1a1;
         font-size: 18px;
         line-height: 30px;
 }

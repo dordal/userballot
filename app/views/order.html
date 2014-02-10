@@ -1,0 +1,52 @@
+
+<div class="signup-block-wrap center">
+  <!-- logo -->
+  <div style="padding: 50px 0 0 10px;"><a href="http://userballot.com/">
+    <img class="logo" src="img/betaapp.svg" alt="" width="120"></a>
+  </div>
+
+  <form id="order-form" name="order" ng-submit="placeOrder()" class="signup-form css-form" novalidate>
+
+    <h3>Order</h3>
+
+    <div class="form-section-title"></div>
+
+    <!-- general error message -->
+    <div class="public-form-error-message">
+      {{generalError}}
+    </div>
+
+    <!-- email address -->
+    <div ng-show="!authenticated">
+      <input type="text" ng-model="formData.email" class="fresh-text-input signup-input-wide" name="uEmail" required placeholder="Email Address" /><br/>
+
+      <!-- error message -->
+      <div ng-show="emailError" class="public-form-error-message">
+        {{emailError}}
+      </div>
+
+      <!-- password -->
+      <input type="password" ng-model="formData.password" class="fresh-text-input signup-input-wide"  required placeholder="Password" /><br/>
+    </div>
+
+
+    <input type="text" ng-model="formData.name" class="fresh-text-input signup-input-wide" required placeholder="Name on Card"/><br>
+
+    <input type="text" ng-model="cc" class="cc-input fresh-text-input signup-input-wide" data-stripe="number" required placeholder="Card Number"/>
+
+    <input type="text" ng-model="cvc" class="cvc-input fresh-text-input signup-input-wide" data-stripe="cvc" required placeholder="CVC"/>
+
+    <div class="form-row">
+      <input type="text" ng-model="expMonth" class="month-input fresh-text-input signup-input-wide" size="2" data-stripe="exp-month" required placeholder="Month"/>
+      <input type="text" ng-model="expYear" class="year-input fresh-text-input signup-input-wide" size="4" data-stripe="exp-year" required placeholder="Year"/>
+    </div>
+
+    <input type="submit" class="signup-btn" ng-disabled="order.$invalid || submitting" name="submit" value="Submit Payment" /> 
+
+  </form>
+
+  <br>
+  <a ng-href="/#/login">Already have an account?</a> 
+
+  <br class="clear" />
+</div>

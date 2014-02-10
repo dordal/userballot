@@ -85,6 +85,7 @@ img {
 	/* border: 1px solid #D5D5D5; */
 	border-radius: 0 3px 3px 3px;
 	margin-bottom: 20px;
+	margin-left: 97px; /*without analytics only*/
 }
 .card-wrap.highlight {
 	background-color: #FFFEE4!important;
@@ -291,6 +292,22 @@ button:focus {
 	margin: 20px 0 0;
 	width: 310px;
 }
+.fresh-text-input.cc-input {
+	width: 252px;
+	float: left;
+}
+.fresh-text-input.cvc-input {
+	width: 49px;
+	float: left;
+}
+.fresh-text-input.month-input {
+	width: 75px;
+	float: left;
+}
+.fresh-text-input.year-input {
+	width: 75px;
+	float: left;
+}
 .fresh-text-input {
 	display: inline-block;
 	min-height: 42px;
@@ -309,8 +326,6 @@ button:focus {
 	margin-right: 10px;
 	font-family: Helvetica-Light, Helvetica;
 	text-align: left;
-<<<<<<< HEAD
-=======
 	/* mobile safari fixes */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff));
     background: -o-linear-gradient(bottom, #fff 0%);
@@ -319,7 +334,6 @@ button:focus {
     background: -ms-linear-gradient(bottom, #fff 0%);
     background: linear-gradient(to bottom, #fff 0%);
 
->>>>>>> Staging
 	-webkit-transition: border linear,box-shadow linear;
 	-webkit-transition-delay: 0.2s,0.2s;
 	-moz-transition: border linear 0.2s,box-shadow linear 0.2s;
@@ -330,6 +344,9 @@ button:focus {
 	color: #FF0000;
 	padding-top: 10px;
 }
+.signup-btn:disabled, .login-btn:disabled {
+	background-color: #ccc !important;
+}
 .signup-form,
 .login-form {
 	margin: auto;
@@ -338,25 +355,18 @@ button:focus {
 }
 .signup-btn,
 .login-btn {
-	border: none;
+	border: none !important;
 	font-size: 18px;
 	margin: 40px auto 0;
 	padding: 15px 0;
 	width: 100%;
-<<<<<<< HEAD
-}
-.signup-btn:hover,
-.login-btn:hover {
-	background-color: #2ECC71;
-	border: none;
-=======
 	box-shadow: 1px 1px 1px #444;
 	cursor: pointer;
 	background-color: #2ecc71;
 	color: #fff;
 	border-radius: 3px;
 	/* mobile safari fixes */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2ecc71));
+	/*background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2ecc71));*/
     background: -o-linear-gradient(bottom, #2ecc71 0%);
     background: -moz-linear-gradient(bottom, #2ecc71 0%);
     background: -webkit-linear-gradient(bottom, #2ecc71 0%);
@@ -371,8 +381,8 @@ button:focus {
     -webkit-transition: background .25s ease-in-out;
     -webkit-appearence: none;
 	border: none !important;
->>>>>>> Staging
 }
+
 /* extent topcoat components */
 .topcoat-icon-button--large:hover {
 	cursor: pointer;
@@ -415,7 +425,8 @@ button:focus {
 	background-color: #b9b9b9;
 	border-radius: 3px 0 0 3px;
 	color: #fff;
-	display: block;
+	/*display: block; analytics*/
+	display: none;
 	margin-bottom: 10px;
 	padding: 10px 20px;
 	text-align: center;
@@ -437,7 +448,8 @@ button:focus {
 	background-color: #b9b9b9;
 	border-radius: 3px 0 0 3px;
 	color: #fff;
-	display: block;
+	/*display: block; analytics*/
+	display: none;
 	margin-bottom: 10px;
 	padding: 10px 0px;
 	text-align: center;
@@ -458,7 +470,7 @@ button:focus {
 	width: 12.5%;
 }
 #settings2 {
-	margin-left: 117.5px;
+	/*margin-left: 117.5px; analytics*/
 }
 .logo {
 	margin-left: -4px !important;
@@ -474,6 +486,9 @@ button:focus {
 #days {
 	width: 40px;
 }
+#steps {
+	margin-left: 107px;
+}
 
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
@@ -482,6 +497,7 @@ button:focus {
     }
     .card-wrap {
     	width: 575px !important;
+    	margin-left: 110px; /*analytics*/
     }
     .main-nav {
     	margin-left: 25%;
@@ -526,6 +542,7 @@ button:focus {
     }
     .card-wrap {
     	margin-bottom: 40px;
+    	margin-left: 0px; /*analytics*/
     }
     .card-wrap p {
     	padding-left: 15px;
@@ -561,6 +578,7 @@ button:focus {
     #steps {
     	padding-right: 0px;
     	padding-left: 0px;
+    	margin: 0px;
     }
     #days {
     	margin-left: 15px;
@@ -604,6 +622,7 @@ button:focus {
     }
     .card-wrap {
     	margin-bottom: 40px;
+    	margin-left: 0px; /*analytics*/
     }
     .card-wrap p {
     	padding-left: 15px;
@@ -640,6 +659,7 @@ button:focus {
     #steps {
     	padding-right: 0px;
     	padding-left: 0px;
+    	margin: 0px;
     }
     #days {
     	margin-left: 15px;

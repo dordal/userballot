@@ -5,6 +5,7 @@
     <!-- JS
   ================================================== -->
     <script src="http://app.userballot.com/scripts/jquery-2.0.3.min.js"></script>
+    <script src="/js/interactions.js"></script>
 
 
     <!-- CSS

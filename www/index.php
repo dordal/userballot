@@ -26,35 +26,19 @@
     <div class="page-wrap">        
         <!-- masthead -->
         <div class="masthead">
-            <div class="container twelve columns">
+            <div class="container five columns innerMasthead">
                 <div class="motto">
-<<<<<<< HEAD
-                    <h1>Make better decisions.</h1>
-                    <p>Quickly validate ideas, products and services with your target audience <strong>before</strong> you waste valuable time and money going in the wrong direction.</p>
-=======
                     <h1>Get the pulse of your visitors.</h1>
                     <p>Easily validate new ideas, products, and services using yes or no questions <strong>before</strong> you waste valuable time and money.</p>
                 </div>
                 <div class="five columns alpha omega" id="button-padding" style="float: right">
                     <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started Today!</a>
                     <p class="free">Sign Up <strong>Free!</strong></p>
->>>>>>> Staging
                 </div>
             </div>    
             <div class="container content-wrap">
                 <div class="sixteen columns">
-<<<<<<< HEAD
-                    <div class="row">
-                        <div class="eight columns alpha omega">
-                            <div class="demo"></div>
-                        </div>
-                        <div class="eight columns alpha omega">
-                            <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started Today!</a>
-                            <p class="free">Sign Up <strong>Free!</strong></p>
-                        </div>
-=======
                     <div class="row">  
->>>>>>> Staging
                     </div>
                 </div>
             </div>
@@ -79,18 +63,11 @@
                             <div class="one-third column left">
                                 <img src="img/clock.svg" class="clock" alt="">
                                 <h1>Working in minutes.</h1>
-<<<<<<< HEAD
-                                <p>Paste a small bit of code into your site and it works!</p>
-=======
                                 <p>Copy and paste 2 lines of code into your site and it just works!</p>
->>>>>>> Staging
                             </div>
                         </div>
                     </div>         
             </div>
-<<<<<<< HEAD
-        </div>     
-=======
         </div>
         <!-- To be added with analytics-->
         <!-- <div class="bottom" id="thirdBar">
@@ -130,7 +107,6 @@
                 </div>
             </div>
         </div> -->
->>>>>>> Staging
         <!-- footer -->
         <div class="footer">
             <img src="img/rackspace.svg" id="rackspace"></img>
