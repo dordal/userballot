@@ -18,9 +18,6 @@
     <?php
         include('inc/head.php');
     ?>
-    <?php
-        include('send_mail.php')
-    ?>
 </head>
 <body class="page">
     <?php
