@@ -4,6 +4,14 @@ body {
 img {
 	border: 0;
 }
+form ul li {
+	color: #323232;
+	list-style: none outside none;
+	text-align: left;
+	font-weight: 400;
+	margin-left: 35px;
+	line-height: 20px;
+}
 .left {
 	float: left;
 }
@@ -345,7 +353,8 @@ button:focus {
 	padding-top: 10px;
 }
 .signup-btn:disabled, .login-btn:disabled {
-	background-color: #ccc !important;
+	opacity: 0.3;
+	cursor: auto;
 }
 .signup-form,
 .login-form {
@@ -589,6 +598,9 @@ button:focus {
     strong {
     	padding-left: 15px;
     }
+    form ul li {
+    	margin-left: 0px;
+    }
 }
 @media only screen and (min-width: 0px) and (max-width: 479px) {
     .main-nav-item {
@@ -669,5 +681,8 @@ button:focus {
 	}
     strong {
     	padding-left: 15px;
+    }
+    form ul li {
+    	margin-left: 0px;
     }
 }

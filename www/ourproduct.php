@@ -32,7 +32,7 @@
             </div>
         </div>     
 		    <div class="container" style="margin-bottom: 100px;">
-                <div style="margin-top: 40px; font-weight:bold; text-align: center; margin-bottom: 40px;">&nbsp&nbsp&nbsp&nbsp&nbsp You’re the busy owner of an online business on the hunt for ways to delight your customers.  You’re thinking of different paths you might take and wondering if your site visitors will follow.</div>
+                <div id="intro-bold">&nbsp&nbsp&nbsp&nbsp&nbsp You’re the busy owner of an online business on the hunt for ways to delight your customers.  You’re thinking of different paths you might take and wondering if your site visitors will follow.</div>
                 <h1 style="text-align: center;"><strong>What do you do?</strong></h1>
                 <div class="sectionContainer" style="margin-top:20px">
                     <div class="left-image" style="background: url(img/check.png) no-repeat;"></div>
@@ -52,7 +52,7 @@
                     <div class="left-image" style="background: url(img/testing.png) no-repeat;"></div>
                     <div class="right-text" id="settingUp">
                         <h2>Setting up.</h2>
-                        <p><strong>Created your account?</strong>  Great, it’s time to get rolling!  Embed two lines of code in your website and you’re set.    We give you step by step instructions, so whether you are a do-it-yourselfer, have a webmaster that supports you, or use a popular CMS platform like Wordpress, Drupal or Shopify, we have you covered!</p>
+                        <p><strong>Created your account?</strong>  Great, it’s time to get rolling!  Embed two lines of code in your website and you’re set.    We give you step by step instructions, so whether you are a do-it-yourselfer, or have a webmaster that supports you,<!-- or use a popular CMS platform like Wordpress, Drupal or Shopify, --> we have you covered!</p>
                     </div>
                 </div>
                 <div class="sectionContainer">
@@ -61,10 +61,14 @@
                         <p><strong>The Control Center</strong> is the place you go to create questions, and get results from your users.<!-- , and see analytics about the people answering your questions.--> Create simple yes or no feedback questions based on suggestions we provide, or your own ideas. You will soon see your users giving you the feedback you need to make better decisions!</p>
                     </div><div class="right-image" style="background: url(img/answer.png) no-repeat;"></div>
                 </div>
-                <!-- <div class="sectionContainer" style="width=100%; height: 180px; margin-top: 60px; margin-bottom: 100px;">
-                    <div style="width:60%; height:100%; float:right; text-align:right;">Beyond the questions, our built in analytics give you <span class="best">powerful</span> insight into what your audience is into!</div>
-                    <div style="width:25%; height:100%; background-color: #323232; float:right;"></div>
-                </div> -->
+                <div class="sectionContainer">
+                    <div class="left-image"></div>
+                    <div class="right-text">
+                        <h2>Know who is answering your questions.</h2>
+                        <p>Beyond the questions, our built in analytics give you <span class="best">powerful</span> insight into who your audience is!</p>
+                    </div>
+                    
+                </div>
                 
             </div>             
         <!-- footer -->

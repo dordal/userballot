@@ -70,7 +70,7 @@
             </div>
         </div>
         <!-- To be added with analytics-->
-        <!-- <div class="bottom" id="thirdBar">
+        <div class="bottom" id="thirdBar">
             <div class="content-wrap feature-block">
                 <div>
                     <div>
@@ -106,7 +106,7 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
         <!-- footer -->
         <div class="footer">
             <img src="img/rackspace.svg" id="rackspace"></img>

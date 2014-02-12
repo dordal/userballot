@@ -139,7 +139,7 @@ h1 {
 
 .masthead {
         background: #232323 url(img/crowd.png);
-        background-position: center;
+        background-position: 50% 80%;
         background-attachment: fixed;
         height: auto;
         width: 100%;
@@ -501,4 +501,10 @@ h1 {
         -webkit-transition: background .25s ease-in-out;
         -webkit-appearence: none;
         border: none !important;
+}
+#intro-bold {
+        margin-top: 40px;
+        font-weight:bold;
+        text-align: center;
+        margin-bottom: 40px;
 }

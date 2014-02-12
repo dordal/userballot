@@ -154,6 +154,9 @@
         #double p {
             width: 360px;
         }
+        .masthead {
+            position: relative;
+        }
 }
 
 @media only screen and (max-width: 480px) {
@@ -174,6 +177,9 @@
     }
     .icon-feature-four {
         width: 304px;
+    }
+    .masthead {
+        position: relative;
     }
 }
 /*tablet!*/
@@ -268,68 +274,6 @@
             margin-left: -10px
         }
 }
-/*high-res!*/
-    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 301dpi) { 
-        .demo {
-            width: inherit;
-            height: 300px;
-            background-size: 350px;
-            background-repeat: no-repeat;
-            background-position: center;
-            background: url(img/demo@2x.png);
-        }
-}
-    @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 244dpi) and (max-resolution: 300dpi)  {
-        .demo {
-            background: url(img/demo244.png);
-            width: inherit;
-            height: 300px;
-            background-size: 350px;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-    }    
-    @media only screen and (-webkit-min-device-pixel-ratio: 0.75), only screen and (max-resolution: 149dpi) {
-        .demo {
-            background: url(img/demo72.png);
-            width: inherit;
-            height: 300px;
-            background-size: 350px;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-    }  
-    @media only screen and (max-width: 767px) and (min-resolution: 301dpi), only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2) {
-        .demo {
-            width: inherit;
-            height: 300px;
-            background-size: 300px;
-            background-repeat: no-repeat;
-            background-position: center;
-            background: url(img/demo@2x.png);
-        }
-    }
-    @media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 767px) and (min-resolution: 244dpi) and (max-resolution: 300dpi)  {
-        .demo {
-            background: url(img/demo244.png);
-            width: inherit;
-            height: 300px;
-            background-size: 300px;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-    }    
-    @media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 0.75), only screen and (max-width: 767px) and (max-resolution: 149dpi) {
-        .demo {
-            background: url(img/demo72.png);
-            width: inherit;
-            height: 300px;
-            background-size: 300px;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-    }  
-
 /*Safari-only*/
 /*@media only screen and (max-width: 959px) {
     :root .signin-btn-top {

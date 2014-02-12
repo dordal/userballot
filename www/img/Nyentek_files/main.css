@@ -1,0 +1,183 @@
+/* line 6, ../../../sass/main.scss */
+p {
+  margin-top: 30px;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: justify;
+  font-family: serif;
+  font-weight: lighter;
+  letter-spacing: .5px;
+  color: #000;
+}
+
+/* line 18, ../../../sass/main.scss */
+h1 {
+  font-size: 42px;
+  text-align: left;
+  line-height: 42px;
+  color: black;
+}
+
+/* line 25, ../../../sass/main.scss */
+.section-image h1, .section-image p {
+  color: white !important;
+}
+
+/* line 29, ../../../sass/main.scss */
+#content {
+  margin-top: 90px;
+}
+
+/*logo*/
+/* line 34, ../../../sass/main.scss */
+#name {
+  text-transform: uppercase;
+  color: orange;
+  font-size: 36px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  margin: 20px 0 0 20px;
+  -webkit-transition: color 0.2s ease-out, background 1s ease-in;
+  -moz-transition: color 0.2s ease-out, background 1s ease-in;
+  -o-transition: color 0.2s ease-out, background 1s ease-in;
+  transition: color 0.2s ease-out, background 1s ease-in;
+}
+/* line 42, ../../../sass/main.scss */
+#name:hover {
+  color: red;
+}
+
+/*nav styling*/
+/* line 50, ../../../sass/main.scss */
+#nav {
+  background-color: white;
+  min-height: 80px;
+}
+
+/* line 55, ../../../sass/main.scss */
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  padding: 20px 0;
+}
+
+/*nav links, hover and active */
+/* line 60, ../../../sass/main.scss */
+.navbar {
+  margin-bottom: 0px;
+}
+/* line 62, ../../../sass/main.scss */
+.navbar .active a {
+  background-color: transparent !important;
+  color: #000;
+}
+
+/* line 69, ../../../sass/main.scss */
+.navbar-default .navbar-nav li a {
+  -webkit-transition: color 0.2s ease-out, background 1s ease-in;
+  -moz-transition: color 0.2s ease-out, background 1s ease-in;
+  -o-transition: color 0.2s ease-out, background 1s ease-in;
+  transition: color 0.2s ease-out, background 1s ease-in;
+  color: #cecece;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+/* line 78, ../../../sass/main.scss */
+.social {
+  margin-top: 10px;
+  margin-left: 15px;
+  height: auto;
+  width: 32px;
+  opacity: .4;
+}
+/* line 84, ../../../sass/main.scss */
+.social:hover {
+  opacity: 1;
+  -webkit-transition: opacity 1s ease-out, opacity 0.3s ease-in;
+  -moz-transition: opacity 1s ease-out, opacity 0.3s ease-in;
+  -o-transition: opacity 1s ease-out, opacity 0.3s ease-in;
+  transition: opacity 1s ease-out, opacity 0.3s ease-in;
+  cursor: pointer;
+}
+
+/* line 91, ../../../sass/main.scss */
+.social-padding {
+  padding: 0px !important;
+}
+
+/* line 95, ../../../sass/main.scss */
+.photo {
+  height: 200px;
+  width: 200px;
+  background-size: 210px auto;
+  border-radius: 100%;
+}
+
+/* line 102, ../../../sass/main.scss */
+.line {
+  width: 60%;
+  height: 2px;
+  background-color: #000;
+  margin: 20px 0;
+}
+
+/*body*/
+/* line 111, ../../../sass/main.scss */
+.section {
+  width: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 500px;
+}
+
+/* line 118, ../../../sass/main.scss */
+.section-image {
+  color: white;
+}
+
+/* line 122, ../../../sass/main.scss */
+.community-section {
+  width: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 200px;
+  margin-top: 90px;
+}
+/* line 128, ../../../sass/main.scss */
+.community-section:nth-child(1) {
+  margin-top: 90px;
+}
+
+/* line 134, ../../../sass/main.scss */
+#subhead {
+  font-size: 20px;
+  margin-left: 45px;
+  font-weight: 100;
+}
+
+/* line 141, ../../../sass/main.scss */
+#bottom-section {
+  margin-bottom: 100px;
+}
+
+/* line 145, ../../../sass/main.scss */
+.text-center {
+  padding-top: 200px;
+  padding-bottom: 150px;
+}
+
+/* line 150, ../../../sass/main.scss */
+.center-button {
+  height: 200px;
+  width: 100%;
+  background-color: black;
+  color: white;
+  border-radius: 3px;
+  margin: 15px;
+}
+
+@media (max-width: 767px) {
+  /* line 160, ../../../sass/main.scss */
+  .section {
+    margin-top: 80px;
+  }
+}
