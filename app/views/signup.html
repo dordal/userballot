@@ -19,6 +19,11 @@
     <div class="public-form-error-message">
       {{error}}
     </div>
+    <!-- name -->
+    <div id="names">
+      <input type="text" class="fresh-text-input signup-input-wide" id="firstName" ng-model="firstName" name="fName" required placeholder="First Name">
+      <input type="text" class="fresh-text-input signup-input-wide" id="lastName" ng-model="lastName" name="lName" required placeholder="Last Name">
+    </div>
 
     <!-- email address -->
     <input type="text" class="fresh-text-input signup-input-wide"  ng-model="email" name="uEmail" required placeholder="Email Address" /><br/>

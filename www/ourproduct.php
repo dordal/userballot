@@ -44,7 +44,7 @@
                 <div class="sectionContainer">
                     <div class="left-text left-text-float">
                         <h2>What's a UserBallot?</h2>
-                        <p><strong>‘UserBallots’ are</strong> simple yes/no questions, limited to 99 characters, that you create and the system deploys to your site visitors. ‘UserBallots’ appear as footers that pop up at the bottom of your site visitors’ screens.<br><br> 'UserBallots' are <strong>unobtrusive by design</strong>, and your visitors maintain full access to your websites’ functions. With one click they answer a single yes/no question form the one’s you created in the control center. <strong>Done!</strong></p>
+                        <p><strong>‘UserBallots’ are</strong> simple yes/no questions, limited to 99 characters, that you create and the system deploys to your site visitors. ‘UserBallots’ appear as footers that pop up at the bottom of your site visitors’ screens.<br><br>'UserBallots' are <strong>unobtrusive by design</strong>.  With one click your site visitors answer a single yes/no question from the one’s you create in the control center... <strong>Done!</strong></p>
                     </div>
                     <div class="right-image" style="background: url(img/ubbutton.png) no-repeat;"></div>
                 </div>
@@ -59,17 +59,16 @@
                     <div class="left-text">
                         <h2>You're in control!</h2>
                         <p><strong>The Control Center</strong> is the place you go to create questions, and get results from your users.<!-- , and see analytics about the people answering your questions.--> Create simple yes or no feedback questions based on suggestions we provide, or your own ideas. You will soon see your users giving you the feedback you need to make better decisions!</p>
-                    </div><div class="right-image" style="background: url(img/answer.png) no-repeat;"></div>
+                    </div>
+                    <div class="right-image" style="background: url(img/answer.png) no-repeat;"></div>
                 </div>
-                <div class="sectionContainer">
+                <div class="sectionContainer" style="border-bottom: 0;">
                     <div class="left-image"></div>
                     <div class="right-text">
                         <h2>Know who is answering your questions.</h2>
                         <p>Beyond the questions, our built in analytics give you <span class="best">powerful</span> insight into who your audience is!</p>
                     </div>
-                    
-                </div>
-                
+                </div> 
             </div>             
         <!-- footer -->
         <div class="footer">

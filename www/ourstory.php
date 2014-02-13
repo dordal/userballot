@@ -39,7 +39,7 @@
             </div>
         </div>    
         <!-- footer -->
-        <div class="footer">
+        <div class="footer" style="position: fixed !important;">
             &copy;UserBallot.com
         </div>
     </div>

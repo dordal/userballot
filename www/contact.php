@@ -46,7 +46,7 @@
             </div>
         </div>                        
         <!-- footer -->
-        <div class="footer" style="position: relative !important">
+        <div class="footer" style="position: absolute !important">
             &copy;UserBallot.com
         </div>
     </div>

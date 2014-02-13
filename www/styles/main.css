@@ -1,5 +1,5 @@
 body {
-        background: url('img/texture.png');
+        background: #fbfbfb;
         background-size: 350px;
 }
 img {
@@ -311,7 +311,7 @@ h1 {
 .footer {
         background-color: #eee;
         bottom: 0;
-        position: relative !important;
+        position: relative;
         color: #999;
         left: 0;
         font-size: 12px;
@@ -326,7 +326,6 @@ h1 {
 .page .footer {
         padding-top: 18px;
         padding-bottom: 18px;
-        position: fixed;
 }
 
 #rackspace {
@@ -405,14 +404,12 @@ h1 {
         height:100%;
         float:left;
         background-position: center;
-        margin-top: 25px;
 }
 .right-image {
         width:25%;
         height:100%;
         background-position: center;
         float:right;
-        margin-top: 25px;
 }
 .left-text {
         width:60%;
@@ -432,6 +429,7 @@ h1 {
         width: 100%; 
         height: 180px;
         margin-top: 100px;
+        border-bottom: 1px solid #323232;
 }
 .commentBox {
         width: 100%;
@@ -507,4 +505,54 @@ h1 {
         font-weight:bold;
         text-align: center;
         margin-bottom: 40px;
+}
+
+.pricing-container {
+        height: 290px;
+        margin-top: 20px;
+}
+
+.pricing {
+        height: 100%;
+        float: left;
+        text-align: center;
+        width: 24.9%;
+}
+
+.pricing-border {
+        border-right: 1px solid #323232;
+}
+
+.pricing h1 {
+        padding: 0 !important;
+        font-weight: bold;
+        color: #323232;
+}
+
+.pricing p {
+        margin: 0 !important;
+        color: #323232;
+}
+
+.buy-btn {
+        letter-spacing: .5px;
+        display: block;
+        cursor: pointer; 
+        border: none;
+        padding: 7px 0px;
+        margin: auto;
+        width: 70%; 
+        color: #fff;  
+        font-size: 16px; 
+        background-color: #2ecc71; 
+        text-align: center;
+        text-decoration: none;
+        border-radius: 3px;
+        box-shadow: 1px 1px 1px #444;
+}
+.buy-btn:hover {
+        background-color: #27DB73;
+        transition: background .25s ease-in-out;
+        -moz-transition: background .25s ease-in-out;
+        -webkit-transition: background .25s ease-in-out;
 }

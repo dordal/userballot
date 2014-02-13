@@ -499,6 +499,22 @@ button:focus {
 	margin-left: 107px;
 }
 
+#firstName {
+	float: left;
+	width: 32%;
+	margin-right: 10.5px;
+}
+
+#lastName {
+	float: left;
+	width: 58%;
+	margin-right: 0;
+}
+
+#names {
+	height: 42px;
+}
+
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
     #cmscontainer {

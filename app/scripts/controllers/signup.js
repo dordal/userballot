@@ -4,6 +4,8 @@ userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, 
 	$scope.email = '';
 	$scope.password = '';
 	$scope.domain = '';
+	$scope.firstName = '';
+	$scope.lastName = '';
 	$scope.error = null;
 	$scope.domainError = null;
 	$scope.emailError = null;
