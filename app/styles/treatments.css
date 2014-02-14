@@ -93,7 +93,6 @@ form ul li {
 	/* border: 1px solid #D5D5D5; */
 	border-radius: 0 3px 3px 3px;
 	margin-bottom: 20px;
-	margin-left: 97px; /*without analytics only*/
 }
 .card-wrap.highlight {
 	background-color: #FFFEE4!important;
@@ -434,8 +433,7 @@ button:focus {
 	background-color: #b9b9b9;
 	border-radius: 3px 0 0 3px;
 	color: #fff;
-	/*display: block; analytics*/
-	display: none;
+	display: block;
 	margin-bottom: 10px;
 	padding: 10px 20px;
 	text-align: center;
@@ -457,8 +455,7 @@ button:focus {
 	background-color: #b9b9b9;
 	border-radius: 3px 0 0 3px;
 	color: #fff;
-	/*display: block; analytics*/
-	display: none;
+	display: block;
 	margin-bottom: 10px;
 	padding: 10px 0px;
 	text-align: center;
@@ -476,10 +473,10 @@ button:focus {
 }
 #cmscontainer {
 	float: left;
-	width: 12.5%;
+	width: 97px;
 }
 #settings2 {
-	/*margin-left: 117.5px; analytics*/
+	margin-left: 117.5px;
 }
 .logo {
 	margin-left: -4px !important;
@@ -496,7 +493,10 @@ button:focus {
 	width: 40px;
 }
 #steps {
-	margin-left: 107px;
+	float: left;
+	margin-left: 0px;
+	width: 773px;
+	margin-right: 0;
 }
 
 #firstName {
@@ -522,7 +522,7 @@ button:focus {
     }
     .card-wrap {
     	width: 575px !important;
-    	margin-left: 110px; /*analytics*/
+    	margin-left: 110px;
     }
     .main-nav {
     	margin-left: 25%;
@@ -567,7 +567,7 @@ button:focus {
     }
     .card-wrap {
     	margin-bottom: 40px;
-    	margin-left: 0px; /*analytics*/
+    	margin-left: 0px;
     }
     .card-wrap p {
     	padding-left: 15px;
@@ -650,7 +650,7 @@ button:focus {
     }
     .card-wrap {
     	margin-bottom: 40px;
-    	margin-left: 0px; /*analytics*/
+    	margin-left: 0px;
     }
     .card-wrap p {
     	padding-left: 15px;

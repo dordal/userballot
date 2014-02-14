@@ -1,7 +1,11 @@
 <!-- AdminArea -->
 <div ng-controller="AdminAreaCtrl">
 	<div class="extended-wrap">
-		<div class="admin-bar"><span ng-show="user.email">{{user.email}} | <a ng-click="logout()">Logout</a></span></div>
+		<div class="admin-bar">
+			<span ng-show="site.firstName">Hello, <strong>{{site.firstName}}</strong></span>
+			<span ng-hide="site.firstName">Hello, <strong>{{user.email}}</strong></span>
+			<span> | <a ng-click="logout()">Logout</a></span>
+		</div>
 		<!-- The container is a centered 960px -->
 		<div class="container content-wrap">
 			<div class="sixteen columns">
@@ -32,8 +36,6 @@
 						<div id="cmscontainer">
 							<div class="three-columns alpha cms">Self Start</div>
 							<div class="three-columns alpha cms">Wordpress</div>
-							<div class="three-columns alpha cms">Drupal</div>
-							<div class="three-columns alpha cms">Shopify</div>
 							<div class="three-columns alpha cms">Share This</div>
 						</div>
 							<div class="card-wrap info-wrap thirteen columns" id="steps">

@@ -4,8 +4,6 @@ userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, 
 	$scope.email = '';
 	$scope.password = '';
 	$scope.domain = '';
-	$scope.firstName = '';
-	$scope.lastName = '';
 	$scope.error = null;
 	$scope.domainError = null;
 	$scope.emailError = null;
@@ -27,6 +25,8 @@ userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, 
 					site.hue = "#2ecc71"; // questions are "userballot green" by default
 					site.frequency = 10;
 					site.allowmute = 0; // dis-allow muting questions by default
+					site.firstName = $scope.firstName;
+					site.lastName = $scope.lastName;
 					
 					site.messages = {};
 					site.messages['default1'] = createMessage("Would you find a mobile version of our website helpful?");
@@ -61,7 +61,7 @@ userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, 
 				if (error.code === 'EMAIL_TAKEN') {
 					$scope.emailError = "Email is already in use. Please login.";
 				} else {
-					$scope.error = "Registration Error: "  + error.code;
+					$scope.error = "There was an error.";
 				}
 			}
 			// log in manually, set noLogin to true
