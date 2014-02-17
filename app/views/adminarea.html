@@ -28,9 +28,65 @@
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='questions'}" ng-click="adminViewState('questions')">Control Center</a>
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Get Started</a>
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='settings'}" ng-click="adminViewState('settings')">Settings</a>
+		              		<a class="main-nav-item" ng-class="{active: adminView.state=='pricing'}" ng-click="adminViewState('pricing')">Upgrade!</a>
 						</div>
 					</div>
-
+					
+					<div ng-show="adminView.state=='pricing'">
+						<!-- <div class="container pricing-container">
+				        	<div class="pricing pricing-border">
+				        		<h1>Trial</h1>
+				        		<p>Try Us <strong>Free!</strong></p>
+				        		<br>
+				        		<h1>FREE</h1>
+				        		<br><br>
+				        		<p><strong>500</strong> Responses</p>
+				        		<br>
+				        		<p style="text-decoration: underline;">Question Analytics Included</p>
+				        		<br><br>
+				        		<a href="http://app.userballot.com/#/signup" style="" id="save-question" class="buy-btn">Try Us Out</a>
+				        	</div>
+				        	<div class="pricing pricing-border">
+				        		<h1>Entry</h1>
+				        		<p>Most Affordable!</p>
+				        		<br>
+				        		<h1>$7</h1>
+				        		<p>per month</p>
+				        		<br>
+				        		<p><strong>2,500</strong> Responses Monthly</p>
+				        		<br>
+				        		<p style="text-decoration: underline;">Question Analytics Included</p>
+				        		<br><br>
+				        		<a href="http://app.userballot.com/#/signup" style="" id="save-question" class="buy-btn">Let's Rock</a>
+				        	</div>
+				        	<div class="pricing pricing-border">
+				        		<h1>Standard</h1>
+				        		<p>Double the Responses!</p>
+				        		<br>
+				        		<h1 style="color: #2ecc71">$10</h1>
+				        		<p>per month</p>
+				        		<br>
+				        		<p><strong>5,000</strong> Responses Monthly</p>
+				        		<br>
+				        		<p style="text-decoration: underline;">Question Analytics Included</p>
+				        		<br><br>
+				        		<a href="http://app.userballot.com/#/signup" style="" id="save-question" class="buy-btn">Time to Roll</a>
+				        	</div>
+				        	<div class="pricing">
+				        		<h1>Deluxe</h1>
+				        		<p>Best Value!</p>
+				        		<br>
+				        		<h1>$25</h1>
+				        		<p>per month</p>
+				        		<br>
+				        		<p><strong>25,000</strong> Responses Monthly</p>
+				        		<br>
+				        		<p style="text-decoration: underline;">Question Analytics Included</p>
+				        		<br><br>
+				        		<a href="http://app.userballot.com/#/signup" style="" id="save-question" class="buy-btn">Super Size Me</a>
+				        	</div>
+				        </div> -->
+					</div>
 					<div class="sixteen columns omega">
 						<div ng-show="adminView.state=='setup'">
 						<div id="cmscontainer">

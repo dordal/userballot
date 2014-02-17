@@ -84,6 +84,7 @@ form ul li {
     -moz-transition: background .25s ease-in-out;
     -webkit-transition: background .25s ease-in-out;
 }
+
 .section-header-med {
 	font-size: 21px;
 	padding-left: 10px;
@@ -515,6 +516,55 @@ button:focus {
 	height: 42px;
 }
 
+.pricing-container {
+        height: 290px;
+        margin-top: 20px;
+}
+
+.pricing {
+        height: 100%;
+        float: left;
+        text-align: center;
+        width: 24.9%;
+}
+
+.pricing-border {
+        border-right: 1px solid #323232;
+}
+
+.pricing h1 {
+        padding: 0 !important;
+        font-weight: bold;
+        color: #323232;
+}
+
+.pricing p {
+        margin: 0 !important;
+        color: #323232;
+}
+
+.buy-btn {
+        letter-spacing: .5px;
+        display: block;
+        cursor: pointer; 
+        border: none;
+        padding: 7px 0px;
+        margin: auto;
+        width: 70%; 
+        color: #fff;  
+        font-size: 16px; 
+        background-color: #2ecc71; 
+        text-align: center;
+        text-decoration: none;
+        border-radius: 3px;
+        box-shadow: 1px 1px 1px #444;
+}
+.buy-btn:hover {
+        background-color: #27DB73;
+        transition: background .25s ease-in-out;
+        -moz-transition: background .25s ease-in-out;
+        -webkit-transition: background .25s ease-in-out;
+}
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
     #cmscontainer {
