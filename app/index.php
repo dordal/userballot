@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="styles/components/topcoat-desktop-light.css">
     <link rel="stylesheet" href="styles/grid/skeleton.css">
     <link rel="stylesheet" href="styles/treatments.css">
+    <!-- <link rel="stylesheet" href="styles/analyticdisplay.css"> -->
     <link rel='stylesheet' href="spectrum/spectrum.css">
 
     <!--[if lt IE 9]>
@@ -58,6 +59,7 @@
         <script src="scripts/jquery-2.0.3.min.js"></script>
         <script src="scripts/jquery-ui-1.10.3.custom.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
         <script src="//cdn.firebase.com/v0/firebase.js"></script>
         <script src="//cdn.firebase.com/v0/firebase-simple-login.js"></script>
         <script src="//cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js"></script>

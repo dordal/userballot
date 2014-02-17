@@ -174,7 +174,11 @@
 									<!-- <div class="line-item card-wrap" ng:class="{true:'active', false:''}[message.active=='1']" ng-repeat="message in site.messages"> -->
 									<div ng-repeat="message in site.messages">
 										<a class="three-columns alpha analytics">Analytics</a>
+										
 										<div class="line-item card-wrap">
+											<div ng-show="">
+												<script>$.ajax( "http://connordev.com/userballot/getdata.php?siteId={{site.id}}&question={{message.id}}" ).done(function(msg) {document.write(msg);});</script>
+											</div>
 											<div class="timestamp">
 												<span ng-show="message.startdate"><strong>Started:</strong> {{message.startdate | date:'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;</span>
 												<span ng-show="message.enddate"><strong>Ended:</strong> {{message.enddate | date: 'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;</span>
