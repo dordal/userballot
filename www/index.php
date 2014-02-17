@@ -32,8 +32,7 @@
                     <p>Easily validate new ideas, products, and services using yes or no questions <strong>before</strong> you waste valuable time and money.</p>
                 </div>
                 <div class="five columns alpha omega" id="button-padding" style="float: right">
-                    <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started Today!</a>
-                    <p class="free">Sign Up <strong>Free!</strong></p>
+                    <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started Free!</a>
                 </div>
             </div>    
             <div class="container content-wrap">
@@ -45,7 +44,7 @@
         </div>
         <!-- The container is a centered 960px -->
         <div class="bottom">
-            <div class="container content-wrap feature-block" style="padding-bottom: 40px;">
+            <div class="container content-wrap feature-block" style="padding-bottom: 40px; margin-bottom: 100px;">
                     <div class="row">
                         <h1 class="chance">Don't leave important decisions to chance!</h1>
                         <p class="subheader center">Getting simple, easy to understand feedback from your users is key to making the right decisions.</p>

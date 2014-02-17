@@ -98,7 +98,7 @@ img {
 .motto p {
         color: #fff;
         font-size: 18px;
-        margin: auto;
+        margin: auto auto auto 0;
         padding-top: 20px;
         line-height: 30px;
         width: 500px;
@@ -115,7 +115,7 @@ h1 {
 
 .home h1 {
         color: #323232;
-        font-size: 32px;
+        font-size: 40px;
         font-weight: 600;
         line-height: 55px;
         padding-top: 40px;
@@ -154,7 +154,7 @@ h1 {
         color: #fff;
 }
 .innerMasthead{
-        padding: 80px 0;
+        padding: 160px 0;
 }
 .demo {
         width: inherit;
@@ -194,6 +194,7 @@ h1 {
         text-decoration: none;
         border-radius: 3px;
         box-shadow: 1px 1px 1px #444;
+        border: 2px solid #17994E;
 }
 .signup-btn:hover {
         background-color: #27DB73;
@@ -244,7 +245,7 @@ h1 {
         font-size: 30px;
         color: #303140;
         text-align: center;
-        margin-top: 40px;
+        margin-top: 100px;
         font-family: 'Open Sans', sans-serif;
         line-height: 40px;
 }
@@ -287,6 +288,7 @@ h1 {
         display: block;
         margin: 0 auto;
         text-align: center;
+        margin-top: 50px;
 }
 .icon-feature-left {
         float: left;
@@ -351,13 +353,14 @@ h1 {
         background: #323232;
         width: 100%;
         border-top: 5px solid #2ecc71;
-        height: 500px;
+        height: 650px;
 }
 #see {
         color: #fff;
         text-align: center;
         font-weight: lighter;
         padding-bottom: 40px;
+        margin-top: 50px;
         text-shadow: 1px 1px 1px #000;
 }
 #double {

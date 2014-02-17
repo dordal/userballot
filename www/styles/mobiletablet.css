@@ -254,9 +254,13 @@
     }
     #button-padding {
         padding-right: 0px;
+        width: 350px;
     }
     .logo {
         padding-left: 0px;
+    }
+    .innerMasthead {
+        width: 485px;
     }
 }
 }
