@@ -3,14 +3,12 @@
 userballotApp.controller('OrderCtrl', function($scope, $location, $http, $routeParams, angularFire, angularFireAuth, userballotAuthSvc) {
 	$scope.formData = {};
 	$scope.generalError = null;
-	$scope.emailError = null;
 	$scope.submitting = false;
-
-	$scope.authenticated = false;
 
 	var APP_DOMAIN = window.location.hostname;
 	var FIREBASE_DOMAIN;
-
+	alert($scope.user.email);
+	
 	// Set the Stripe API key. Stripe library is included in the template
 	switch(APP_DOMAIN){
 		case 'app.userballot.com':
@@ -38,6 +36,7 @@ userballotApp.controller('OrderCtrl', function($scope, $location, $http, $routeP
 			// Insert the token into the form so it gets submitted to the server
 			$scope.formData.stripeToken = token;
 			$scope.formData.plan = $routeParams.plan;
+			$scope.formData.email = user.email;
 			
 			// Submit the form the order processor
 			$http({
@@ -49,6 +48,7 @@ userballotApp.controller('OrderCtrl', function($scope, $location, $http, $routeP
 			.success(function(data) {
 				// Yay, we've saved our token and set up the subscription. If the user is authenticated, associated the
 				// plan ID in firebase. Otherwise, we need to create a new account and associate the plan ID.
+				alert(data);
 				console.log(data);
 				if (data.success) {
 					alert("Hooray! The order has gone through");
@@ -72,7 +72,7 @@ userballotApp.controller('OrderCtrl', function($scope, $location, $http, $routeP
 
 		// Prevent the form from submitting with the default action
 		return false;
-
 	}
+
 });
 

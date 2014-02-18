@@ -16,20 +16,6 @@
       {{generalError}}
     </div>
 
-    <!-- email address -->
-    <div ng-show="!authenticated">
-      <input type="text" ng-model="formData.email" class="fresh-text-input signup-input-wide" name="uEmail" required placeholder="Email Address" /><br/>
-
-      <!-- error message -->
-      <div ng-show="emailError" class="public-form-error-message">
-        {{emailError}}
-      </div>
-
-      <!-- password -->
-      <input type="password" ng-model="formData.password" class="fresh-text-input signup-input-wide"  required placeholder="Password" /><br/>
-    </div>
-
-
     <input type="text" ng-model="formData.name" class="fresh-text-input signup-input-wide" required placeholder="Name on Card"/><br>
 
     <input type="text" ng-model="cc" class="cc-input fresh-text-input signup-input-wide" data-stripe="number" required placeholder="Card Number"/>

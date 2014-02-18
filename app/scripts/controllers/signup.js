@@ -1,6 +1,6 @@
 'use strict';
 
-userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, angularFireAuth, userballotAuthSvc) {
+userballotApp.controller('SignupCtrl', function($scope, $location, $routeParams, angularFire, angularFireAuth, userballotAuthSvc) {
 	$scope.email = '';
 	$scope.password = '';
 	$scope.domain = '';
@@ -25,6 +25,9 @@ userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, 
 					site.hue = "#2ecc71"; // questions are "userballot green" by default
 					site.frequency = 10;
 					site.allowmute = 0; // dis-allow muting questions by default
+
+					// TF - not sure we want to associate the first name and last name with the site -- maybe this would be
+					// useful for cross-referencing purposes, but I think it makes more sense on the user object.
 					site.firstName = $scope.firstName;
 					site.lastName = $scope.lastName;
 					
@@ -48,10 +51,19 @@ userballotApp.controller('SignupCtrl', function($scope, $location, angularFire, 
 
 					var newUser = userRef.child(emailId);
 					newUser.set({email: user.email, sites: sitesObj});
+					// Set the first and last name attributes on the user object
+					newUser.set({firstname: $scope.firstName, lastName: $scope.lastName})
 
 					// login the user and redirect to the admin interface
 					// console.log("User Reg:", user);
-					$location.path('/admin');
+					// If this is a free trial account, redirect to the "getting started" view in the admin area
+					if ($routeParams['plan'] === "" || $routeParams['plan'] === "trial") {
+						$location.path('/admin');
+					} else {
+						// Otherwise, proceed to the order page
+						$scope.user = newUser;
+						$location.path('/order/' + $routeParams['plan']);
+					}
 				});
 			} else if ( !(emailMatch) || error.code === 'EMAIL_TAKEN' ) {
 				if (!emailMatch) {
