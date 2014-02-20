@@ -25,14 +25,8 @@
     ?>   
     <div class="page-wrap">        
 	    <div class="masthead">
-            <div class="twelve columns alpha">
-                <div class="page-title">
-                    <h1>Contact</h1>
-                </div>
-            </div>
-        </div>     
 		    <div class="container">
-                    <h1 style="text-align:center;">We value your feedback!</h1>
+                    <h1>We value your feedback!</h1>
                     <div class="container">
                         <form action="send_mail.php" method="post" id="commentBoxContainer">
                             <input class="commentBox fresh-text-input" placeholder="Email" name="email_address">
@@ -44,12 +38,12 @@
                 <p style="margin: 0 0px 20px; padding-top: 0px; text-align: center; margin-top: 20px;">For other general inquiries, please email us at:</p>
                 <p class="best" style="text-align: center; margin-bottom: 350px;"><a href="mailto:info@userballot.com">info@userballot.com</a></p>
             </div>
-        </div>                        
+        </div>   
+        </div>                     
         <!-- footer -->
-        <div class="footer" style="position: absolute !important">
-            &copy;UserBallot.com
-        </div>
-    </div>
+        <?php
+            include('inc/footer.php');
+        ?>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
