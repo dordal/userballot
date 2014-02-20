@@ -200,11 +200,12 @@ h1 {
 
 .feature-triple {
         text-align: justify;
+        margin: 100px auto;
 }
 .feature-triple img {
         display: block;
-        padding-top: 20px;
 }
+
 .vector {
         max-width: 80px;
         height: 80px;
@@ -282,7 +283,7 @@ h1 {
         height: 35px;
         border-radius: 100%;
         border: 1px solid transparent;
-        margin: 45px 0;
+        margin: 100px 0;
 
 }
 

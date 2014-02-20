@@ -35,7 +35,7 @@
 	        		<br>
 	        		<p style="text-decoration: underline;">Question Analytics Included</p>
 	        		<br><br>
-	        		<a href="http://app.userballot.com/#/signup" style="" id="save-question" class="buy-btn">Try Us Out</a>
+	        		<a style="" class="buy-btn" plan="trial">Try Us Out</a>
 	        	</div>
 	        	<div class="pricing pricing-border">
 	        		<h1>Entry</h1>
@@ -48,7 +48,7 @@
 	        		<br>
 	        		<p style="text-decoration: underline;">Question Analytics Included</p>
 	        		<br><br>
-	        		<a href="http://app.userballot.com/#/signup" style="" id="save-question" class="buy-btn">Let's Rock</a>
+	        		<a style="" class="buy-btn" plan="entry">Let's Rock</a>
 	        	</div>
 	        	<div class="pricing pricing-border">
 	        		<h1>Standard</h1>
@@ -61,7 +61,7 @@
 	        		<br>
 	        		<p style="text-decoration: underline;">Question Analytics Included</p>
 	        		<br><br>
-	        		<a href="http://app.userballot.com/#/signup" style="" id="save-question" class="buy-btn">Time to Roll</a>
+	        		<a style="" class="buy-btn" plan="standard">Time to Roll</a>
 	        	</div>
 	        	<div class="pricing">
 	        		<h1>Deluxe</h1>
@@ -74,7 +74,7 @@
 	        		<br>
 	        		<p style="text-decoration: underline;">Question Analytics Included</p>
 	        		<br><br>
-	        		<a href="http://app.userballot.com/#/signup" style="" id="save-question" class="buy-btn">Super Size Me</a>
+	        		<a style="" class="buy-btn" plan="delux" >Super Size Me</a>
 	        	</div>
 	        	</div>
 		        <p style="text-align: center;">For high volume and custom orders, contact us at <a href="mailto:info@userballot.com"><strong>info@userballot.com</strong></a>.</p>
