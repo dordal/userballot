@@ -104,7 +104,7 @@ $ub.displayMessage = function( allowmute, frequency, hue ) {
 		}
 
 		var html = ""+
-			"<div style='z-index: 1000; padding: " + padding + "; height: " + ballotHeight + "; position: fixed; bottom: 0; left: 0; right: 0; background-color: #fbfbfb; color: #323232; font-size: 16px; font-family: Helvetica, sans-serif; font-weight: lighter; border-top: 5px solid  " +  ballotColor + ";'>"+
+			"<div id='ub-container' style='z-index: 1000; padding: " + padding + "; height: " + ballotHeight + "; position: fixed; bottom: 0; left: 0; right: 0; background-color: #fbfbfb; color: #323232; font-size: 16px; font-family: Helvetica, sans-serif; font-weight: lighter; border-top: 5px solid  " +  ballotColor + ";'>"+
 			"	<div style='text-align: left; position: relative; max-width: 1024px; margin: 0 auto;'>"+
 			"		<span id='message-text' style='text-align: left;padding: " + textPadding + "; word-break: break-word; position: absolute; left: 0; right: 45px;'>" + $ub.selectedMessage.text + "</span>"+
 			"		<span style='position: absolute; right: 0;'>"+
