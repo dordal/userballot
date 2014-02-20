@@ -48,11 +48,9 @@ userballotApp.controller('SignupCtrl', function($scope, $location, $routeParams,
 					var sitesObj = {};
 					sitesObj[siteId] = siteId;
 
-
 					var newUser = userRef.child(emailId);
-					newUser.set({email: user.email, sites: sitesObj});
-					// Set the first and last name attributes on the user object
-					newUser.set({firstname: $scope.firstName, lastName: $scope.lastName})
+					newUser.set({firstName: $scope.firstName, lastName: $scope.lastName, email: user.email, sites: sitesObj});
+					
 
 					// login the user and redirect to the admin interface
 					// console.log("User Reg:", user);
@@ -60,8 +58,6 @@ userballotApp.controller('SignupCtrl', function($scope, $location, $routeParams,
 					if ($routeParams['plan'] === "" || $routeParams['plan'] === "trial") {
 						$location.path('/admin');
 					} else {
-						// Otherwise, proceed to the order page
-						$scope.user = newUser;
 						$location.path('/order/' + $routeParams['plan']);
 					}
 				});
