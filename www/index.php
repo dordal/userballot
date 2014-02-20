@@ -24,9 +24,9 @@
         <div class="masthead">
             <div class="container splash">
                 <div style="margin: auto;">
-                    <img style="height: 80px; margin-right: 10px;" src="img/logo-icon.svg" alt="">
-                    <img style="height: 60px; margin-bottom: 10px;" src="img/logo.svg" alt="">
-                    <img style="height: 60px; margin-bottom: 10px;" src="img/sup.svg" alt="">
+                    <img id="logo-icon-line" src="img/logo-icon.svg" alt="">
+                    <img class="logo-line" src="img/logo.svg" alt="">
+                    <img class="logo-line" src="img/sup.svg" alt="">
                 </div>
                 <h1 style="color: #3dcad7;">Get the pulse of your visitors.</h1>
                 <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started Free!</a>

@@ -74,9 +74,19 @@ h1 {
         width: 200px;
 }
 
+#logo-icon-line {
+        height: 80px;
+        margin-right: 10px;
+}
+
+.logo-line {
+        height: 60px;
+        margin-bottom: 10px;
+}
+
 .page-wrap {
         overflow: hidden;
-        height: 1250px;
+        height: 1280px;
         margin-top: 50px;
 }
 
@@ -93,21 +103,17 @@ h1 {
         height: auto;
 }
 
-.masthead h1:first-child {
-        font-weight: bold;
-}
 
 .home h1 {
         color: #323232;
-        font-size: 28px;
+        font-size: 24px;
         font-weight: 500;
         line-height: 25px;
-        padding-bottom: 60px;
+        padding-bottom: 20px;
         padding-top: 10px;
 }
 
 .page h1 {
-        padding: 20px 0;
         color: #2ecc71;
         font-weight: 500;
         font-size: 30px;
@@ -129,8 +135,8 @@ h1 {
         width: 100%;
 }
 
-.masthead p{
-        text-shadow: 0;
+.masthead h1:first-child {
+        font-weight: bold;
 }
 
 .splash{
@@ -200,7 +206,7 @@ h1 {
 
 .feature-triple {
         text-align: justify;
-        margin: 100px auto;
+        margin: 50px auto;
 }
 .feature-triple img {
         display: block;
@@ -237,7 +243,6 @@ h1 {
         line-height: 30px;
 }
 .text {
-        padding: 15px 0;
         margin: 0 10%;
         text-indent: 30px;
         text-align: justify;
@@ -283,7 +288,7 @@ h1 {
         height: 35px;
         border-radius: 100%;
         border: 1px solid transparent;
-        margin: 100px 0;
+        margin: 80px 0 0;
 
 }
 
@@ -307,9 +312,8 @@ h1 {
         text-align: center;
 }
 
-#funnel {
-        height: 50px;
-        margin: auto;
+.funnel {
+        margin: 50px auto;
         width: 584px;
 }
 
@@ -344,7 +348,7 @@ h1 {
         background: #323232;
         width: 100%;
         border-top: 5px solid #2ecc71;
-        height: 670px;
+        height: 100%;
 }
 #see {
         padding-bottom: 40px;
@@ -373,6 +377,7 @@ h1 {
 .analytics-icons {
         height: 110px;
         width: auto;
+        margin: 40px auto;
 }
 #double h1 {
         color: #2ecc71;
@@ -394,7 +399,7 @@ h1 {
 }
 #commentBoxContainer {
         width: 40%;
-        margin: auto;
+        margin: 30px auto;
 }
 #comment {
         height: 120px;
@@ -402,7 +407,7 @@ h1 {
 .fresh-text-input {
         display: inline-block;
         min-height: 42px;
-        padding: 6px 0 6px 10px;
+        padding: 0 0 0 10px;
         font-size: 1.1em;
         line-height: 28px;
         color: #262936;
@@ -509,7 +514,7 @@ h1 {
 }
 
 .nav {
-        color: #7cbf99;
+        color: #2ecc71;
         text-decoration: none;
         font-size: 13px;
 }

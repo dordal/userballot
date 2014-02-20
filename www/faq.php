@@ -25,7 +25,8 @@
     ?>
     <div class="page-wrap" style="margin-top: 50px">        
 	    <div class="masthead">
-            <div style="height: 50px; margin: auto; width: 584px;">
+            <h1>Frequently asked questions</h1>
+            <div class="funnel">
                 <span><a href="http://app.userballot.com/#/signup" style="margin: 0; float: left;" id="save-question" class="signup-btn">Try It Free!</a></span>
                 <span><a href="/pricing.php" style="margin: 0; float: left; margin-left: 20px;" id="save-question" class="signup-btn">See Our Plans!</a></span>
             </div>

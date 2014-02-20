@@ -79,7 +79,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="funnel">
+                <div class="funnel">
                     <span><a href="http://app.userballot.com/#/signup" id="save-question" class="signup-btn product-button">Try It Free!</a></span>
                     <span><a href="/pricing.php" style="margin-left: 20px;" id="save-question" class="signup-btn product-button">See Our Plans!</a></span>
                 </div>

@@ -319,7 +319,7 @@ button:focus {
 .fresh-text-input {
 	display: inline-block;
 	min-height: 42px;
-	padding: 6px 0 6px 10px;
+	padding: 0 0 0 10px;
 	font-size: 1.1em;
 	line-height: 28px;
 	color: #262936;
