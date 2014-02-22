@@ -29,9 +29,9 @@
 		        		<h1>Trial</h1>
 		        		<p>Try Us <strong>Free!</strong></p>
 		        		<br>
-		        		<h1>FREE</h1>
+		        		<h1 class="second">FREE</h1>
 		        		<br><br>
-		        		<p style="color: #3dcad7;"><strong>500</strong> Responses</p>
+		        		<p><strong>500</strong> Responses</p>
 		        		<br>
 		        		<p style="text-decoration: underline;">Question Analytics Included</p>
 		        		<br><br>
@@ -41,10 +41,10 @@
 		        		<h1>Entry</h1>
 		        		<p>Most Affordable!</p>
 		        		<br>
-		        		<h1>$7</h1>
+		        		<h1 class="second">$7</h1>
 		        		<p>per month</p>
 		        		<br>
-		        		<p style="color: #3dcad7;"><strong>2,500</strong> Responses Monthly</p>
+		        		<p><strong>2,500</strong> Responses Monthly</p>
 		        		<br>
 		        		<p style="text-decoration: underline;">Question Analytics Included</p>
 		        		<br><br>
@@ -54,10 +54,10 @@
 		        		<h1>Standard</h1>
 		        		<p>Double the Responses!</p>
 		        		<br>
-		        		<h1 style="color: #2ecc71">$10</h1>
+		        		<h1 style="color: #2ecc71 !important">$10</h1>
 		        		<p>per month</p>
 		        		<br>
-		        		<p style="color: #3dcad7;"><strong>5,000</strong> Responses Monthly</p>
+		        		<p><strong>5,000</strong> Responses Monthly</p>
 		        		<br>
 		        		<p style="text-decoration: underline;">Question Analytics Included</p>
 		        		<br><br>
@@ -67,23 +67,23 @@
 		        		<h1>Deluxe</h1>
 		        		<p>Best Value!</p>
 		        		<br>
-		        		<h1>$25</h1>
+		        		<h1 class="second">$25</h1>
 		        		<p>per month</p>
 		        		<br>
-		        		<p style="color: #3dcad7;"><strong>25,000</strong> Responses Monthly</p>
+		        		<p><strong>25,000</strong> Responses Monthly</p>
 		        		<br>
 		        		<p style="text-decoration: underline;">Question Analytics Included</p>
 		        		<br><br>
 		        		<a style="" class="buy-btn" plan="delux" >Super Size Me</a>
 		        	</div>
 	        	</div>
-		        <p style="text-align: center;">For high volume and custom orders, contact us at <a href="mailto:info@userballot.com"><strong>info@userballot.com</strong></a>.</p>
+		        <p id="custom-order" style="text-align: center;">For high volume and custom orders, contact us at <a href="mailto:info@userballot.com"><strong>info@userballot.com</strong></a>.</p>
 		   		<input type="hidden" id="app-url" value="<?php echo UB_APP_DOMAIN?>">
 	        </div>
 	        <br><br><br>
-		    <?php
-		    	include('inc/footer.php');
-		    ?>
 		</div>
+		<?php
+	    	include('inc/footer.php');
+	    ?>
 	</body>
 </html>

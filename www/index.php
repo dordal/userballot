@@ -30,23 +30,9 @@
                 </div>
                 <h1 style="color: #3dcad7;">Get the pulse of your visitors.</h1>
                 <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started Free!</a>
-                <span>or </span> <span><a href="app.userballot.com/login" style="color: #2ecc71; text-decoration: none;">Sign in</a></span>
+                <span><a href="app.userballot.com/login" style="color: #2ecc71; text-decoration: none;">Sign in</a></span>
+                <span><a href="/ourproduct.php" style="color: #2ecc71; text-decoration: none; margin-left: 20px;">Learn more</a></span>
                 <!-- Footer -->
-                <div class="container">
-                    <div style="text-align: center; margin-top: 450px;">
-                        <span>
-                            <a class="nav" href="/ourproduct.php">Product</a>
-                            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                            <a class="nav" href="/pricing.php">Pricing</a>
-                            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                            <a class="nav" href="/faq.php">FAQ</a>
-                            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                            <a class="nav" href="/ourstory.php">About Us</a>
-                            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
-                            <a class="nav" href="/contact.php">Contact Us</a>
-                        </span>
-                    </div>
-                </div>
             </div>    
         </div>
     </div>

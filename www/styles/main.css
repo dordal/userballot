@@ -3,14 +3,11 @@ body {
         height: 100%;
 }
 
-img {
-        border: 0;
-}
-
 h1 {
         font-family: 'Open Sans', sans-serif;
         margin: 0;
         text-align: center;
+        line-height: 35px !important;
 }
 
 .left {
@@ -26,20 +23,10 @@ h1 {
         display: none;
 }
 
-.superheader {
-        width: auto;
-}
-
-.header {
-        height: 20px;
-        position: relative;
-}
-
 .signin-btn-top {
         color: #323232;
         padding-top: 5px;
-        position: absolute;
-        right: 0;
+        float: right;
         text-decoration: none;
         padding: 5px 16px;
 }
@@ -49,16 +36,15 @@ h1 {
         transition: color .25s ease-in-out;
         -moz-transition: color .25s ease-in-out;
         -webkit-transition: color .25s ease-in-out;
-        padding: 5px 16px;
 }
 
 .signup-btn-top {
         background-color: #2ecc71;
+        border: 1px solid #17994E;
         border-radius: 0 0 5px 5px;
         color: #fff;
         padding: 5px 16px;
-        position: absolute;
-        right: 70px;
+        float: right;
         text-decoration: none;
         margin-right: 10px;
 }
@@ -70,13 +56,19 @@ h1 {
         -webkit-transition: background .25s ease-in-out;
 }
 
-.headerlogo {
-        width: 200px;
+#logo {
+        height: 30px;
+        margin-bottom: 5px;
+}
+
+#logo-icon {
+        height: 40px;
 }
 
 #logo-icon-line {
         height: 80px;
-        margin-right: 10px;
+        margin: 10px;
+        margin-bottom: 0;
 }
 
 .logo-line {
@@ -84,10 +76,24 @@ h1 {
         margin-bottom: 10px;
 }
 
+.logo-container {
+        height: 80px;
+        width: 200px;
+}
+
+.logo-container img {
+        margin: 10px 0 0 0px;
+}
+
+.signin-container {
+        height: 80px;
+        width: 200px;
+        float: right;
+}
+
 .page-wrap {
-        overflow: hidden;
-        height: 1280px;
         margin-top: 50px;
+        min-height: 855px;
 }
 
 .product-button {
@@ -114,7 +120,7 @@ h1 {
 }
 
 .page h1 {
-        color: #2ecc71;
+        color: #3dcad7;
         font-weight: 500;
         font-size: 30px;
 }
@@ -129,19 +135,18 @@ h1 {
 }
 
 .masthead {
-        background-position: 50% 80%;
-        background-attachment: fixed;
         height: 100%;
         width: 100%;
 }
 
 .masthead h1:first-child {
         font-weight: bold;
+        color: #2ecc71;
 }
 
 .splash{
         position: absolute;
-        margin: 150px auto 0;
+        margin: 200px auto 0;
         top: 0;
         bottom: 0;
         left: 0;
@@ -208,6 +213,7 @@ h1 {
         text-align: justify;
         margin: 50px auto;
 }
+
 .feature-triple img {
         display: block;
 }
@@ -224,7 +230,7 @@ h1 {
 
 .feature-triple p {
         font-family: Helvetica-Light, Helvetica;
-        color: #3dcad7; 
+        color: #323232; 
         line-height: 25px;
         margin: 0.5em 2.2em 0 2.2em;
         word-spacing:-1px;
@@ -239,7 +245,7 @@ h1 {
         line-height: 40px;
 }
 .subheader {
-        color: #3dcad7;
+        color: #323232;
         line-height: 30px;
 }
 .text {
@@ -303,27 +309,39 @@ h1 {
 
 .footer {
         background-color: #eee;
-        bottom: 0;
-        position: fixed;
+        position: relative;
         color: #999;
-        left: 0;
         font-size: 12px;
-        right: 0;
         text-align: center;
+        border-top: 1px dotted #323232;
+}
+
+.footer .nav {
+        text-align: center;
+        
+}
+
+.nav-container {
+        margin: auto;
+        display: inline-block;
+        margin: 15px;
 }
 
 .funnel {
         margin: 50px auto;
         width: 584px;
+        height: 120px;
 }
 
+.funnel a {
+        float: left;
+}
 .home .footer {
         height: 100px;
         vertical-align: bottom;
         padding: 10px;
 }
 .page .footer {
-        padding-top: 18px;
         padding-bottom: 18px;
 }
 
@@ -380,12 +398,11 @@ h1 {
         margin: 40px auto;
 }
 #double h1 {
-        color: #2ecc71;
         text-align: center;
         font-size: 22px;
 }
 #double p {
-        color: #3dcad7;
+        color: #fff;
         margin: auto;
         width: 85%;
         font-size: 17px;
@@ -436,14 +453,13 @@ h1 {
         transition: border linear 0.2s,box-shadow linear 0.2s;
 }
 #submit {
-        border: none !important;
         font-size: 18px;
         margin: 40px auto 0;
         padding: 15px 0;
         width: 100%;
-        box-shadow: 1px 1px 1px #444;
         cursor: pointer;
         background-color: #2ecc71;
+        border: 1px solid #17994E;
         color: #fff;
         border-radius: 3px;
         /* mobile safari fixes */
@@ -479,15 +495,30 @@ h1 {
         border-right: 1px solid #323232;
 }
 
+.pricing .second {
+        color: #323232 !important;
+}
 .pricing h1 {
         padding: 0 !important;
-        font-weight: bold;
-        color: #323232;
+        font-weight: normal !important;
+        color: #3dcad7 !important;
 }
 
 .pricing p {
         margin: 0 !important;
         color: #323232;
+}
+.faq {
+        width: 55%;
+        margin: auto;
+        text-align: justify;
+}
+.faq h1:first-child {
+        color: #2ecc71;
+}
+.faq h1 {
+        margin-top: 60px;
+        color: #3dcad7;
 }
 
 .buy-btn {
@@ -517,4 +548,10 @@ h1 {
         color: #2ecc71;
         text-decoration: none;
         font-size: 13px;
+        margin-left: 20px;
+        float: left;
+}
+
+.nav a:first-child {
+        margin-left: 0;
 }

@@ -65,31 +65,30 @@
         <div id="secondBar">
             <div class="content-wrap feature-block">
                 <h1 id="see">See <strong>who</strong> is answering your questions.</h1>
-                <div id="doubleContainer">
-                    <div id="double">
-                        <div id="double-left">
-                            <div class="analytics-container"><img class="analytics-icons" src="img/location.svg"></div>
-                            <h1>See important demographics.</h1>
-                            <p>Know your audience.<br>Be <strong>driven</strong> by response.</p>
-                        </div>
-                        <div id="double-right">
-                            <div class="analytics-container"><img class="analytics-icons" src="img/focus.svg"></div>
-                            <h1>Focus on what's essential.</h1>
-                            <p>Use our analytics to focus on the answers <strong>you</strong> care about.</p>
-                        </div>
+                <div id="double">
+                    <div id="double-left">
+                        <div class="analytics-container"><img class="analytics-icons" src="img/location.svg"></div>
+                        <h1>See important demographics.</h1>
+                        <p>Know your audience.<br>Be <strong>driven</strong> by response.</p>
+                    </div>
+                    <div id="double-right">
+                        <div class="analytics-container"><img class="analytics-icons" src="img/focus.svg"></div>
+                        <h1>Focus on what's essential.</h1>
+                        <p>Use our analytics to focus on the answers <strong>you</strong> care about.</p>
                     </div>
                 </div>
                 <div class="funnel">
-                    <span><a href="http://app.userballot.com/#/signup" id="save-question" class="signup-btn product-button">Try It Free!</a></span>
-                    <span><a href="/pricing.php" style="margin-left: 20px;" id="save-question" class="signup-btn product-button">See Our Plans!</a></span>
+                    <a href="http://app.userballot.com/#/signup" id="save-question" class="signup-btn product-button">Try It Free!</a>
+                    <a href="/pricing.php" style="margin-left: 20px;" id="save-question" class="signup-btn product-button">See Our Plans!</a>
                 </div>
             </div>
         </div> 
+        <?php
+        include('inc/footer.php');
+        ?>
     </div>
     <!-- footer -->
-    <?php
-        include('inc/footer.php');
-    ?>
+    
     <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
