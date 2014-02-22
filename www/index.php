@@ -30,7 +30,7 @@
                 </div>
                 <h1 style="color: #3dcad7;">Get the pulse of your visitors.</h1>
                 <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started Free!</a>
-                <span><a href="app.userballot.com/login" style="color: #2ecc71; text-decoration: none;">Sign in</a></span>
+                <span><a href="http://app.userballot.com/login" style="color: #2ecc71; text-decoration: none;">Sign in</a></span>
                 <span><a href="/ourproduct.php" style="color: #2ecc71; text-decoration: none; margin-left: 20px;">Learn more</a></span>
                 <!-- Footer -->
             </div>    
