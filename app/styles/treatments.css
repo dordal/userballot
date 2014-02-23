@@ -308,14 +308,16 @@ button:focus {
 	width: 49px;
 	float: left;
 }
-.fresh-text-input.month-input {
-	width: 75px;
+.month-input, .year-input {
 	float: left;
+	font-size: 14px;
+    height: 35px;
+    margin-top: 18px;
+    margin-right: 10px;
+    padding-top: 10px;
+    width: 100px;
 }
-.fresh-text-input.year-input {
-	width: 75px;
-	float: left;
-}
+
 .fresh-text-input {
 	display: inline-block;
 	min-height: 42px;
@@ -359,7 +361,7 @@ button:focus {
 .signup-form,
 .login-form {
 	margin: auto;
-	width: 36%;
+	width: 40%;
 	padding: 20px 0 0;
 }
 .signup-btn,

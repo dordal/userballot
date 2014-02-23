@@ -34,13 +34,12 @@
     </div>
 
     <!-- password -->
-    <input type="password" class="fresh-text-input signup-input-wide"  ng-model="password" required placeholder="Password" /><br/>
+    <input type="password" class="fresh-text-input signup-input-wide"  ng-model="password" placeholder="Password" /><br/>
 
-    <input name="confirm_password" type="password" class="fresh-text-input signup-input-wide" ui-validate=" '$value==password' " ui-validate-watch=" 'password' " placeholder="Confirm Password">
-    <div class="public-form-error-message">
-      {{!!confirm_password.$error.validator}}
+    <input name="confirm_password" type="password" class="fresh-text-input signup-input-wide" ng-model="repassword" required equal="password" placeholder="Confirm Password">
+    <div class="public-form-error-message" ng-show="signup.repassword.$error.equal">
+      Passwords do not match
     </div>
-
    <!-- site url 
     <div class="form-section-title">Site Details</div> 
     <input type="text" class="fresh-text-input signup-input-wide" ng-model="domain" required placeholder="Site URL" /><br/>

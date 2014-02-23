@@ -23,8 +23,34 @@
     <input type="text" ng-model="cvc" class="cvc-input fresh-text-input signup-input-wide" data-stripe="cvc" required placeholder="CVC"/>
 
     <div class="form-row">
-      <input type="text" ng-model="expMonth" class="month-input fresh-text-input signup-input-wide" size="2" data-stripe="exp-month" required placeholder="Month"/>
-      <input type="text" ng-model="expYear" class="year-input fresh-text-input signup-input-wide" size="4" data-stripe="exp-year" required placeholder="Year"/>
+      <select ng-model="expMonth" class="month-input" data-stripe="exp-month" required>
+        <option value="">Month</option>
+        <option value="01">01 - Jan</option>
+        <option value="02">02 - Feb</option>
+        <option value="03">03 - Mar</option>
+        <option value="04">04 - Apr</option>
+        <option value="05">05 - May</option>
+        <option value="06">06 - Jun</option>
+        <option value="07">07 - Jul</option>
+        <option value="08">08 - Aug</option>
+        <option value="09">09 - Sep</option>
+        <option value="10">10 - Oct</option>
+        <option value="11">11 - Nov</option>
+        <option value="12">12 - Dec</option>
+      </select>
+      <select ng-model="expYear" class="year-input" data-stripe="exp-year" required>
+        <option value="">Year</option>
+        <option value="2014">2014</option>
+        <option value="2015">2015</option>
+        <option value="2016">2016</option>
+        <option value="2017">2017</option>
+        <option value="2018">2018</option>
+        <option value="2019">2019</option>
+        <option value="2020">2020</option>
+        <option value="2021">2021</option>
+        <option value="2022">2022</option>
+      </select>
+
     </div>
 
     <input type="submit" class="signup-btn" ng-disabled="order.$invalid || submitting" name="submit" value="Submit Payment" /> 

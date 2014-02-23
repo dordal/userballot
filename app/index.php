@@ -73,6 +73,7 @@
         <script src="scripts/controllers/signup.js"></script>
         <script src="scripts/controllers/adminarea.js"></script>
         <script src="scripts/controllers/order.js"></script>
+        <script src="scripts/directives/equal.js"></script>
         <script src="scripts/ui-interactions.js"></script>
         <script src="spectrum/spectrum.js"></script>
         <!-- endbuild -->
