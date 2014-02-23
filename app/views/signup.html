@@ -36,6 +36,10 @@
     <!-- password -->
     <input type="password" class="fresh-text-input signup-input-wide"  ng-model="password" required placeholder="Password" /><br/>
 
+    <input name="confirm_password" type="password" class="fresh-text-input signup-input-wide" ui-validate=" '$value==password' " ui-validate-watch=" 'password' " placeholder="Confirm Password">
+    <div class="public-form-error-message">
+      {{!!confirm_password.$error.validator}}
+    </div>
 
    <!-- site url 
     <div class="form-section-title">Site Details</div> 
