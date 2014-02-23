@@ -4,12 +4,7 @@
         .icon-feature-left {
             width: 75px;
         }
-        .header {
-            padding-top: 20px;
-        }
-        .signup-btn {
-            margin: 0 auto 0;
-        }
+
         .signin-btn-top {
             position: relative;
             float: right;
@@ -28,87 +23,87 @@
             padding: 5px 10px 10px 10px;
             font-size: 18px;
         }
-        .headerlogo {
-            margin: 0 auto;
-        }
-        .pages {
-            margin: 0 auto;
-            text-align: center;
-            font-size: 18px;
-            padding-bottom: 30px;
-        }
         .page-padded {
             margin-left: 1.025em;
-        }
-        .logo {
-            margin: 0 auto 0 15px;
-            padding: 15px 60px 30px 60px;
-        }
-        .motto p {
-            width: 95%;
-            text-align: justify;
-        }
-        .motto h1 {
-            line-height: normal;
-            text-align: center;
-        }
-        .free {
-            margin-top: 5px;
-            padding-bottom: 40px;
         }
         .chance {
             padding-bottom: 45px;
         }
-        .home h1 {
-            line-height: normal 
+        
+        .feature-triple {
+            text-align: center;
         }
+
+        .feature-triple img {
+            margin-top: 40px;
+        }
+
         .feature-triple p {
             padding-bottom: 30px;
         }
         .icon-feature {
             padding-top: 50px;
         }    
-        .sectionContainer {
-            height: 300px;
-            width: 100%;
-            margin-top: 0;
-        }
-        .left-image {
-            height: 50%;
-            width: 100%;
-            float: left;
-            margin: 0;
-            display: none;
-            height: 0;
-        }
-        .right-image {
-            height: 50%;
-            width: 100%;
-            float: left;
-            margin: 0;
-            display: none;
-            height: 0;
-        }
-        .left-text {
-            height: 50%;
-            width: 100%;
-            float: left;
-            text-align: justify;
-            margin: 0;
-        }
-        .right-text {
-            height: 50%;
-            width: 100%;
-            float: left;
-            text-align: justify;
-            margin: 0;
-        }
+
         #settingUp {
             margin-top: 40px;
         }
+
         #commentBoxContainer {
             width: 100%;
         }
+
+        #logo {
+            margin-top: 5px;
+        }
+
+        .signin-btn-top {
+            margin-top: 20px;
+        }
+
+        .signup-btn-top {
+            margin-top: 20px;
+        }
+
+        .logo-container {
+            margin: auto;
+        }
+
+        .signin-container {
+            width: 100%;
+        }
+
+        .page-wrap {
+            margin-top: 100px;
+        }
+
+        .funnel {
+            width: 282px;
+            height: 200px;
+        }
+
+        .funnel a {
+            margin-left: 0 !important;
+        }
+
+        .faq {
+            width: 75%
+        }
+
+        .pricing {
+            width: 100%;
+            height: 60%;
+            border-right: 0;
+        }
+
+        .pricing-container {
+            height: 600px;
+        }
+
+        #custom-order {
+            color: transparent;
+        }
+
     }
 /*mobile landscape*/
     @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -125,23 +120,14 @@
         .signup-btn-top {
             margin-left: 30%;
         }
-        .headerlogo {
-            margin: 0 auto;
-        }
         .pages {
             margin: 0 auto;
             text-align: center;
         }
-        .logo {
-            margin: 0 auto 0 15px;
-            padding: 15px 120px 30px 120px;
-        }
+
         #double {
             width: 100%;
             height: 600px;
-        }
-        #thirdBar {
-            height: 900px;
         }
         #double-right {
             height: 55%;
@@ -154,8 +140,8 @@
         #double p {
             width: 360px;
         }
-        .masthead {
-            position: relative;
+        .faq {
+            width: 85%
         }
 }
 
@@ -163,9 +149,6 @@
     #double {
         width: 320px;
         height: 600px;
-    }
-    #thirdBar {
-        height: 950px;
     }
     #double-right {
         height: 55%;
@@ -178,16 +161,36 @@
     .icon-feature-four {
         width: 304px;
     }
-    .masthead {
-        position: relative;
+
+    .logo-line {
+        height: 50px;
     }
+
+    #logo-icon-line {
+        margin-bottom: 20px;
+    }
+
+    .home h1 {
+        padding-bottom: 50px;
+    }
+
+    .signup-btn-top {
+        margin-left: 22%;
+    }
+
+    .signin-btn-top {
+        margin-right: 22%;
+    }
+
+    .nav {
+        margin-top: 20px;
+    }
+    .faq {
+            width: 85%
+        }
 }
 /*tablet!*/
     @media only screen and (min-width: 768px) and (max-width: 959px) {
-        .signup-btn {
-            margin: 85px 10px 0 0;
-            padding: 20px 10px;
-        }
         .feature-triple p {
             font-size: 16px;
         }
@@ -197,12 +200,7 @@
             border-radius: 0 0 8px 8px;
             background-color: transparent;
         }
-        .signup-btn-top {
-            font-size: 18px;
-            border-radius: 0 0 8px 8px;
-            padding: 5px 10px 10px 10px;
-            right: 80px;
-        }
+
         .pages {
             font-size: 18px;
             margin: 0 auto;
@@ -211,12 +209,7 @@
         .page-padded {
             margin-left: 1.5em;
         }
-        .headerlogo {
-            margin-left: 0px;
-        }
-        .home h1 {
-            line-height: normal
-        }
+
         #double {
             width: 740px;
             height: 300px;
@@ -232,52 +225,24 @@
             height: 30%;
             width: 370px;
         }
-        .motto p {
-            padding-left: 10px;
-        }
-        .motto h1 {
-            padding-left: 10px;
-        }
         #button-padding {
             padding-right: 15px;
         }
-        .logo {
-            padding-left: 10px;
+        .faq {
+            width: 65%
         }
 /*odd spacing fix*/
-@media only screen and (min-width: 810px) and (max-width: 959px) {
-    .motto p {
-        padding-left: 0px;
-    }
-    .motto h1 {
-        padding-left: 0px;
-    }
+@media only screen and (min-width: 810px) and (max-width: 1080px) {
     #button-padding {
         padding-right: 0px;
         width: 350px;
     }
-    .logo {
-        padding-left: 0px;
-    }
-    .innerMasthead {
-        width: 485px;
+    .faq {
+        width: 65%;
     }
 }
-}
-@media only screen and (min-width: 960px) and (max-width: 1079px) {
-    .logo {
-        margin-left: 2%;
-    }
-    .motto {
-        margin-left: 2%;
-    }
-}
-/*logo issue!*/
-    @media only screen and (min-width: 960px) and (max-width: 1030px) {
-        .headerlogo {
-            margin-left: -10px
-        }
-}
+
+
 /*Safari-only*/
 /*@media only screen and (max-width: 959px) {
     :root .signin-btn-top {

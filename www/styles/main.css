@@ -1,129 +1,126 @@
 body {
-        background: #fbfbfb;
-        background-size: 350px;
+        background: #fdfdfd;
+        height: 100%;
 }
-img {
-        border: 0;
+
+h1 {
+        font-family: 'Open Sans', sans-serif;
+        margin: 0;
+        text-align: center;
+        line-height: 35px !important;
 }
+
 .left {
         float: left;
         text-align: inherit;
 }
+
 .right {
         float: right;
 }
+
 .hide {
         display: none;
 }
-.superheader {
-        background-color: #2ecc71;
-        width: auto;
-        border-bottom: 5px solid #17994E;
+
+.signin-btn-top {
+        color: #323232;
+        padding-top: 5px;
+        float: right;
+        text-decoration: none;
+        padding: 5px 16px;
 }
-.header {
-        height: 20px;
-        position: relative;
-}
+
 .signin-btn-top:hover {
-        color: #75FFAF;
+        color: #2ecc71;
         transition: color .25s ease-in-out;
         -moz-transition: color .25s ease-in-out;
         -webkit-transition: color .25s ease-in-out;
 }
+
 .signup-btn-top {
-        background-color: #fff;
+        background-color: #2ecc71;
+        border: 1px solid #17994E;
         border-radius: 0 0 5px 5px;
-        color: #2ECC71;
+        color: #fff;
         padding: 5px 16px;
-        position: absolute;
-        right: 70px;
+        float: right;
         text-decoration: none;
+        margin-right: 10px;
 }
+
 .signup-btn-top:hover {
         background-color: #75ffaf;
         transition: background .25s ease-in-out;
         -moz-transition: background .25s ease-in-out;
         -webkit-transition: background .25s ease-in-out;
 }
-.signin-btn-top {
-        color: #fff;
-        padding-top: 5px;
-        position: absolute;
-        right: 0;
-        text-decoration: none;
+
+#logo {
+        height: 30px;
+        margin-bottom: 5px;
 }
-.headerlogo {
-        margin-left: -30px;
+
+#logo-icon {
+        height: 40px;
 }
+
+#logo-icon-line {
+        height: 80px;
+        margin: 10px;
+        margin-bottom: 0;
+}
+
+.logo-line {
+        height: 60px;
+        margin-bottom: 10px;
+}
+
+.logo-container {
+        height: 80px;
+        width: 200px;
+}
+
+.logo-container img {
+        margin: 10px 0 0 0px;
+}
+
+.signin-container {
+        height: 80px;
+        width: 200px;
+        float: right;
+}
+
 .page-wrap {
-        overflow: hidden;
-        position: relative;
+        margin-top: 50px;
+        min-height: 855px;
 }
-.logo {
-        width: 155px;
-        float: left;
-        margin-bottom: 15px;
-}
-.pages {
-        margin: 13px 0 0 200px;
-}
-.pages a {
-        position: relative;
-        text-decoration: none;
-        color: #ffffff;
-        font-family: Helvetica-Light, Helvetica;
-        letter-spacing: 1px;
-}
-.pages a:visited {
-        text-decoration: none;
-        color: #ffffff;
-}
-.pages a:hover {
-        color: #75ffaf;
-        transition: color .25s ease-in-out;
-        -moz-transition: color .25s ease-in-out;
-        -webkit-transition: color .25s ease-in-out;
+
+.product-button {
+        margin: 0;
+        float: left; 
 }
 
 .page-padded {
         margin-left: 2.813em;
 }
 
-.motto {
-        padding-bottom: 45px;
-        text-align: left;
-        float: left;
+.home {
+        height: auto;
 }
 
-.motto p {
-        color: #fff;
-        font-size: 18px;
-        margin: auto auto auto 0;
-        padding-top: 20px;
-        line-height: 30px;
-        width: 500px;
-        text-shadow: 1px 1px 1px #323232;
-}
-.motto p strong {
-        letter-spacing: .5px;
-}
-
-h1 {
-        font-family: 'Open Sans', sans-serif;
-        margin: 0;
-}
 
 .home h1 {
         color: #323232;
-        font-size: 40px;
-        font-weight: 600;
-        line-height: 55px;
-        padding-top: 40px;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 25px;
+        padding-bottom: 20px;
+        padding-top: 10px;
 }
 
 .page h1 {
-        padding: 20px 0;
-        color: #2ecc71;
+        color: #3dcad7;
         font-weight: 500;
         font-size: 30px;
 }
@@ -138,24 +135,39 @@ h1 {
 }
 
 .masthead {
-        background: #232323 url(img/crowd.png);
-        background-position: 50% 80%;
-        background-attachment: fixed;
-        height: auto;
+        height: 100%;
         width: 100%;
-        border-bottom: 5px solid #2ecc71;
 }
 
-.masthead h1{
-        color: rgba(255,255,255,1);
-        text-shadow: 1px 1px 1px #323232;
+.masthead h1:first-child {
+        font-weight: bold;
+        color: #2ecc71;
 }
-.masthead p{
+
+.splash{
+        position: absolute;
+        margin: 200px auto 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 500px;
+        padding-bottom: 45px;
+        text-align: center;
+}
+
+.splash p {
         color: #fff;
+        font-size: 16px;
+        margin: auto;
+        line-height: 30px;
+        width: 500px;
 }
-.innerMasthead{
-        padding: 160px 0;
+
+.splash p strong {
+        letter-spacing: .5px;
 }
+
 .demo {
         width: inherit;
         height: 300px;
@@ -165,45 +177,29 @@ h1 {
         background-position: center;
         display: none;
 }
-.free {
-        font-family: Helvetica, sans-serif;
-        font-size: 13.5px;
-        margin: auto;
-        padding-top: 5px;
-        height: auto;
-        text-align: center;
-        text-shadow: 1px 1px 1px #323232;
-}
 
-.free strong {
-        letter-spacing: .5px;
-}
 .signup-btn {
-        font-weight: 500;
         letter-spacing: .5px;
         display: block;
         cursor: pointer; 
+        font-weight: 400;
         border: none;
-        margin: 85px auto 0;
-        padding: 20px 30px;
+        margin: 25px auto 5px;
+        padding: 20px 40px;
         width: 200px; 
         color: #fff;  
-        font-size: 18px; 
+        font-size: 16px; 
         background-color: #2ecc71; 
         text-align: center;
         text-decoration: none;
         border-radius: 3px;
-        box-shadow: 1px 1px 1px #444;
-        border: 2px solid #17994E;
+        border: 1px solid #17994E;
 }
 .signup-btn:hover {
         background-color: #27DB73;
         transition: background .25s ease-in-out;
         -moz-transition: background .25s ease-in-out;
         -webkit-transition: background .25s ease-in-out;
-}
-.signup-btn-top {
-        box-shadow: 1px 1px 1px #444;
 }
 .signup-btn-top:hover {
         background-color: #27DB73;
@@ -212,30 +208,29 @@ h1 {
         -moz-transition: background .25s ease-in-out;
         -webkit-transition: background .25s ease-in-out;
 }
-.feature-block {
-        height: auto;
-}
+
 .feature-triple {
-        text-align: center;
+        text-align: justify;
+        margin: 50px auto;
 }
+
 .feature-triple img {
         display: block;
-        padding-top: 20px;
 }
+
 .vector {
-        height: 190px;
-        margin: -25px auto -29px
+        max-width: 80px;
+        height: 80px;
+        margin: 10px auto;
 }
-.clock {
-        margin: 0 auto;
-}
+
 .feature-triple h1 {
         font-size: 22px;
-        padding-top: 10px;
 }
+
 .feature-triple p {
         font-family: Helvetica-Light, Helvetica;
-        color: #a1a1a1; 
+        color: #323232; 
         line-height: 25px;
         margin: 0.5em 2.2em 0 2.2em;
         word-spacing:-1px;
@@ -250,12 +245,10 @@ h1 {
         line-height: 40px;
 }
 .subheader {
-        color: #a1a1a1;
-        font-size: 18px;
+        color: #323232;
         line-height: 30px;
 }
 .text {
-        padding: 15px 0;
         margin: 0 10%;
         text-indent: 30px;
         text-align: justify;
@@ -278,6 +271,7 @@ h1 {
 .best a:visited {
         text-decoration: none;
 }
+
 .icon-feature {
         height: 36px;
         padding-top: 100px;
@@ -289,6 +283,7 @@ h1 {
         margin: 0 auto;
         text-align: center;
         margin-top: 50px;
+
 }
 .icon-feature-left {
         float: left;
@@ -299,6 +294,8 @@ h1 {
         height: 35px;
         border-radius: 100%;
         border: 1px solid transparent;
+        margin: 80px 0 0;
+
 }
 
 .social-media:hover {
@@ -312,13 +309,32 @@ h1 {
 
 .footer {
         background-color: #eee;
-        bottom: 0;
         position: relative;
         color: #999;
-        left: 0;
         font-size: 12px;
-        right: 0;
         text-align: center;
+        border-top: 1px dotted #323232;
+}
+
+.footer .nav {
+        text-align: center;
+        
+}
+
+.nav-container {
+        margin: auto;
+        display: inline-block;
+        margin: 15px;
+}
+
+.funnel {
+        margin: 50px auto;
+        width: 584px;
+        height: 120px;
+}
+
+.funnel a {
+        float: left;
 }
 .home .footer {
         height: 100px;
@@ -326,7 +342,6 @@ h1 {
         padding: 10px;
 }
 .page .footer {
-        padding-top: 18px;
         padding-bottom: 18px;
 }
 
@@ -339,9 +354,7 @@ h1 {
 #copyright {
         padding-bottom: 10px;
 }
-.bottom {
-        width: auto;
-}
+
 /* extent topcoat components */
 .topcoat-icon-button--large:hover {
         cursor: pointer;
@@ -349,19 +362,15 @@ h1 {
 .topcoat-button--quiet.active {
         color: #16a085;
 }
-#thirdBar {
+#secondBar {
         background: #323232;
         width: 100%;
         border-top: 5px solid #2ecc71;
-        height: 650px;
+        height: 100%;
 }
 #see {
-        color: #fff;
-        text-align: center;
-        font-weight: lighter;
         padding-bottom: 40px;
         margin-top: 50px;
-        text-shadow: 1px 1px 1px #000;
 }
 #double {
         width: 800px;
@@ -386,12 +395,11 @@ h1 {
 .analytics-icons {
         height: 110px;
         width: auto;
+        margin: 40px auto;
 }
 #double h1 {
-        color: #2ecc71;
         text-align: center;
         font-size: 22px;
-        font-weight: 600;
 }
 #double p {
         color: #fff;
@@ -402,44 +410,13 @@ h1 {
         margin-top: 16px;
         line-height: 25px;
 }
-.left-image {
-        width:25%;
-        height:100%;
-        float:left;
-        background-position: center;
-}
-.right-image {
-        width:25%;
-        height:100%;
-        background-position: center;
-        float:right;
-}
-.left-text {
-        width:60%;
-        height:100%;
-        float: left;
-        text-align: right;
-        margin-right: 15%;
-}
-.right-text {
-        width:60%;
-        height:100%;
-        float:left;
-        margin-left: 15%;
-        text-align: left;
-}
-.sectionContainer {
-        width: 100%; 
-        height: 180px;
-        margin-top: 100px;
-        border-bottom: 1px solid #323232;
-}
+
 .commentBox {
         width: 100%;
 }
 #commentBoxContainer {
         width: 40%;
-        margin: auto;
+        margin: 30px auto;
 }
 #comment {
         height: 120px;
@@ -447,7 +424,7 @@ h1 {
 .fresh-text-input {
         display: inline-block;
         min-height: 42px;
-        padding: 6px 0 6px 10px;
+        padding: 0 0 0 10px;
         font-size: 1.1em;
         line-height: 28px;
         color: #262936;
@@ -469,7 +446,6 @@ h1 {
         background: -webkit-linear-gradient(bottom, #fff 0%);
         background: -ms-linear-gradient(bottom, #fff 0%);
         background: linear-gradient(to bottom, #fff 0%);
-
         -webkit-transition: border linear,box-shadow linear;
         -webkit-transition-delay: 0.2s,0.2s;
         -moz-transition: border linear 0.2s,box-shadow linear 0.2s;
@@ -477,14 +453,13 @@ h1 {
         transition: border linear 0.2s,box-shadow linear 0.2s;
 }
 #submit {
-        border: none !important;
         font-size: 18px;
         margin: 40px auto 0;
         padding: 15px 0;
         width: 100%;
-        box-shadow: 1px 1px 1px #444;
         cursor: pointer;
         background-color: #2ecc71;
+        border: 1px solid #17994E;
         color: #fff;
         border-radius: 3px;
         /* mobile safari fixes */
@@ -503,12 +478,6 @@ h1 {
         -webkit-appearence: none;
         border: none !important;
 }
-#intro-bold {
-        margin-top: 40px;
-        font-weight:bold;
-        text-align: center;
-        margin-bottom: 40px;
-}
 
 .pricing-container {
         height: 290px;
@@ -526,15 +495,30 @@ h1 {
         border-right: 1px solid #323232;
 }
 
+.pricing .second {
+        color: #323232 !important;
+}
 .pricing h1 {
         padding: 0 !important;
-        font-weight: bold;
-        color: #323232;
+        font-weight: normal !important;
+        color: #3dcad7 !important;
 }
 
 .pricing p {
         margin: 0 !important;
         color: #323232;
+}
+.faq {
+        width: 55%;
+        margin: auto;
+        text-align: justify;
+}
+.faq h1:first-child {
+        color: #2ecc71;
+}
+.faq h1 {
+        margin-top: 60px;
+        color: #3dcad7;
 }
 
 .buy-btn {
@@ -551,11 +535,23 @@ h1 {
         text-align: center;
         text-decoration: none;
         border-radius: 3px;
-        box-shadow: 1px 1px 1px #444;
+        border: 1px solid #17994E;
 }
 .buy-btn:hover {
         background-color: #27DB73;
         transition: background .25s ease-in-out;
         -moz-transition: background .25s ease-in-out;
         -webkit-transition: background .25s ease-in-out;
+}
+
+.nav {
+        color: #2ecc71;
+        text-decoration: none;
+        font-size: 13px;
+        margin-left: 20px;
+        float: left;
+}
+
+.nav a:first-child {
+        margin-left: 0;
 }

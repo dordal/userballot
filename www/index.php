@@ -20,96 +20,20 @@
     ?>
 </head>
 <body class="home">
-    <?php
-        include('inc/topnav.php');
-    ?>
-    <div class="page-wrap">        
-        <!-- masthead -->
+    <div class="page-wrap">
         <div class="masthead">
-            <div class="container five columns innerMasthead">
-                <div class="motto">
-                    <h1>Get the pulse of your visitors.</h1>
-                    <p>Easily validate new ideas, products, and services using yes or no questions <strong>before</strong> you waste valuable time and money.</p>
+            <div class="container splash">
+                <div style="margin: auto;">
+                    <img id="logo-icon-line" src="img/logo-icon.svg" alt="">
+                    <img class="logo-line" src="img/logo.svg" alt="">
+                    <img class="logo-line" src="img/sup.svg" alt="">
                 </div>
-                <div class="five columns alpha omega" id="button-padding" style="float: right">
-                    <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started Free!</a>
-                </div>
+                <h1 style="color: #3dcad7;">Get the pulse of your visitors.</h1>
+                <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started Free!</a>
+                <span><a href="http://app.userballot.com/#/login" style="color: #2ecc71; text-decoration: none;">Sign in</a></span>
+                <span><a href="/ourproduct.php" style="color: #2ecc71; text-decoration: none; margin-left: 20px;">Learn more</a></span>
+                <!-- Footer -->
             </div>    
-            <div class="container content-wrap">
-                <div class="sixteen columns">
-                    <div class="row">  
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- The container is a centered 960px -->
-        <div class="bottom">
-            <div class="container content-wrap feature-block" style="padding-bottom: 40px; margin-bottom: 100px;">
-                    <div class="row">
-                        <h1 class="chance">Don't leave important decisions to chance!</h1>
-                        <p class="subheader center">Getting simple, easy to understand feedback from your users is key to making the right decisions.</p>
-                        <div class="feature-triple">
-                            <div class="one-third column left">
-                                <img src="img/scale.svg" class="vector" alt="">
-                                <h1>Simplicity is key.</h1>
-                                <p>Direct answers help you make better decisions.</p>
-                            </div>
-                            <div class="one-third column left">
-                                <img src="img/chart.svg" class="vector" alt="">
-                                <h1>Get answers in real-time.</h1>
-                                <p>See results the second they're answered.</p>
-                            </div>
-                            <div class="one-third column left">
-                                <img src="img/clock.svg" class="clock" alt="">
-                                <h1>Working in minutes.</h1>
-                                <p>Copy and paste 2 lines of code into your site and it just works!</p>
-                            </div>
-                        </div>
-                    </div>         
-            </div>
-        </div>
-        <!-- To be added with analytics-->
-        <div class="bottom" id="thirdBar">
-            <div class="content-wrap feature-block">
-                <div>
-                    <div>
-                        <h1 id="see">See <strong>who</strong> is answering your questions.</h1>
-                    </div>
-                    <div id="doubleContainer">
-                        <div id="double">
-                            <div id="double-left">
-                                <div class="analytics-container"><img class="analytics-icons" src="img/location.svg"></div>
-                                <h1>See important demographics.</h1>
-                                <p>Know your audience.<br>Be <strong>driven</strong> by response.</p>
-                            </div>
-                            <div id="double-right">
-                                <div class="analytics-container"><img class="analytics-icons" src="img/focus.svg"></div>
-                                <h1>Focus on what's essential.</h1>
-                                <p>Use our analytics to focus on the answers <strong>you</strong> care about.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="icon-feature-four">
-                        <div class="icon-feature-left">
-                            <a href="https://www.facebook.com/pages/Userballot/587625811299982"><img src="img/facebook.svg" alt="" class="social-media"></a>
-                        </div>
-                        <div class="icon-feature-left">
-                            <a href="https://plus.google.com/b/100033594081784228442/100033594081784228442/about"><img src="img/google+.svg" alt="" class="social-media"></a>
-                        </div>
-                        <div class="icon-feature-left">
-                            <a href="http://www.linkedin.com/company/3350090?trk=tyah&trkInfo=tas%3Auserballot"><img src="img/linkedin.svg" alt="" class="social-media"></a>
-                        </div>
-                        <div class="icon-feature-left">
-                            <a href="https://twitter.com/UserBallot"><img src="img/twitter.svg" alt="" class="social-media"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- footer -->
-        <div class="footer">
-            <img src="img/rackspace.svg" id="rackspace"></img>
-            <div id="copyright">&copy;UserBallot.com</div>
         </div>
     </div>
     <script>
@@ -122,6 +46,5 @@
           ga('send', 'pageview');
     </script>
 <!-- UserBallot: Add this before the closing body tag  -->
-<script type="text/javascript">var $ub = window.$ub || {};$ub.siteId = '-J9G9EIDUHVaZMRqI3M-';</script><script src="http://app.userballot.com/client.js"></script>
 </body>
 </html>
