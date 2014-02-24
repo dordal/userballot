@@ -13,12 +13,13 @@
 
 // change if needed for testing
 var UB_FIREBASE_DOMAIN = "https://userballotdb.firebaseio.com/";
+var UB_URL = "http://userballot-app-tfite/ub.php";
 
 window.onload = function() {
 
-	// Call Firebase and get back a list of messages for this site
+	// Call UserBallot and get back a list of messages for this site
 	req = new XMLHttpRequest();
-	req.open("GET", UB_FIREBASE_DOMAIN + "/sites/" + $ub.siteId + "/.json");
+	req.open("GET", UB_URL + "?a=get&id=" + $ub.siteId);
 
 	req.onreadystatechange = function() {
 		if (req.readyState==4 && req.status==200) {
@@ -51,7 +52,6 @@ window.onload = function() {
 				// select the message
 				$ub.selectedMessage = activeMessages[selectedId];
 				$ub.selectedMessage.id = activeMessages[selectedId].hash;
-
 				// display the selected message
 				$ub.displayMessage( response.allowmute, response.frequency, response.hue );
 			}
@@ -135,13 +135,17 @@ $ub.displayMessage = function( allowmute, frequency, hue ) {
 			document.getElementById("ub-yes").onclick = function(e) {
 				e.preventDefault();
 
-				$ub.updateCount("yesVotes");
+				$ub.updateCount("vote", "y");
+
 				docCookies.setItem($ub.selectedMessage.id,"yes",10 * 365 * 24 * 60 * 60,window.location.host);
 				docCookies.setItem('ub-vote-' + window.location.host,"voted",frequency * 24 * 60 * 60, window.location.host);
 
                 req = new XMLHttpRequest();
-            	req.open("GET", "http://www.connordev.com/userballot/visit.php?siteId=" + $ub.siteId);
-                req.send();
+
+                // Access control is not set here, this causes an error. This will be fixed when we integrate 
+                // Connor's code into ub.php on the app.userballot.com domain
+                //req.open("GET", "http://www.connordev.com/userballot/visit.php?siteId=" + $ub.siteId);
+                //req.send();
 
 				document.getElementById("ub-yes").style.display="none";
 				document.getElementById("ub-no").style.display="none";
@@ -155,14 +159,16 @@ $ub.displayMessage = function( allowmute, frequency, hue ) {
 			document.getElementById("ub-no").onclick = function(e) {
 				e.preventDefault();
 
-				$ub.updateCount("noVotes");
+				$ub.updateCount("vote", "n");
+
 				docCookies.setItem($ub.selectedMessage.id,"no",10 * 365 * 24 * 60 * 60,window.location.host);
 				docCookies.setItem('ub-vote-' + window.location.host,"voted",frequency * 24 * 60 * 60, window.location.host);
 
-                req = new XMLHttpRequest();
-            	req.open("GET", "http://www.connordev.com/userballot/visit.php?siteId=" + $ub.siteId);
-                req.send();
-
+                
+                // Access control is not set here, this causes an error. This will be fixed when we integrate 
+                // Connor's code into ub.php on the app.userballot.com domain
+                //req.open("GET", "http://www.connordev.com/userballot/visit.php?siteId=" + $ub.siteId);
+                //req.send();
 				document.getElementById("ub-yes").style.display="none";
 				document.getElementById("ub-no").style.display="none";
 				document.getElementById("message-text").innerHTML = "Thank you!";
@@ -174,7 +180,9 @@ $ub.displayMessage = function( allowmute, frequency, hue ) {
 
 			document.getElementById("ub-mute").onclick = function(e) {
 				e.preventDefault();
+
 				$ub.updateCount("mute");
+
 				$ub.setMuteCookie();
 
 				document.getElementById("ub-yes").style.display="none";
@@ -186,7 +194,8 @@ $ub.displayMessage = function( allowmute, frequency, hue ) {
 				}, 500);
 			};
 
-			$ub.updateCount("views");
+			$ub.updateCount("view");
+
 			$ub.updateUrlList();
 		}, 1500);
 	}
@@ -256,37 +265,15 @@ var docCookies = {
   }
 };
 
-$ub.updateCount = function(type) {
+$ub.updateCount = function(type, answer) {
 	
-	reqRefresh = new XMLHttpRequest();
-	reqRefresh.open("GET", UB_FIREBASE_DOMAIN + "/sites/" + $ub.siteId + "/messages/" + $ub.selectedMessage.id + "/" + type + "/.json");
-
-	reqRefresh.onreadystatechange = function() {
-		tempID = $ub.selectedMessage.id;
-		if (reqRefresh.readyState==4 && reqRefresh.status==200) {
-			data = reqRefresh.responseText;
-			response = JSON.parse(data);
-
-			count = response;
-	
-			if (isNaN(count)) {
-				count = 0;
-			}
-
-			count++;
-			
-			req = new XMLHttpRequest();
-			req.open("PATCH", UB_FIREBASE_DOMAIN + "/sites/" + $ub.siteId + "/messages/" + $ub.selectedMessage.id +  "/.json");
-
-			req.onreadystatechange = function() {
-				if (req.readyState==4 && req.status==200) {
-				}
-			};
-			var updateStr = '{"' + type + '":"' + count + '"}';
-			req.send(updateStr);
-		}
-	};
-	reqRefresh.send();
+	var url = UB_URL + "?a=" + type + "&id=" + $ub.siteId + "&q=" + $ub.selectedMessage.id;
+	if (answer !== undefined) {
+		url += "&t=" + answer;
+	}
+	req = new XMLHttpRequest();
+	req.open("GET", url);
+	req.send();
 
 };
 

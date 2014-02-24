@@ -135,6 +135,7 @@ form ul li {
 .code-provider {
 	margin: 0;
 	padding: 5px;
+	width: 100%;
 }
 #questions {
 	margin-top: 40px;
