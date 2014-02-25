@@ -104,6 +104,13 @@
             color: transparent;
         }
 
+        .icon-container {
+            width: 80%;
+        }
+        .footer .icon-container {
+            width: 60%;
+        }
+
     }
 /*mobile landscape*/
     @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -182,9 +189,6 @@
         margin-right: 22%;
     }
 
-    .nav {
-        margin-top: 20px;
-    }
     .faq {
             width: 85%
         }

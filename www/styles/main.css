@@ -8,6 +8,7 @@ h1 {
         margin: 0;
         text-align: center;
         line-height: 35px !important;
+        color: #3dcad7;
 }
 
 .left {
@@ -93,7 +94,7 @@ h1 {
 
 .page-wrap {
         margin-top: 50px;
-        min-height: 855px;
+        height: auto;
 }
 
 .product-button {
@@ -105,13 +106,8 @@ h1 {
         margin-left: 2.813em;
 }
 
-.home {
-        height: auto;
-}
 
-
-.home h1 {
-        color: #323232;
+.page-wrap h1 {
         font-size: 24px;
         font-weight: 500;
         line-height: 25px;
@@ -146,9 +142,7 @@ h1 {
 
 .splash{
         position: absolute;
-        margin: 200px auto 0;
-        top: 0;
-        bottom: 0;
+        top: 20%;
         left: 0;
         right: 0;
         height: 500px;
@@ -219,8 +213,8 @@ h1 {
 }
 
 .vector {
-        max-width: 80px;
-        height: 80px;
+        max-width: 300px;
+        height: 150px;
         margin: 10px auto;
 }
 
@@ -234,7 +228,6 @@ h1 {
         line-height: 25px;
         margin: 0.5em 2.2em 0 2.2em;
         word-spacing:-1px;
-        font-size: 17px;
 }
 .chance {
         font-size: 30px;
@@ -294,8 +287,16 @@ h1 {
         height: 35px;
         border-radius: 100%;
         border: 1px solid transparent;
-        margin: 80px 0 0;
 
+}
+
+.footer .social-media {
+        height: 25px;
+}
+
+.footer .icon-container {
+        width: 20%;
+        padding-bottom: 10px;
 }
 
 .social-media:hover {
@@ -309,11 +310,13 @@ h1 {
 
 .footer {
         background-color: #eee;
-        position: relative;
-        color: #999;
         font-size: 12px;
         text-align: center;
         border-top: 1px dotted #323232;
+        height: 140px;
+        vertical-align: bottom;
+        padding: 10px;
+        padding-bottom: 18px;
 }
 
 .footer .nav {
@@ -328,21 +331,13 @@ h1 {
 }
 
 .funnel {
-        margin: 50px auto;
+        margin: 50px auto 0;
         width: 584px;
         height: 120px;
 }
 
 .funnel a {
         float: left;
-}
-.home .footer {
-        height: 100px;
-        vertical-align: bottom;
-        padding: 10px;
-}
-.page .footer {
-        padding-bottom: 18px;
 }
 
 #rackspace {
@@ -366,7 +361,6 @@ h1 {
         background: #323232;
         width: 100%;
         border-top: 5px solid #2ecc71;
-        height: 100%;
 }
 #see {
         padding-bottom: 40px;
@@ -554,4 +548,82 @@ h1 {
 
 .nav a:first-child {
         margin-left: 0;
+}
+
+.scroll {
+        position: absolute;
+        top: 90%;
+        width: 100%;
+        text-align: center;
+        font-size: 14px;
+        color: #a1a1a1;
+        text-decoration: none;
+        margin-bottom: -20px;
+}
+
+.scroll-container {
+        position: absolute;
+        top: 95%;
+        width: 100%;
+        right: 0;
+        left: 0;
+}
+
+.icon-container {
+        width: 50%;
+        margin: auto;
+}
+
+.icon-four {
+        width: 25%;
+        float: left;
+        text-align: center;
+}
+
+.icon-four a {
+        margin: auto;
+}
+
+.section-container {
+        height: 300px;
+        width: 100%;
+}
+
+.section-height {
+        height: 100%;
+        text-align: center;
+}
+
+.section-height h1 {
+        color: #3dcad7 !important;
+        font-weight: normal !important;
+}
+
+.section-left {
+        float: left !important;
+}
+
+.section-right {
+        float: right !important;
+}
+
+.section-left h1 {
+        text-align: left;
+}
+
+.section-left p {
+        text-align: left;
+}
+
+.section-right h1 {
+        text-align: right;
+}
+
+.section-right p {
+        text-align: right;
+}
+
+#destination1:first-child h1 {
+        font-weight: bold;
+        color: #2ecc71;
 }

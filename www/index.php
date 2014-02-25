@@ -19,7 +19,7 @@
         include('inc/head.php');
     ?>
 </head>
-<body class="home">
+<body>
     <div class="page-wrap">
         <div class="masthead">
             <div class="container splash">
@@ -30,10 +30,90 @@
                 </div>
                 <h1 style="color: #3dcad7;">Get the pulse of your visitors.</h1>
                 <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn">Get Started Free!</a>
-                <span><a href="http://app.userballot.com/#/login" style="color: #2ecc71; text-decoration: none;">Sign in</a></span>
-                <span><a href="/ourproduct.php" style="color: #2ecc71; text-decoration: none; margin-left: 20px;">Learn more</a></span>
-                <!-- Footer -->
+                <span><a href="http://app.userballot.com/#/login" style="color: #2ecc71; text-decoration: none;">Sign in</a></span>  
             </div>    
+        </div>
+    </div>
+    <div class="container scroll-container">
+        <a class="scroll" href="#destination1">Learn More</a>
+    </div>
+    <div class="page-wrap">        
+        <div class="masthead" style="position: absolute; top: 100%;">
+            <section id="destination1">
+                <div class="content-wrap">
+                    <div class="container">
+                        <div class="container icon-container" style="padding-top: 50px;">
+                            <div class="icon-four">
+                                <a href="https://www.facebook.com/pages/Userballot/587625811299982"><img src="img/facebook.svg" alt="" class="social-media"></a>
+                            </div>
+                            <div class="icon-four">
+                                <a href="https://plus.google.com/b/100033594081784228442/100033594081784228442/about"><img src="img/google+.svg" alt="" class="social-media"></a>
+                            </div>
+                            <div class="icon-four">
+                                <a href="http://www.linkedin.com/company/3350090?trk=tyah&trkInfo=tas%3Auserballot"><img src="img/linkedin.svg" alt="" class="social-media"></a>
+                            </div>
+                            <div class="icon-four">
+                                <a href="https://twitter.com/UserBallot"><img src="img/twitter.svg" alt="" class="social-media"></a>
+                            </div>
+                        </div>
+                            <h1 style="padding: 50px 0 0;">Don't leave important decisions to chance!</h1>
+                            <p class="subheader center">Getting simple, easy to understand feedback from your users is key to making the right decisions.</p>
+                            <div class="container section-container row" style="margin-top: 150px;">
+                                <div class="one-third column section-height section-right">
+                                    <img src="img/scale.svg" class="vector" alt="">
+                                </div>
+                                <div class="two-thirds column section-height section-left">
+                                    <h1>Simplicity is key.</h1>
+                                    <p>Direct answers help you make better decisions.</p>
+                                </div>
+                            </div>
+                            <div class="container section-container row">
+                                <div class="one-third column section-height section-left">
+                                    <img src="img/chart.svg" class="vector" alt="">
+                                </div>
+                                <div class="two-thirds column section-height section-right">
+                                    <h1>Get answers in real-time.</h1>
+                                    <p>See results the second they're answered.</p>
+                                </div>
+                            </div>
+                            <div class="container section-container row">
+                                <div class="one-third column section-height section-right">
+                                    <img src="img/clock.svg" class="vector" alt="">
+                                </div>
+                                <div class="two-thirds column section-height section-left">
+                                    <h1>Working in minutes.</h1>
+                                    <p>Copy and paste 2 lines of code into your site and it just works!</p>
+                                </div>
+                            </div>
+                            <div class="container section-container row">
+                                <div class="one-third column section-height section-left">
+                                    <img src="img/location.svg" class="vector">
+                                </div>
+                                <div class="two-thirds column section-height section-right">
+                                    <h1>See important demographics.</h1>
+                                    <p>Know your audience.<br>Be <strong>driven</strong> by response.</p>
+                                </div>
+                            </div>
+                            <div class="container section-container row">
+                                <div class="one-third column section-height section-right">
+                                    <img src="img/focus.svg" class="vector">
+                                </div>
+                                <div class="two-thirds column section-height section-left">
+                                    <h1>Focus on what's essential.</h1>
+                                    <p>Use our analytics to focus on the answers <strong>you</strong> care about.</p>
+                                </div>
+                            </div>
+                            <div class="container funnel">
+                                <a href="http://app.userballot.com/#/signup" id="save-question" class="signup-btn product-button">Try It Free!</a>
+                                <a href="/pricing.php" style="margin-left: 20px;" id="save-question" class="signup-btn product-button">See Our Plans!</a>
+                            </div>
+                    </div>
+                    <?php
+                        include('inc/footer.php');
+                    ?>
+                    </div>         
+                </div>
+            </section>
         </div>
     </div>
     <script>
