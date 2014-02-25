@@ -111,6 +111,10 @@
             width: 60%;
         }
 
+        .splash {
+            top: 10%;
+        }
+
     }
 /*mobile landscape*/
     @media only screen and (min-width: 480px) and (max-width: 767px) {
