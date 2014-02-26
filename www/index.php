@@ -57,7 +57,7 @@
                             </div>
                         </div>
                             <h1 style="padding: 50px 0 20px;">Don't leave important decisions to chance!</h1>
-                            <p class="subheader center">Getting simple, easy to understand feedback from your users is <strong>key</strong> to making the right decisions. UserBallot is a new one-touch feedback gathering tool based around yes or no questions that lets you get real time answers from more of your customers than ever before.</p>
+                            <p class="subheader center">Getting simple, easy to understand feedback from your users is key to making the right decisions. UserBallot is a simple feedback gathering tool that lets you get answers from more of your customers than ever before.</p>
                             <div class="container section-container row" style="margin-top: 150px;">
                                 <div class="one-third column section-height section-right">
                                     <img src="img/scale.svg" class="vector" alt="">
@@ -72,8 +72,8 @@
                                     <img src="img/chart.svg" class="vector" alt="">
                                 </div>
                                 <div class="two-thirds column section-height section-right">
-                                    <h1>Get answers in real-time.</h1>
-                                    <p>Answers are shown in real time on our Control Center. </p>
+                                    <h1>You're in control!</h1>
+                                    <p>The Control Center is the place you go to create questions, get real-time results from your users, and view analytics about the people answering your questions. Create simple yes or no feedback questions based on suggestions we provide, or your own ideas.</p>
                                 </div>
                             </div>
                             <div class="container section-container row">
@@ -82,7 +82,7 @@
                                 </div>
                                 <div class="two-thirds column section-height section-left">
                                     <h1>Working in minutes.</h1>
-                                    <p>Copy and paste 2 lines of code into your site and it just works!</p>
+                                    <p>UserBallot is easy to use! Just copy and paste two lines of code into your website and you’re set. We give you step by step instructions, so whether you are a do-it-yourselfer, have a webmaster that supports you, or use a popular CMS platform like Wordpress, Drupal or Shopify, we have you covered!</p>
                                 </div>
                             </div>
                             <div class="container section-container row">
@@ -91,16 +91,7 @@
                                 </div>
                                 <div class="two-thirds column section-height section-right">
                                     <h1>See important demographics.</h1>
-                                    <p>Know your audience.<br>Be <strong>driven</strong> by response.</p>
-                                </div>
-                            </div>
-                            <div class="container section-container row">
-                                <div class="one-third column section-height section-right">
-                                    <img src="img/focus.svg" class="vector">
-                                </div>
-                                <div class="two-thirds column section-height section-left">
-                                    <h1>Focus on what's essential.</h1>
-                                    <p>Use our analytics to focus on the answers <strong>you</strong> care about.</p>
+                                    <p>Beyond the questions, our built in analytics give you powerful insight into who your audience is! See what's essential and use our analytics to focus on the answers you care about. Know your audience. Be <strong>driven</strong> by response.</p>
                                 </div>
                             </div>
                             <div class="container funnel">

@@ -115,6 +115,23 @@
             top: 10%;
         }
 
+        .subheader {
+            width: 90%;
+        }
+
+        .section-height {
+            height: initial;
+        }
+
+        .section-height p {
+            margin-bottom: 100px;
+            text-align: justify;
+        }
+
+        .section-height h1 {
+            text-align: center;
+        }
+
     }
 /*mobile landscape*/
     @media only screen and (min-width: 480px) and (max-width: 767px) {
