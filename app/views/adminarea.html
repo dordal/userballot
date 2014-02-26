@@ -32,60 +32,50 @@
 						</div>
 					</div>
 					
-					<div ng-show="adminView.state=='pricing'">
-						<!-- <div class="container pricing-container">
-				        	<div class="pricing pricing-border">
-				        		<h1>Trial</h1>
-				        		<p>Try Us <strong>Free!</strong></p>
-				        		<br>
-				        		<h1>FREE</h1>
-				        		<br><br>
-				        		<p><strong>500</strong> Responses</p>
-				        		<br>
-				        		<p style="text-decoration: underline;">Question Analytics Included</p>
-				        		<br><br>
-				        		<a href="http://app.userballot.com/#/signup" style="" id="save-question" class="buy-btn">Try Us Out</a>
+					<div ng-show="adminView.state=='pricing'" style="height: 0;">
+						<div class="container" style="height: 0; margin-left: 10px;">
+							<div class="card-wrap info-wrap thirteen columns settings2">
+					        	<div class="pricing pricing-border">
+					        		<h1>Entry</h1>
+					        		<p>Most Affordable!</p>
+					        		<br>
+					        		<h1>$7</h1>
+					        		<p>per month</p>
+					        		<br>
+					        		<p><strong>2,500</strong> Responses Monthly</p>
+					        		<br>
+					        		<p style="text-decoration: underline;">Question Analytics Included</p>
+					        		<br><br>
+					        		<a href="http://app.userballot.com/#/signup" style="" class="order buy-btn">Let's Rock</a>
+					        	</div>
+					        	<div class="pricing pricing-border">
+					        		<h1>Standard</h1>
+					        		<p>Double the Responses!</p>
+					        		<br>
+					        		<h1 style="color: #2ecc71">$10</h1>
+					        		<p>per month</p>
+					        		<br>
+					        		<p><strong>5,000</strong> Responses Monthly</p>
+					        		<br>
+					        		<p style="text-decoration: underline;">Question Analytics Included</p>
+					        		<br><br>
+					        		<a href="http://app.userballot.com/#/signup" style="" class="order buy-btn">Time to Roll</a>
+					        	</div>
+					        	<div class="pricing">
+					        		<h1>Deluxe</h1>
+					        		<p>Best Value!</p>
+					        		<br>
+					        		<h1>$25</h1>
+					        		<p>per month</p>
+					        		<br>
+					        		<p><strong>25,000</strong> Responses Monthly</p>
+					        		<br>
+					        		<p style="text-decoration: underline;">Question Analytics Included</p>
+					        		<br><br>
+					        		<a href="http://app.userballot.com/#/signup" style="" class="order buy-btn">Super Size Me</a>
+					        	</div>
 				        	</div>
-				        	<div class="pricing pricing-border">
-				        		<h1>Entry</h1>
-				        		<p>Most Affordable!</p>
-				        		<br>
-				        		<h1>$7</h1>
-				        		<p>per month</p>
-				        		<br>
-				        		<p><strong>2,500</strong> Responses Monthly</p>
-				        		<br>
-				        		<p style="text-decoration: underline;">Question Analytics Included</p>
-				        		<br><br>
-				        		<a href="http://app.userballot.com/#/signup" style="" id="save-question" class="buy-btn">Let's Rock</a>
-				        	</div>
-				        	<div class="pricing pricing-border">
-				        		<h1>Standard</h1>
-				        		<p>Double the Responses!</p>
-				        		<br>
-				        		<h1 style="color: #2ecc71">$10</h1>
-				        		<p>per month</p>
-				        		<br>
-				        		<p><strong>5,000</strong> Responses Monthly</p>
-				        		<br>
-				        		<p style="text-decoration: underline;">Question Analytics Included</p>
-				        		<br><br>
-				        		<a href="http://app.userballot.com/#/signup" style="" id="save-question" class="buy-btn">Time to Roll</a>
-				        	</div>
-				        	<div class="pricing">
-				        		<h1>Deluxe</h1>
-				        		<p>Best Value!</p>
-				        		<br>
-				        		<h1>$25</h1>
-				        		<p>per month</p>
-				        		<br>
-				        		<p><strong>25,000</strong> Responses Monthly</p>
-				        		<br>
-				        		<p style="text-decoration: underline;">Question Analytics Included</p>
-				        		<br><br>
-				        		<a href="http://app.userballot.com/#/signup" style="" id="save-question" class="buy-btn">Super Size Me</a>
-				        	</div>
-				        </div> -->
+				        </div>
 					</div>
 					<div class="sixteen columns omega">
 						<div ng-show="adminView.state=='setup'">
@@ -118,7 +108,7 @@
 							</div>
 						</div>
 						<div id="settingsBlock" class="card-wrap" ng-show="adminView.state=='settings'">
-							<div id="settings2" class="card-wrap info-wrap thirteen columns">
+							<div class="card-wrap info-wrap thirteen columns settings2">
 								<!--<a href="" class="close right">Hide</a>-->
 								<div class="title">Site Settings</div>
 								<br>
@@ -173,22 +163,9 @@
 
 									<!-- <div class="line-item card-wrap" ng:class="{true:'active', false:''}[message.active=='1']" ng-repeat="message in site.messages"> -->
 									<div ng-repeat="message in site.messages">
-										<a class="three-columns alpha analytics">Analytics</a>
+										<a class="three-columns alpha analytics activate_modal" name='first_window' href='#'>Analytics</a>
 
 										<div class="line-item card-wrap">
-                                            <div class="analytics">
-									        <script>
-									            $.ajax({
-									                type: "GET", url: "http://connordev.com/userballot/getdata.php?siteId=-J47tp6OajeLvnHFuU-3&question=0", data: {},
-									                success: function(data){
-									                    document.write(data);
-									                    document.close();
-									                }
-									                ,error: function() {
-									                }
-									            });
-									        </script>
-											</div>
                                             <div class="default">
     											<div class="timestamp">
 	    											<span ng-show="message.startdate"><strong>Started:</strong> {{message.startdate | date:'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -267,5 +244,10 @@
 				</div>
 			</div>
 		</div>
+		<div id='mask' class='close_modal'></div>  
+  
+		<div id='first_window' class='modal_window'>This is the first modal window</div>  
 	</div>
+
 </div> 
+

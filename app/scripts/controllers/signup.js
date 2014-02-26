@@ -85,7 +85,7 @@ function createMessage(messageText) {
 	message['views'] = 0;
 	message['mute'] = 0;
 	message['position'] = 0;
-	message['active'] = 0;
+	message['active'] = 1;
 	return message;
 }
 

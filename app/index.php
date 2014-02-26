@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="styles/components/topcoat-desktop-light.css">
     <link rel="stylesheet" href="styles/grid/skeleton.css">
     <link rel="stylesheet" href="styles/treatments.css">
-    <link rel="stylesheet" href="styles/analyticdisplay.css">
     <link rel='stylesheet' href="spectrum/spectrum.css">
 
     <!--[if lt IE 9]>

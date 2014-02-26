@@ -269,6 +269,18 @@ button:focus {
     -moz-transition: background .25s ease-in-out;
     -webkit-transition: background .25s ease-in-out;
 }
+
+.order {
+	padding: 10px 20px;
+	margin-bottom: 18px;
+}
+
+.order:hover {
+	transition: background .25s ease-in-out;
+    -moz-transition: background .25s ease-in-out;
+    -webkit-transition: background .25s ease-in-out;
+}
+
 .line-item-controls {
 	margin: 0px 32.58%;
 }
@@ -479,8 +491,8 @@ button:focus {
 	float: left;
 	width: 97px;
 }
-#settings2 {
-	margin-left: 117.5px;
+.settings2 {
+	margin-left: 117.5px !important;
 }
 .logo {
 	margin-left: -4px !important;
@@ -519,16 +531,11 @@ button:focus {
 	height: 42px;
 }
 
-.pricing-container {
-        height: 290px;
-        margin-top: 20px;
-}
-
 .pricing {
         height: 100%;
         float: left;
         text-align: center;
-        width: 24.9%;
+        width: 33%;
 }
 
 .pricing-border {
@@ -568,6 +575,34 @@ button:focus {
         -moz-transition: background .25s ease-in-out;
         -webkit-transition: background .25s ease-in-out;
 }
+
+#mask{  
+    position:absolute; /* important */  
+    top:0px; /* start from top */  
+    left:0px; /* start from left */  
+    height:100%; /* cover the whole page */  
+    width:100%;  /* cover the whole page */  
+    display:none; /* don't show it '*/  
+  
+    /* styling bellow */  
+    background-color: black;  
+}  
+  
+.modal_window{  
+    position:absolute; /* important so we can position it on center later */  
+    display:none; /* don't show it */  
+  
+    /* styling bellow */  
+    color:white;  
+}  
+  
+/* style a specific modal window  */  
+#modal_window{  
+    padding:50px;  
+    border:1px solid gray;  
+    background: #246493;  
+    color:black;  
+}  
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
     #cmscontainer {

@@ -240,6 +240,9 @@ h1 {
 .subheader {
         color: #323232;
         line-height: 30px;
+        width: 600px;
+        text-align: justify;
+        margin: auto;
 }
 .text {
         margin: 0 10%;
@@ -592,6 +595,10 @@ h1 {
 .section-height {
         height: 100%;
         text-align: center;
+}
+
+.section-height p {
+        line-height: 30px;
 }
 
 .section-height h1 {

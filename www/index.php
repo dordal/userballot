@@ -56,15 +56,15 @@
                                 <a href="https://twitter.com/UserBallot"><img src="img/twitter.svg" alt="" class="social-media"></a>
                             </div>
                         </div>
-                            <h1 style="padding: 50px 0 0;">Don't leave important decisions to chance!</h1>
-                            <p class="subheader center">Getting simple, easy to understand feedback from your users is key to making the right decisions.</p>
+                            <h1 style="padding: 50px 0 20px;">Don't leave important decisions to chance!</h1>
+                            <p class="subheader center">Getting simple, easy to understand feedback from your users is <strong>key</strong> to making the right decisions. UserBallot is a new one-touch feedback gathering tool based around yes or no questions that lets you get real time answers from more of your customers than ever before.</p>
                             <div class="container section-container row" style="margin-top: 150px;">
                                 <div class="one-third column section-height section-right">
                                     <img src="img/scale.svg" class="vector" alt="">
                                 </div>
                                 <div class="two-thirds column section-height section-left">
                                     <h1>Simplicity is key.</h1>
-                                    <p>Direct answers help you make better decisions.</p>
+                                    <p>Simple to implement, and simple to answer questions help you get the directional feedback you need to make better decisions. Limited to 99 characters, and requiring only one touch to answer, UserBallots have a truly simple user experience that won't distract your visitors!</p>
                                 </div>
                             </div>
                             <div class="container section-container row">
@@ -73,7 +73,7 @@
                                 </div>
                                 <div class="two-thirds column section-height section-right">
                                     <h1>Get answers in real-time.</h1>
-                                    <p>See results the second they're answered.</p>
+                                    <p>Answers are shown in real time on our Control Center. </p>
                                 </div>
                             </div>
                             <div class="container section-container row">
