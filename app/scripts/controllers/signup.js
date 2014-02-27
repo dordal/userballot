@@ -51,6 +51,12 @@ userballotApp.controller('SignupCtrl', function($scope, $location, $routeParams,
 					var newUser = userRef.child(emailId);
 					newUser.set({firstName: $scope.firstName, lastName: $scope.lastName, email: user.email, sites: sitesObj});
 					
+					// Inject conversion tracking iframe into page so we track this in Adwords
+                    jQuery("body").append('<iframe src="/conversion.html" width="0" height="0"/>');
+
+                    // Fire event for GA conversion tracking
+                    ga('send', 'event', 'Account', 'Create');
+
 					// login the user and redirect to the admin interface
 					// If this is a free trial account, redirect to the "getting started" view in the admin area
 					if ($routeParams['plan'] === undefined || $routeParams['plan'] === "trial") {
