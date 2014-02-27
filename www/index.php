@@ -35,11 +35,11 @@
         </div>
     </div>
     <div class="container scroll-container">
-        <a class="scroll" href="#destination1">Learn More</a>
+        <a class="scroll" href="#product">Learn More</a>
     </div>
     <div class="page-wrap">        
         <div class="masthead" style="position: absolute; top: 100%;">
-            <section id="destination1">
+            <section id="product">
                 <div class="content-wrap">
                     <div class="container">
                         <div class="container icon-container" style="padding-top: 50px;">

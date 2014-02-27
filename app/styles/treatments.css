@@ -1,5 +1,5 @@
 body {
-	background-color: #fbfbfb!important;
+	background-color: #fdfdfd!important;
 }
 img {
 	border: 0;
@@ -69,10 +69,11 @@ form ul li {
 	font-size: 14px;
 	float: left;
 	margin-right: 15px;
-	box-shadow:  1px 1px 1px #444;
+	border: 1px solid #17994E;
 }
 .main-nav-item.active {
-	background-color: #3EF089;
+	border: 1px solid #3EF089;
+	background-color: #27db73;
 	border-radius: 3px;
 	color: #fff;
 	display: block;
@@ -138,6 +139,7 @@ form ul li {
 	width: 100%;
 }
 #questions {
+	color: #3dcad7;
 	margin-top: 40px;
 	margin-bottom: 15px;
 	margin-left: 100px;
@@ -240,7 +242,7 @@ button:focus {
 .newbutton {
 	margin: 0px;
 	border: none;
-	border-radius: 2px;
+	border-radius: 3px;
 	background-color: #2ecc71;
 	color: #fff;
 	padding: 10px 28px;
@@ -253,17 +255,22 @@ button:focus {
 .newbutton:hover {
 	background-color: #27db73;
 }
+
 .newbutton:disabled {
 	opacity: 0.3;
 	cursor: auto;
 }
+
 .newbutton:disabled:hover {
 	background-color: #2ecc71;
 }
+
 #save-question {
 	padding: 10px 36px;
 	margin-bottom: 18px;
+	border: 1px solid #17994E;
 }
+
 #save-question:hover {
 	transition: background .25s ease-in-out;
     -moz-transition: background .25s ease-in-out;
@@ -379,12 +386,11 @@ button:focus {
 }
 .signup-btn,
 .login-btn {
-	border: none !important;
 	font-size: 18px;
 	margin: 40px auto 0;
 	padding: 15px 0;
 	width: 100%;
-	box-shadow: 1px 1px 1px #444;
+	border: 1px solid #17994E;
 	cursor: pointer;
 	background-color: #2ecc71;
 	color: #fff;
@@ -575,6 +581,47 @@ button:focus {
         -moz-transition: background .25s ease-in-out;
         -webkit-transition: background .25s ease-in-out;
 }
+
+.logo-container {
+        height: 80px;
+        width: 200px;
+        margin: auto;
+}
+
+.logo-container img {
+        margin: 10px 0 0 0px;
+}
+
+.log-logo-container {
+	height: 80px;
+    width: 200px;
+    margin: 50px auto 0;
+}
+
+.log-logo-container img {
+	margin: 10px 0 0 0;
+}
+
+#logo {
+        height: 30px;
+        margin-bottom: 5px;
+}
+
+#logo-icon {
+        height: 40px;
+}
+
+#logo-icon-line {
+        height: 80px;
+        margin: 10px;
+        margin-bottom: 0;
+}
+
+.logo-line {
+        height: 60px;
+        margin-bottom: 10px;
+}
+
 
 #mask{  
     position:absolute; /* important */  

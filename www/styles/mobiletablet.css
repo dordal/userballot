@@ -80,6 +80,7 @@
         .funnel {
             width: 282px;
             height: 200px;
+            margin: 50px auto;
         }
 
         .funnel a {
@@ -266,12 +267,3 @@
         width: 65%;
     }
 }
-
-
-/*Safari-only*/
-/*@media only screen and (max-width: 959px) {
-    :root .signin-btn-top {
-        font-size: 17px;
-    }
-}*/
-

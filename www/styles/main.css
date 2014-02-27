@@ -178,7 +178,7 @@ h1 {
         cursor: pointer; 
         font-weight: 400;
         border: none;
-        margin: 25px auto 5px;
+        margin: 5px auto 25px;
         padding: 20px 40px;
         width: 200px; 
         color: #fff;  
@@ -634,7 +634,7 @@ h1 {
         text-align: right;
 }
 
-#destination1:first-child h1 {
+#product:first-child h1 {
         font-weight: bold;
         color: #2ecc71;
 }
