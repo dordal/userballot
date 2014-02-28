@@ -29,7 +29,7 @@
                 <h1>What is UserBallot?</h1> 
                 <p>UserBallot is a simple decision support tool which allows online businesses to collect directional feedback from all of their site visitors and therefore make better business decisions.</p>
                 <h1>How do I get started with UserBallot?</h1>
-                <p>Embed the code snippet in your website, have your website editor do the same or download the plug-in for popular CMS’s and follow the instructions and you should be good to go.  Just create a username and password and go to ‘Get Started’.</p>
+                <p>Embed the code snippet in your website, have your website editor do the same or download the plug-in for Wordpress and follow the instructions and you should be good to go.  Just create a username and password and go to ‘Get Started’.</p>
                 <h1>How do you create questions with UserBallot?</h1>
                 <p>The Control Center is the place you go to create questions, get results from your users and analytics about the people answering your questions or ‘userballots’ as we like to call them.</p>
                 <h1>Can I control whether a question is active or not?</h1>
@@ -43,7 +43,7 @@
                 <h1>What can I find out about my users?</h1>
                 <p>In addition to the directional feedback to each of your questions, you will be able to gain insights about who is answering your questions.  You will be able to filter your results based on location data, browser type, device, time spent on a question, and more.</p>                
                 <h1>How much does UserBallot cost?</h1>
-                <p>While UserBallot is in Beta it is free.  After that, you will be able to use UserBallot free for up to 500 responses per website annually.  Website owners wanting more feedback will benefit greatly by choosing one of our monthly subscription plans.  The first tier plan is widely affordable and can bring you tremendous value in the form of responses from all of your site visitors.</p>                
+                <p>You can use UserBallot free for up to 500 responses per website annually.  Website owners wanting more feedback will benefit greatly by choosing one of our monthly subscription plans.  The first tier plan is widely affordable and can bring you tremendous value in the form of responses from all of your site visitors.</p>                
                 <p>We are taking this approach so we can provide as much value as possible to as many people possible.</p>
                 <h1>Is there a free component to your service?</h1>
                 <p>Yes, UserBallot will be free for up to 500 responses per website annually so you need not commit to our service without test driving it first.  Our base tier of pricing will be widely affordable to all, will include basic analytics and a good number of responses.</p>

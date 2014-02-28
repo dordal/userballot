@@ -82,7 +82,7 @@
                                 </div>
                                 <div class="two-thirds column section-height section-left">
                                     <h1>Working in minutes.</h1>
-                                    <p>UserBallot is easy to use! Just copy and paste two lines of code into your website and you’re set. We give you step by step instructions, so whether you are a do-it-yourselfer, have a webmaster that supports you, or use a popular CMS platform like Wordpress, Drupal or Shopify, we have you covered!</p>
+                                    <p>UserBallot is easy to use! Just copy and paste two lines of code into your website and you’re set. We give you step by step instructions, so whether you are a do-it-yourselfer, have a webmaster that supports you, or use Wordpress we have you covered!</p>
                                 </div>
                             </div>
                             <div class="container section-container row">

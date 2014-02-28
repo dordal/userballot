@@ -1,15 +1,61 @@
 
 <div class="signup-block-wrap center">
-  <!-- logo -->
-  <div style="padding: 50px 0 0 10px;"><a href="http://userballot.com/">
-    <img class="logo" src="img/betaapp.svg" alt="" width="120"></a>
+  <div class="admin-bar">
+    <span ng-show="site.firstName">Hello, <strong>{{site.firstName}}</strong></span>
+    <span ng-hide="site.firstName">Hello, <strong>{{user.email}}</strong></span>
+    <span> | <a ng-click="logout()">Logout</a></span>
   </div>
+  <!-- logo -->
+  <div class="logo-container" style="margin: 50px auto 0">
+        <a href="/" style="text-decoration: none;">
+            <img id="logo-icon" src="img/logo-icon.svg" alt="">
+            <img id="logo" src="img/logo.svg" alt="">
+        </a>
+  </div>
+      
 
-  <form id="order-form" name="order" ng-submit="placeOrder()" class="signup-form css-form" novalidate>
+  <form id="order-form" name="order" ng-submit="placeOrder()" style="padding: 0;" class="signup-form css-form" novalidate>
 
     <h3>Order</h3>
 
-    <div class="form-section-title"></div>
+    <div id="entry">
+      <div class="pricing" style="width: 100%;">
+        <br><br><br>
+        <p><strong>Get started with our most affordable plan! This plan includes:</strong></p>
+        <br>
+        <ul>
+          <li style="list-style: disc"><strong>2,500</strong> Responses Monthly</li>
+          <li style="list-style: disc">Question Analytics</li>
+        </ul>
+        <br><br>
+      </div>
+    </div>
+    <div id="standard">
+      <div class="pricing" style="width: 100%;">
+        <br><br><br>
+        <p><strong>Get started with double the responses! This plan includes:</strong></p>
+        <br>
+        <ul>
+          <li style="list-style: disc"><strong>5,000</strong> Responses Monthly</li>
+          <li style="list-style: disc">Question Analytics</li>
+        </ul>
+        <br><br>
+      </div>
+    </div>
+    <div id="delux">
+      <div class="pricing" style="width: 100%;">
+        <br><br><br>
+        <p><strong>Get started with the best value! This plan includes:</strong></p>
+        <br>
+        <ul>
+          <li style="list-style: disc"><strong>25,000</strong> Responses Monthly</li>
+          <li style="list-style: disc">Question Analytics</li>
+        </ul>
+        <br><br>
+      </div>
+    </div>
+    <div class="form-section-title">
+    </div>
 
     <!-- general error message -->
     <div class="public-form-error-message">
@@ -58,7 +104,6 @@
   </form>
 
   <br>
-  <a ng-href="/#/login">Already have an account?</a> 
 
   <br class="clear" />
 </div>
