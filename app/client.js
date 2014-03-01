@@ -13,7 +13,7 @@
 
 // change if needed for testing
 var UB_FIREBASE_DOMAIN = "https://userballotdb.firebaseio.com/";
-var UB_URL = "http://userballot-app-tfite/ub.php";
+var UB_URL = "http://userballot-app-dmccarthy/ub.php";
 
 window.onload = function() {
 
@@ -111,7 +111,7 @@ $ub.displayMessage = function( allowmute, frequency, hue, shade ) {
 			bottomLogo = "50px";
 		}
 
-		if  (ballotShade === "dark") {
+		if (ballotShade === "dark") {
 			ballotButton = "#ffffff";
 			ballotBG = ballotColor;
 			ballotButtonText = ballotColor;
