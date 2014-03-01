@@ -71,6 +71,6 @@
           ga('create', 'UA-45967588-1', 'userballot.com');
           ga('send', 'pageview');
     </script>
-    <!-- UserBallot: Add this before the closing body tag  --><script type="text/javascript">var $ub = window.$ub || {};$ub.siteId = '-JGv4PgU68OYjWTp3e53';</script><script src="/app/client.js"></script>
+    <script type="text/javascript">var $ub = window.$ub || {};$ub.siteId = '-J9G9EIDUHVaZMRqI3M-';</script><script src="http://app.userballot.com/client.js"></script>
 </body>
 </html>
