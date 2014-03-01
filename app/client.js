@@ -53,7 +53,7 @@ window.onload = function() {
 				$ub.selectedMessage = activeMessages[selectedId];
 				$ub.selectedMessage.id = activeMessages[selectedId].hash;
 				// display the selected message
-				$ub.displayMessage( response.allowmute, response.frequency, response.hue );
+				$ub.displayMessage( response.allowmute, response.frequency, response.hue, response.shade );
 			}
 		}
 	};
@@ -65,7 +65,7 @@ window.onload = function() {
 /**
  * displayMessage(): Adds the message to the DOM and displays it
  */
-$ub.displayMessage = function( allowmute, frequency, hue ) {
+$ub.displayMessage = function( allowmute, frequency, hue, shade ) {
 	// Check to see the last time that we voted
 	var vote_cookie = docCookies.hasItem('ub-vote-' + window.location.host);
 	var is_muted = docCookies.hasItem("mute");
@@ -76,9 +76,17 @@ $ub.displayMessage = function( allowmute, frequency, hue ) {
 		var buttonWidth = "60px";
 		var ballotHeight = "60px";
 		var bottomLogo = "5px";
+		var ballotBG = "#fbfbfb";
+		var ballotText = "#323232"
 		var ballotColor = hue;
+		var ballotShade = shade;
+		var ballotButton = ballotColor;
+		var ballotButtonText = "#ffffff";
 		if (ballotColor === undefined) {
 			var ballotColor = "#2ecc71";
+		}
+		if (ballotShade === undefined) {
+			var ballotShade = "dark";
 		}
 
 
@@ -103,13 +111,20 @@ $ub.displayMessage = function( allowmute, frequency, hue ) {
 			bottomLogo = "50px";
 		}
 
+		if  (ballotShade === "dark") {
+			ballotButton = "#ffffff";
+			ballotBG = ballotColor;
+			ballotButtonText = ballotColor;
+			ballotText = "#ffffff";
+		}
+
 		var html = ""+
-			"<div id='ub-container' style='z-index: 1000; padding: " + padding + "; height: " + ballotHeight + "; position: fixed; bottom: 0; left: 0; right: 0; background-color: #fbfbfb; color: #323232; font-size: 16px; font-family: Helvetica, sans-serif; font-weight: lighter; border-top: 5px solid  " +  ballotColor + ";'>"+
+			"<div id='ub-container' style='z-index: 1000; padding: " + padding + "; height: " + ballotHeight + "; position: fixed; bottom: 0; left: 0; right: 0; background-color: " + ballotBG + "; color: " + ballotText + "; font-size: 16px; font-family: Helvetica, sans-serif; font-weight: lighter; border-top: 5px solid  " +  ballotColor + ";'>"+
 			"	<div style='text-align: left; position: relative; max-width: 1024px; margin: 0 auto;'>"+
 			"		<span id='message-text' style='text-align: left;padding: " + textPadding + "; word-break: break-word; position: absolute; left: 0; right: 45px;'>" + $ub.selectedMessage.text + "</span>"+
 			"		<span style='position: absolute; right: 0;'>"+
-			"			<a style='text-align: center; background-color: " +  ballotColor + "; color: #ffffff; text-decoration: none; padding: " + buttonHeight + "; width: " + buttonWidth + "; display: inline-block;' href='' id='ub-yes'>Yes</a> "+
-			"			<a style='text-align: center; background-color: " +  ballotColor + "; color: #ffffff; text-decoration: none; padding: " + buttonHeight + "; width: " + buttonWidth + "; display: inline-block;' href='' id='ub-no'>No</a>"+
+			"			<a style='text-align: center; background-color: " +  ballotButton + "; color: " + ballotButtonText + "; text-decoration: none; padding: " + buttonHeight + "; width: " + buttonWidth + "; display: inline-block;' href='' id='ub-yes'>Yes</a> "+
+			"			<a style='text-align: center; background-color: " +  ballotButton + "; color: " + ballotButtonText + "; text-decoration: none; padding: " + buttonHeight + "; width: " + buttonWidth + "; display: inline-block;' href='' id='ub-no'>No</a>"+
 			"		</span>"+
 			"	</div>";
 		if ( allowmute == 1 ) {
