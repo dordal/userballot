@@ -119,21 +119,7 @@
 								<br>
 								<div class="line-item">
 									<p>What color would you like to use in your UserBallots?</p>
-									<!--<script type="text/javascript">        
-										$(document).ready(
-											function() {
-												$("#custom").spectrum({
-    												preferredFormat: "hex",
-    												showInput: true,
-    												clickoutFiresChange: true,
-    												chooseText: "I like it!",
-    												showInitial: true,
-    												showInput: true
-												});
-											});
-									</script>
-									<input type='text' id="custom" value="#2ecc71" ng-model="site.hue"/> -->
-									<input ng-model="site.hue" />
+ 									<input type='color' id="customColor" value="{{site.hue}}" ng-model="site.hue" />
 								</div>
 								<div class="line-item">
 									<form name="sitesettings">
