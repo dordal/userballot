@@ -25,6 +25,7 @@ userballotApp.controller('SignupCtrl', function($scope, $location, $routeParams,
 					site.hue = "#2ecc71"; // questions are "userballot green" by default
 					site.frequency = 10;
 					site.allowmute = 0; // dis-allow muting questions by default
+					site.qCount = 0;
 
 					// TF - not sure we want to associate the first name and last name with the site -- maybe this would be
 					// useful for cross-referencing purposes, but I think it makes more sense on the user object.
