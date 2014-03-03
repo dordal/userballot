@@ -121,6 +121,14 @@
 									<p>What color would you like to use in your UserBallots?</p>
  									<input type='color' id="customColor" value="{{site.hue}}" ng-model="site.hue" />
 								</div>
+								<br>
+								<div class="line-item">
+									<p>What look would you like for your UserBallots?</p>
+									<button class="topcoat-button--quiet" id="yes" ng-click="setShade('light')" ng:class="{true:'active', false:''}[site.shade=='light']">Light</button>
+									<button class="topcoat-button--quiet" ng-click="setShade('dark')" ng:class="{true:'active', false:''}[site.shade=='dark']">Dark</button>
+									<button class="topcoat-button--quiet" ng-click="setShade('vibrant')" ng:class="{true:'active', false:''}[site.shade=='vibrant']">Vibrant</button>	
+								</div>
+								<br>
 								<div class="line-item">
 									<form name="sitesettings">
 										<p>How many days between showing each question to a visitor?</p> 
@@ -183,14 +191,14 @@
     											<br class="clear" />
 
     											<div class="editMessage left" ng-show="message.editing">
-    												<textarea class="topcoat-textarea" name="text" rows="3" ng-model="message.text" cols="60" ng-maxlength="140" update-model-on-blur>{{message.text}}</textarea><br><br>
+    												<textarea class="topcoat-textarea" name="text" rows="2" rows="2" cols="" ng-model="message.text" cols="60" ng-maxlength="99" update-model-on-blur>{{message.text}}</textarea><br><br>
     												<button class="newbutton" id="update-question" ng-click="updateMessage($index)">Update</button>
 
     											</div>
     											<!-- results -->
     											<br class="clear" />
-											<div style="width: 100%">
-												<div class="header-small center" style="width: 175px; text-align: center; margin: 20px 334px 0; height: 15px;">
+											<div style="width: 100%; text-align: center;">
+												<div class="header-small center" style="width: 175px; text-align: center; margin: auto; height: 15px;">
 													<span class="vote">Yes</span>
 													<span class="vote">No</span>
 												</div>

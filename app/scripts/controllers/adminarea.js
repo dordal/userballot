@@ -148,6 +148,10 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 		}
 	};
 
+	$scope.setShade = function( shade ) {
+		$scope.site.shade = shade;
+	};
+
 	// remove a message at a specific index based on 
 	// a click in the dom
 	$scope.removeMessage = function ( index ) {

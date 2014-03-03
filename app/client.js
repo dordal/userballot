@@ -70,61 +70,94 @@ $ub.displayMessage = function( allowmute, frequency, hue, shade ) {
 	var vote_cookie = docCookies.hasItem('ub-vote-' + window.location.host);
 	var is_muted = docCookies.hasItem("mute");
 	if (( !is_muted ) && ( !vote_cookie )) {
-		var padding = "20px 10px 15px";
-		var textPadding = "5px 150px 0 0";
+		var padding = "15px 10px 15px";
+		var textPadding = "0 170px 0 0";
+		var textAlign = "right";
 		var buttonHeight = "10px 10px";
 		var buttonWidth = "60px";
-		var ballotHeight = "60px";
+		var ballotHeight = "40px";
 		var bottomLogo = "5px";
 		var ballotBG = "#fbfbfb";
 		var ballotText = "#323232"
 		var ballotColor = hue;
 		var ballotShade = shade;
 		var ballotButton = ballotColor;
+		var ballotButtonLocation = "right: 0px;"
 		var ballotButtonText = "#ffffff";
+		var borderColor = hue;
+		var powered = "powered.svg"
+		var poweredSide = "right";
 		if (ballotColor === undefined) {
 			var ballotColor = "#2ecc71";
 		}
 		if (ballotShade === undefined) {
-			var ballotShade = "dark";
+			var ballotShade = "light";
 		}
-
 
 		if (($ub.windowWidth() < 600) && ($ub.windowWidth() > 480)) {
 			padding = "10px 10px 15px";
-			textPadding = "0 100px 0 0";
+			textPadding = "0 140px 0 0";
 			buttonWidth = "40px";
+			textAlign = "justify";
+			ballotHeight = "100px";
+			ballotButtonLocation = "right: 0px;"
 		}
 
 		if ($ub.windowWidth() < 960) {
+			padding = "15px 10px 0px";
 			buttonHeight = "15px 10px";
 			ballotHeight = "70px";
+			poweredSide = "left";
+			textAlign = "right";
+			textPadding = "0 200px 0 0"
 		}
+
+		if ($ub.windowWidth() < 1279) {
+			poweredSide = "right";
+			ballotButtonLocation = "right: 120px;"
+			textAlign = "left";
+			textPadding = "0 240px 0 0"
+			}
 
 		if ($ub.windowWidth() < 480) {
 			ballotHeight = "100px";
-			bottomLogo = "20px";
+			bottomLogo = "5px";
+			poweredSide = "right";
+			textPadding = "0 140px 0 0";
+			textAlign = "justify";
+			ballotButtonLocation = "right: 0px;"
 		}
+
 		if ($ub.windowWidth() < 395) {
 			ballotHeight = "150px";
 			buttonWidth = "55px";
 			bottomLogo = "50px";
 		}
 
-		if (ballotShade === "dark") {
+		if (ballotShade === "vibrant") {
 			ballotButton = "#ffffff";
 			ballotBG = ballotColor;
 			ballotButtonText = ballotColor;
 			ballotText = "#ffffff";
+			borderColor = "";
+			powered = "poweredVibrant.svg"
+		}
+
+		if (ballotShade === "dark") {
+			ballotBG = "#323232";
+			ballotButton = ballotColor;
+			ballotButtonText = "#ffffff";
+			ballotText = "#ffffff";
+			powered = "poweredDark.svg"
 		}
 
 		var html = ""+
-			"<div id='ub-container' style='z-index: 1000; padding: " + padding + "; height: " + ballotHeight + "; position: fixed; bottom: 0; left: 0; right: 0; background-color: " + ballotBG + "; color: " + ballotText + "; font-size: 16px; font-family: Helvetica, sans-serif; font-weight: lighter; border-top: 5px solid  " +  ballotColor + ";'>"+
-			"	<div style='text-align: left; position: relative; max-width: 1024px; margin: 0 auto;'>"+
-			"		<span id='message-text' style='text-align: left;padding: " + textPadding + "; word-break: break-word; position: absolute; left: 0; right: 45px;'>" + $ub.selectedMessage.text + "</span>"+
-			"		<span style='position: absolute; right: 0;'>"+
-			"			<a style='text-align: center; background-color: " +  ballotButton + "; color: " + ballotButtonText + "; text-decoration: none; padding: " + buttonHeight + "; width: " + buttonWidth + "; display: inline-block;' href='' id='ub-yes'>Yes</a> "+
-			"			<a style='text-align: center; background-color: " +  ballotButton + "; color: " + ballotButtonText + "; text-decoration: none; padding: " + buttonHeight + "; width: " + buttonWidth + "; display: inline-block;' href='' id='ub-no'>No</a>"+
+			"<div id='ub-container' style='z-index: 1000; padding: " + padding + "; height: " + ballotHeight + "; position: fixed; bottom: 0; left: 0; right: 0; background-color: " + ballotBG + "; color: " + ballotText + "; font-size: 16px; font-family: Helvetica, sans-serif; font-weight: lighter; border-top: 5px solid  " +  borderColor + ";'>"+
+			"	<div style='text-align: left; position: relative; max-width: 1024px; height: 100%; margin: 0 auto;'>"+
+			"		<span id='message-text' style='text-align: " + textAlign + "; padding: " + textPadding + "; word-break: break-word; position: absolute; left: 0; right: 45px;'>" + $ub.selectedMessage.text + "</span>"+
+			"		<span style='position: absolute; " + ballotButtonLocation + "'>"+
+			"			<a style='text-align: center; border-radius: 3px; background-color: " +  ballotButton + "; color: " + ballotButtonText + "; text-decoration: none; padding: " + buttonHeight + "; width: " + buttonWidth + "; display: inline-block;' href='' id='ub-yes'>Yes</a> "+
+			"			<a style='text-align: center; border-radius: 3px; background-color: " +  ballotButton + "; color: " + ballotButtonText + "; text-decoration: none; padding: " + buttonHeight + "; width: " + buttonWidth + "; display: inline-block;' href='' id='ub-no'>No</a>"+
 			"		</span>"+
 			"	</div>";
 		if ( allowmute == 1 ) {
@@ -133,7 +166,7 @@ $ub.displayMessage = function( allowmute, frequency, hue, shade ) {
 			html += "<a href='' id='ub-mute'></a>";
 		}
 			html += "" +
-			"   <div style='position: absolute; bottom: " + bottomLogo + "; right: 10px; font-size:10px'><a href='http://www.userballot.com'><img style='width:110px' src='http://www.userballot.com/img/powered.svg'/></a></div>"+
+			"   <div style='position: absolute; bottom: " + bottomLogo + "; " + poweredSide + ": 10px; font-size:10px'><a href='http://www.userballot.com'><img style='width:110px; max-height: 40px;' src='http://www.userballot.com/img/" + powered + "'/></a></div>"+
 			"</div>";
 
 
