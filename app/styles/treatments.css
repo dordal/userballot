@@ -338,14 +338,6 @@ button:focus {
     width: 100px;
 }
 
-.signup-fresh-text-input {
-	width: calc(100% - 25px) !important;
-	width: -webkit-calc(100% - 25px) !important;
-	width: -moz-calc(100% - 25px) !important;
-	width: -o-calc(100% - 25px) !important;
-	margin-right: 3px !important;
-}
-
 .fresh-text-input {
 	display: inline-block;
 	min-height: 42px;
@@ -529,13 +521,13 @@ button:focus {
 
 #firstName {
 	float: left;
-	width: 31%;
+	width: 33%;
 	margin-right: 10.5px;
 }
 
 #lastName {
 	float: left;
-	width: 56.5%;
+	width: 58%;
 	margin-right: 0;
 }
 
@@ -671,11 +663,6 @@ button:focus {
   font-family: 'arial', 'sans-serif';
 }
 
-.asterisk {
-	color: red;
-	float: left;
-	padding-top: 20px;
-}
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
     #cmscontainer {
@@ -781,17 +768,11 @@ button:focus {
 }
 @media only screen and (min-width: 0px) and (max-width: 479px) {
 	#firstName {
-		width: calc(100% - 25px) !important;
-		width: -webkit-calc(100% - 25px) !important;
-		width: -moz-calc(100% - 25px) !important;
-		width: -o-calc(100% - 25px) !important;
+		width: 100% !important;
 	}
 
 	#lastName {
-		width: calc(100% - 25px) !important;
-		width: -webkit-calc(100% - 25px) !important;
-		width: -moz-calc(100% - 25px) !important;
-		width: -o-calc(100% - 25px) !important;
+		width: 100% !important;
 	}
     .main-nav-item {
     	width: 100%;

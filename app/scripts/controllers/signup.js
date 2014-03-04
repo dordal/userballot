@@ -23,6 +23,7 @@ userballotApp.controller('SignupCtrl', function($scope, $location, $routeParams,
 					var site = {};
 					//site.domain = $scope.domain;
 					site.hue = "#2ecc71"; // questions are "userballot green" by default
+					site.shade = "light";
 					site.frequency = 10;
 					site.allowmute = 0; // dis-allow muting questions by default
 					site.qCount = 0;
@@ -67,7 +68,7 @@ userballotApp.controller('SignupCtrl', function($scope, $location, $routeParams,
 				}
 
 				if (error.code === 'EMAIL_TAKEN') {
-					$scope.emailError = "Email is already in use. Please login.";
+					$scope.emailError = "Email is already in use. Please login here.";
 				} else {
 					$scope.error = "There was an error.";
 				}
