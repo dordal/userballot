@@ -15,8 +15,8 @@
     <div class="form-section-title"></div>
     <ul>
       <li>Get the pulse of your visitors.</li>
-      <li>Easy to use.</li>
-      <li>Free while in Beta.</li>
+      <li>Get started quick.</li>
+      <li>Be driven by response.</li>
     </ul>
     <!-- general error message -->
     <div class="public-form-error-message">
@@ -24,12 +24,12 @@
     </div>
     <!-- name -->
     <div id="names">
-      <input class="fresh-text-input signup-input-wide" id="firstName" ng-model="firstName" required placeholder="First Name" />
-      <input class="fresh-text-input signup-input-wide" id="lastName" ng-model="lastName" required placeholder="Last Name" />
+      <input class="fresh-text-input signup-input-wide" id="firstName" ng-model="firstName" placeholder="First Name" />
+      <input class="fresh-text-input signup-input-wide" id="lastName" ng-model="lastName" placeholder="Last Name" />
     </div>
 
     <!-- email address -->
-    <input type="text" class="fresh-text-input signup-input-wide"  ng-model="email" name="uEmail" required placeholder="Email Address" /><br/>
+    <input type="text" class="fresh-text-input signup-input-wide signup-fresh-text-input"  ng-model="email" name="uEmail" required placeholder="Email Address" style="float: left;"/><div class="asterisk">*</div>
 
     <!-- error message -->
     <div ng-show="emailError" class="public-form-error-message">
@@ -37,12 +37,14 @@
     </div>
 
     <!-- password -->
-    <input type="password" class="fresh-text-input signup-input-wide"  ng-model="password" placeholder="Password" /><br/>
+    <span><input type="password" class="fresh-text-input signup-input-wide signup-fresh-text-input"  ng-model="password" placeholder="Password" style="float: left;" /></span><span class="asterisk">*</span>
 
-    <input name="confirm_password" type="password" class="fresh-text-input signup-input-wide" ng-model="repassword" required equal="password" placeholder="Confirm Password">
+    <span><input name="confirm_password" type="password" class="fresh-text-input signup-input-wide signup-fresh-text-input" ng-model="repassword" required equal="password" placeholder="Confirm Password" style="float: left;"></span><span class="asterisk">*</span>
+
     <div class="public-form-error-message" ng-show="signup.repassword.$error.equal">
-      Passwords do not match
+      Passwords do not match.
     </div>
+    <div style="width: 100%; text-align: center; color: #323232; font-size: 14px; margin-top: 10px; float: left;">Fields with an asterisk (<span style="color:red;">*</span>) are required.</div>
    <!-- site url 
     <div class="form-section-title">Site Details</div> 
     <input type="text" class="fresh-text-input signup-input-wide" ng-model="domain" required placeholder="Site URL" /><br/>

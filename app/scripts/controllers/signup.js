@@ -26,11 +26,6 @@ userballotApp.controller('SignupCtrl', function($scope, $location, $routeParams,
 					site.frequency = 10;
 					site.allowmute = 0; // dis-allow muting questions by default
 					site.qCount = 0;
-
-					// TF - not sure we want to associate the first name and last name with the site -- maybe this would be
-					// useful for cross-referencing purposes, but I think it makes more sense on the user object.
-					site.firstName = $scope.firstName;
-					site.lastName = $scope.lastName;
 					
 					site.messages = {};
 					site.messages['default1'] = createMessage("Would you find a mobile version of our website helpful?");

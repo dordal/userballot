@@ -71,8 +71,8 @@ $ub.displayMessage = function( allowmute, frequency, hue, shade ) {
 	var is_muted = docCookies.hasItem("mute");
 	if (( !is_muted ) && ( !vote_cookie )) {
 		var padding = "15px 10px 15px";
-		var textPadding = "0 170px 0 0";
-		var textAlign = "right";
+		var textPadding = "10px 170px 0 0";
+		var textAlign = "left";
 		var buttonHeight = "10px 10px";
 		var buttonWidth = "60px";
 		var ballotHeight = "40px";
@@ -97,39 +97,42 @@ $ub.displayMessage = function( allowmute, frequency, hue, shade ) {
 		if (($ub.windowWidth() < 600) && ($ub.windowWidth() > 480)) {
 			padding = "10px 10px 15px";
 			textPadding = "0 140px 0 0";
-			buttonWidth = "40px";
 			textAlign = "justify";
 			ballotHeight = "100px";
-			ballotButtonLocation = "right: 0px;"
+			ballotButtonLocation = "right: 0px";
 		}
 
 		if ($ub.windowWidth() < 960) {
 			padding = "15px 10px 0px";
-			buttonHeight = "15px 10px";
+			buttonHeight = "10px 10px";
 			ballotHeight = "70px";
-			poweredSide = "left";
 			textAlign = "right";
-			textPadding = "0 200px 0 0"
 		}
 
-		if ($ub.windowWidth() < 1279) {
-			poweredSide = "right";
-			ballotButtonLocation = "right: 120px;"
-			textAlign = "left";
-			textPadding = "0 240px 0 0"
+		if (($ub.windowWidth() > 601) && ($ub.windowWidth() < 959)) {
+			textPadding = "10px 200px 0 0";
+			ballotButtonLocation = "right: 0px";
+		}
+
+		if (($ub.windowWidth() < 1279) && ($ub.windowWidth() > 961)) {
+			textPadding = "10px 240px 0 0";
+			ballotButtonLocation = "right: 120px";
 			}
 
+		if ($ub.windowWidth() < 1279) {
+			textAlign = "left";
+		}
+
 		if ($ub.windowWidth() < 480) {
-			ballotHeight = "100px";
+			ballotHeight = "90px";
 			bottomLogo = "5px";
-			poweredSide = "right";
 			textPadding = "0 140px 0 0";
 			textAlign = "justify";
-			ballotButtonLocation = "right: 0px;"
+			ballotButtonLocation = "right: 0px";
 		}
 
 		if ($ub.windowWidth() < 395) {
-			ballotHeight = "150px";
+			ballotHeight = "120px";
 			buttonWidth = "55px";
 			bottomLogo = "50px";
 		}
@@ -166,7 +169,7 @@ $ub.displayMessage = function( allowmute, frequency, hue, shade ) {
 			html += "<a href='' id='ub-mute'></a>";
 		}
 			html += "" +
-			"   <div style='position: absolute; bottom: " + bottomLogo + "; " + poweredSide + ": 10px; font-size:10px'><a href='http://www.userballot.com'><img style='width:110px; max-height: 40px;' src='http://www.userballot.com/img/" + powered + "'/></a></div>"+
+			"   <div style='position: absolute; bottom: " + bottomLogo + "; " + poweredSide + ": 10px; font-size:10px'><a href='http://www.userballot.com'><img style='width:auto; max-height: 20px;' src='http://www.userballot.com/img/" + powered + "'/></a></div>"+
 			"</div>";
 
 

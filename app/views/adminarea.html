@@ -2,8 +2,8 @@
 <div ng-controller="AdminAreaCtrl">
 	<div class="extended-wrap">
 		<div class="admin-bar">
-			<span ng-show="site.firstName">Hello, <strong>{{site.firstName}}</strong></span>
-			<span ng-hide="site.firstName">Hello, <strong>{{user.email}}</strong></span>
+			<span ng-show="user.firstName">Hello, <strong>{{user.firstName}}</strong></span>
+			<span ng-hide="user.firstName">Hello, <strong>{{user.email}}</strong></span>
 			<span> | <a ng-click="logout()">Logout</a></span>
 		</div>
 		<!-- The container is a centered 960px -->
@@ -119,7 +119,8 @@
 								<br>
 								<div class="line-item">
 									<p>What color would you like to use in your UserBallots?</p>
- 									<input type='color' id="customColor" value="{{site.hue}}" ng-model="site.hue" />
+									<input type='color' id="customColor" value="{{site.hue}}" ng-model="site.hue" />
+ 									<input type="text" value="{{site.hue}}" ng-model="site.hue"/>
 								</div>
 								<br>
 								<div class="line-item">
