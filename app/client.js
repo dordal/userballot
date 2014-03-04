@@ -13,7 +13,7 @@
 
 // change if needed for testing
 var UB_FIREBASE_DOMAIN = "https://userballotdb.firebaseio.com/";
-var UB_URL = "http://userballot-app-dmccarthy/ub.php";
+var UB_URL = "http://userballot-app-tfite/ub.php";
 
 window.onload = function() {
 
@@ -159,8 +159,8 @@ $ub.displayMessage = function( allowmute, frequency, hue, shade ) {
 
                 // Access control is not set here, this causes an error. This will be fixed when we integrate 
                 // Connor's code into ub.php on the app.userballot.com domain
-                //req.open("GET", "http://www.connordev.com/userballot/visit.php?siteId=" + $ub.siteId);
-                //req.send();
+                req.open("GET", UB_URL + "/analytics/visit.php?siteId=" + $ub.siteId);
+                req.send();
 
 				document.getElementById("ub-yes").style.display="none";
 				document.getElementById("ub-no").style.display="none";
@@ -182,8 +182,9 @@ $ub.displayMessage = function( allowmute, frequency, hue, shade ) {
                 
                 // Access control is not set here, this causes an error. This will be fixed when we integrate 
                 // Connor's code into ub.php on the app.userballot.com domain
-                //req.open("GET", "http://www.connordev.com/userballot/visit.php?siteId=" + $ub.siteId);
-                //req.send();
+                req.open("GET", UB_URL + "/analytics/visit.php?siteId=" + $ub.siteId);
+                req.send();
+				
 				document.getElementById("ub-yes").style.display="none";
 				document.getElementById("ub-no").style.display="none";
 				document.getElementById("message-text").innerHTML = "Thank you!";

@@ -225,7 +225,7 @@ function getNullResponces(){
 
 }
 function isRepeatUser($user, $site){
-  $query = "SELECT * FROM `visits` WHERE `user`='$user' and `site`='$site'";
+  $query = "SELECT * FROM `visits` WHERE `user_id`='$user' and `site`='$site'";
   $res = DBManager::ExecuteQueryAsArray($query);
   if(count($res) == 0){
     return "yes";
@@ -234,7 +234,7 @@ function isRepeatUser($user, $site){
   }
 }
 function getLastVisit($user, $site){
-  $query = "SELECT * FROM `visits` WHERE `user`='$user' and `site`='$site'";
+  $query = "SELECT * FROM `visits` WHERE `user_id`='$user' and `site`='$site'";
   $res = DBManager::ExecuteQueryAsArray($query);
   return $res[count($res) - 1];
 }
@@ -247,7 +247,7 @@ function logVisit($ip){
   date_default_timezone_set('America/Los_Angeles');
   $time = date("Y-m-d H:i:s");
   $repeat = isRepeatUser($user, UB_SITE);
-  $query = "INSERT INTO `visits`(`user`, `time`, `site`, `os`, `browser`, `returning`) VALUES ('$user', '$time', '".UB_SITE."', '".$browser['platform']."', '".$browser['name']." - ".$browser['version']."', '".$repeat."')";
+  $query = "INSERT INTO `visits`(`user_id`, `time`, `site`, `os`, `browser`, `returning`) VALUES ('$user', '$time', '".UB_SITE."', '".$browser['platform']."', '".$browser['name']." - ".$browser['version']."', '".$repeat."')";
   DBManager::ExecuteQuery($query);
 }
 
