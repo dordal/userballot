@@ -10,7 +10,7 @@ form ul li {
 	text-align: left;
 	font-weight: 400;
 	margin-left: 35px;
-	line-height: 20px;
+	line-height: 25px;
 }
 .left {
 	float: left;
@@ -342,7 +342,7 @@ button:focus {
 	display: inline-block;
 	min-height: 42px;
 	padding: 0 0 0 10px;
-	font-size: 1.1em;
+	font-size: 16px;
 	line-height: 28px;
 	color: #262936;
 	width: calc(100% - 10px);
@@ -521,7 +521,7 @@ button:focus {
 
 #firstName {
 	float: left;
-	width: 32%;
+	width: 33%;
 	margin-right: 10.5px;
 }
 
@@ -767,6 +767,13 @@ button:focus {
     }
 }
 @media only screen and (min-width: 0px) and (max-width: 479px) {
+	#firstName {
+		width: 100% !important;
+	}
+
+	#lastName {
+		width: 100% !important;
+	}
     .main-nav-item {
     	width: 100%;
     	margin-left: 0px;

@@ -2,8 +2,8 @@
 <div ng-controller="AdminAreaCtrl">
 	<div class="extended-wrap">
 		<div class="admin-bar">
-			<span ng-show="site.firstName">Hello, <strong>{{site.firstName}}</strong></span>
-			<span ng-hide="site.firstName">Hello, <strong>{{user.email}}</strong></span>
+			<span ng-show="user.firstName">Hello, <strong>{{user.firstName}}</strong></span>
+			<span ng-hide="user.firstName">Hello, <strong>{{user.email}}</strong></span>
 			<span> | <a ng-click="logout()">Logout</a></span>
 		</div>
 		<!-- The container is a centered 960px -->
@@ -119,7 +119,8 @@
 								<br>
 								<div class="line-item">
 									<p>What color would you like to use in your UserBallots?</p>
- 									<input type='color' id="customColor" value="{{site.hue}}" ng-model="site.hue" />
+									<input type='color' id="customColor" value="{{site.hue}}" ng-model="site.hue" />
+ 									<input type="text" value="{{site.hue}}" ng-model="site.hue"/>
 								</div>
 								<br>
 								<div class="line-item">
@@ -152,7 +153,7 @@
 								<div class="charcount" ng-show="questionSubmitForm.text.$valid">{{question.length}} / 99</div>
 								<div class="charcount-error" ng-show="questionSubmitForm.text.$error.maxlength">Question is too long!</div>
 								<textarea class="topcoat-textarea ask-new-question-input" ng-model="question" name="text" rows="2" cols="" ng-maxlength="99" placeholder="Keep it simple and ask a yes or no question. (99 characters or less)" required style="margin-bottom:2.5%;"></textarea>
-								<button class="newbutton" id="save-question" ng-disabled="questionSubmitForm.text.$invalid">Save</button>
+								<button class="newbutton" id="save-question" ng-disabled="questionSubmitForm.text.$invalid">Create</button>
 								</form>
 							</div>
 							<div>

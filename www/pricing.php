@@ -2,7 +2,7 @@
 	include('inc/environment.php');
 ?>
 <!DOCTYPE html>
-<html>
+<html style="height: 100%;">
 	<head>
 		 <!-- Basic Page Needs
 	    ================================================== -->
