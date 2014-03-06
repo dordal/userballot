@@ -153,7 +153,7 @@
 								<div class="charcount" ng-show="questionSubmitForm.text.$valid">{{question.length}} / 99</div>
 								<div class="charcount-error" ng-show="questionSubmitForm.text.$error.maxlength">Question is too long!</div>
 								<textarea class="topcoat-textarea ask-new-question-input" ng-model="question" name="text" rows="2" cols="" ng-maxlength="99" placeholder="Keep it simple and ask a yes or no question. (99 characters or less)" required style="margin-bottom:2.5%;"></textarea>
-								<button class="newbutton" id="save-question" ng-disabled="questionSubmitForm.text.$invalid">Save</button>
+								<button class="newbutton" id="save-question" ng-disabled="questionSubmitForm.text.$invalid">Create</button>
 								</form>
 							</div>
 							<div>
