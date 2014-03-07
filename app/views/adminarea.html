@@ -142,6 +142,20 @@
 									<button class="topcoat-button--quiet" id="yes" ng-click="setAllowMute(true)" ng:class="{true:'active', false:''}[site.allowmute=='1']">Yes</button>
 									<button class="topcoat-button--quiet" ng-click="setAllowMute(false)" ng:class="{true:'active', false:''}[site.allowmute=='0']">No</button>	
 								</div>
+								<br><br><br><br><br>
+								<div class="title" style="margin 50px 0 !important;">Account Info</div>
+								<br><br>
+								<span>{{user.firstName}}</span>&nbsp<span>{{user.lastName}}</span>
+								<button class="topcoat-button--quiet" ng-click="editAcct($index)" ng:class="{true:'active', false:''}[site.editing === true]">Edit Name</button>
+								<div class="question-wrap" ng-show="user.editing">
+    								<input ng-minlength="1" ng-model="user.firstName" update-model-on-blur></input><input ng-minlength="1" ng-model="user.lastName" update-model-on-blur></input><button ng-click="noEditAcct()">Done</button>
+								</div>
+								<br><br>
+								{{user.email}}
+								<button class="topcoat-button--quiet" ng-click="editAcct($index)" ng:class="{true:'active', false:''}[site.editing === true]">Edit Name</button>
+								<div class="question-wrap" ng-show="site.editing">
+    								<input ng-minlength="1" ng-model="user.email" update-model-on-blur></input><button ng-click="noEditAcct()">Done</button>
+								</div>
 							</div>
 						</div>
 						<div id="questionsBlock" ng-show="adminView.state=='questions'">

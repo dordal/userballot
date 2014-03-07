@@ -10,7 +10,6 @@
 /*jshint globalstrict: true*/
 
 'use strict';
-
 function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userballotAuthSvc) {
 	$scope.sites = [];
 	$scope.messages = [];
@@ -50,6 +49,9 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 			for( var message in $scope.site.messages ){
 				$scope.site.messages[message].editing = false;
 			}
+
+			//reset account detail editing
+			$scope.user.editing = false;
 
 		});
 
@@ -182,6 +184,7 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 		$scope.site.messages[key].editing = true;
 	};
 
+
 	// reset all the count fields to 0 
 	$scope.resetMessageCount = function( index ) {
 		if (confirm("Are you sure you want to reset this question's answers?")){
@@ -194,6 +197,14 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 			$scope.updateTimestamps(index, 'reset', (old == 1));
 		}else{
 		}
+	};
+
+	$scope.noEditAcct = function( index ) {
+		$scope.user.editing = false;
+	}
+
+	$scope.editAcct = function( index ) {
+		$scope.user.editing = true;
 	};
 
 	// update the message
