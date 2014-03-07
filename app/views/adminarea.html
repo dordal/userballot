@@ -120,7 +120,7 @@
 								<div class="line-item">
 									<p>What color would you like to use in your UserBallots?</p>
 									<input type='color' id="customColor" value="{{site.hue}}" ng-model="site.hue" />
- 									<input type="text" value="{{site.hue}}" ng-model="site.hue"/>
+ 									<input spellcheck="false" type="text" value="{{site.hue}}" ng-model="site.hue"/>
 								</div>
 								<br>
 								<div class="line-item">
@@ -148,13 +148,13 @@
 								<span>{{user.firstName}}</span>&nbsp<span>{{user.lastName}}</span>
 								<button class="topcoat-button--quiet" ng-click="editAcct($index)" ng:class="{true:'active', false:''}[site.editing === true]">Edit Name</button>
 								<div class="question-wrap" ng-show="user.editing">
-    								<input ng-minlength="1" ng-model="user.firstName" update-model-on-blur></input><input ng-minlength="1" ng-model="user.lastName" update-model-on-blur></input><button ng-click="noEditAcct()">Done</button>
+    								<input spellcheck="false" ng-minlength="1" ng-model="user.firstName" update-model-on-blur></input><input spellcheck="false" ng-minlength="1" ng-model="user.lastName" update-model-on-blur></input><button ng-click="noEditAcct()">Done</button>
 								</div>
 								<br><br>
 								{{user.email}}
 								<button class="topcoat-button--quiet" ng-click="editAcct($index)" ng:class="{true:'active', false:''}[site.editing === true]">Edit Name</button>
 								<div class="question-wrap" ng-show="site.editing">
-    								<input ng-minlength="1" ng-model="user.email" update-model-on-blur></input><button ng-click="noEditAcct()">Done</button>
+    								<input spellcheck="false" ng-minlength="1" ng-model="user.email" update-model-on-blur></input><button ng-click="noEditAcct()">Done</button>
 								</div>
 							</div>
 						</div>
