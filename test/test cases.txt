@@ -1,3 +1,6 @@
+-moved to google drive
+
+
 setup for all test
 I. clear cookies
 II.make sure you have a site set up for one of the qa accounts
