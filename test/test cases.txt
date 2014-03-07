@@ -1,3 +1,7 @@
+setup for all test
+I. clear cookies
+II.make sure you have a site set up for one of the qa accounts
+
 1.(for final depoyment) 
 I. open a site with one question in window A.
 II.  open a site with one question in window B. Answer the question in window B 'yes'.
@@ -43,11 +47,33 @@ II. answer questions on the site, you should never get the same one twice
 for each distribution platform
 I. create complex page using that platform (i.e. Install a lot of plugins)
 II. note how it's working
-III. install userballot wordpress plugin
+III. install userballot plugin
 IV. everything should work the same as step II and there should be a question at the bottom
 10. (for final depoyment)
 I. create a url targeted question
-II. goto the site the url target question. the url targeted question should apper on that page and only on that page
+II. goto the site of url target question. the url targeted question should appear on that page and only on that page
+11. (for final depoyment)
+I. set up a site with two question
+II. turn off debug mode if on
+III. set the number of days between questions to one
+IV. go to the site. a question should apper
+V. answer the question then reload the page a another question shouldn't apper
+VI. wait a day
+VII. go to the site. a question should apper
+12. 
+I. set up a site with two questions
+II. goto the site note the color of the userballot question
+III. change the color in the admin panel
+IV. goto the site the color of the userballot question should be the new color
+13. 
+I. goto the account admin and pay for a plan(may use any fake payment Stripe provides)
+II. the account should be a plan
+III. reverse any charges that happened
+14.
+I. goto the site a question should apper
+II. clear cookies
+III. install mute cookie
+IV. goto the site a question shouldn't apper
 --misc QA--
 test login (for demo and final depoyment)
 test registration (for final depoyment)
