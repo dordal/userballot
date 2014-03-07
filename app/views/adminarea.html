@@ -2,8 +2,8 @@
 <div ng-controller="AdminAreaCtrl">
 	<div class="extended-wrap">
 		<div class="admin-bar">
-			<span ng-show="site.firstName">Hello, <strong>{{site.firstName}}</strong></span>
-			<span ng-hide="site.firstName">Hello, <strong>{{user.email}}</strong></span>
+			<span ng-show="user.firstName">Hello, <strong>{{user.firstName}}</strong></span>
+			<span ng-hide="user.firstName">Hello, <strong>{{user.email}}</strong></span>
 			<span> | <a ng-click="logout()">Logout</a></span>
 		</div>
 		<!-- The container is a centered 960px -->
@@ -119,22 +119,17 @@
 								<br>
 								<div class="line-item">
 									<p>What color would you like to use in your UserBallots?</p>
-									<!--<script type="text/javascript">        
-										$(document).ready(
-											function() {
-												$("#custom").spectrum({
-    												preferredFormat: "hex",
-    												showInput: true,
-    												clickoutFiresChange: true,
-    												chooseText: "I like it!",
-    												showInitial: true,
-    												showInput: true
-												});
-											});
-									</script>
-									<input type='text' id="custom" value="#2ecc71" ng-model="site.hue"/> -->
-									<input ng-model="site.hue" />
+									<input type='color' id="customColor" value="{{site.hue}}" ng-model="site.hue" />
+ 									<input type="text" value="{{site.hue}}" ng-model="site.hue"/>
 								</div>
+								<br>
+								<div class="line-item">
+									<p>What look would you like for your UserBallots?</p>
+									<button class="topcoat-button--quiet" id="yes" ng-click="setShade('light')" ng:class="{true:'active', false:''}[site.shade=='light']">Light</button>
+									<button class="topcoat-button--quiet" ng-click="setShade('dark')" ng:class="{true:'active', false:''}[site.shade=='dark']">Dark</button>
+									<button class="topcoat-button--quiet" ng-click="setShade('vibrant')" ng:class="{true:'active', false:''}[site.shade=='vibrant']">Vibrant</button>	
+								</div>
+								<br>
 								<div class="line-item">
 									<form name="sitesettings">
 										<p>How many days between showing each question to a visitor?</p> 
@@ -158,7 +153,7 @@
 								<div class="charcount" ng-show="questionSubmitForm.text.$valid">{{question.length}} / 99</div>
 								<div class="charcount-error" ng-show="questionSubmitForm.text.$error.maxlength">Question is too long!</div>
 								<textarea class="topcoat-textarea ask-new-question-input" ng-model="question" name="text" rows="2" cols="" ng-maxlength="99" placeholder="Keep it simple and ask a yes or no question. (99 characters or less)" required style="margin-bottom:2.5%;"></textarea>
-								<button class="newbutton" id="save-question" ng-disabled="questionSubmitForm.text.$invalid">Save</button>
+								<button class="newbutton" id="save-question" ng-disabled="questionSubmitForm.text.$invalid">Create</button>
 								</form>
 							</div>
 							<div>
@@ -197,14 +192,14 @@
     											<br class="clear" />
 
     											<div class="editMessage left" ng-show="message.editing">
-    												<textarea class="topcoat-textarea" name="text" rows="3" ng-model="message.text" cols="60" ng-maxlength="140" update-model-on-blur>{{message.text}}</textarea><br><br>
+    												<textarea class="topcoat-textarea" name="text" rows="2" rows="2" cols="" ng-model="message.text" cols="60" ng-maxlength="99" update-model-on-blur>{{message.text}}</textarea><br><br>
     												<button class="newbutton" id="update-question" ng-click="updateMessage($index)">Update</button>
 
     											</div>
     											<!-- results -->
     											<br class="clear" />
-											<div style="width: 100%">
-												<div class="header-small center" style="width: 175px; text-align: center; margin: 20px 334px 0; height: 15px;">
+											<div style="width: 100%; text-align: center;">
+												<div class="header-small center" style="width: 175px; text-align: center; margin: auto; height: 15px;">
 													<span class="vote">Yes</span>
 													<span class="vote">No</span>
 												</div>

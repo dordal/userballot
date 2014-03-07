@@ -24,7 +24,6 @@
     <link rel="stylesheet" href="styles/components/topcoat-desktop-light.css">
     <link rel="stylesheet" href="styles/grid/skeleton.css">
     <link rel="stylesheet" href="styles/treatments.css">
-    <link rel='stylesheet' href="spectrum/spectrum.css">
 
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -74,7 +73,6 @@
         <script src="scripts/controllers/order.js"></script>
         <script src="scripts/directives/equal.js"></script>
         <script src="scripts/ui-interactions.js"></script>
-        <script src="spectrum/spectrum.js"></script>
         <!-- endbuild -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

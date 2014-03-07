@@ -114,15 +114,13 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 				$scope.site.messages = {};
 
 			}
-			// if (itemPosition === undefined) {
-			// 	var itemPosition = 1;
-			// };
-			// var itemPosition = itemPosition + 2;
+			$scope.site.qCount = $scope.site.qCount + 1;
+			var count = $scope.site.qCount;
 			$scope.site.messages[$scope.sitesRef.push().name()] = {
 				text: $scope.question,
 				yesVotes: 0,
 				noVotes: 0,
-				position: 0, //itemPosition,
+				position: count, //itemPosition,
 				active: 1, //questions active by default
 				views: 0,
 				mute: 0,
@@ -146,6 +144,10 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 		}else{
 			$scope.site.allowmute = 0;
 		}
+	};
+
+	$scope.setShade = function( shade ) {
+		$scope.site.shade = shade;
 	};
 
 	// remove a message at a specific index based on 
