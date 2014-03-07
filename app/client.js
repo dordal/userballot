@@ -193,11 +193,6 @@ $ub.displayMessage = function( allowmute, frequency, hue, shade ) {
 
                 req = new XMLHttpRequest();
 
-                // Access control is not set here, this causes an error. This will be fixed when we integrate 
-                // Connor's code into ub.php on the app.userballot.com domain
-                req.open("GET", UB_URL + "/analytics/visit.php?siteId=" + $ub.siteId);
-                req.send();
-
 				document.getElementById("ub-yes").style.display="none";
 				document.getElementById("ub-no").style.display="none";
 				document.getElementById("message-text").innerHTML = "Thank you!";
@@ -214,12 +209,6 @@ $ub.displayMessage = function( allowmute, frequency, hue, shade ) {
 
 				docCookies.setItem($ub.selectedMessage.id,"no",10 * 365 * 24 * 60 * 60,window.location.host);
 				docCookies.setItem('ub-vote-' + window.location.host,"voted",frequency * 24 * 60 * 60, window.location.host);
-
-                
-                // Access control is not set here, this causes an error. This will be fixed when we integrate 
-                // Connor's code into ub.php on the app.userballot.com domain
-                req.open("GET", UB_URL + "/analytics/visit.php?siteId=" + $ub.siteId);
-                req.send();
 				
 				document.getElementById("ub-yes").style.display="none";
 				document.getElementById("ub-no").style.display="none";

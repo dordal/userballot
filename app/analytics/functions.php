@@ -123,8 +123,8 @@ function getNumberOfUniqueUsers(){
   $res = DBManager::ExecuteQueryAsArray($query);
   $users = array();
   foreach($res as $visit){
-     if(!in_array($visit['user'], $users)){
-      array_push($users, $visit['user']);
+     if(!in_array($visit['user_id'], $users)){
+      array_push($users, $visit['user_id']);
     }
   }
   return count($users);
@@ -154,8 +154,8 @@ function getUniqueUsersByDay(){
     if(!is_array($users[$day])){
       $users[$day] = array();
     }
-    if(!in_array($visit['user'], $users[$day])){
-      array_push($users[$day], $visit['user']);
+    if(!in_array($visit['user_id'], $users[$day])){
+      array_push($users[$day], $visit['user_id']);
       $days[$day] += 1;
     }
   }
@@ -170,8 +170,8 @@ function getUsersByBrowser(){
 /*    if(!is_array($users[$visit['browser']])){
       $users[$visit['browser']] = array();
     }
-    if(!in_array($visit['user'], $users[$visit['browser']])){
-      array_push($users[$visit['browser']], $visit['user']);*/
+    if(!in_array($visit['user_id'], $users[$visit['browser']])){
+      array_push($users[$visit['browser']], $visit['user_id']);*/
       $browser[$visit['browser']]++;
     }
 //  }
@@ -183,7 +183,7 @@ function getUsersByCity(){
   $cities = array();
   $users = array();
   foreach($res as $re){
-    $user = DBManager::ExecuteQueryAsArray("SELECT * FROM `user` WHERE `id`='".$re['user']."'");
+    $user = DBManager::ExecuteQueryAsArray("SELECT * FROM `user` WHERE `id`='".$re['user_id']."'");
 //    if(!in_array($user, $users)){
 //      array_push($users, $user);
       $cities[$user[0]['city']]++;
@@ -201,8 +201,8 @@ function getUsersByOs(){
  /*  if(!is_array($users[$visit['os']])){
       $users[$visit['os']] = array();
    }
-    if(!in_array($visit['user'], $users[$visit['os']])){
-      array_push($users[$visit['os']], $visit['user']);*/
+    if(!in_array($visit['user_id'], $users[$visit['os']])){
+      array_push($users[$visit['os']], $visit['user_id']);*/
       $os[$visit['os']]++;
 //    }
   }
@@ -260,7 +260,7 @@ function logAnswer($ip){
   $last = getLastVisit($user, UB_SITE);
   $diff = abs(strtotime(date('Y-m-d H:i:s', strtotime($time))) - strtotime(date('Y-m-d H:i:s', strtotime($last['time']))));
   $visit = $last['id'];
-  $query = "INSERT INTO `answer`(`user`, `site`, `visit`, `question`, `answer`, `time`) VALUES ('$user', '".UB_SITE."', '$visit', '".UB_QUESTION."', '".UB_ANSWER ."', '".date('i:s', $diff)."')";
+  $query = "INSERT INTO `answer`(`user_id`, `site`, `visit_id`, `question`, `answer`, `time`) VALUES ('$user', '".UB_SITE."', '$visit', '".UB_QUESTION."', '".UB_ANSWER ."', '".date('i:s', $diff)."')";
   DBManager::ExecuteQuery($query);
 }
 

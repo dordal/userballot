@@ -5,7 +5,7 @@
 -- mysql> create database userballot;
 -- mysql> use userballot;
 -- mysql> create user `userballot`@`localhost` identified by 'UserBallot!';
--- mysql> flush privileges;
+-- mysql> flush privileges; 
 -- Then run the following queries: 
 
 CREATE TABLE `user` (

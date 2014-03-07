@@ -9,6 +9,8 @@
  */
 include('inc/environment.php');
 include('lib/firebase/firebaseLib.php');
+include("analytics/DBM.php");
+include("analytics/functions.php");
 
 // Important! Allow all domains to hit this URL via AJAX
 header('Access-Control-Allow-Origin: *');
@@ -45,9 +47,11 @@ switch ($action) {
 		switch ($type) {
 			case "n":
 				$voteType = "noVotes";
+				$answer = "no";
 			break;
 			case "y":
 				$voteType = "yesVotes";
+				$answer = "yes";
 			break;
 		}
 		$votes = $question->$voteType;
@@ -55,6 +59,18 @@ switch ($action) {
 
 		// Record the yes or no answer.
 		$firebase->set("/sites/" . $id . "/messages/" . $questionId . "/" . $voteType, $votes);
+
+		// Record the answer in the analytics database
+		$ip = $_SERVER['REMOTE_ADDR'];
+
+		define('UB_SITE', $id);
+		define('UB_QUESTION', $questionId);
+		define('UB_ANSWER', $answer);
+
+		if(!hasUser($ip)){
+		  addUser($ip);
+		}
+		logAnswer($ip);
 	break;
 	// Increment the mute counter
 	// id: site ID
@@ -89,6 +105,25 @@ switch ($action) {
 		$views = $question->views;
 		$views++;
 		$firebase->set("/sites/" . $id . "/messages/" . $questionId . "/views", $views);
+
+		// Log the visit to the analytics database
+		/*
+		what to do on accessing this page:
+		    - get the ip,
+		    - make user if applicable
+		    - store the visit in the db
+		*/
+		$ip = $_SERVER['REMOTE_ADDR'];
+		//$site = $_REQUEST['siteId'];
+		define('UB_SITE', $id);
+		define('UB_QUESTION', $questionId);
+
+		if(!hasUser($ip)){
+		  addUser($ip);
+		}
+		logVisit($ip);
+
+		
 	break;
 
 }
