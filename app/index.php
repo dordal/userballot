@@ -21,9 +21,9 @@
 
     <!-- CSS
   ================================================== -->
-    <link rel="stylesheet" href="styles/components/topcoat-desktop-light.css">
-    <link rel="stylesheet" href="styles/grid/skeleton.css">
-    <link rel="stylesheet" href="styles/treatments.css">
+    <link rel="stylesheet" href="styles/bootstrap.css"/>
+    <link rel="stylesheet" href="styles/bootstrap-theme.css"/>
+    <link rel="stylesheet" href="styles/treatments.css"/>
 
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -64,6 +64,7 @@
         <script src="https://js.stripe.com/v2/"></script>
 
         <!-- build:js scripts/scripts.js -->
+        <script src="scripts/ui-bootstrap-tpls-0.10.0.min.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/services/auth.js"></script>
         <script src="scripts/controllers/login.js"></script>

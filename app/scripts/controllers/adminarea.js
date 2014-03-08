@@ -10,6 +10,7 @@
 /*jshint globalstrict: true*/
 
 'use strict';
+
 function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userballotAuthSvc) {
 	$scope.sites = [];
 	$scope.messages = [];
@@ -48,6 +49,7 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 			// reset editing on new page loads
 			for( var message in $scope.site.messages ){
 				$scope.site.messages[message].editing = false;
+				$scope.site.messages[message].open = false;
 			}
 
 			//reset account detail editing
@@ -282,6 +284,7 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 			}
 		);
 	};
+
 }
 
 $(document).ready(function(){  

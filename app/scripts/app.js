@@ -26,7 +26,7 @@ switch(APP_DOMAIN){
 
 // console.log("Current Firebase Domain: " + FIREBASE_DOMAIN);
 
-var userballotApp = angular.module('userballotApp', ['firebase'])
+var userballotApp = angular.module('userballotApp', ['firebase', 'ui.bootstrap'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/loading', {
