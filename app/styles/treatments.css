@@ -90,7 +90,6 @@ form ul li {
 
 .section-header-med {
 	font-size: 21px;
-	padding-left: 10px;
 }
 .card-wrap {
 	background-color: #eaeaea;
@@ -141,10 +140,9 @@ form ul li {
 	width: 100%;
 }
 #questions {
-	color: #3dcad7;
+	color: #2ecc71;
 	padding-top: 40px;
 	margin-bottom: 15px;
-	text-align: center;
 }
 .small-instruction-text {
 	color: #333;
@@ -881,4 +879,9 @@ a {
 a:hover {
 	color: #1D8047;
 	text-decoration: none;
-};
+}
+.copyright {
+	padding-top:50px;
+	font-size: 11px;
+	color: #999;
+}

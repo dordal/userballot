@@ -27,15 +27,22 @@
 		<tab heading="Control Center">
 			
 			<!-- <a href="#">active</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">draft</a> -->
+			<accordion>
+				<accordion-group is-open="newQuestionOpen">
+					<accordion-heading>
+						<div class="click">Ask a new question...</div>
+					</accordion-heading>
+					<form ng-submit="submit()" ng-controller="AdminAreaCtrl" name="questionSubmitForm">
+						<div class="charcount" ng-show="!questionSubmitForm.text.$error.maxlength">{{question.length}} / 99</div>
+						<div class="charcount-error" ng-show="questionSubmitForm.text.$error.maxlength">Question is too long!</div>
+						<textarea class="form-control" ng-model="question" name="text" rows="2" cols="" ng-maxlength="99" placeholder="Keep it simple and ask a yes or no question. (99 characters or less)" required style="margin-bottom:2.5%;"></textarea>
+						<button class="newbutton" id="save-question" ng-disabled="questionSubmitForm.text.$invalid">Create</button>
+					</form>
+				</accordion-group>
+			<accordion>
 
-			<h3>Add a new question</h3>
 
-			<form ng-submit="submit()" ng-controller="AdminAreaCtrl" name="questionSubmitForm">
-				<div class="charcount" ng-show="!questionSubmitForm.text.$error.maxlength">{{question.length}} / 99</div>
-				<div class="charcount-error" ng-show="questionSubmitForm.text.$error.maxlength">Question is too long!</div>
-				<textarea class="form-control" ng-model="question" name="text" rows="2" cols="" ng-maxlength="99" placeholder="Keep it simple and ask a yes or no question. (99 characters or less)" required style="margin-bottom:2.5%;"></textarea>
-				<button class="newbutton" id="save-question" ng-disabled="questionSubmitForm.text.$invalid">Create</button>
-			</form>
+			
 
 			<!-- <div class="line-item card-wrap" ng:class="{true:'active', false:''}[message.active=='1']" ng-repeat="message in site.messages"> -->
 			<div id="questions" class="section-header-med">Current Questions</div>
@@ -216,29 +223,12 @@
 	</tabset>
 
 
-
-
-
-
-
-
-
-
-
-
-
+<!--
 	<div class="extended-wrap">
-		
-		<!-- The container is a centered 960px -->
-		<div class="container content-wrap">
+	<div class="container content-wrap">
 			<div class="sixteen columns">
 				
 			</div>
-
-			
-
-
-			<!-- Give column value in word form (one, two..., twelve) -->
 			<div class="sixteen columns">
 				<div class="row">
 
@@ -247,12 +237,10 @@
 						
 						<div id="questionsBlock" ng-show="adminView.state=='questions'">
 							<div id="ask" class="card-wrap ask-new-question" style="border-radius: 3px;">
-								<!--
-								-->
 							</div>
 							<div>
 								
-        									<!--
+
 
 										<div class="line-item card-wrap">
                                             <div class="default">
@@ -297,4 +285,5 @@
 	</div>
 
 </div> 
-
+-->
+<div class="copyright">Copyright © 2014 UserBallot Inc. All rights reserved.</div>
