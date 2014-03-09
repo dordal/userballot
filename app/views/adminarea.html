@@ -22,7 +22,6 @@
 		</div>
 	</div>
 
-
 	<tabset verticle="false">
 		<tab heading="Control Center">
 			
@@ -39,7 +38,7 @@
 						<button class="newbutton" id="save-question" ng-disabled="questionSubmitForm.text.$invalid">Create</button>
 					</form>
 				</accordion-group>
-			<accordion>
+			</accordion>
 
 
 			
@@ -51,7 +50,7 @@
 				<accordion>
 					<accordion-group is-open="message.open">
 						<accordion-heading>
-							<div class="click-area" ng-click="message.open = !message.open" ng:class="{true:'active', false:'inactive'}[message.active=='1']">
+							<div class="click-area" ng-click="openAnalytics($index)" ng:class="{true:'active', false:'inactive'}[message.active=='1']">
 								{{message.text}}
 								<div class="vote-count">
 									<progress animate="false">
@@ -75,8 +74,9 @@
 						</div>
 						<br class="clear" /><br>
 						<div class="header-small center">
-							<span id="yes-no">Question</span>
+							<span id="yes-no">Analytics</span>
 						</div>
+						<!--
 						<div class="question-wrap" ng-hide="message.editing">
 						{{message.text}}
 					   	<br><br><button disabled class="newbutton left hide" id="update-question">Update</button>
@@ -86,6 +86,26 @@
 						<div class="editMessage left" ng-show="message.editing">
 							<textarea class="form-control" name="text" rows="2" rows="2" cols="" ng-model="message.text" cols="60" ng-maxlength="99" update-model-on-blur>{{message.text}}</textarea><br><br>
 							<button class="newbutton" id="update-question" ng-click="updateMessage($index)">Update</button>
+						</div>
+						-->
+						<div style="overflow:hidden">
+							<div class="chart-options" style="float: left; width: 20%">
+								<br/>
+								<p>Group by</p>
+								<div class="btn-group">
+							        <button type="button" class="btn btn-primary" ng-model="groupByDate" btn-radio="'Hour'">Hour</button>
+							        <button type="button" class="btn btn-primary" ng-model="groupByDate" btn-radio="'Day'">Day</button>
+							        <button type="button" class="btn btn-primary" ng-model="groupByDate" btn-radio="'Week'">Week</button>
+							    </div>
+							    <ul class="dropdown-menu">
+							    	<li><a>Answers</a></li>
+							    	<li><a>Answers by Location</a></li>
+							    	<li><a>Answers by Browser</a></li>
+							  	</ul>
+							</div>
+							<div class="chart-wrap" style="float: left; width: 80%">
+								<div id="chart-{{$index}}"></div>
+							</div>	
 						</div>
 
 						<div class="timestamp">

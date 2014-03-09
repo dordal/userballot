@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="styles/bootstrap.css"/>
     <link rel="stylesheet" href="styles/bootstrap-theme.css"/>
     <link rel="stylesheet" href="styles/treatments.css"/>
+    <link rel="stylesheet" href="styles/jquery.jqplot.min.css"/>
 
     <!--[if lt IE 9]>
         <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -63,6 +64,14 @@
         <script src="//cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js"></script>
         <script src="https://js.stripe.com/v2/"></script>
 
+        <!-- build for jqplot charts -->
+        <script src="scripts/ui-chart.js"></script>
+        <script src="scripts/jquery.jqplot.min.js"></script>
+        <script src="scripts/plugins/jqplot.highlighter.min.js"></script>
+        <script src="scripts/plugins/jqplot.cursor.min.js"></script>
+        <script src="scripts/plugins/jqplot.dateAxisRenderer.min.js"></script>
+        <!-- endbuild -->
+
         <!-- build:js scripts/scripts.js -->
         <script src="scripts/ui-bootstrap-tpls-0.10.0.min.js"></script>
         <script src="scripts/app.js"></script>
@@ -74,7 +83,7 @@
         <script src="scripts/controllers/order.js"></script>
         <script src="scripts/directives/equal.js"></script>
         <script src="scripts/ui-interactions.js"></script>
-        <!-- endbuild -->
+        
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

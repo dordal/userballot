@@ -269,7 +269,7 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 
 		// default
 		$scope.adminView.state = 'questions';
-		// iotherwise set it to whatever was passed in
+		// otherwise set it to whatever was passed in
 		if( stateFlag ){
 			$scope.adminView.state = stateFlag;
 		}
@@ -277,13 +277,56 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 
 	$scope.openAnalytics = function(index) {
 		var messageId = $scope.keyAt($scope.site.messages, index);
+		$scope.site.messages[messageId].open = !$scope.site.messages[messageId].open;
+		if ($scope.site.messages[messageId].open) {
+			/*$.ajax( "/analytics/getdata.php?siteId=" + $scope.site.id + "&question=" + messageId + "}" ).done(
+				function(msg) {
+					document.write(msg);
+				}
+			);*/
+			setTimeout(function() {
+				var line1 = [['2014-03-06 00:00:00', 60], ['2014-03-06 01:00:00', 56], ['2014-03-06 02:00:00', 50], ['2014-03-06 03:00:00', 55],
+				['2014-03-06 04:00:00', 53], ['2014-03-06 05:00:00', 55], ['2014-03-06 06:00:00', 52], ['2014-03-06 07:00:00', 53],
+				['2014-03-06 08:00:00', 54], ['2014-03-06 09:00:00', 54], ['2014-03-06 10:00:00', 55], ['2014-03-06 11:00:00', 56]];
 
-		$.ajax( "/analytics/getdata.php?siteId=" + $scope.site.id + "&question=" + messageId + "}" ).done(
-			function(msg) {
-				document.write(msg);
-			}
-		);
+				var plot1 = jQuery.jqplot('chart-' + index, [line1], {
+					seriesColors: [ "#2ecc71" ],
+					title:'Yes Votes',
+					axes:{
+						xaxis:{
+							renderer:jQuery.jqplot.DateAxisRenderer,
+							tickOptions:{
+								formatString:'%b&nbsp;%#d&nbsp;%H:%M'
+							} 
+						},
+						yaxis:{
+							tickOptions:{
+								formatString:'%.0f\%'
+							},
+							min: 0,
+							max: 100
+						}
+					},
+					seriesDefaults: {
+						fill: true,
+						fillAlpha: 0.6,
+						fillColor: "#C9F2DB",
+						fillAndStroke: true,
+						lineWidth: 3
+					},
+					highlighter: {
+						show: true,
+						sizeAdjust: 7.5
+					},
+					cursor: {
+						show: false
+					}
+				});
+			}, 100);
+			
+		}
 	};
+
 
 }
 
