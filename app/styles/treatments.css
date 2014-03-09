@@ -885,3 +885,12 @@ a:hover {
 	font-size: 11px;
 	color: #999;
 }
+.inactive.click-area {
+	color: #999 !important;
+}
+.inactive .progress-bar-success {
+	background-image: linear-gradient(to bottom, #94B594 0%, #7C9C7C 100%);
+}
+.inactive .progress-bar-danger {
+	background-image: linear-gradient(to bottom, #D4A2A1 0%, #C79695 100%);
+}

@@ -51,7 +51,7 @@
 				<accordion>
 					<accordion-group is-open="message.open">
 						<accordion-heading>
-							<div class="click-area" ng-click="message.open = !message.open">
+							<div class="click-area" ng-click="message.open = !message.open" ng:class="{true:'active', false:'inactive'}[message.active=='1']">
 								{{message.text}}
 								<div class="vote-count">
 									<progress animate="false">
@@ -84,7 +84,7 @@
 						<br class="clear" />
 
 						<div class="editMessage left" ng-show="message.editing">
-							<textarea class="topcoat-textarea" name="text" rows="2" rows="2" cols="" ng-model="message.text" cols="60" ng-maxlength="99" update-model-on-blur>{{message.text}}</textarea><br><br>
+							<textarea class="form-control" name="text" rows="2" rows="2" cols="" ng-model="message.text" cols="60" ng-maxlength="99" update-model-on-blur>{{message.text}}</textarea><br><br>
 							<button class="newbutton" id="update-question" ng-click="updateMessage($index)">Update</button>
 						</div>
 
