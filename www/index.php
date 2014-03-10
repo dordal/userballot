@@ -73,7 +73,7 @@
                                 </div>
                                 <div class="two-thirds column section-height section-right">
                                     <h1>You're in control!</h1>
-                                    <p>The Control Center is the place you go to create questions, get real-time results from your users, and view analytics about the people answering your questions. Create simple yes or no feedback questions based on suggestions we provide, or your own ideas.</p>
+                                    <p>The Control Center is the place you go to create questions, and get real-time results from your users.<!-- , and view analytics about the people answering your questions. --> Create simple yes or no feedback questions based on suggestions we provide, or your own ideas.</p>
                                 </div>
                             </div>
                             <div class="container section-container row">
@@ -85,7 +85,7 @@
                                     <p>UserBallot is easy to use! Just copy and paste two lines of code into your website and you’re set. We give you step by step instructions, so whether you are a do-it-yourselfer, have a webmaster that supports you, or use Wordpress we have you covered!</p>
                                 </div>
                             </div>
-                            <div class="container section-container row">
+                            <!-- <div class="container section-container row">
                                 <div class="one-third column section-height section-left">
                                     <img src="img/location.svg" class="vector">
                                 </div>
@@ -93,7 +93,7 @@
                                     <h1>See important demographics.</h1>
                                     <p>Beyond the questions, our built in analytics give you powerful insight into who your audience is! See what's essential and use our analytics to focus on the answers you care about. Know your audience. Be <strong>driven</strong> by response.</p>
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="container funnel">
                                 <a href="http://app.userballot.com/#/signup" id="save-question" class="signup-btn product-button">Try It Free!</a>
                                 <a href="/pricing.php" style="margin-left: 20px;" id="save-question" class="signup-btn product-button">See Our Plans!</a>

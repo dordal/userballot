@@ -93,8 +93,9 @@ form ul li {
 .card-wrap {
 	background-color: #eaeaea;
 	/* border: 1px solid #D5D5D5; */
-	border-radius: 0 3px 3px 3px;
+	border-radius: 3px;
 	margin-bottom: 20px;
+	margin-left: 97px; 
 }
 .card-wrap.highlight {
 	background-color: #FFFEE4!important;
@@ -480,17 +481,26 @@ button:focus {
 	padding: 10px 0px;
 	text-align: center;
 	text-decoration: none;
-	font-size: 14px;
+	font-size: 14px !important;
+	box-sizing: initial;
+	border: none;
+	float: right;
+	font: inherit;
+	width: 97px;
+	cursor: pointer;
+
 }
 .cms:hover {
-	background-color: #27db73;
+	background-color: #2ecc71;
 	transition: background .25s ease-in-out;
     -moz-transition: background .25s ease-in-out;
     -webkit-transition: background .25s ease-in-out;
 }
-.cms:active {
-	background-color: #eaeaea;
+
+.cms.active {
+	background-color: #2ecc71 !important;
 }
+
 #cmscontainer {
 	float: left;
 	width: 97px;

@@ -1,10 +1,5 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-	<?php
-    	include('inc/head.php');
-    	include ('inc/topnav.php');
-	?>
 <title>Thank You!</title>	
 </head>
 <body style="text-align: center;">

@@ -267,7 +267,7 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 
 		// default
 		$scope.adminView.state = 'questions';
-		// iotherwise set it to whatever was passed in
+		// otherwise set it to whatever was passed in
 		if( stateFlag ){
 			$scope.adminView.state = stateFlag;
 		}
