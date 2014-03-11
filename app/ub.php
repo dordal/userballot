@@ -115,13 +115,11 @@ switch ($action) {
 		*/
 		$ip = $_SERVER['REMOTE_ADDR'];
 		//$site = $_REQUEST['siteId'];
-		define('UB_SITE', $id);
-		define('UB_QUESTION', $questionId);
 
 		if(!hasUser($ip)){
 		  addUser($ip);
 		}
-		logVisit($ip);
+		logVisit($ip, $id, $questionId);
 
 		
 	break;

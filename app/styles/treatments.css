@@ -209,17 +209,12 @@ button:focus {
 }
 .line-item-results {
 	background-color: #fff;
-	margin-bottom: 1px;
-	padding: 5px 0 5px 20px;
-	border: solid 2px #f3f3f3;
+	margin-top: 20px;
+	padding: 5px 0 5px 10px;
 }
 .result-label {
 	color: #a1a1a1;
-	display: inline-block;
 	font-size: 15px;
-	margin-right: 0px;
-	text-align: right;
-	margin-top: 29px;
 }
 .mini-label {
 	font-size: 11px;

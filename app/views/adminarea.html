@@ -97,11 +97,23 @@
 							        <button type="button" class="btn btn-primary" ng-model="groupByDate" btn-radio="'Day'">Day</button>
 							        <button type="button" class="btn btn-primary" ng-model="groupByDate" btn-radio="'Week'">Week</button>
 							    </div>
+							    <br/><br/>
+							    <a class="dropdown-toggle">
+							   		Answers over time
+							  	</a>
 							    <ul class="dropdown-menu">
 							    	<li><a>Answers</a></li>
 							    	<li><a>Answers by Location</a></li>
 							    	<li><a>Answers by Browser</a></li>
 							  	</ul>
+
+							  	<div class="line-item-results">
+									<span class="result-label">Views: </span><span class="pill no views-{{message.id}}">{{message.views}}</span>
+								</div>
+								<div class="line-item-results" ng-show="site.allowmute=='1' && message.mute > 0">
+									<span class="result-label">Muted: </span><span class="pill no mute-{{message.id}}">{{message.mute}}</span>
+								</div>
+								
 							</div>
 							<div class="chart-wrap" style="float: left; width: 80%">
 								<div id="chart-{{$index}}"></div>

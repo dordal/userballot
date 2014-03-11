@@ -7,17 +7,19 @@ what to do on page load:
  - get the site id
  - print out the data that we have
 */
-define('UB_SITE', $_REQUEST['siteId']);
+$siteId = $_REQUEST['siteId'];
+$questionId = $REQUEST['question'];
+
 $returnarray = array();
-$returnarray['totalunique'] = getNumberOfUniqueUsers();
-$returnarray['total'] = getNumberOfResponses();
-$returnarray['totalperday'] = getResponsesByDay();
-$returnarray['uniqueperday'] = getUniqueUsersByDay();
-$returnarray['usersperbrowser'] = getUsersByBrowser();
-$returnarray['usersperos'] = getUsersByOs();
-$returnarray['nullresponce'] = getNullResponces();
-$returnarray['responcetimes'] = getResponceTimes();
-$returnarray['usersbycity'] = getUsersByCity();
+$returnarray['totalunique'] = getNumberOfUniqueUsers($siteId, $questionId);
+$returnarray['total'] = getNumberOfResponses($siteId, $questionId);
+$returnarray['totalperday'] = getResponsesByDay($siteId, $questionId);
+$returnarray['uniqueperday'] = getUniqueUsersByDay($siteId, $questionId);
+$returnarray['usersperbrowser'] = getUsersByBrowser($siteId, $questionId);
+$returnarray['usersperos'] = getUsersByOs($siteId, $questionId);
+$returnarray['nullresponce'] = getNullResponces($siteId, $questionId);
+$returnarray['responcetimes'] = getResponceTimes($siteId, $questionId);
+$returnarray['usersbycity'] = getUsersByCity($siteId, $questionId);
 echo json_encode($returnarray);
 
 ?>

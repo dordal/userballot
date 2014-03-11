@@ -118,8 +118,8 @@ function getBrowser()
 
 
 //Get DATA//
-function getNumberOfUniqueUsers(){
-  $query = "SELECT * FROM `visits` WHERE `site`='".UB_SITE."'";
+function getNumberOfUniqueUsers($siteId, $questionId){
+  $query = "SELECT * FROM `visits` WHERE `site`='$siteId' AND `question`='$questionId'";
   $res = DBManager::ExecuteQueryAsArray($query);
   $users = array();
   foreach($res as $visit){
@@ -129,13 +129,13 @@ function getNumberOfUniqueUsers(){
   }
   return count($users);
 }
-function getNumberOfResponses(){
-  $query = "SELECT * FROM `visits` WHERE `site`='".UB_SITE."'";
+function getNumberOfResponses($siteId, $questionId){
+  $query = "SELECT * FROM `visits` WHERE  `site`='$siteId' AND `question`='$questionId'";
   $res = DBManager::ExecuteQueryAsArray($query);
   return count($res);
 }
-function getResponsesByDay(){
-  $query = "SELECT * FROM `visits` WHERE `site`='".UB_SITE."'";
+function getResponsesByDay($siteId, $questionId){
+  $query = "SELECT * FROM `visits` WHERE  `site`='$siteId' AND `question`='$questionId'";
   $res = DBManager::ExecuteQueryAsArray($query);
   $days = array();
   foreach($res as $visit){
@@ -144,8 +144,8 @@ function getResponsesByDay(){
   }
   return $days;
 }
-function getUniqueUsersByDay(){
-  $query = "SELECT * FROM `visits` WHERE `site`='".UB_SITE."'";
+function getUniqueUsersByDay($siteId, $questionId){
+  $query = "SELECT * FROM `visits` WHERE  `site`='$siteId' AND `question`='$questionId'";
   $res = DBManager::ExecuteQueryAsArray($query);
   $days = array();
   $users = array();
@@ -161,8 +161,8 @@ function getUniqueUsersByDay(){
   }
   return $days;
 }
-function getUsersByBrowser(){
-  $query = "SELECT * FROM `visits` WHERE `site`='".UB_SITE."'";
+function getUsersByBrowser($siteId, $questionId){
+  $query = "SELECT * FROM `visits` WHERE  `site`='$siteId' AND `question`='$questionId'";
   $res = DBManager::ExecuteQueryAsArray($query);
   $browsers = array();
   $users = array();
@@ -177,8 +177,8 @@ function getUsersByBrowser(){
 //  }
   return $browser;
 }
-function getUsersByCity(){
-  $query = "SELECT * FROM `visits` WHERE `site`='".UB_SITE."'";
+function getUsersByCity($siteId, $questionId){
+  $query = "SELECT * FROM `visits` WHERE  `site`='$siteId' AND `question`='$questionId'";
   $res = DBManager::ExecuteQueryAsArray($query);
   $cities = array();
   $users = array();
@@ -192,8 +192,8 @@ function getUsersByCity(){
   return $cities;
 
 }
-function getUsersByOs(){
-  $query = "SELECT * FROM `visits` WHERE `site`='".UB_SITE."'";
+function getUsersByOs($siteId, $questionIdz){
+  $query = "SELECT * FROM `visits` WHERE  `site`='$siteId' AND `question`='$questionId'";
   $res = DBManager::ExecuteQueryAsArray($query);
   $os = array();
   $users = array();
@@ -240,14 +240,14 @@ function getLastVisit($user, $site){
 }
 
 //Visit//
-function logVisit($ip){
+function logVisit($ip, $siteId, $questionId){
   $user = getUserFromIp($ip);
   $browser = getBrowser();
 //  echo "platform: " . $browser['platform'];
   date_default_timezone_set('America/Los_Angeles');
   $time = date("Y-m-d H:i:s");
   $repeat = isRepeatUser($user, UB_SITE);
-  $query = "INSERT INTO `visits`(`user_id`, `time`, `site`, `os`, `browser`, `returning`) VALUES ('$user', '$time', '".UB_SITE."', '".$browser['platform']."', '".$browser['name']." - ".$browser['version']."', '".$repeat."')";
+  $query = "INSERT INTO `visits`(`user_id`, `time`, `site`, `question`, `os`, `browser`, `returning`) VALUES ('$user', '$time', '$siteId', '$questionId', '".$browser['platform']."', '".$browser['name']." - ".$browser['version']."', '".$repeat."')";
   DBManager::ExecuteQuery($query);
 }
 
