@@ -29,7 +29,6 @@
 				<div class="row">
 					<div style="text-align:center;">
 						<div class="alpha main-nav">
-		              <!-- <a class="main-nav-item" href="#">Dashboard</a> -->
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='questions'}" ng-click="adminViewState('questions')">Control Center</a>
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Get Started</a>
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='settings'}" ng-click="adminViewState('settings')">Settings</a>
@@ -86,9 +85,9 @@
 					<div class="sixteen columns omega">
 						<div ng-show="adminView.state=='setup'">
 						<div id="cmscontainer">
-							<div class="three-columns alpha cms">Self Start</div>
-							<div class="three-columns alpha cms">Wordpress</div>
-							<div class="three-columns alpha cms">Share This</div>
+							<button class="three-columns alpha cms" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Self Start</button>
+							<button class="three-columns alpha cms" ng-class="{active: adminView.state=='wordpress'}" ng-click="adminViewState('wordpress')">Wordpress</button>
+							<button class="three-columns alpha cms" ng-class="{active: adminView.state=='share'}" ng-click="adminViewState('share')">Share This</button>
 						</div>
 							<div class="card-wrap info-wrap thirteen columns" id="steps">
 								<!--<a href="" class="close right">Hide</a>-->
@@ -103,7 +102,7 @@
 								<!-- step 2 -->
 								<br>
 								<strong>Step 2</strong>
-								<p>Create your first question using the "Ask a new question" section of your admin area.</p>
+								<p>Create your first question using your Control Center!</p>
 								<br>
 								<strong>A few things to remember.</strong>
 								<p>Make sure you ask simple yes or no questions and keep them short (99 characters or less).</p>
@@ -113,6 +112,63 @@
 								<p><a ng-click="adminViewState('questions')" href="" class="close">Click here</a> when you are ready to start asking questions!</p>
 							</div>
 						</div>
+						<div ng-show="adminView.state=='wordpress'">
+							<div id="cmscontainer">
+								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Self Start</button>
+								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='wordpress'}" ng-click="adminViewState('wordpress')">Wordpress</button>
+								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='share'}" ng-click="adminViewState('share')">Share This</button>
+							</div>
+							<div class="card-wrap info-wrap thirteen columns" id="steps">
+								<!--<a href="" class="close right">Hide</a>-->
+								<!-- step 1 -->
+								<div class="title">Activate your Wordpress plugin!</div>
+								<br><br><br>
+								<strong>Step 1</strong>
+								<p>Activate the plugin in your WordPress admin panel.</p>
+								<br>
+								<strong>Step 2</strong>
+								<br>
+								<p><span>Copy your UserBallot site ID:</span>&nbsp&nbsp<span><input readonly type="text" value="{{site.id}}" style="width: 150px;"></span></p>
+								<br>
+								<strong>Step 3</strong>
+								<br>
+								<p>Go to the UserBallot for WordPress configuration page in your Wordpress admin panel, and save your site ID.</p>
+								<br>
+								<strong>Step 4</strong>
+								<br>
+								<p>Create your first question using your Control Center!</p>
+								<br>
+								<strong>A few things to remember.</strong>
+								<p>Make sure you ask simple yes or no questions and keep them short (99 characters or less).</p>
+								<p>Questions are shown to a visitor only once.</p>
+								<p>Only questions that are set to <span style="color:#2ecc71;font-weight:bold;">active</span> will be shown to your visitors.</p>
+								<br>
+								<p><a ng-click="adminViewState('questions')" href="" class="close">Click here</a> when you are ready to start asking questions!</p>
+							</div>
+						</div>
+						<div ng-show="adminView.state=='share'">
+							<div id="cmscontainer">
+								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Self Start</button>
+								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='wordpress'}" ng-click="adminViewState('wordpress')">Wordpress</button>
+								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='share'}" ng-click="adminViewState('share')">Share This</button>
+							</div>
+							<div class="card-wrap info-wrap thirteen columns" id="steps">
+								<div class="title">Email your developer!</div>
+								<br><br>
+								<strong>Step 1</strong>
+								<p>Copy and paste this code into an email to your webmaster or developer. They will know what to do!</p>
+								<textarea readonly class="topcoat-textarea code-provider active" rows="3" cols="" placeholder=""><!-- UserBallot: Add this before the closing body tag  --><script type	="text/javascript">var $ub = window.$ub || {};$ub.siteId = '{{site.id}}';</script><script src="http://app.userballot.com/client.js"></script></textarea>
+  								<br><br>
+								<!-- step 2 -->
+								<br>
+								<strong>Step 2</strong>
+								<p>Create your first question using your Control Center!</p>
+ 								<br>
+ 								<strong>A few things to remember.</strong>
+ 								<p>Make sure you ask simple yes or no questions and keep them short (99 characters or less).</p>
+ 								<p>Questions are shown to a visitor only once.</p>
+ 								<p>Only questions that are set to <span style="color:#2ecc71;font-weight:bold;">active</span> will be shown to your visitors.</p>
+ 								<br>
 						<div id="settingsBlock" class="card-wrap" ng-show="adminView.state=='settings'">
 							<div class="card-wrap info-wrap thirteen columns settings2">
 								<!--<a href="" class="close right">Hide</a>-->
