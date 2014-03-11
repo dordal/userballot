@@ -9,6 +9,12 @@ userballotApp.controller('SignupCtrl', function($scope, $location, $routeParams,
 	$scope.domainError = null;
 	$scope.emailError = null;
 
+	$scope.pcheck = function() {
+		if ($scope.password != $scope.repassword) {
+			return true;
+		}
+	}
+	
 	// authenticate a user
 	$scope.register = function() {
 		angularFireAuth.createUser($scope.email, $scope.password, function(error, user) {
@@ -71,7 +77,7 @@ userballotApp.controller('SignupCtrl', function($scope, $location, $routeParams,
 				if (error.code === 'EMAIL_TAKEN') {
 					$scope.emailError = "Email is already in use. Please login here.";
 				} else {
-					$scope.error = "There was an error.";
+					$scope.error = "Please check that all forms have been filled out and are correct.";
 				}
 			}
 			// log in manually, set noLogin to true
