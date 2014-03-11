@@ -212,7 +212,7 @@
 								</div>
 								<br><br>
 								{{user.email}}
-								<button class="topcoat-button--quiet" ng-click="editAcct($index)" ng:class="{true:'active', false:''}[site.editing === true]">Edit Name</button>
+								<button class="topcoat-button--quiet" ng-click="editAcct($index)" ng:class="{true:'active', false:''}[site.editing === true]">Edit Email</button>
 								<div class="question-wrap" ng-show="site.editing">
     								<input spellcheck="false" ng-minlength="1" ng-model="user.email" update-model-on-blur></input><button ng-click="noEditAcct()">Done</button>
 								</div>
