@@ -16,9 +16,61 @@ include("analytics/functions.php");
 header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
 
-$action = $_GET['a'];
-
 $firebase = new Firebase(FIREBASE_URL, FIREBASE_TOKEN);
+
+function incrementVoteCount($id, $firebase)
+{
+	// get Id of site owner
+	$userEmailId = $firebase->get("/sites/" . $id . "/userEmailId");
+	$userEmailId = trim($userEmailId,'"');
+
+	// Increment the vote count for this site (used to enforce plan limit)
+	date_default_timezone_set('America/Los_Angeles');
+	$voteCountUrl = "/users/" . $userEmailId . "/votes/" . date('Y') . "/" . date('m');
+	$voteCount = $firebase->get($voteCountUrl);
+	$voteCount = ($voteCount == 'null' ? 0 : $voteCount);
+	$firebase->set($voteCountUrl, ++$voteCount);
+}
+
+function isUserOverPlanLevel($id, $firebase)
+{
+	// get Id of site owner
+	$userEmailId = $firebase->get("/sites/" . $id . "/userEmailId");
+	$userEmailId = trim($userEmailId,'"');
+
+	// get plan level
+	$planUrl = "/users/" . $userEmailId  . "/plan";
+	$plan = $firebase->get($planUrl);
+	// default to free plan if the plan is not defined
+	$plan = ($plan == 'null' ? 'trial' : $plan);
+
+	// get total vote count for this month
+	date_default_timezone_set('America/Los_Angeles');
+	$voteCountUrl = "/users/" . $userEmailId . "/votes/" . date('Y') . "/" . date('m');
+	$voteCount = $firebase->get($voteCountUrl);
+	$voteCount = ($voteCount == 'null' ? 0 : $voteCount);
+
+	// check plan level
+	$overPlanLevel = False;
+	switch ($plan) {
+		case "trial":
+			$overPlanLevel = $voteCount > 500;
+			break;
+		case "entry":
+			$overPlanLevel = $voteCount > 2500;
+			break;
+		case "standard":
+			$overPlanLevel = $voteCount > 5000;
+			break;
+		case "deluxe":
+			$overPlanLevel = $voteCount > 25000;
+			break;
+	}
+
+	return $overPlanLevel;
+}
+
+$action = $_GET['a'];
 
 switch ($action) {
 
@@ -28,7 +80,15 @@ switch ($action) {
 		$id = $_GET['id'];
 		$site = $firebase->get("/sites/" . $id );
 
-		echo $site;
+		$siteObj = json_decode($site);
+		
+		// if the user is over their plan level, set the messages to empty.
+		if (isUserOverPlanLevel($id, $firebase))
+		{
+			$siteObj->messages = new stdClass();
+		}
+
+		echo json_encode($siteObj);
 	break;
 	// Vote yes or no
 	// id: site ID
@@ -59,6 +119,8 @@ switch ($action) {
 
 		// Record the yes or no answer.
 		$firebase->set("/sites/" . $id . "/messages/" . $questionId . "/" . $voteType, $votes);
+		
+		incrementVoteCount($id, $firebase);
 
 		// Record the answer in the analytics database
 		$ip = $_SERVER['REMOTE_ADDR'];
@@ -122,8 +184,8 @@ switch ($action) {
 		  addUser($ip);
 		}
 		logVisit($ip);
-
 		
 	break;
 
 }
+

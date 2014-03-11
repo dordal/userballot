@@ -39,6 +39,7 @@ userballotApp.controller('SignupCtrl', function($scope, $location, $routeParams,
 					var siteId = sitesRef.push(site).name();
 
 					var emailId = user.email.replace(/\./g, ',');
+					site.userEmailId = emailId;
 					var userRef = new Firebase(FIREBASE_DOMAIN + "/users/");
 
 					var userPromise = angularFire(sitesRef, $scope, 'users');
