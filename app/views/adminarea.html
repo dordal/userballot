@@ -176,7 +176,7 @@
 									<!-- <a href="#">active</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="#">draft</a> -->
 
 									<!-- <div class="line-item card-wrap" ng:class="{true:'active', false:''}[message.active=='1']" ng-repeat="message in site.messages"> -->
-									<div ng-repeat="message in site.messages">
+									<div ng-repeat="message in site.messages | orderObjectBy:'position':true">
 										<a class="three-columns alpha analytics activate_modal" name='first_window' ng-click="openAnalytics($index)">Analytics</a>
 										<div class="line-item card-wrap">
                                             <div class="default">
