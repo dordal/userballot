@@ -116,6 +116,10 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 				$scope.site.messages = {};
 
 			}
+			if ($scope.site.qCount == undefined) {
+				$scope.site.qCount = 0;
+
+			}
 			$scope.site.qCount = $scope.site.qCount + 1;
 			var count = $scope.site.qCount;
 			$scope.site.messages[$scope.sitesRef.push().name()] = {
