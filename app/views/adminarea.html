@@ -125,9 +125,9 @@
 								<br>
 								<div class="line-item">
 									<p>What look would you like for your UserBallots?</p>
-									<button class="topcoat-button--quiet" id="yes" ng-click="setShade('light')" ng:class="{true:'active', false:''}[site.shade=='light']">Light</button>
-									<button class="topcoat-button--quiet" ng-click="setShade('dark')" ng:class="{true:'active', false:''}[site.shade=='dark']">Dark</button>
-									<button class="topcoat-button--quiet" ng-click="setShade('vibrant')" ng:class="{true:'active', false:''}[site.shade=='vibrant']">Vibrant</button>	
+									<button class="topcoat-button--quiet" id="yes" ng-click="setShade('light')" ng:class="{active:site.shade=='light'}">Light</button>
+									<button class="topcoat-button--quiet" ng-click="setShade('dark')" ng:class="{active: site.shade=='dark'}">Dark</button>
+									<button class="topcoat-button--quiet" ng-click="setShade('vibrant')" ng:class="{active: site.shade=='vibrant'}">Vibrant</button>	
 								</div>
 								<br>
 								<div class="line-item">
@@ -139,20 +139,20 @@
 								<br>
 								<div class="line-item">
 									<p>Allow people to mute questions, hiding all future questions from them?</p>
-									<button class="topcoat-button--quiet" id="yes" ng-click="setAllowMute(true)" ng:class="{true:'active', false:''}[site.allowmute=='1']">Yes</button>
-									<button class="topcoat-button--quiet" ng-click="setAllowMute(false)" ng:class="{true:'active', false:''}[site.allowmute=='0']">No</button>	
+									<button class="topcoat-button--quiet" id="yes" ng-click="setAllowMute(true)" ng:class="{active: site.allowmute=='1'}">Yes</button>
+									<button class="topcoat-button--quiet" ng-click="setAllowMute(false)" ng:class="{active: site.allowmute=='0'}">No</button>	
 								</div>
 								<br><br><br><br><br>
 								<div class="title" style="margin 50px 0 !important;">Account Info</div>
 								<br><br>
 								<span>{{user.firstName}}</span>&nbsp<span>{{user.lastName}}</span>
-								<button class="topcoat-button--quiet" ng-click="editAcct($index)" ng:class="{true:'active', false:''}[site.editing === true]">Edit Name</button>
+								<button class="topcoat-button--quiet" ng-click="editAcct($index)" ng:class="{active: site.editing}">Edit Name</button>
 								<div class="question-wrap" ng-show="user.editing">
     								<input spellcheck="false" ng-minlength="1" ng-model="user.firstName" update-model-on-blur></input><input spellcheck="false" ng-minlength="1" ng-model="user.lastName" update-model-on-blur></input><button ng-click="noEditAcct()">Done</button>
 								</div>
 								<br><br>
 								{{user.email}}
-								<button class="topcoat-button--quiet" ng-click="editAcct($index)" ng:class="{true:'active', false:''}[site.editing === true]">Edit Name</button>
+								<button class="topcoat-button--quiet" ng-click="editAcct($index)" ng:class="{active: site.editing}">Edit Name</button>
 								<div class="question-wrap" ng-show="site.editing">
     								<input spellcheck="false" ng-minlength="1" ng-model="user.email" update-model-on-blur></input><button ng-click="noEditAcct()">Done</button>
 								</div>
@@ -178,7 +178,6 @@
 									<!-- <div class="line-item card-wrap" ng:class="{true:'active', false:''}[message.active=='1']" ng-repeat="message in site.messages"> -->
 									<div ng-repeat="message in site.messages">
 										<a class="three-columns alpha analytics activate_modal" name='first_window' ng-click="openAnalytics($index)">Analytics</a>
-
 										<div class="line-item card-wrap">
                                             <div class="default">
     											<div class="timestamp">
@@ -188,8 +187,8 @@
     											</div>
 
 	    										<div class="left" style="margin-left:2.5%; padding-left:0.563rem;">
-    												<button class="topcoat-button--quiet outline" ng-click="selectActive($index)" ng:class="{true:'active', false:''}[message.active=='1']">Active</button>
-    												<button class="topcoat-button--quiet outline" ng-click="selectDraft($index)" ng:class="{true:'active', false:''}[message.active=='0']">Draft</button>
+    												<button class="topcoat-button--quiet outline" ng-click="selectActive($index)" ng:class="{active: message.active=='1'}">Active</button>
+    												<button class="topcoat-button--quiet outline" ng-click="selectDraft($index)" ng:class="{active: message.active=='0'}">Draft</button>
     											</div>
 	    										<div class="right" style="margin-right:2.5%;">
     												<button class="topcoat-button--quiet outline" ng-click="editMessage($index)">Edit</button>
