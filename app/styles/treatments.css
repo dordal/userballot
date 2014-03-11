@@ -78,6 +78,15 @@ form ul li {
 	color: #fff;
 	display: block;
 }
+
+.main-nav-item.important {
+	border: 1px solid red;
+	background-color: red;
+	border-radius: 3px;
+	color: #fff;
+	display: block;
+}
+
 .main-nav-item:hover {
 	background-color: #27db73;
 	cursor: pointer;

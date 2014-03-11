@@ -1,6 +1,12 @@
 <!-- AdminArea -->
 <div ng-controller="AdminAreaCtrl">
 	<div class="extended-wrap">
+		<div ng-show="user.nearPlanLimit">
+			You have used <span>{{user.voteCount}}</span> of <span>{{user.planLimit}}</span> messages. Upgrade now to continue receiving feedback from your users.
+		</div>
+		<div ng-show="user.overPlanLimit">
+			User feedback has been suspended. Upgrade now to continue receiving feedback from your users.
+		</div>
 		<div class="admin-bar">
 			<span ng-show="user.firstName">Hello, <strong>{{user.firstName}}</strong></span>
 			<span ng-hide="user.firstName">Hello, <strong>{{user.email}}</strong></span>
@@ -32,7 +38,7 @@
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='questions'}" ng-click="adminViewState('questions')">Control Center</a>
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Get Started</a>
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='settings'}" ng-click="adminViewState('settings')">Settings</a>
-		              		<a class="main-nav-item" ng-class="{active: adminView.state=='pricing'}" ng-click="adminViewState('pricing')">Upgrade!</a>
+		              		<a class="main-nav-item" ng-class="{active: adminView.state=='pricing', important: user.nearPlanLimit || user.overPlanLimit}" ng-click="adminViewState('pricing')">Upgrade!</a>
 						</div>
 					</div>
 					

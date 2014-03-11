@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Userballot</title>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet">
+	<style type="text/css">
+	</style>
+</head>
+<body>
+    <div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h1 id='status'><i class="fa fa-cog fa-spin"></i> Working</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6" id='scratchpad'>				
+			</div>
+		</div>
+        <hr />
+        <footer>
+            <div class="row text-center">
+                <p>&copy;Userballot</p>
+            </div>
+        </footer>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <!--[if lte IE 8]>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <![endif]-->
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/knockout/knockout-3.0.0.js"></script>    
+	<script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.6/firebase.js'></script>
+	<script type="text/javascript">
+$(function()
+{
+	var token = 'XfBvYQUesMSmcKXdSUs2LFUSbp0ww6r7GmVyDbCt';
+	var firebaseUrl = 'https://userballotdb-staging.firebaseio.com';
+	var rootRef = new Firebase(firebaseUrl);
+	rootRef.auth(token, function(error, result) {
+		var userRef = rootRef.child('users');
+		userRef.on('value', function(userSnapshot) {
+			var siteRef = rootRef.child('sites');
+			siteRef.on('value', function (siteSnapshot) {
+				var userData = userSnapshot.val();
+				var siteData = siteSnapshot.val();
+				var count = 0;
+				for (userKey in userData)
+				{
+					for (siteKey in userData[userKey].sites)
+					{
+						var tmp = rootRef.child('sites').child(siteKey);
+						tmp.update({ userEmailId : userKey });
+						count ++;
+					}					
+				}				
+				$('#status').text('Done. Updated ' + count + ' records.');
+			});
+		});	
+	});
+	
+});	
+	</script>
+</body>
+</html>
