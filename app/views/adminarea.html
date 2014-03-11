@@ -169,7 +169,10 @@
  								<p>Questions are shown to a visitor only once.</p>
  								<p>Only questions that are set to <span style="color:#2ecc71;font-weight:bold;">active</span> will be shown to your visitors.</p>
  								<br>
-						<div id="settingsBlock" class="card-wrap" ng-show="adminView.state=='settings'">
+ 							</div>
+ 						</div>
+
+						<div style="margin-left: 0;" id="settingsBlock" class="card-wrap" ng-show="adminView.state=='settings'">
 							<div class="card-wrap info-wrap thirteen columns settings2">
 								<!--<a href="" class="close right">Hide</a>-->
 								<div class="title">Site Settings</div>
@@ -209,7 +212,7 @@
 								</div>
 								<br><br>
 								{{user.email}}
-								<button class="topcoat-button--quiet" ng-click="editAcct($index)" ng:class="{active: site.editing}">Edit Name</button>
+								<button class="topcoat-button--quiet" ng-click="editAcct($index)" ng:class="{active: site.editing}">Edit Email</button>
 								<div class="question-wrap" ng-show="site.editing">
     								<input spellcheck="false" ng-minlength="1" ng-model="user.email" update-model-on-blur></input><button ng-click="noEditAcct()">Done</button>
 								</div>
@@ -234,7 +237,7 @@
 
 									<!-- <div class="line-item card-wrap" ng:class="{true:'active', false:''}[message.active=='1']" ng-repeat="message in site.messages"> -->
 									<div ng-repeat="message in site.messages | orderObjectBy:'position':true">
-										<a class="three-columns alpha analytics activate_modal" name='first_window' ng-click="openAnalytics($index)">Analytics</a>
+										<!-- <a class="three-columns alpha analytics activate_modal" name='first_window' ng-click="openAnalytics($index)">Analytics</a> -->
 										<div class="line-item card-wrap">
                                             <div class="default">
     											<div class="timestamp">
