@@ -37,10 +37,10 @@
     </div>
 
     <!-- password -->
-    <input type="password" class="fresh-text-input signup-input-wide"  ng-model="password" placeholder="Password" />
+    <input type="password" class="fresh-text-input signup-input-wide"  ng-model="password" placeholder="Password" equal="{{confirm_password}}"/>
 
-    <input name="confirm_password" type="password" class="fresh-text-input signup-input-wide" ng-model="repassword" required equal="password" placeholder="Confirm Password">
-    <div class="public-form-error-message" ng-show="signup.repassword.$error.equal">
+    <input name="confirm_password" type="password" class="fresh-text-input signup-input-wide" ng-model="repassword" required equal="{{password}}" placeholder="Confirm Password">
+    <div class="public-form-error-message" ng-show="!signup.confirm_password.$error.required && signup.confirm_password.$error.mismatch">
       Passwords do not match.
     </div>
    <!-- site url 
