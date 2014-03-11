@@ -72,6 +72,7 @@
         <script src="scripts/controllers/adminarea.js"></script>
         <script src="scripts/controllers/order.js"></script>
         <script src="scripts/directives/equal.js"></script>
+		<script src="scripts/filters/order-object-by.js"></script>
         <script src="scripts/ui-interactions.js"></script>
         <!-- endbuild -->
 
