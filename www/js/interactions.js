@@ -10,6 +10,8 @@ $(document).ready(function() {
 	});
 });
 
+	//scroll to
+
 $(document).ready(function(){
 	$('a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();

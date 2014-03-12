@@ -1,6 +1,12 @@
 <!-- AdminArea -->
 <div ng-controller="AdminAreaCtrl">
 	<div class="extended-wrap">
+		<div ng-show="user.nearPlanLimit">
+			You have used <span>{{user.voteCount}}</span> of <span>{{user.planLimit}}</span> messages. Upgrade now to continue receiving feedback from your users.
+		</div>
+		<div ng-show="user.overPlanLimit">
+			User feedback has been suspended. Upgrade now to continue receiving feedback from your users.
+		</div>
 		<div class="admin-bar">
 			<span ng-show="user.firstName">Hello, <strong>{{user.firstName}}</strong></span>
 			<span ng-hide="user.firstName">Hello, <strong>{{user.email}}</strong></span>
@@ -29,53 +35,53 @@
 				<div class="row">
 					<div style="text-align:center;">
 						<div class="alpha main-nav">
-		              <!-- <a class="main-nav-item" href="#">Dashboard</a> -->
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='questions'}" ng-click="adminViewState('questions')">Control Center</a>
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Get Started</a>
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='settings'}" ng-click="adminViewState('settings')">Settings</a>
-		              		<a class="main-nav-item" ng-class="{active: adminView.state=='pricing'}" ng-click="adminViewState('pricing')">Upgrade!</a>
+		              		<a class="main-nav-item" ng-class="{active: adminView.state=='pricing', important: user.nearPlanLimit || user.overPlanLimit}" ng-click="adminViewState('pricing')">Upgrade!</a>
 						</div>
 					</div>
 					
 					<div ng-show="adminView.state=='pricing'" style="height: 0;">
 						<div class="container" style="height: 0; margin-left: 10px;">
 							<div class="card-wrap info-wrap thirteen columns settings2">
+								<h1 style="text-align: center; color: #2ecc71;">A plan that's all yours!</h1>
 					        	<div class="pricing pricing-border">
-					        		<h1>Entry</h1>
+					        		<h1 style="color: #3dcad7 !important; font-weight: lighter;">Entry</h1>
 					        		<p>Most Affordable!</p>
 					        		<br>
-					        		<h1>$7</h1>
+					        		<h1 style="font-weight: normal;">$9</h1>
 					        		<p>per month</p>
 					        		<br>
 					        		<p><strong>2,500</strong> Responses Monthly</p>
 					        		<br>
-					        		<p style="text-decoration: underline;">Question Analytics Included</p>
+					        		<!-- <p style="text-decoration: underline;">Question Analytics Included</p> -->
 					        		<br><br>
 					        		<a href="/#/order/entry" style="" class="order buy-btn">Let's Rock</a>
 					        	</div>
 					        	<div class="pricing pricing-border">
-					        		<h1>Standard</h1>
+					        		<h1 style="color: #3dcad7 !important; font-weight: lighter;">Standard</h1>
 					        		<p>Double the Responses!</p>
 					        		<br>
-					        		<h1 style="color: #2ecc71">$10</h1>
+					        		<h1 style="font-weight: normal;">$19</h1>
 					        		<p>per month</p>
 					        		<br>
-					        		<p><strong>5,000</strong> Responses Monthly</p>
+					        		<p><strong>7,500</strong> Responses Monthly</p>
 					        		<br>
-					        		<p style="text-decoration: underline;">Question Analytics Included</p>
+					        		<!-- <p style="text-decoration: underline;">Question Analytics Included</p> -->
 					        		<br><br>
 					        		<a href="/#/order/standard" style="" class="order buy-btn">Time to Roll</a>
 					        	</div>
 					        	<div class="pricing">
-					        		<h1>Deluxe</h1>
+					        		<h1 style="color: #3dcad7 !important; font-weight: lighter;">Deluxe</h1>
 					        		<p>Best Value!</p>
 					        		<br>
-					        		<h1>$25</h1>
+					        		<h1 style="font-weight: normal;">$29</h1>
 					        		<p>per month</p>
 					        		<br>
 					        		<p><strong>25,000</strong> Responses Monthly</p>
 					        		<br>
-					        		<p style="text-decoration: underline;">Question Analytics Included</p>
+					        		<!-- <p style="text-decoration: underline;">Question Analytics Included</p> -->
 					        		<br><br>
 					        		<a href="/#/order/delux" style="" class="order buy-btn">Super Size Me</a>
 					        	</div>
@@ -85,9 +91,9 @@
 					<div class="sixteen columns omega">
 						<div ng-show="adminView.state=='setup'">
 						<div id="cmscontainer">
-							<div class="three-columns alpha cms">Self Start</div>
-							<div class="three-columns alpha cms">Wordpress</div>
-							<div class="three-columns alpha cms">Share This</div>
+							<button class="three-columns alpha cms" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Self Start</button>
+							<button class="three-columns alpha cms" ng-class="{active: adminView.state=='wordpress'}" ng-click="adminViewState('wordpress')">Wordpress</button>
+							<button class="three-columns alpha cms" ng-class="{active: adminView.state=='share'}" ng-click="adminViewState('share')">Share This</button>
 						</div>
 							<div class="card-wrap info-wrap thirteen columns" id="steps">
 								<!--<a href="" class="close right">Hide</a>-->
@@ -102,7 +108,7 @@
 								<!-- step 2 -->
 								<br>
 								<strong>Step 2</strong>
-								<p>Create your first question using the "Ask a new question" section of your admin area.</p>
+								<p>Create your first question using your Control Center!</p>
 								<br>
 								<strong>A few things to remember.</strong>
 								<p>Make sure you ask simple yes or no questions and keep them short (99 characters or less).</p>
@@ -112,7 +118,67 @@
 								<p><a ng-click="adminViewState('questions')" href="" class="close">Click here</a> when you are ready to start asking questions!</p>
 							</div>
 						</div>
-						<div id="settingsBlock" class="card-wrap" ng-show="adminView.state=='settings'">
+						<div ng-show="adminView.state=='wordpress'">
+							<div id="cmscontainer">
+								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Self Start</button>
+								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='wordpress'}" ng-click="adminViewState('wordpress')">Wordpress</button>
+								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='share'}" ng-click="adminViewState('share')">Share This</button>
+							</div>
+							<div class="card-wrap info-wrap thirteen columns" id="steps">
+								<!--<a href="" class="close right">Hide</a>-->
+								<!-- step 1 -->
+								<div class="title">Activate your Wordpress plugin!</div>
+								<br><br>
+								<strong>Step 1</strong>
+								<p>Activate the plugin in your WordPress admin panel.</p>
+								<br>
+								<strong>Step 2</strong>
+								<br>
+								<p><span>Copy your UserBallot site ID:</span>&nbsp&nbsp<span><input readonly type="text" value="{{site.id}}" style="width: 150px;"></span></p>
+								<br>
+								<strong>Step 3</strong>
+								<br>
+								<p>Go to the UserBallot for WordPress configuration page in your Wordpress admin panel, and save your site ID.</p>
+								<br>
+								<strong>Step 4</strong>
+								<br>
+								<p>Create your first question using your Control Center!</p>
+								<br>
+								<strong>A few things to remember.</strong>
+								<p>Make sure you ask simple yes or no questions and keep them short (99 characters or less).</p>
+								<p>Questions are shown to a visitor only once.</p>
+								<p>Only questions that are set to <span style="color:#2ecc71;font-weight:bold;">active</span> will be shown to your visitors.</p>
+								<br>
+								<p><a ng-click="adminViewState('questions')" href="" class="close">Click here</a> when you are ready to start asking questions!</p>
+							</div>
+						</div>
+						<div ng-show="adminView.state=='share'">
+							<div id="cmscontainer">
+								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Self Start</button>
+								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='wordpress'}" ng-click="adminViewState('wordpress')">Wordpress</button>
+								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='share'}" ng-click="adminViewState('share')">Share This</button>
+							</div>
+							<div class="card-wrap info-wrap thirteen columns" id="steps">
+								<div class="title">Email your developer!</div>
+								<br><br>
+								<strong>Step 1</strong>
+								<p>Copy and paste this code into an email to your webmaster or developer. They will know what to do!</p>
+								<textarea readonly class="topcoat-textarea code-provider active" rows="3" cols="" placeholder=""><!-- UserBallot: Add this before the closing body tag  --><script type	="text/javascript">var $ub = window.$ub || {};$ub.siteId = '{{site.id}}';</script><script src="http://app.userballot.com/client.js"></script></textarea>
+  								<br><br>
+								<!-- step 2 -->
+								<br>
+								<strong>Step 2</strong>
+								<p>Create your first question using your Control Center!</p>
+ 								<br>
+ 								<strong>A few things to remember.</strong>
+ 								<p>Make sure you ask simple yes or no questions and keep them short (99 characters or less).</p>
+ 								<p>Questions are shown to a visitor only once.</p>
+ 								<p>Only questions that are set to <span style="color:#2ecc71;font-weight:bold;">active</span> will be shown to your visitors.</p>
+ 								<br>
+ 							</div>
+ 						</div>
+
+						<div style="margin-left: 0;" id="settingsBlock" class="card-wrap" ng-show="adminView.state=='settings'">
 							<div class="card-wrap info-wrap thirteen columns settings2">
 								<!--<a href="" class="close right">Hide</a>-->
 								<div class="title">Site Settings</div>
@@ -152,7 +218,7 @@
 								</div>
 								<br><br>
 								{{user.email}}
-								<button class="topcoat-button--quiet" ng-click="editAcct($index)" ng:class="{active: site.editing}">Edit Name</button>
+								<button class="topcoat-button--quiet" ng-click="editAcct($index)" ng:class="{active: site.editing}">Edit Email</button>
 								<div class="question-wrap" ng-show="site.editing">
     								<input spellcheck="false" ng-minlength="1" ng-model="user.email" update-model-on-blur></input><button ng-click="noEditAcct()">Done</button>
 								</div>
@@ -177,7 +243,7 @@
 
 									<!-- <div class="line-item card-wrap" ng:class="{true:'active', false:''}[message.active=='1']" ng-repeat="message in site.messages"> -->
 									<div ng-repeat="message in site.messages | orderObjectBy:'position':true">
-										<a class="three-columns alpha analytics activate_modal" name='first_window' ng-click="openAnalytics($index)">Analytics</a>
+										<!-- <a class="three-columns alpha analytics activate_modal" name='first_window' ng-click="openAnalytics($index)">Analytics</a> -->
 										<div class="line-item card-wrap">
                                             <div class="default">
     											<div class="timestamp">

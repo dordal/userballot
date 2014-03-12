@@ -5,7 +5,7 @@
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en" style="height: 100%;"> <!--<![endif]-->
 
 <head>
     <!-- Basic Page Needs
@@ -19,11 +19,11 @@
         include('inc/head.php');
     ?>
 </head>
-    <body class="page">
+    <body class="page" style="height: 100%;">
         <?php
             include('inc/topnav.php');
         ?>
-        <div class="page-wrap">        
+        <div class="page-wrap" style="height: 100%;">        
     	    <div class="masthead">
     		    <div class="container">
                     <div class="text">

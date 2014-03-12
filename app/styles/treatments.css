@@ -78,6 +78,15 @@ form ul li {
 	color: #fff;
 	display: block;
 }
+
+.main-nav-item.important {
+	border: 1px solid red;
+	background-color: red;
+	border-radius: 3px;
+	color: #fff;
+	display: block;
+}
+
 .main-nav-item:hover {
 	background-color: #27db73;
 	cursor: pointer;
@@ -92,17 +101,13 @@ form ul li {
 }
 .card-wrap {
 	background-color: #eaeaea;
-	/* border: 1px solid #D5D5D5; */
-	border-radius: 0 3px 3px 3px;
+	border: 1px solid #D5D5D5;
+	border-radius: 3px;
 	margin-bottom: 20px;
+	margin-left: 97px; 
 }
 .card-wrap.highlight {
 	background-color: #FFFEE4!important;
-}
-.card-wrap.ask-new-question {
-	/* background-color: #fff; */
-	/* border: 1px solid #D5D5D5; */
-	/* padding: 30px; */
 }
 .card-wrap p {
 	font-size: 14px;
@@ -480,17 +485,26 @@ button:focus {
 	padding: 10px 0px;
 	text-align: center;
 	text-decoration: none;
-	font-size: 14px;
+	font-size: 14px !important;
+	box-sizing: initial;
+	border: none;
+	float: right;
+	font: inherit;
+	width: 97px;
+	cursor: pointer;
+
 }
 .cms:hover {
-	background-color: #27db73;
+	background-color: #2ecc71;
 	transition: background .25s ease-in-out;
     -moz-transition: background .25s ease-in-out;
     -webkit-transition: background .25s ease-in-out;
 }
-.cms:active {
-	background-color: #eaeaea;
+
+.cms.active {
+	background-color: #2ecc71 !important;
 }
+
 #cmscontainer {
 	float: left;
 	width: 97px;
@@ -508,6 +522,7 @@ button:focus {
 #ask {
     background: #b9b9b9;
     margin-left: 97px;
+    border: 1px solid #a1a1a1;
 }
 #days {
 	width: 40px;
@@ -550,6 +565,7 @@ button:focus {
         padding: 0 !important;
         font-weight: bold;
         color: #323232;
+        margin-bottom: 0;
 }
 
 .pricing p {

@@ -35,7 +35,30 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 			userSite = $scope.user.sites[siteId];
 			break;
 		}
-
+		
+		// get vote count
+		var currentDate = new Date();
+		var currentMonth= ('0'+(currentDate.getMonth()+1)).slice(-2);
+		var currentYear = currentDate.getFullYear();
+		var voteCount = 0;
+		if ($scope.user.votes && $scope.user.votes[currentYear] &&
+				$scope.user.votes[currentYear][currentMonth])
+		{
+			voteCount = $scope.user.votes[currentYear][currentMonth];
+		}
+		$scope.user.voteCount = voteCount;
+		
+		// get subscription plan
+		var planType = $scope.user.plan || 'trial';
+		$scope.user.planType = planType;
+		var planLimits = {trial: 500, entry: 2500, standard: 5000, deluxe: 25000}
+		var planLimit = planLimits[$scope.user.planType];
+		$scope.user.planLimit = planLimit;
+		
+		// check plan limit
+		$scope.user.nearPlanLimit = voteCount >= 0.9 * planLimit && voteCount < planLimit;
+		$scope.user.overPlanLimit = voteCount >= planLimit; 
+		
 		// get the specific site for the user from the database
 		$scope.sitesRef = new Firebase(FIREBASE_DOMAIN + "/sites/"+userSite);
 		var sitesPromise = angularFire($scope.sitesRef, $scope, "site");
@@ -114,6 +137,10 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 		if($scope.question) {
 			if ($scope.site.messages == undefined) {
 				$scope.site.messages = {};
+
+			}
+			if ($scope.site.qCount == undefined) {
+				$scope.site.qCount = 0;
 
 			}
 			$scope.site.qCount = $scope.site.qCount + 1;
@@ -267,7 +294,7 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 
 		// default
 		$scope.adminView.state = 'questions';
-		// iotherwise set it to whatever was passed in
+		// otherwise set it to whatever was passed in
 		if( stateFlag ){
 			$scope.adminView.state = stateFlag;
 		}
