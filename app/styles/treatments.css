@@ -101,18 +101,13 @@ form ul li {
 }
 .card-wrap {
 	background-color: #eaeaea;
-	/* border: 1px solid #D5D5D5; */
+	border: 1px solid #D5D5D5;
 	border-radius: 3px;
 	margin-bottom: 20px;
 	margin-left: 97px; 
 }
 .card-wrap.highlight {
 	background-color: #FFFEE4!important;
-}
-.card-wrap.ask-new-question {
-	/* background-color: #fff; */
-	/* border: 1px solid #D5D5D5; */
-	/* padding: 30px; */
 }
 .card-wrap p {
 	font-size: 14px;
@@ -527,6 +522,7 @@ button:focus {
 #ask {
     background: #b9b9b9;
     margin-left: 97px;
+    border: 1px solid #a1a1a1;
 }
 #days {
 	width: 40px;
@@ -569,6 +565,7 @@ button:focus {
         padding: 0 !important;
         font-weight: bold;
         color: #323232;
+        margin-bottom: 0;
 }
 
 .pricing p {
