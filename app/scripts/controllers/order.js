@@ -19,6 +19,8 @@ userballotApp.controller('OrderCtrl', function($scope, $location, $http, $routeP
 		break;
 	}
 
+	$scope.plan = $routeParams.plan;
+
 	// Define the response handler for Stripe
 	var stripeResponseHandler = function(status, response) {
 		var $form = $('#order-form');
