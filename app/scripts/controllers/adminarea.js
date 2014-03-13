@@ -49,7 +49,10 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 		$scope.user.voteCount = voteCount;
 		
 		// get subscription plan
-		var planType = $scope.user.plan || 'trial';
+		var planType = $scope.user.planType;
+		if (planType == null) {
+			planType = "trial";
+		}
 		$scope.user.planType = planType;
 		var planLimits = {trial: 500, entry: 2500, standard: 5000, deluxe: 25000}
 		var planLimit = planLimits[$scope.user.planType];
