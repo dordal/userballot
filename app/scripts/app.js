@@ -58,7 +58,7 @@ var userballotApp = angular.module('userballotApp', ['firebase'])
         authRequired: false
       })
       .otherwise({
-        redirectTo: '/admin'
+        redirectTo: '/login'
       });
   }])
 
