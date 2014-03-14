@@ -123,6 +123,7 @@ switch ($action) {
 		incrementVoteCount($id, $firebase);
 
 		// Record the answer in the analytics database
+		/*
 		$ip = $_SERVER['REMOTE_ADDR'];
 
 		define('UB_SITE', $id);
@@ -133,6 +134,7 @@ switch ($action) {
 		  addUser($ip);
 		}
 		logAnswer($ip);
+		*/
 	break;
 	// Increment the mute counter
 	// id: site ID
@@ -175,6 +177,7 @@ switch ($action) {
 		    - make user if applicable
 		    - store the visit in the db
 		*/
+		/* comment out analytics for now
 		$ip = $_SERVER['REMOTE_ADDR'];
 		//$site = $_REQUEST['siteId'];
 		define('UB_SITE', $id);
@@ -184,7 +187,7 @@ switch ($action) {
 		  addUser($ip);
 		}
 		logVisit($ip);
-		
+		*/		
 	break;
 
 }

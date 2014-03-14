@@ -19,37 +19,37 @@
     <h3>Order</h3>
 
     <div id="entry">
-      <div class="pricing" style="width: 100%;">
+      <div class="pricing" ng-show="plan == 'entry'" style="width: 100%;">
         <br><br><br>
         <p><strong>Get started with our most affordable plan! This plan includes:</strong></p>
         <br>
         <ul>
           <li style="list-style: disc"><strong>2,500</strong> Responses Monthly</li>
-          <li style="list-style: disc">Question Analytics</li>
+          <!--<li style="list-style: disc">Question Analytics</li>-->
         </ul>
         <br><br>
       </div>
     </div>
     <div id="standard">
-      <div class="pricing" style="width: 100%;">
+      <div class="pricing" ng-show="plan == 'standard'" style="width: 100%;">
         <br><br><br>
         <p><strong>Get started with double the responses! This plan includes:</strong></p>
         <br>
         <ul>
           <li style="list-style: disc"><strong>5,000</strong> Responses Monthly</li>
-          <li style="list-style: disc">Question Analytics</li>
+          <!--<li style="list-style: disc">Question Analytics</li>-->
         </ul>
         <br><br>
       </div>
     </div>
-    <div id="delux">
-      <div class="pricing" style="width: 100%;">
+    <div id="deluxe">
+      <div class="pricing" ng-show="plan == 'deluxe'" style="width: 100%;">
         <br><br><br>
         <p><strong>Get started with the best value! This plan includes:</strong></p>
         <br>
         <ul>
           <li style="list-style: disc"><strong>25,000</strong> Responses Monthly</li>
-          <li style="list-style: disc">Question Analytics</li>
+          <!--<li style="list-style: disc">Question Analytics</li>-->
         </ul>
         <br><br>
       </div>

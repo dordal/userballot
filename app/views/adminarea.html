@@ -5,6 +5,7 @@
 		<div class="admin-bar">
 			<span ng-show="user.firstName">Hello, <strong>{{user.firstName}}</strong></span>
 			<span ng-hide="user.firstName">Hello, <strong>{{user.email}}</strong></span>
+			<span ng-show="user.planType != 'trial'"> | {{user.planType}} plan</span>
 			<span> | <a ng-click="logout()">Logout</a></span>
 		</div>
 		<!-- The container is a centered 960px -->
@@ -78,7 +79,7 @@
 					        		<br>
 					        		<!-- <p style="text-decoration: underline;">Question Analytics Included</p> -->
 					        		<br><br>
-					        		<a href="/#/order/delux" style="" class="order buy-btn">Super Size Me</a>
+					        		<a href="/#/order/deluxe" style="" class="order buy-btn">Super Size Me</a>
 					        	</div>
 				        	</div>
 				        </div>

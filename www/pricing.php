@@ -74,7 +74,7 @@
 		        		<br>
 		        		<!-- <p style="text-decoration: underline;">Question Analytics Included</p> -->
 		        		<br><br>
-		        		<a style="" class="buy-btn" plan="delux" >Super Size Me</a>
+		        		<a style="" class="buy-btn" plan="deluxe" >Super Size Me</a>
 		        	</div>
 	        	</div>
 		        <p id="custom-order" style="text-align: center;">For high volume and custom orders, contact us at <a href="mailto:info@userballot.com"><strong>info@userballot.com</strong></a>.</p>

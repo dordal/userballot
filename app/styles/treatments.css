@@ -355,10 +355,8 @@ button:focus {
 .month-input, .year-input {
 	float: left;
 	font-size: 14px;
-    height: 35px;
     margin-top: 18px;
     margin-right: 10px;
-    padding-top: 10px;
     width: 100px;
 }
 

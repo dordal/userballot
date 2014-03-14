@@ -19,6 +19,8 @@ userballotApp.controller('OrderCtrl', function($scope, $location, $http, $routeP
 		break;
 	}
 
+	$scope.plan = $routeParams.plan;
+
 	// Define the response handler for Stripe
 	var stripeResponseHandler = function(status, response) {
 		var $form = $('#order-form');
@@ -49,12 +51,16 @@ userballotApp.controller('OrderCtrl', function($scope, $location, $http, $routeP
 					// get the logged in user's email
 					var emailId = $scope.user.email.replace(/\./g, ',');
 
-					var userRef = new Firebase(FIREBASE_DOMAIN + "/users/" + emailId);
-					userRef.plan = $routeParams.plan;
+					var url = new Firebase(FIREBASE_DOMAIN + "/users/"+emailId);
+					var userPromise = angularFire(url, $scope, 'user');
 
-					// Redirect to the admin area
-					$location.path('/admin/');
-		
+					// when we get the user back, populate the plan and redirect to the admin area
+					userPromise.then(function(user) {
+						$scope.user.planType = $scope.plan;
+
+						// Redirect to the admin area
+						$location.path('/admin/');
+					});
 				} else {
 					$scope.generalError = data.error;
 					$scope.submitting = false;
@@ -75,12 +81,6 @@ userballotApp.controller('OrderCtrl', function($scope, $location, $http, $routeP
 
 		// Prevent the form from submitting with the default action
 		return false;
-	}
-
-	var associatePlan = function(user, plan) {
-		
-			
-
 	}
 });
 
