@@ -29,7 +29,8 @@
                     <img class="logo-line" src="img/sup.svg" alt="">
                 </div>
                 <h1 style="color: #3dcad7;">Get the pulse of your visitors.</h1>
-                <a href="http://app.userballot.com/#/signup" style="" id="save-question" class="signup-btn" style="margin-bottom: 0;">Get Started Free!</a>
+                <br><br>
+                <a href="http://app.userballot.com/#/signup" id="save-question" class="signup-btn" style="margin-bottom: 5px;">Get Started Free!</a>
                 <span><a href="http://app.userballot.com/#/login" style="color: #2ecc71; text-decoration: none;">Sign in</a></span>  
             </div>    
         </div>

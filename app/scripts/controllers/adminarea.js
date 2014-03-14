@@ -76,6 +76,10 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 			//reset account detail editing
 			$scope.user.editing = false;
 
+			if ($scope.user.alertTab = true) {
+				$scope.user.alertTab = false;
+			}
+
 		});
 
 		// Flash updates to the vote counts
@@ -228,11 +232,19 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 
 	$scope.noEditAcct = function( index ) {
 		$scope.user.editing = false;
-	}
+	};
 
 	$scope.editAcct = function( index ) {
 		$scope.user.editing = true;
 	};
+
+	$scope.alertTab = function() {
+		$scope.user.alertTab = true;
+	};
+
+	$scope.alertTabClose = function() {
+		$scope.user.alertTab = false;
+	}
 
 	// update the message
 	$scope.updateMessage = function( index ){
@@ -298,6 +310,7 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 		if( stateFlag ){
 			$scope.adminView.state = stateFlag;
 		}
+		$scope.user.alertTab = false;
 	};
 
 	$scope.openAnalytics = function(index) {

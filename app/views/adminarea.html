@@ -1,12 +1,7 @@
 <!-- AdminArea -->
 <div ng-controller="AdminAreaCtrl">
 	<div class="extended-wrap">
-		<div ng-show="user.nearPlanLimit">
-			You have used <span>{{user.voteCount}}</span> of <span>{{user.planLimit}}</span> messages. Upgrade now to continue receiving feedback from your users.
-		</div>
-		<div ng-show="user.overPlanLimit">
-			User feedback has been suspended. Upgrade now to continue receiving feedback from your users.
-		</div>
+		
 		<div class="admin-bar">
 			<span ng-show="user.firstName">Hello, <strong>{{user.firstName}}</strong></span>
 			<span ng-hide="user.firstName">Hello, <strong>{{user.email}}</strong></span>
@@ -38,7 +33,7 @@
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='questions'}" ng-click="adminViewState('questions')">Control Center</a>
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Get Started</a>
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='settings'}" ng-click="adminViewState('settings')">Settings</a>
-		              		<a class="main-nav-item" ng-class="{active: adminView.state=='pricing', important: user.nearPlanLimit || user.overPlanLimit}" ng-click="adminViewState('pricing')">Upgrade!</a>
+		              		<a class="main-nav-item" ng-class="{active: adminView.state=='pricing', important: user.nearPlanLimit, priority: user.overPlanLimit}" ng-click="adminViewState('pricing')">Upgrade!</a>
 						</div>
 					</div>
 					
@@ -134,7 +129,7 @@
 								<br>
 								<strong>Step 2</strong>
 								<br>
-								<p><span>Copy your UserBallot site ID:</span>&nbsp&nbsp<span><input readonly type="text" value="{{site.id}}" style="width: 150px;"></span></p>
+								<p><span>Copy your UserBallot site ID:</span>&nbsp&nbsp<span><input style="border: 1px solid #a1a1a1; width: 150px; border-radius: 3px;" readonly type="text" value="{{site.id}}"></span></p>
 								<br>
 								<strong>Step 3</strong>
 								<br>
@@ -323,6 +318,41 @@
 			</div>
 		</div> 
 	</div>
-
+	<div style="text-align: center;">
+		<div ng-show="user.nearPlanLimit">
+			<div class="tab-alert second-priority">
+				<div ng-show="user.alertTab" class="full-tab-alert second-priority" style="padding-top: 10px;">
+					<strong>You have gotten<span>{{user.voteCount}}</span>of your<span>{{user.planLimit}}</span>responses.</strong><br>
+					<span> Upgrade now to get more feedback from your users!</span><br>
+					<a ng-click="adminViewState('pricing')">Upgrade Now</a>
+					<p style="font-size: 12px; cursor: pointer; float: right; margin-top: 40px; margin-right: 20px;" ng-click="alertTabClose()">close [x]</p>
+				</div>
+				<div ng-click="alertTab()" ng-hide="user.alertTab" style="cursor: pointer; padding: 10px 0;">
+					<span>A</span>
+					<span>L</span>
+					<span>E</span>
+					<span>R</span>
+					<span>T</span>
+				</div>
+			</div>
+		</div>
+		<div ng-show="user.overPlanLimit">
+			<div class="tab-alert first-priority">
+				<div ng-show="user.alertTab" class="full-tab-alert first-priority" style="padding-top: 10px;">
+					<strong>User feedback has been suspended.</strong> <br> 
+					<span> Upgrade now to get more feedback from your users!</span><br>
+					<a ng-click="adminViewState('pricing')">Upgrade Now</a>
+					<p style="font-size: 12px; cursor: pointer; float: right; margin-top: 40px; margin-right: 20px;" ng-click="alertTabClose()">close [x]</p>
+				</div>
+				<div ng-click="alertTab()" ng-hide="user.alertTab" style="cursor: pointer; padding: 10px 0;">
+					<span>A</span>
+					<span>L</span>
+					<span>E</span>
+					<span>R</span>
+					<span>T</span>
+				</div>
+			</div>
+		</div>
+	</div>
 </div> 
 

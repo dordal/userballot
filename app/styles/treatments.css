@@ -79,16 +79,35 @@ form ul li {
 	display: block;
 }
 
-.main-nav-item.important {
-	border: 1px solid red;
-	background-color: red;
+.main-nav-item.priority {
+	border: 1px solid #c0392b;
+	background-color: #ef3b39;
 	border-radius: 3px;
 	color: #fff;
 	display: block;
 }
 
+.main-nav-item.priority:hover {
+	border: 1px solid #d35400;
+	background-color: #e67e22;
+}
+
+.main-nav-item.important {
+	border: 1px solid #d35400;
+	background-color: #e67e22;
+	border-radius: 3px;
+	color: #fff;
+	display: block;
+}
+
+.main-nav-item.important:hover {
+	background-color: #27db73;
+	border: 1px solid #3EF089;
+}
+
 .main-nav-item:hover {
 	background-color: #27db73;
+	border: 1px solid #3EF089;
 	cursor: pointer;
 	transition: background .25s ease-in-out;
     -moz-transition: background .25s ease-in-out;
@@ -679,6 +698,55 @@ button:focus {
   font-family: 'arial', 'sans-serif';
 }
 
+input[type="checkbox"] {
+	opacity: 1;
+	position: relative;
+}
+
+.tab-alert {
+	width: 40px;
+	position: fixed;
+	left: 0;
+	top: 113.5px;
+	height: 108px;
+	border-radius: 0 10px 10px 0;
+	color: #fff;
+}
+
+.tab-alert span {
+	padding: 15px 10px;
+}
+
+.full-tab-alert {
+	width: 400px;
+	position: fixed;
+	left: 0;
+	top: 113.5px;
+	height: 98px;
+	border-radius: 0 10px 10px 0;
+	color: #fff;
+}
+
+.full-tab-alert a {
+	color: #fff;
+	float: left;
+	margin-top: 35px;
+	margin-left: 20px;
+}
+
+.first-priority {
+	border-right: 1px solid #c0392b;
+	border-top: 1px solid #c0392b;
+	border-bottom: 1px solid #c0392b;
+	background: #ef3b39;
+}
+
+.second-priority {
+	border-right: 1px solid #d35400;
+	border-top: 1px solid #d35400;
+	border-bottom: 1px solid #d35400;
+	background-color: #e67e22;
+}
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
     #cmscontainer {
@@ -701,6 +769,13 @@ button:focus {
     img {
     	margin-left: -30px;
     }
+    #firstName {
+		width: 97% !important;
+	}
+
+	#lastName {
+		width: 97% !important;
+	}
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -781,6 +856,13 @@ button:focus {
     form ul li {
     	margin-left: 0px;
     }
+    #firstName {
+		width: 97% !important;
+	}
+
+	#lastName {
+		width: 97% !important;
+	}
 }
 @media only screen and (min-width: 0px) and (max-width: 479px) {
 	#firstName {

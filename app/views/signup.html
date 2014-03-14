@@ -43,6 +43,9 @@
     <div class="public-form-error-message" ng-show="!signup.repassword.$error.required && signup.repassword.$error.mismatch">
       Passwords do not match.
     </div>
+    <div style="margin-top: 20px;">
+      <span><input type="checkbox" name="accept" ng-model="acceptConditions" required /></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="color: #323232;">By checking this box, I agree to the <a href="" style="text-decoration: underline;">Terms of Use </a>and <a href="" style="text-decoration: underline;">Privacy Policy</a>.</span>
+    </div>
    <!-- site url 
     <div class="form-section-title">Site Details</div> 
     <input type="text" class="fresh-text-input signup-input-wide" ng-model="domain" required placeholder="Site URL" /><br/>
@@ -51,14 +54,11 @@
       {{domainError}}
     </div>
     error message -->
-
     <input type="submit" class="signup-btn" ng-disabled="signup.$invalid" name="submit" value="Sign Up" /> 
 
   </form>
 
   <br>
-  <a ng-href="/#/login">Already have an account?</a> 
-
-  <br class="clear" />
+  <a ng-href="/#/login" style="text-decoration: underline;">Already have an account?</a> 
   </div>
 
