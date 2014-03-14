@@ -54,7 +54,7 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 			planType = "trial";
 		}
 		$scope.user.planType = planType;
-		var planLimits = {trial: 500, entry: 2500, standard: 5000, deluxe: 25000}
+		var  s = {trial: 500, entry: 2500, standard: 7500, deluxe: 25000}
 		var planLimit = planLimits[$scope.user.planType];
 		$scope.user.planLimit = planLimit;
 		
@@ -67,7 +67,7 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 		var sitesPromise = angularFire($scope.sitesRef, $scope, "site");
 
 		// when this completes we have the site ID
-		sitesPromise.then(function(site) {
+		sitesPromise.then(function(site) { 
 			// Assign site ID for easy access
 			$scope.site.id = siteId;
 

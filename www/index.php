@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="two-thirds column section-height section-left">
                                     <h1>Simplicity is key.</h1>
-                                    <p>Simple to implement, and simple to answer questions help you get the directional feedback you need to make better decisions. Limited to 99 characters, and requiring only one touch to answer, UserBallots have a truly simple user experience that won't distract your visitors!</p>
+                                    <p>Simple to implement, and simple to answer questions help you get the directional feedback you need to make better decisions. Limited to 99 characters, and requiring only one touch to answer, UserBallots provide a truly simple user experience that won't distract your visitors!</p>
                                 </div>
                             </div>
                             <div class="container section-container row">
@@ -99,7 +99,7 @@
                                 <a href="http://app.userballot.com/#/signup" id="save-question" class="signup-btn product-button">Try It Free!</a>
                                 <a href="/pricing.php" style="margin-left: 20px;" id="save-question" class="signup-btn product-button">See Our Plans!</a>
                             </div>
-                    </div>
+                        </div>
                     <?php
                         include('inc/footer.php');
                     ?>
