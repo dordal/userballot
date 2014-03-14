@@ -5,7 +5,9 @@
 		<div class="admin-bar">
 			<span ng-show="user.firstName">Hello, <strong>{{user.firstName}}</strong></span>
 			<span ng-hide="user.firstName">Hello, <strong>{{user.email}}</strong></span>
-			<span ng-show="user.planType != 'trial'"> | {{user.planType}} plan</span>
+			<span ng-show="user.planType == 'entry'"> | <strong>Entry Plan</strong></span>
+			<span ng-show="user.planType == 'standard'"> | <strong>Standard Plan</strong></span>
+			<span ng-show="user.planType == 'deluxe'"> | <strong>Deluxe Plan</strong></span>
 			<span> | <a ng-click="logout()">Logout</a></span>
 		</div>
 		<!-- The container is a centered 960px -->
@@ -39,47 +41,68 @@
 					</div>
 					
 					<div ng-show="adminView.state=='pricing'" style="height: 0;">
-						<div class="container" style="height: 0; margin-left: 10px;">
+						<div class="container" style="height: 0;">
 							<div class="card-wrap info-wrap thirteen columns settings2">
 								<h1 style="text-align: center; color: #2ecc71;">A plan that's all yours!</h1>
 					        	<div class="pricing pricing-border">
-					        		<h1 style="color: #3dcad7 !important; font-weight: lighter;">Entry</h1>
-					        		<p>Most Affordable!</p>
-					        		<br>
-					        		<h1 style="font-weight: normal;">$9</h1>
-					        		<p>per month</p>
-					        		<br>
-					        		<p><strong>2,500</strong> Responses Monthly</p>
-					        		<br>
-					        		<!-- <p style="text-decoration: underline;">Question Analytics Included</p> -->
-					        		<br><br>
-					        		<a href="/#/order/entry" style="" class="order buy-btn">Let's Rock</a>
+									<div ng-show="user.planType =='entry'" style="height: 300.875px; margin-bottom: -20px;">
+					        			<h1 style="color: #3dcad7 !important; font-weight: lighter;">Entry</h1>
+					        			<br><br>
+					        			<h3 style="font-weight: normal;">You have this plan!</h3>
+					        		</div>
+					        		<div ng-hide="user.planType =='entry'">
+						        		<h1 style="color: #3dcad7 !important; font-weight: lighter;">Entry</h1>
+						        		<p>Most Affordable!</p>
+						        		<br>
+						        		<h1 style="font-weight: normal;">$9</h1>
+						        		<p>per month</p>
+						        		<br>
+						        		<p><strong>2,500</strong> Responses Monthly</p>
+						        		<br>
+						        		<!-- <p style="text-decoration: underline;">Question Analytics Included</p> -->
+						        		<br><br>
+						        		<a href="/#/order/entry" style="" class="order buy-btn">Let's Rock</a>
+					        		</div>
 					        	</div>
 					        	<div class="pricing pricing-border">
-					        		<h1 style="color: #3dcad7 !important; font-weight: lighter;">Standard</h1>
-					        		<p>Triple the Responses!</p>
-					        		<br>
-					        		<h1 style="font-weight: normal;">$19</h1>
-					        		<p>per month</p>
-					        		<br>
-					        		<p><strong>7,500</strong> Responses Monthly</p>
-					        		<br>
-					        		<!-- <p style="text-decoration: underline;">Question Analytics Included</p> -->
-					        		<br><br>
-					        		<a href="/#/order/standard" style="" class="order buy-btn">Time to Roll</a>
+					        		<div ng-show="user.planType =='standard'" style="height: 300.875px; margin-bottom: -20px;">
+					        			<h1 style="color: #3dcad7 !important; font-weight: lighter;">Standard</h1>
+					        			<br><br>
+					        			<h3 style="font-weight: normal;">You have this plan!</h3>
+					        		</div>
+					        		<div ng-hide="user.planType =='standard'">
+					        			<h1 style="color: #3dcad7 !important; font-weight: lighter;">Standard</h1>
+						        		<p>Triple the Responses!</p>
+						        		<br>
+						        		<h1 style="font-weight: normal;">$19</h1>
+						        		<p>per month</p>
+						        		<br>
+						        		<p><strong>7,500</strong> Responses Monthly</p>
+						        		<br>
+						        		<!-- <p style="text-decoration: underline;">Question Analytics Included</p> -->
+						        		<br><br>
+						        		<a href="/#/order/standard" style="" class="order buy-btn">Time to Roll</a>
+					        		</div>
 					        	</div>
 					        	<div class="pricing">
-					        		<h1 style="color: #3dcad7 !important; font-weight: lighter;">Deluxe</h1>
-					        		<p>Best Value!</p>
-					        		<br>
-					        		<h1 style="font-weight: normal;">$29</h1>
-					        		<p>per month</p>
-					        		<br>
-					        		<p><strong>25,000</strong> Responses Monthly</p>
-					        		<br>
-					        		<!-- <p style="text-decoration: underline;">Question Analytics Included</p> -->
-					        		<br><br>
-					        		<a href="/#/order/deluxe" style="" class="order buy-btn">Super Size Me</a>
+					        		<div ng-show="user.planType =='deluxe'" style="height: 300.875px; margin-bottom: -20px;">
+					        			<h1 style="color: #3dcad7 !important; font-weight: lighter;">Deluxe</h1>
+					        			<br><br>
+					        			<h3 style="font-weight: normal;">You have this plan!</h3>
+					        		</div>
+					        		<div ng-hide="user.planType =='deluxe'">
+						        		<h1 style="color: #3dcad7 !important; font-weight: lighter;">Deluxe</h1>
+						        		<p>Best Value!</p>
+						        		<br>
+						        		<h1 style="font-weight: normal;">$29</h1>
+						        		<p>per month</p>
+						        		<br>
+						        		<p><strong>25,000</strong> Responses Monthly</p>
+						        		<br>
+						        		<!-- <p style="text-decoration: underline;">Question Analytics Included</p> -->
+						        		<br><br>
+						        		<a href="/#/order/deluxe" style="" class="order buy-btn">Super Size Me</a>
+						        	</div>
 					        	</div>
 				        	</div>
 				        </div>
@@ -180,7 +203,7 @@
 								<br>
 								<div class="line-item">
 									<p>What color would you like to use in your UserBallots?</p>
-									<input type='color' id="customColor" value="{{site.hue}}" ng-model="site.hue" />
+									<input style="margin-left: 15px;" type='color' id="customColor" value="{{site.hue}}" ng-model="site.hue" />
  									<input spellcheck="false" type="text" value="{{site.hue}}" ng-model="site.hue"/>
 								</div>
 								<br>
@@ -206,13 +229,13 @@
 								<br><br><br><br><br>
 								<div class="title" style="margin 50px 0 !important;">Account Info</div>
 								<br><br>
-								<span>{{user.firstName}}</span>&nbsp<span>{{user.lastName}}</span>
+								<span style="margin-left: 15px;">{{user.firstName}}</span>&nbsp<span>{{user.lastName}}</span>
 								<button class="topcoat-button--quiet" ng-click="editAcct($index)" ng:class="{active: site.editing}">Edit Name</button>
 								<div class="question-wrap" ng-show="user.editing">
     								<input spellcheck="false" ng-minlength="1" ng-model="user.firstName" update-model-on-blur></input><input spellcheck="false" ng-minlength="1" ng-model="user.lastName" update-model-on-blur></input><button ng-click="noEditAcct()">Done</button>
 								</div>
 								<br><br>
-								{{user.email}}
+								<span style="margin-left: 15px;">{{user.email}}</span>
 								<button class="topcoat-button--quiet" ng-click="editAcct($index)" ng:class="{active: site.editing}">Edit Email</button>
 								<div class="question-wrap" ng-show="site.editing">
     								<input spellcheck="false" ng-minlength="1" ng-model="user.email" update-model-on-blur></input><button ng-click="noEditAcct()">Done</button>

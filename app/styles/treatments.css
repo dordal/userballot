@@ -747,9 +747,6 @@ input[type="checkbox"] {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 959px) {
-    #cmscontainer {
-    	width: 15%
-    }
     .card-wrap {
     	width: 575px !important;
     	margin-left: 110px;
@@ -775,6 +772,17 @@ input[type="checkbox"] {
 		width: 97% !important;
 	}
 }
+@media only screen and (max-width: 767px) {
+	.pricing {
+		width: 100%;
+	}
+	.pricing-border {
+		border: 0;
+	}
+	.order {
+		margin-bottom: 100px;
+	}
+}
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
     .main-nav-item {
@@ -789,6 +797,8 @@ input[type="checkbox"] {
     	float: left;
     	padding: 10px 0px;
     	width: 21%;
+    	margin: 0 5px;
+    	border-radius: 3px 3px 0 0;
     }
     .signup-form,
 	.login-form {
@@ -798,9 +808,6 @@ input[type="checkbox"] {
     	margin-top: 20px;
     	width: 100%;
     	margin-left: 11.5px;
-    }
-    #settings2 {
-    	margin-left: 0px;
     }
     .card-wrap {
     	margin-bottom: 40px;
@@ -822,7 +829,8 @@ input[type="checkbox"] {
     	background-color: #2ecc71;
     }
     .code-provider {
-    	margin: 0 0 0 10px;
+    	width: 90%;
+    	margin-left: 20px;
     }
     .title {
     	padding-left: 15px;
@@ -833,14 +841,16 @@ input[type="checkbox"] {
     #questions {
     	margin-left: 0px;
     }
-    #settings2 {
+    .settings2 {
     	padding-left: 0px;
-    	padding-right: 0px; 
+    	padding-right: 0px;
+    	margin-left: 0px !important;
     }
     #steps {
     	padding-right: 0px;
     	padding-left: 0px;
     	margin: 0px;
+    	width: 100%;
     }
     #days {
     	margin-left: 15px;
@@ -880,9 +890,10 @@ input[type="checkbox"] {
     }
     .cms {
     	float: left;
-    	margin-right: 6px;
     	padding: 10px 8px;
-    	width: 63px;
+    	width: 70px;
+    	margin: 0 5px;
+    	border-radius: 3px 3px 0 0;
     }
     .signup-form,
 	.login-form {
@@ -890,14 +901,11 @@ input[type="checkbox"] {
 	}
     #cmscontainer {
     	margin-top: 20px;
-    	width: auto;
-    	margin-left: 8%;
+    	width: 100%;
+    	margin: 10px 7px 0;
     }
     .info-wrap {
     	padding-left: 0px;
-    }
-    #settings2 {
-    	margin-left: 0px;
     }
     .card-wrap {
     	margin-bottom: 40px;
@@ -916,14 +924,16 @@ input[type="checkbox"] {
     }
     .code-provider {
     	margin: 5px;
+    	width: 90%;
     }
 
     #questions {
     	margin-left: 0px;
     }
-    #settings2 {
+    .settings2 {
     	padding-left: 0px;
-    	padding-right: 0px; 
+    	padding-right: 0px;
+    	margin-left: 0px !important;
     }
     .admin-bar {
     	padding: 20px 0px;
@@ -939,6 +949,7 @@ input[type="checkbox"] {
     	padding-right: 0px;
     	padding-left: 0px;
     	margin: 0px;
+    	width: 100%;
     }
     #days {
     	margin-left: 15px;
