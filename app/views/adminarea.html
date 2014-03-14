@@ -248,12 +248,12 @@
     											</div>
 
 	    										<div class="left" style="margin-left:2.5%; padding-left:0.563rem;">
-    												<button class="topcoat-button--quiet outline" ng-click="selectActive($index)" ng:class="{active: message.active=='1'}">Active</button>
-    												<button class="topcoat-button--quiet outline" ng-click="selectDraft($index)" ng:class="{active: message.active=='0'}">Draft</button>
+    												<button class="topcoat-button--quiet outline" ng-click="selectActive(message)" ng-class="{active: message.active}">Active</button>
+    												<button class="topcoat-button--quiet outline" ng-click="selectDraft(message)" ng-class="{active: !message.active}">Draft</button>
     											</div>
 	    										<div class="right" style="margin-right:2.5%;">
-    												<button class="topcoat-button--quiet outline" ng-click="editMessage($index)">Edit</button>
-    												<button class="topcoat-button--quiet delete outline" ng-click="removeMessage($index)">Delete</button>
+    												<button class="topcoat-button--quiet outline" ng-click="editMessage(message)">Edit</button>
+    												<button class="topcoat-button--quiet delete outline" ng-click="removeMessage(message)">Delete</button>
     											</div>
 			    								<br class="clear" /><br>
 	        	    							<div class="header-small center">
@@ -267,7 +267,7 @@
 
     											<div class="editMessage left" ng-show="message.editing">
     												<textarea class="topcoat-textarea" name="text" rows="2" rows="2" cols="" ng-model="message.text" cols="60" ng-maxlength="99" update-model-on-blur>{{message.text}}</textarea><br><br>
-    												<button class="newbutton" id="update-question" ng-click="updateMessage($index)">Update</button>
+    												<button class="newbutton" id="update-question" ng-click="updateMessage(message)">Update</button>
 
     											</div>
     											<!-- results -->
@@ -304,7 +304,7 @@
 												</div>
 												<br class="clear" />
 												<div class="reset">
-													<button class="topcoat-button--quiet outline" style="margin-bottom:5px; " ng-click="resetMessageCount($index)">Reset</button>
+													<button class="topcoat-button--quiet outline" style="margin-bottom:5px; " ng-click="resetMessageCount(message)">Reset</button>
 												</div>
 											</div>
 										</div>

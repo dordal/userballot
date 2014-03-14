@@ -188,47 +188,48 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 
 	// remove a message at a specific index based on 
 	// a click in the dom
-	$scope.removeMessage = function ( index ) {
+	$scope.removeMessage = function ( message ) {
 		if (confirm('Are you sure you want to delete this question?')){
-			var key = $scope.keyAt($scope.site.messages, index);
-			$scope.site.messages[key] = null;
+			// loop through the site messages to find the passed in message
+			for (var i in $scope.site.messages) {
+				if ($scope.site.messages[i] == message) {
+					$scope.site.messages[i] = null;
+				}
+			}
 		}else{
 		}
 	};
 
 	// switch the active state to 0
-	$scope.selectDraft = function( index ){
-		var key = $scope.keyAt($scope.site.messages, index);
-		var old = $scope.site.messages[key].active;
-		$scope.site.messages[key].active = 0;
-		$scope.updateTimestamps(index, 'draft', (old != 0));
+	$scope.selectDraft = function( message ){
+		var old = message.active;
+		message.active = 0;
+		$scope.updateTimestamps(message, 'draft', (old != 0));
 	};
 
 	// switch the active state to 1
-	$scope.selectActive = function( index ){
-		var key = $scope.keyAt($scope.site.messages, index);
-		var old = $scope.site.messages[key].active;
-		$scope.site.messages[key].active = 1;
-		$scope.updateTimestamps(index, 'active', true, (old != 1));
+	$scope.selectActive = function( message ){
+		var old = message.active;
+		message.active = 1;
+		$scope.updateTimestamps(message, 'active', true, (old != 1));
 	};
 
 	// open the message for editing
-	$scope.editMessage = function( index ){
-		var key = $scope.keyAt($scope.site.messages, index);
-		$scope.site.messages[key].editing = true;
+	$scope.editMessage = function( message ){
+		message.editing = true;
 	};
 
 
 	// reset all the count fields to 0 
-	$scope.resetMessageCount = function( index ) {
+	$scope.resetMessageCount = function( message ) {
 		if (confirm("Are you sure you want to reset this question's answers?")){
 			var key = $scope.keyAt($scope.site.messages, index);
-			var old = $scope.site.messages[key].active;
-			$scope.site.messages[key].mute = 0;
-			$scope.site.messages[key].views = 0;
-			$scope.site.messages[key].yesVotes = 0;
-			$scope.site.messages[key].noVotes = 0;
-			$scope.updateTimestamps(index, 'reset', (old == 1));
+			var old = message.active;
+			message.mute = 0;
+			message.views = 0;
+			message.yesVotes = 0;
+			message.noVotes = 0;
+			$scope.updateTimestamps(message, 'reset', (old == 1));
 		}else{
 		}
 	};
@@ -250,40 +251,38 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 	}
 
 	// update the message
-	$scope.updateMessage = function( index ){
-		var key = $scope.keyAt($scope.site.messages, index);
-		$scope.site.messages[key].editing = false;
-		$scope.updateTimestamps(index, 'update');
+	$scope.updateMessage = function( message ){
+		message.editing = false;
+		$scope.updateTimestamps(message, 'update');
 	};
 
-	$scope.updateTimestamps = function( index, action, isChange) {
-		var key = $scope.keyAt($scope.site.messages, index);
+	$scope.updateTimestamps = function( message, action, isChange) {
 		var ts = new Date();
 		switch (action) {
 			case 'active':
 			if (isChange) {
-				$scope.site.messages[key].startdate = ts;
-				$scope.site.messages[key].enddate = null;
+				message.startdate = ts;
+				message.enddate = null;
 			}
 			break;
 			case 'draft':
 			if (isChange) {
-				$scope.site.messages[key].enddate = ts;
+				message.enddate = ts;
 			}
 			break;
 			case 'reset':
 			if (isChange) {
-				$scope.site.messages[key].startdate = ts;
+				message.startdate = ts;
 			}
 			else {
-				$scope.site.messages[key].startdate = null;
+				message.startdate = null;
 			}
-			$scope.site.messages[key].enddate = null;
+			message.enddate = null;
 			break;
 			case 'update':
 			break;
 		}
-		$scope.site.messages[key].updated = ts;
+		message.updated = ts;
 	};
 
 	$scope.keyAt = function(obj, index) {
