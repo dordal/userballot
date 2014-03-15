@@ -78,6 +78,7 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 
 			//reset account detail editing
 			$scope.user.editing = false;
+			$scope.user.editingEmail = false;
 
 			if ($scope.user.alertTab = true) {
 				$scope.user.alertTab = false;
@@ -240,6 +241,14 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 
 	$scope.editAcct = function( index ) {
 		$scope.user.editing = true;
+	};
+
+	$scope.noEditAcctEmail = function( index ) {
+		$scope.user.editingEmail = false;
+	};
+
+	$scope.editAcctEmail = function( index ) {
+		$scope.user.editingEmail = true;
 	};
 
 	$scope.alertTab = function() {
