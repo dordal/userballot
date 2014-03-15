@@ -31,7 +31,7 @@
 		        		<br>
 		        		<h1 class="second">Free</h1>
 		        		<br><br>
-		        		<p><strong>500</strong> Responses</p>
+		        		<p><strong>50</strong> Responses Monthly</p>
 		        		<br>
 		        		<!-- <p style="text-decoration: underline;">Question Analytics Included</p> -->
 		        		<br><br>
