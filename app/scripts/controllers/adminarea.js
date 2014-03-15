@@ -54,7 +54,7 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 			planType = "trial";
 		}
 		$scope.user.planType = planType;
-		var  planLimits = {trial: 500, entry: 2500, standard: 7500, deluxe: 25000}
+		var  planLimits = {trial: 50, entry: 2500, standard: 7500, deluxe: 25000}
 		var planLimit = planLimits[$scope.user.planType];
 		$scope.user.planLimit = planLimit;
 		
