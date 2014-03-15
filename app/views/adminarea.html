@@ -236,9 +236,9 @@
 								</div>
 								<br><br>
 								<span style="margin-left: 15px;">{{user.email}}</span>
-								<button class="topcoat-button--quiet" ng-click="editAcct($index)" ng:class="{active: site.editing}">Edit Email</button>
-								<div class="question-wrap" ng-show="site.editing">
-    								<input spellcheck="false" ng-minlength="1" ng-model="user.email" update-model-on-blur></input><button ng-click="noEditAcct()">Done</button>
+								<button class="topcoat-button--quiet" ng-click="editAcctEmail($index)" ng:class="{active: site.editingEmail}">Edit Email</button>
+								<div class="question-wrap" ng-show="user.editingEmail">
+    								<input style="width: 150px;" spellcheck="false" ng-minlength="1"  ng-model="user.email" update-model-on-blur></input><button ng-click="noEditAcctEmail()">Done</button>
 								</div>
 							</div>
 						</div>
