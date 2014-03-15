@@ -11,7 +11,7 @@
     <!-- Basic Page Needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>UserBallot | Our Product</title>
+    <title>UserBallot | FAQ</title>
     <meta name="description" content="">
     <meta name="author" content="">
 

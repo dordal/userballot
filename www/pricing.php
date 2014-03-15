@@ -7,7 +7,7 @@
 		 <!-- Basic Page Needs
 	    ================================================== -->
     	<meta charset="utf-8">
-	    <title>UserBallot</title>
+	    <title>UserBallot | Pricing</title>
     	<meta name="description" content="">
     	<meta name="author" content="">
 
