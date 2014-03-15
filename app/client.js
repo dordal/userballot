@@ -105,13 +105,14 @@ $ub.displayMessage = function( allowmute, frequency, hue, shade ) {
 		if ($ub.windowWidth() < 960) {
 			padding = "15px 10px 0px";
 			buttonHeight = "10px 10px";
-			ballotHeight = "70px";
+			ballotHeight = "80px";
 			textAlign = "right";
 		}
 
 		if (($ub.windowWidth() > 601) && ($ub.windowWidth() < 959)) {
 			textPadding = "10px 200px 0 0";
-			ballotButtonLocation = "right: 0px";
+			ballotButtonLocation = "right: 0px;";
+			ballotHeight = "80px";
 		}
 
 		if (($ub.windowWidth() < 1279) && ($ub.windowWidth() > 961)) {
@@ -169,7 +170,7 @@ $ub.displayMessage = function( allowmute, frequency, hue, shade ) {
 			html += "<a href='' id='ub-mute'></a>";
 		}
 			html += "" +
-			"   <div style='position: absolute; bottom: " + bottomLogo + "; " + poweredSide + ": 10px; font-size:10px'><a href='http://www.userballot.com'><img style='width:auto; max-height: 20px;' src='http://www.userballot.com/img/" + powered + "'/></a></div>"+
+			"   <div style='position: absolute; bottom: " + bottomLogo + "; " + poweredSide + ": 10px; font-size:10px'><a href='http://www.userballot.com'><img style='width:auto; max-height: 28px;' src='http://www.userballot.com/img/" + powered + "'/></a></div>"+
 			"</div>";
 
 
