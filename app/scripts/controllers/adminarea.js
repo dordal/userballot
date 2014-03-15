@@ -224,7 +224,6 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 	// reset all the count fields to 0 
 	$scope.resetMessageCount = function( message ) {
 		if (confirm("Are you sure you want to reset this question's answers?")){
-			var key = $scope.keyAt($scope.site.messages, index);
 			var old = message.active;
 			message.mute = 0;
 			message.views = 0;
