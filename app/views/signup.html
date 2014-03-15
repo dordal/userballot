@@ -37,11 +37,11 @@
     </div>
 
     <!-- password -->
-    <input type="password" name="password" class="fresh-text-input signup-input-wide"  ng-model="password" placeholder="Password" equal="{{repassword}}"/>
+    <input ng-minlength="6" type="password" name="password" class="fresh-text-input signup-input-wide"  ng-model="password" placeholder="Password" equal="{{repassword}}"/>
 
     <input name="repassword" type="password" class="fresh-text-input signup-input-wide" ng-model="repassword" required equal="{{password}}" placeholder="Confirm Password">
     <div class="public-form-error-message" ng-show="!signup.repassword.$error.required && signup.repassword.$error.mismatch">
-      Passwords do not match.
+      Password doesn't match or isn't long enough. (Password must be at least 6 characters)
     </div>
     <!-- <div style="margin-top: 20px;">
       <span><input type="checkbox" name="accept" ng-model="acceptConditions" required /></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="color: #323232;">By checking this box, I agree to the <a href="" style="text-decoration: underline;">Terms of Use </a>and <a href="" style="text-decoration: underline;">Privacy Policy</a>.</span>
