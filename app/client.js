@@ -143,7 +143,7 @@ $ub.displayMessage = function( allowmute, frequency, hue, shade ) {
 			ballotBG = ballotColor;
 			ballotButtonText = ballotColor;
 			ballotText = "#ffffff";
-			borderColor = "";
+			borderColor = "transparent";
 			powered = "poweredVibrant.svg"
 		}
 
