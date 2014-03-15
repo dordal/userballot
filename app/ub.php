@@ -54,7 +54,7 @@ function isUserOverPlanLevel($id, $firebase)
 	$overPlanLevel = False;
 	switch ($plan) {
 		case "trial":
-			$overPlanLevel = $voteCount > 500;
+			$overPlanLevel = $voteCount > 50;
 			break;
 		case "entry":
 			$overPlanLevel = $voteCount > 2500;
