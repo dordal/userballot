@@ -43,7 +43,7 @@
                 <!-- <h1>What can I find out about my users?</h1>
                 <p>In addition to the directional feedback to each of your questions, you will be able to gain insights about who is answering your questions.  You will be able to filter your results based on location data, browser type, device, time spent on a question, and more.</p> -->                
                 <h1>How much does UserBallot cost?</h1>
-                <p>You can use UserBallot free for up to 500 responses per account annually.  Website owners wanting more feedback will benefit greatly by choosing one of our monthly subscription plans.  The first tier plan is widely affordable and all plans can bring you tremendous value in the form of responses from all of your site visitors. You can look at our pricing <a href="/pricing">here!</a></p>                
+                <p>You can use UserBallot free for up to 500 responses per account annually.  Website owners wanting more feedback will benefit greatly by choosing one of our monthly subscription plans.  The first tier plan is widely affordable and all plans can bring you tremendous value in the form of responses from all of your site visitors. You can look at our pricing <a href="/#/pricing">here!</a></p>                
                 <p>We are taking this approach so we can provide as much value as possible to as many people possible.</p>
                 <h1>Is there a free version of your service?</h1>
                 <p>Yes, UserBallot will be free for up to 500 responses per website annually so you need not commit to our service without test driving it first.</p>
