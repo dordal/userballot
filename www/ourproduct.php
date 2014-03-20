@@ -25,22 +25,22 @@
     ?>
     <div class="page-wrap">        
 	    <div class="masthead">
-            <div class="container content-wrap">
-                <div class="row home">
+            <div class="container content-wrap"> <!-- bs -->
+                <div class="row home"> <!-- bs -->
                     <h1 style="padding: 0;">Don't leave important decisions to chance!</h1>
                     <p class="subheader center">Getting simple, easy to understand feedback from your users is key to making the right decisions.</p>
                     <div class="feature-triple">
-                        <div class="one-third column left">
+                        <div class="one-third column left"> <!-- bs -->
                             <img src="img/scale.svg" class="vector" alt="">
                             <h1>Simplicity is key.</h1>
                             <p>Direct answers help you make better decisions.</p>
                         </div>
-                        <div class="one-third column left">
+                        <div class="one-third column left"> <!-- bs -->
                             <img src="img/chart.svg" class="vector" alt="">
                             <h1>Get answers in real-time.</h1>
                             <p>See results the second they're answered.</p>
                         </div>
-                        <div class="one-third column left">
+                        <div class="one-third column left"> <!-- bs -->
                             <img src="img/clock.svg" class="vector" alt="">
                             <h1>Working in minutes.</h1>
                             <p>Copy and paste 2 lines of code into your site and it just works!</p>

@@ -11,14 +11,14 @@
 			<span> | <a ng-click="logout()">Logout</a></span>
 		</div>
 		<!-- The container is a centered 960px -->
-		<div class="container content-wrap">
-			<div class="sixteen columns">
-				<div class="row">
-					<div class="three columns alpha" style="margin-right: 0;">
+		<div class="container content-wrap"> <!-- bs -->
+			<div class="sixteen columns"> <!-- bs -->
+				<div class="row"> <!-- bs -->
+					<div class="three columns alpha" style="margin-right: 0;"> <!-- bs -->
 						&nbsp;
 					</div>
 					<!-- logo -->
-					<div class="thirteen columns omega logo">
+					<div class="thirteen columns omega logo"> <!-- bs -->
 						<div class="logo-container">
 					        <a href="/" style="text-decoration: none;">
 					            <img id="logo-icon" src="img/logo-icon.svg" alt="">
@@ -29,10 +29,10 @@
 				</div>
 			</div>
 			<!-- Give column value in word form (one, two..., twelve) -->
-			<div class="sixteen columns">
-				<div class="row">
+			<div class="sixteen columns"> <!-- bs -->
+				<div class="row"> <!-- bs -->
 					<div style="text-align:center;">
-						<div class="alpha main-nav">
+						<div class="alpha main-nav"> <!-- bs -->
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='questions'}" ng-click="adminViewState('questions')">Control Center</a>
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Get Started</a>
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='settings'}" ng-click="adminViewState('settings')">Settings</a>
@@ -41,8 +41,8 @@
 					</div>
 					
 					<div ng-show="adminView.state=='pricing'" style="height: 0;">
-						<div class="container" style="height: 0;">
-							<div class="card-wrap info-wrap thirteen columns settings2">
+						<div class="container" style="height: 0;"> <!-- bs -->
+							<div class="card-wrap info-wrap thirteen columns settings2"> <!-- bs -->
 								<h1 style="text-align: center; color: #2ecc71;">A plan that's all yours!</h1>
 					        	<div class="pricing pricing-border">
 									<div ng-show="user.planType =='entry'" style="height: 300.875px; margin-bottom: -20px;">
@@ -107,13 +107,13 @@
 				        	</div>
 				        </div>
 					</div>
-					<div class="sixteen columns omega">
+					<div class="sixteen columns omega"><!-- bs -->
 						<div ng-show="adminView.state=='setup'">
 						<div id="cmscontainer">
-							<button class="three-columns alpha cms" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Get Started</button>
-							<button class="three-columns alpha cms" ng-class="{active: adminView.state=='wordpress'}" ng-click="adminViewState('wordpress')">Wordpress</button>
+							<button class="three-columns alpha cms" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Get Started</button> <!-- bs -->
+							<button class="three-columns alpha cms" ng-class="{active: adminView.state=='wordpress'}" ng-click="adminViewState('wordpress')">Wordpress</button> <!-- bs -->
 						</div>
-							<div class="card-wrap info-wrap thirteen columns" id="steps">
+							<div class="card-wrap info-wrap thirteen columns" id="steps"> <!-- bs -->
 								<!--<a href="" class="close right">Hide</a>-->
 								<!-- step 1 -->
 								<div class="title">Let's get started!</div>
@@ -131,17 +131,17 @@
 								<strong>A few things to remember.</strong>
 								<p>Make sure you ask simple yes or no questions and keep them short (99 characters or less).</p>
 								<p>Questions are shown to a visitor only once.</p>
-								<p>Only questions that are set to <span style="color:#2ecc71;font-weight:bold;">active</span> will be shown to your visitors.</p>
+								<p>Only questions that are set to <span style="color:#2ecc71; font-weight:bold;">active</span> will be shown to your visitors.</p>
 								<br>
 								<p><a ng-click="adminViewState('questions')" href="" class="close">Click here</a> when you are ready to start asking questions!</p>
 							</div>
 						</div>
 						<div ng-show="adminView.state=='wordpress'">
 							<div id="cmscontainer">
-								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Self Start</button>
-								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='wordpress'}" ng-click="adminViewState('wordpress')">Wordpress</button>
+								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Self Start</button> <!-- bs -->
+								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='wordpress'}" ng-click="adminViewState('wordpress')">Wordpress</button> <!-- bs -->
 							</div>
-							<div class="card-wrap info-wrap thirteen columns" id="steps">
+							<div class="card-wrap info-wrap thirteen columns" id="steps"> <!-- bs -->
 								<!--<a href="" class="close right">Hide</a>-->
 								<!-- step 1 -->
 								<div class="title">Activate your Wordpress plugin!</div>
@@ -171,45 +171,45 @@
 						</div>
 
 						<div style="margin-left: 0;" id="settingsBlock" ng-show="adminView.state=='settings'">
-							<div class="card-wrap info-wrap thirteen columns settings2">
+							<div class="card-wrap info-wrap thirteen columns settings2"> <!-- bs -->
 								<div class="title">Site Settings</div>
 								<br>
-								<div class="line-item">
+								<div class="line-item"> <!-- bs -->
 									<p>What color would you like to use in your UserBallots?</p>
 									<input style="margin-left: 15px;" type='color' id="customColor" value="{{site.hue}}" ng-model="site.hue" />
  									<input spellcheck="false" type="text" value="{{site.hue}}" ng-model="site.hue"/>
 								</div>
 								<br>
-								<div class="line-item">
+								<div class="line-item"> <!-- bs -->
 									<p>What look would you like for your UserBallots?</p>
-									<button class="topcoat-button--quiet" id="yes" ng-click="setShade('light')" ng:class="{active:site.shade=='light'}">Light</button>
-									<button class="topcoat-button--quiet" ng-click="setShade('dark')" ng:class="{active: site.shade=='dark'}">Dark</button>
-									<button class="topcoat-button--quiet" ng-click="setShade('vibrant')" ng:class="{active: site.shade=='vibrant'}">Vibrant</button>	
+									<button class="topcoat-button--quiet" id="yes" ng-click="setShade('light')" ng:class="{active:site.shade=='light'}">Light</button> <!-- bs -->
+									<button class="topcoat-button--quiet" ng-click="setShade('dark')" ng:class="{active: site.shade=='dark'}">Dark</button> <!-- bs -->
+									<button class="topcoat-button--quiet" ng-click="setShade('vibrant')" ng:class="{active: site.shade=='vibrant'}">Vibrant</button>	<!-- bs -->
 								</div>
 								<br>
-								<div class="line-item">
+								<div class="line-item"> <!-- bs -->
 									<form name="sitesettings">
 										<p>How many days between showing each question to a visitor?</p> 
 										<input id="days" ng-model="site.frequency" maxlength="3" type="number" ngMinimum="0"/> days.
 									</form>
 								</div>	
 								<br>
-								<div class="line-item">
+								<div class="line-item"> <!-- bs -->
 									<p>Allow people to mute questions, hiding all future questions from them?</p>
-									<button class="topcoat-button--quiet" id="yes" ng-click="setAllowMute(true)" ng:class="{active: site.allowmute=='1'}">Yes</button>
-									<button class="topcoat-button--quiet" ng-click="setAllowMute(false)" ng:class="{active: site.allowmute=='0'}">No</button>	
+									<button class="topcoat-button--quiet" id="yes" ng-click="setAllowMute(true)" ng:class="{active: site.allowmute=='1'}">Yes</button> <!-- bs -->
+									<button class="topcoat-button--quiet" ng-click="setAllowMute(false)" ng:class="{active: site.allowmute=='0'}">No</button>	<!-- bs -->
 								</div>
 								<br><br><br><br><br>
 								<div class="title" style="margin 50px 0 !important;">Account Info</div>
 								<br><br>
 								<span style="margin-left: 15px;">{{user.firstName}}</span>&nbsp<span>{{user.lastName}}</span>
-								<button class="topcoat-button--quiet" ng-click="editAcct($index)" ng:class="{active: site.editing}">Edit Name</button>
+								<button class="topcoat-button--quiet" ng-click="editAcct($index)" ng:class="{active: site.editing}">Edit Name</button> <!-- bs -->
 								<div class="question-wrap" ng-show="user.editing">
     								<input spellcheck="false" ng-minlength="1" ng-model="user.firstName" update-model-on-blur></input><input spellcheck="false" ng-minlength="1" ng-model="user.lastName" update-model-on-blur></input><button ng-click="noEditAcct()">Done</button>
 								</div>
 								<br><br>
 								<span style="margin-left: 15px;">{{user.email}}</span>
-								<button class="topcoat-button--quiet" ng-click="editAcctEmail($index)" ng:class="{active: site.editingEmail}">Edit Email</button>
+								<button class="topcoat-button--quiet" ng-click="editAcctEmail($index)" ng:class="{active: site.editingEmail}">Edit Email</button> <!-- bs -->
 								<div class="question-wrap" ng-show="user.editingEmail">
     								<input style="width: 150px;" spellcheck="false" ng-minlength="1"  ng-model="user.email" update-model-on-blur></input><button ng-click="noEditAcctEmail()">Done</button>
 								</div>
@@ -219,12 +219,12 @@
 							<div id="ask" class="card-wrap ask-new-question" style="border-radius: 3px;">
 								<!-- <h2 class="emphasis-heading">Add a new question</h2> -->
 								<br>
-								<div style="color: #fbfbfb; text-align:center;" class="emphasis-heading">Ask a new question!</div>
+								<div style="color: #fbfbfb; text-align:center;" class="emphasis-heading">Ask a new question!</div> <!-- bs -->
 								<form ng-submit="submit()" ng-controller="AdminAreaCtrl" name="questionSubmitForm">
 								<div class="charcount" ng-show="questionSubmitForm.text.$valid">{{question.length}} / 99</div>
 								<div class="charcount-error" ng-show="questionSubmitForm.text.$error.maxlength">Question is too long!</div>
-								<textarea class="topcoat-textarea ask-new-question-input" ng-model="question" name="text" rows="2" cols="" ng-maxlength="99" placeholder="Keep it simple and ask a yes or no question. (99 characters or less)" required style="margin-bottom:2.5%;"></textarea>
-								<button class="newbutton" id="save-question" ng-disabled="questionSubmitForm.text.$invalid">Create</button>
+								<textarea class="topcoat-textarea ask-new-question-input" ng-model="question" name="text" rows="2" cols="" ng-maxlength="99" placeholder="Keep it simple and ask a yes or no question. (99 characters or less)" required style="margin-bottom:2.5%;"></textarea> <!-- bs -->
+								<button class="newbutton" id="save-question" ng-disabled="questionSubmitForm.text.$invalid">Create</button> <!-- bs -->
 								</form>
 							</div>
 							<div>
@@ -235,7 +235,7 @@
 									<!-- <div class="line-item card-wrap" ng:class="{true:'active', false:''}[message.active=='1']" ng-repeat="message in site.messages"> -->
 									<div ng-repeat="message in site.messages | orderObjectBy:'position':true">
 										<!-- <a class="three-columns alpha analytics activate_modal" name='first_window' ng-click="openAnalytics($index)">Analytics</a> -->
-										<div class="line-item card-wrap">
+										<div class="line-item card-wrap"> <!-- bs -->
                                             <div class="default">
     											<div class="timestamp">
 	    											<span ng-show="message.startdate"><strong>Started:</strong> {{message.startdate | date:'mediumDate'}}&nbsp;&nbsp;&nbsp;&nbsp;</span>
@@ -244,32 +244,32 @@
     											</div>
 
 	    										<div class="left" style="margin-left:2.5%; padding-left:0.563rem;">
-    												<button class="topcoat-button--quiet outline" ng-click="selectActive(message)" ng-class="{active: message.active}">Active</button>
-    												<button class="topcoat-button--quiet outline" ng-click="selectDraft(message)" ng-class="{active: !message.active}">Draft</button>
+    												<button class="topcoat-button--quiet outline" ng-click="selectActive(message)" ng-class="{active: message.active}">Active</button> <!-- bs -->
+    												<button class="topcoat-button--quiet outline" ng-click="selectDraft(message)" ng-class="{active: !message.active}">Draft</button> <!-- bs -->
     											</div>
 	    										<div class="right" style="margin-right:2.5%;">
-    												<button class="topcoat-button--quiet outline" ng-click="editMessage(message)">Edit</button>
-    												<button class="topcoat-button--quiet delete outline" ng-click="removeMessage(message)">Delete</button>
+    												<button class="topcoat-button--quiet outline" ng-click="editMessage(message)">Edit</button> <!-- bs -->
+    												<button class="topcoat-button--quiet delete outline" ng-click="removeMessage(message)">Delete</button> <!-- bs -->
     											</div>
-			    								<br class="clear" /><br>
-	        	    							<div class="header-small center">
+			    								<br class="clear" /><br> <!-- bs -->
+	        	    							<div class="header-small center"> <!-- bs --> 
     												<span id="yes-no">Question</span>
     											</div>
     											<div class="question-wrap" ng-hide="message.editing">
 				    							{{message.text}}
-    										   	<br><br><button disabled class="newbutton left hide" id="update-question">Update</button>
+    										   	<br><br><button disabled class="newbutton left hide" id="update-question">Update</button> <!-- bs -->
     											</div>
-    											<br class="clear" />
+    											<br class="clear" /> <!-- bs -->
 
     											<div class="editMessage left" ng-show="message.editing">
-    												<textarea class="topcoat-textarea" name="text" rows="2" rows="2" cols="" ng-model="message.text" cols="60" ng-maxlength="99" update-model-on-blur>{{message.text}}</textarea><br><br>
-    												<button class="newbutton" id="update-question" ng-click="updateMessage(message)">Update</button>
+    												<textarea class="topcoat-textarea" name="text" rows="2" rows="2" cols="" ng-model="message.text" cols="60" ng-maxlength="99" update-model-on-blur>{{message.text}}</textarea><br><br> <!-- bs -->
+    												<button class="newbutton" id="update-question" ng-click="updateMessage(message)">Update</button> <!-- bs -->
 
     											</div>
     											<!-- results -->
-    											<br class="clear" />
+    											<br class="clear" /><!-- bs -->
 											<div style="width: 100%; text-align: center;">
-												<div class="header-small center" style="width: 175px; text-align: center; margin: auto; height: 15px;">
+												<div class="header-small center" style="width: 175px; text-align: center; margin: auto; height: 15px;"> <!-- bs -->
 													<span class="vote">Yes</span>
 													<span class="vote">No</span>
 												</div>
@@ -298,9 +298,9 @@
 													
 													</div>
 												</div>
-												<br class="clear" />
+												<br class="clear" /> <!-- bs -->
 												<div class="reset">
-													<button class="topcoat-button--quiet outline" style="margin-bottom:5px; " ng-click="resetMessageCount(message)">Reset</button>
+													<button class="topcoat-button--quiet outline" style="margin-bottom:5px; " ng-click="resetMessageCount(message)">Reset</button> <!-- bs -->
 												</div>
 											</div>
 										</div>
@@ -310,7 +310,7 @@
 							</div>
 						</div>
 					</div>
-					<br class="clear" />
+					<br class="clear" /> <!-- bs -->
 				</div>
 			</div>
 		</div> 

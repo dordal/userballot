@@ -1,11 +1,17 @@
 <div class="footer">
     <div class="container">
-        <span class="nav-container">
-            <a class="nav" href="/pricing.php">Pricing</a>
-            <a class="nav" href="/faq.php">FAQ</a>
-            <a class="nav" href="/ourstory.php">About Us</a>
-            <a class="nav" href="/contact.php">Contact Us</a>
-        </span>
+        <div class="link-container">
+            <span class="nav-container">
+                <a class="nav" href="/pricing.php">Pricing</a>
+                <a class="nav" href="/faq.php">FAQ</a>
+                <a class="nav" href="/ourstory.php">About Us</a>
+                <a class="nav" href="/contact.php">Contact Us</a>
+            </span>
+            <div class="nav-container" style="margin: 0 23px 25px;">
+                <a class="nav" href="/tos.php">Terms of Service</a>
+                <a class="nav" href="/privacy.php">Privacy Policy</a>
+            </div>
+        </div>
         <span>
             <div class="container icon-container">
                 <div class="icon-four">

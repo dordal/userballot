@@ -1,5 +1,5 @@
 
-<div class="signup-block-wrap center">
+<div class="signup-block-wrap center"> <!-- bs -->
   <div class="admin-bar">
     <span ng-show="site.firstName">Hello, <strong>{{site.firstName}}</strong></span>
     <span ng-hide="site.firstName">Hello, <strong>{{user.email}}</strong></span>
@@ -14,7 +14,7 @@
   </div>
       
 
-  <form id="order-form" name="order" ng-submit="placeOrder()" style="padding: 0;" class="signup-form css-form" novalidate>
+  <form id="order-form" name="order" ng-submit="placeOrder()" style="padding: 0;" class="signup-form css-form" novalidate> <!-- bs -->
 
     <h3>Order</h3>
 
@@ -54,19 +54,19 @@
         <br><br>
       </div>
     </div>
-    <div class="form-section-title">
+    <div class="form-section-title"> <!-- bs -->
     </div>
 
     <!-- general error message -->
-    <div class="public-form-error-message">
+    <div class="public-form-error-message"> <!-- bs -->
       {{generalError}}
     </div>
 
-    <input type="text" ng-model="formData.name" class="fresh-text-input signup-input-wide" required placeholder="Name on Card"/><br>
+    <input type="text" ng-model="formData.name" class="fresh-text-input signup-input-wide" required placeholder="Name on Card"/><br> <!-- bs -->
 
-    <input type="text" ng-model="cc" class="cc-input fresh-text-input signup-input-wide" data-stripe="number" required placeholder="Card Number"/>
+    <input type="text" ng-model="cc" class="cc-input fresh-text-input signup-input-wide" data-stripe="number" required placeholder="Card Number"/> <!-- bs -->
 
-    <input type="text" ng-model="cvc" class="cvc-input fresh-text-input signup-input-wide" data-stripe="cvc" required placeholder="CVC"/>
+    <input type="text" ng-model="cvc" class="cvc-input fresh-text-input signup-input-wide" data-stripe="cvc" required placeholder="CVC"/> <!-- bs -->
 
     <div class="form-row">
       <select ng-model="expMonth" class="month-input" data-stripe="exp-month" required>
@@ -105,5 +105,5 @@
 
   <br>
 
-  <br class="clear" />
+  <br class="clear" /> <!-- bs -->
 </div>

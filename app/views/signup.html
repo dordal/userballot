@@ -1,4 +1,4 @@
-<div class="signup-block-wrap center">
+<div class="signup-block-wrap center"> <!-- bs -->
   <!-- logo -->
   <div class="log- logo-container">
       <a href="/" style="text-decoration: none;">
@@ -8,7 +8,7 @@
   </div>
   
 
-  <form name="signup" ng-submit="register()" class="signup-form css-form" novalidate>
+  <form name="signup" ng-submit="register()" class="signup-form css-form" novalidate> <!-- bs -->
 
     <h3>Sign Up is Free</h3>
 
@@ -24,29 +24,29 @@
     </div>
     <!-- name -->
     <div id="names">
-      <input class="fresh-text-input signup-input-wide" id="firstName" ng-model="firstName" required placeholder="First Name" />
-      <input class="fresh-text-input signup-input-wide" id="lastName" ng-model="lastName" required placeholder="Last Name" />
+      <input class="fresh-text-input signup-input-wide" id="firstName" ng-model="firstName" required placeholder="First Name" /> <!-- bs -->
+      <input class="fresh-text-input signup-input-wide" id="lastName" ng-model="lastName" required placeholder="Last Name" /> <!-- bs -->
     </div>
 
     <!-- email address -->
-    <input type="text" class="fresh-text-input signup-input-wide"  ng-model="email" name="uEmail" required placeholder="Email Address" /><br/>
+    <input type="text" class="fresh-text-input signup-input-wide"  ng-model="email" name="uEmail" required placeholder="Email Address" /><br/> <!-- bs -->
 
     <!-- error message -->
-    <div ng-show="emailError" class="public-form-error-message">
+    <div ng-show="emailError" class="public-form-error-message"> <!-- bs -->
       {{emailError}}
     </div>
 
     <!-- password -->
-    <input ng-minlength="6" type="password" name="password" class="fresh-text-input signup-input-wide"  ng-model="password" placeholder="Password" equal="{{repassword}}"/>
+    <input ng-minlength="6" type="password" name="password" class="fresh-text-input signup-input-wide"  ng-model="password" placeholder="Password" equal="{{repassword}}"/> <!-- bs -->
 
-    <input name="repassword" type="password" class="fresh-text-input signup-input-wide" ng-model="repassword" required equal="{{password}}" placeholder="Confirm Password">
-    <div class="public-form-error-message" ng-show="!signup.repassword.$error.required && signup.repassword.$error.mismatch">
+    <input name="repassword" type="password" class="fresh-text-input signup-input-wide" ng-model="repassword" required equal="{{password}}" placeholder="Confirm Password"> <!-- bs -->
+    <div class="public-form-error-message" ng-show="!signup.repassword.$error.required && signup.repassword.$error.mismatch"> <!-- bs -->
       Password doesn't match or isn't long enough. (Password must be at least 6 characters)
     </div>
-    <!-- <div style="margin-top: 20px;">
+    <div style="margin-top: 20px;">
       <span><input type="checkbox" name="accept" ng-model="acceptConditions" required /></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span style="color: #323232;">By checking this box, I agree to the <a href="" style="text-decoration: underline;">Terms of Use </a>and <a href="" style="text-decoration: underline;">Privacy Policy</a>.</span>
-    </div> -->
-    <input type="submit" class="signup-btn" ng-disabled="signup.$invalid" name="submit" value="Sign Up" /> 
+    </div>
+    <input type="submit" class="signup-btn" ng-disabled="signup.$invalid" name="submit" value="Sign Up" />
 
   </form>
 

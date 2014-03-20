@@ -1,4 +1,4 @@
-<div class="signup-block-wrap center">
+<div class="signup-block-wrap center"> <!-- bs -->
   <!-- logo -->
     <div class="log-logo-container">
           <a href="/" style="text-decoration: none;">
@@ -7,31 +7,31 @@
           </a>
     </div>
 
-	<form ng-submit="login()" class="login-form css-form">
+	<form ng-submit="login()" class="login-form css-form"> <!-- bs -->
 
     <h3>Sign In</h3>
 
-    <div class="form-section-title"></div>
+    <div class="form-section-title"></div> <!-- bs -->
 
     <!-- general error message -->
-    <div class="public-form-error-message">
+    <div class="public-form-error-message"> <!-- bs -->
       {{error}}
     </div>
 
     <!-- email address -->
-    <input type="text" class="fresh-text-input signup-input-wide"  ng-model="email" required placeholder="Email Address" /><br/>
+    <input type="text" class="fresh-text-input signup-input-wide"  ng-model="email" required placeholder="Email Address" /><br/> <!-- bs -->
 
     <!-- error message -->
-    <div ng-show="emailError" class="public-form-error-message">
+    <div ng-show="emailError" class="public-form-error-message"> <!-- bs -->
     	{{emailError}}
     </div>
     <!-- error message -->
-    <div ng-show="passwdError" class="public-form-error-message">
+    <div ng-show="passwdError" class="public-form-error-message"> <!-- bs -->
       {{passwdError}}
     </div>
 
     <!-- password -->
-    <input type="password" class="fresh-text-input signup-input-wide"  ng-model="password" required placeholder="Password" /><br/>
+    <input type="password" class="fresh-text-input signup-input-wide"  ng-model="password" required placeholder="Password" /><br/> <!-- bs -->
 
 
 
@@ -42,5 +42,5 @@
   <br>
   <a ng-href="/#/signup">Sign up free!</a>
 
-  <br class="clear" />
+  <br class="clear" /> <!-- bs -->
 </div>

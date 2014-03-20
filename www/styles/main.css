@@ -42,6 +42,7 @@ h1 {
 .signup-btn-top {
         background-color: #2ecc71;
         border: 1px solid #17994E;
+        border-top: 0;
         border-radius: 0 0 5px 5px;
         color: #fff;
         padding: 5px 16px;
@@ -290,6 +291,7 @@ h1 {
         height: 35px;
         border-radius: 100%;
         border: 1px solid transparent;
+        margin-bottom: 10px;
 
 }
 
@@ -299,7 +301,7 @@ h1 {
 
 .footer .icon-container {
         width: 20%;
-        padding-bottom: 10px;
+        height: 0px;
 }
 
 .social-media:hover {
@@ -316,7 +318,7 @@ h1 {
         font-size: 12px;
         text-align: center;
         border-top: 1px dotted #323232;
-        height: 140px;
+        height: 170px;
         vertical-align: bottom;
         padding: 10px;
         padding-bottom: 18px;
@@ -330,11 +332,13 @@ h1 {
 .nav-container {
         margin: auto;
         display: inline-block;
-        margin: 15px;
+        margin: 15px 0px;
+        float: left;
 }
 
-.nav-container:first-child {
-        margin-left: 0;
+.link-container {
+        width: 266px;
+        margin: auto;
 }
 
 .funnel {
@@ -549,13 +553,10 @@ h1 {
         color: #2ecc71;
         text-decoration: none;
         font-size: 13px;
-        margin-left: 20px;
+        margin: 0 10px;
         float: left;
 }
 
-.nav a:first-child {
-        margin-left: 0;
-}
 
 .scroll {
         position: absolute;
@@ -637,4 +638,38 @@ h1 {
 #product:first-child h1 {
         font-weight: bold;
         color: #2ecc71;
+}
+.terms p {
+        font-family: serif;
+        text-align: justify;
+        margin: 25px 0;
+}
+
+.terms table {
+        border-spacing: 0;
+}
+
+.terms th {
+        border: 1px solid #000;
+}
+
+.terms td {
+        border: 1px solid #000;
+}
+
+.terms th div {
+        padding: 0 5px;
+}
+
+.terms td div {
+        padding: 0 5px;
+}
+
+.terms h3 {
+        padding-top: 50px;
+        color: #2ecc71;
+}
+
+.terms ul {
+        font-family: serif;
 }

@@ -25,7 +25,7 @@
         ?>
         <div class="page-wrap" style="height: 100%;">        
     	    <div class="masthead">
-    		    <div class="container">
+    		    <div class="container"> <!-- bs -->
                     <div class="text">
                         <h1>Our Story</h1>
                         <p>It started with a simple idea, and a common goal - to help website owners gather reliable data from their users without compromising the look and feel of their website. We found that it was a huge challenge to collect feedback that we could rely on, and use to gain direction in our own projects. The way other companies worked was either too obtrusive, or didn’t give us the right direction. Many people felt this pain, and when David Ordal presented our idea at Startup Weekend Tri-Valley, the team seemed to instantaneously form around it.</p>
