@@ -80,19 +80,20 @@ $ub.displayMessage = function( allowmute, frequency, hue, shade ) {
 		var ballotBG = "#fbfbfb";
 		var ballotText = "#323232"
 		var ballotColor = hue;
-		var ballotShade = shade;
-		var ballotButton = ballotColor;
-		var ballotButtonLocation = "right: 0px;"
-		var ballotButtonText = "#ffffff";
-		var borderColor = hue;
-		var powered = "powered.svg"
-		var poweredSide = "right";
 		if (ballotColor === undefined) {
 			var ballotColor = "#2ecc71";
 		}
+		var ballotShade = shade;
 		if (ballotShade === undefined) {
 			var ballotShade = "light";
 		}
+		var ballotButton = ballotColor;
+		var ballotButtonLocation = "right: 0px;"
+		var ballotButtonText = "#ffffff";
+		var borderColor = ballotColor;
+		var powered = "powered.svg"
+		var poweredSide = "right";
+		
 
 		if (($ub.windowWidth() < 600) && ($ub.windowWidth() > 480)) {
 			padding = "10px 10px 15px";
