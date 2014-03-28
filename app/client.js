@@ -136,7 +136,7 @@ $ub.displayMessage = function( allowmute, frequency, hue, shade ) {
 		if ($ub.windowWidth() < 395) {
 			ballotHeight = "120px";
 			buttonWidth = "55px";
-			bottomLogo = "50px";
+			bottomLogo = "5px";
 		}
 
 		if (ballotShade === "vibrant") {
