@@ -26,7 +26,7 @@ switch(APP_DOMAIN){
 
 // console.log("Current Firebase Domain: " + FIREBASE_DOMAIN);
 
-var userballotApp = angular.module('userballotApp', ['firebase'])
+var userballotApp = angular.module('userballotApp', ['firebase','ngRoute','ngSanitize'])
   .config(['$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/loading', {
@@ -63,7 +63,7 @@ var userballotApp = angular.module('userballotApp', ['firebase'])
   }])
 
    // establish authentication
-   .run(['angularFireAuth', '$rootScope', function(angularFireAuth, $rootScope) {
+   .run(function($rootScope,$firebaseSimpleLogin) {
       var ref = new Firebase(FIREBASE_DOMAIN);
-      angularFireAuth.initialize(ref, {scope: $rootScope, name: "user", path: '/loading'});
-   }]);
+      $rootScope.auth = new $firebaseSimpleLogin(ref);
+   });

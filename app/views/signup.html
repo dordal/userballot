@@ -32,7 +32,7 @@
     <input type="text" class="fresh-text-input signup-input-wide"  ng-model="email" name="uEmail" required placeholder="Email Address" /><br/> <!-- bs -->
 
     <!-- error message -->
-    <div ng-show="emailError" class="public-form-error-message"> <!-- bs -->
+    <div ng-show="emailError" class="public-form-error-message" ng-bind-html="emailError"> <!-- bs -->
       {{emailError}}
     </div>
 
