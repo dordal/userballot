@@ -171,7 +171,7 @@ function AdminAreaCtrl( $scope, $firebase, userballotAuthSvc) {
 			$scope.site.qCount = $scope.site.qCount + 1;
 			
 			// add the question
-			$scope.site.messages[$scope.sitesRef.push().name()] = {
+			$scope.site.messages[$scope.siteRef.push().name()] = {
 				text: $scope.question,
 				yesVotes: 0,
 				noVotes: 0,
