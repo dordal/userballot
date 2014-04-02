@@ -55,12 +55,14 @@
         <div class="container" ng-view></div>
 
         <script src="scripts/jquery-2.0.3.min.js"></script>
-        <script src="scripts/jquery-ui-1.10.3.custom.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
-        <script src="//cdn.firebase.com/v0/firebase.js"></script>
-        <script src="//cdn.firebase.com/v0/firebase-simple-login.js"></script>
-        <script src="//cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js"></script>
+        <script src="scripts/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-route.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.6/angular-sanitize.min.js"></script>
+        <script src="//cdn.firebase.com/js/client/1.0.6/firebase.js"></script>
+        <script src="//cdn.firebase.com/js/simple-login/1.3.0/firebase-simple-login.js"></script>
+        <script src="//cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
         <script src="https://js.stripe.com/v2/"></script>
 
         <!-- build:js scripts/scripts.js -->
@@ -72,7 +74,7 @@
         <script src="scripts/controllers/adminarea.js"></script>
         <script src="scripts/controllers/order.js"></script>
         <script src="scripts/directives/equal.js"></script>
-		<script src="scripts/filters/order-object-by.js"></script>
+        <script src="scripts/filters/order-object-by.js"></script>
         <script src="scripts/ui-interactions.js"></script>
         <!-- endbuild -->
 
