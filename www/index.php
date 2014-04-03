@@ -36,7 +36,7 @@
         </div>
     </div>
     <div class="container scroll-container"><!-- bs -->
-        <a class="scroll" href="#product">Learn More</a>
+        <a class="scroll ubb" href="#product">Learn More</a>
     </div>
     <div class="page-wrap">        
         <div class="masthead" style="position: absolute; top: 100%;">
@@ -59,6 +59,8 @@
                         </div>
                             <h1 style="padding: 50px 0 20px;">Don't leave important decisions to chance!</h1>
                             <p class="subheader center">Getting simple, easy to understand feedback from your users is key to making the right decisions. UserBallot is a simple feedback gathering tool that lets you get answers from more of your customers than ever before.</p>
+                            <a id="save-question" class="signup-btn ubb what" style="margin-bottom: 5px;">What's a UserBallot?</a>
+                            <p class="wait">(After you click, wait 3-5 seconds)</p>
                             <div class="container section-container row" style="margin-top: 150px;"> <!-- bs -->
                                 <div class="one-third column section-height section-right"> <!-- bs -->
                                     <img src="img/scale.svg" class="vector" alt="">
@@ -96,8 +98,10 @@
                                 </div>
                             </div> --> <!-- bs -->
                             <div class="container funnel"> <!-- bs -->
-                                <a href="http://app.userballot.com/#/signup" id="save-question" class="signup-btn product-button">Try It Free!</a>
-                                <a href="/pricing.php" style="margin-left: 20px;" id="save-question" class="signup-btn product-button">See Our Plans!</a>
+                                <div class="bottom-funnel">
+                                    <a href="http://app.userballot.com/#/signup" id="save-question" class="signup-btn product-button">Try It Free!</a>
+                                    <a href="/pricing.php" style="margin-left: 20px;" id="save-question" class="signup-btn product-button">See Our Plans!</a>
+                                </div>
                             </div>
                         </div>
                     <?php
@@ -116,5 +120,6 @@
           ga('create', '<?php echo GA_USERAGENT ?>', 'userballot.com');
           ga('send', 'pageview');
     </script>
+    <div id="ubScript"></div>
 </body>
 </html>

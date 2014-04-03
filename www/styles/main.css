@@ -40,8 +40,14 @@ h1 {
 }
 
 .signup-btn-top {
+        background: -webkit-gradient(#2ecc71,#16ac56); 
+        background: -o-linear-gradient(#2ecc71,#16ac56); 
+        background: -moz-linear-gradient(#2ecc71,#16ac56); 
+        background: -webkit-linear-gradient(#2ecc71,#16ac56); 
+        background: -ms-linear-gradient(#2ecc71,#16ac56); 
+        background: linear-gradient(#2ecc71,#16ac56); 
         background-color: #2ecc71;
-        border: 1px solid #17994E;
+        border: 1px solid #16ac56;
         border-top: 0;
         border-radius: 0 0 5px 5px;
         color: #fff;
@@ -52,7 +58,7 @@ h1 {
 }
 
 .signup-btn-top:hover {
-        background-color: #75ffaf;
+        box-shadow: 0 0 1px #444;
         transition: background .25s ease-in-out;
         -moz-transition: background .25s ease-in-out;
         -webkit-transition: background .25s ease-in-out;
@@ -180,18 +186,24 @@ h1 {
         font-weight: 400;
         border: none;
         margin: 5px auto 25px;
-        padding: 20px 40px;
+        padding: 15px 20px;
         width: 200px; 
         color: #fff;  
         font-size: 16px; 
-        background-color: #2ecc71; 
+        background: -webkit-gradient(#2ecc71,#16ac56); 
+        background: -o-linear-gradient(#2ecc71,#16ac56); 
+        background: -moz-linear-gradient(#2ecc71,#16ac56); 
+        background: -webkit-linear-gradient(#2ecc71,#16ac56); 
+        background: -ms-linear-gradient(#2ecc71,#16ac56); 
+        background: linear-gradient(#2ecc71,#16ac56); 
+        background-color: #2ecc71;
         text-align: center;
         text-decoration: none;
         border-radius: 3px;
-        border: 1px solid #17994E;
+        border: 1px solid #16ac56;
 }
 .signup-btn:hover {
-        background-color: #27DB73;
+        box-shadow: 0 0 1px #444;
         transition: background .25s ease-in-out;
         -moz-transition: background .25s ease-in-out;
         -webkit-transition: background .25s ease-in-out;
@@ -345,6 +357,7 @@ h1 {
         margin: 50px auto 0;
         width: 584px;
         height: 120px;
+        text-align: center;
 }
 
 .funnel a {
@@ -376,6 +389,11 @@ h1 {
 #see {
         padding-bottom: 40px;
         margin-top: 50px;
+}
+
+.bottom-funnel {
+        width: 504px;
+        margin: auto;
 }
 #double {
         width: 800px;
@@ -426,6 +444,18 @@ h1 {
 #comment {
         height: 120px;
 }
+
+.what {
+        margin-top: 50px;
+}
+
+.wait {
+        text-align: center;
+        margin-top: 0;
+        font-size: 12px;
+        color: #a1a1a1;
+}
+
 .fresh-text-input {
         display: inline-block;
         min-height: 42px;
@@ -460,20 +490,20 @@ h1 {
 #submit {
         font-size: 18px;
         margin: 40px auto 0;
-        padding: 15px 0;
+        padding: 0;
         width: 100%;
         cursor: pointer;
         background-color: #2ecc71;
         border: 1px solid #17994E;
         color: #fff;
         border-radius: 3px;
-        /* mobile safari fixes */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #2ecc71));
-        background: -o-linear-gradient(bottom, #2ecc71 0%);
-        background: -moz-linear-gradient(bottom, #2ecc71 0%);
-        background: -webkit-linear-gradient(bottom, #2ecc71 0%);
-        background: -ms-linear-gradient(bottom, #2ecc71 0%);
-        background: linear-gradient(to bottom, #2ecc71 0%);
+        background: -webkit-gradient(#2ecc71,#16ac56); 
+        background: -o-linear-gradient(#2ecc71,#16ac56); 
+        background: -moz-linear-gradient(#2ecc71,#16ac56); 
+        background: -webkit-linear-gradient(#2ecc71,#16ac56); 
+        background: -ms-linear-gradient(#2ecc71,#16ac56); 
+        background: linear-gradient(#2ecc71,#16ac56); 
+        background-color: #2ecc71;
 }
 #submit:hover {
         background-color: #27db73;
@@ -526,6 +556,13 @@ h1 {
         color: #3dcad7;
 }
 
+.numbers {
+        font-size: 35px;
+}
+
+.mo {
+        color: #3dcad7;
+}
 .buy-btn {
         letter-spacing: .5px;
         display: block;
@@ -536,14 +573,20 @@ h1 {
         width: 70%; 
         color: #fff;  
         font-size: 16px; 
-        background-color: #2ecc71; 
+        background: -webkit-gradient(#2ecc71,#16ac56); 
+        background: -o-linear-gradient(#2ecc71,#16ac56); 
+        background: -moz-linear-gradient(#2ecc71,#16ac56); 
+        background: -webkit-linear-gradient(#2ecc71,#16ac56); 
+        background: -ms-linear-gradient(#2ecc71,#16ac56); 
+        background: linear-gradient(#2ecc71,#16ac56); 
+        background-color: #2ecc71;
         text-align: center;
         text-decoration: none;
         border-radius: 3px;
-        border: 1px solid #17994E;
+        border: 1px solid #16ac56;
 }
 .buy-btn:hover {
-        background-color: #27DB73;
+        box-shadow: 0 0 1px #444;
         transition: background .25s ease-in-out;
         -moz-transition: background .25s ease-in-out;
         -webkit-transition: background .25s ease-in-out;
@@ -564,11 +607,30 @@ h1 {
         width: 100%;
         text-align: center;
         font-size: 14px;
-        color: #a1a1a1;
+        color: #2ecc71;
         text-decoration: none;
         margin-bottom: -20px;
 }
 
+.scroll:hover {
+        text-decoration: underline;
+}
+
+.faq-scroll {
+        position: relative;
+        width: auto;
+        text-align: left;
+        margin-bottom: 5px;
+        font-size: 16px;
+
+}
+
+ol {
+        color: #2ecc71;
+        margin-bottom: 100px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid #2ecc71;
+}
 .scroll-container {
         position: absolute;
         top: 95%;
