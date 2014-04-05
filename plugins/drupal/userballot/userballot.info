@@ -1,5 +1,0 @@
-name = UserBallot for Drupal
-description = Add UserBallot user feedback to your Drupal site. UserBallot helps you find the <strong>pulse</strong> of your users through <em>simple yes or no questions</em>.
-core = 7.x
-files[] = userballot.module
-configure = admin/config/content/userballot
