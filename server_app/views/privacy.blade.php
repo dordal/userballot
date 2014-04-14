@@ -1,18 +1,8 @@
-<?php
-    include('inc/environment.php');
-?>
-<!DOCTYPE html>
-<head>
-	<title>UserBallot | Terms of Service</title>
-	<?php
-		include('inc/head.php');
-	?>
-</head>
-<body>
-	<?php
-		include('inc/topnav.php');
-	?>
-	<div class="container terms">
+@extends('layout.master')
+
+@section('content')
+
+<div class="container terms">
 		<h1 style="margin-top: 100px;">Privacy Policy</h1>
 		<p><strong>Effective date:</strong> March 19, 2014</p>
 		<p>We at UserBallot know you care about how your personal information is used and shared, and we take your privacy seriously.  Please read the following to learn more about our Privacy Policy.  <strong>By using or accessing the Services in any manner, you acknowledge that you accept the practices and policies outlined in this Privacy Policy, and you hereby consent that we will collect, use, and share your information in the following ways.</strong></p>
@@ -76,7 +66,5 @@
 		<p>If you have any questions or concerns regarding our privacy policies, please send us a detailed message to info@userballot.com, and we will try to resolve your concerns.</p>
 		
 	</div>
-	<?php
-		include('inc/footer.php');
-	?>
-</body>
+
+@stop

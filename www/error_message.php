@@ -3,7 +3,7 @@
 <head>
 <title>Error</title>
 <?php
-       include('inc/head.php');
+       include ('inc/head.php');
        include ('inc/topnav.php');
 ?>
 </head>
