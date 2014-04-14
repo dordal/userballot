@@ -110,11 +110,10 @@
 					<div class="sixteen columns omega"><!-- bs -->
 						<div ng-show="adminView.state=='setup'">
 						<div id="cmscontainer">
-							<button class="three-columns alpha cms" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Get Started</button> <!-- bs -->
-							<button class="three-columns alpha cms" ng-class="{active: adminView.state=='wordpress'}" ng-click="adminViewState('wordpress')">Wordpress</button> <!-- bs -->
+							<button class="three-columns alpha cms" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Embed Code</button> <!-- bs -->
+							<button class="three-columns alpha cms" ng-class="{active: adminView.state=='wordpress'}" ng-click="adminViewState('wordpress')">CMS Plugin</button> <!-- bs -->
 						</div>
 							<div class="card-wrap info-wrap thirteen columns" id="steps"> <!-- bs -->
-								<!--<a href="" class="close right">Hide</a>-->
 								<!-- step 1 -->
 								<div class="title">Let's get started!</div>
 								<br><br>
@@ -138,24 +137,26 @@
 						</div>
 						<div ng-show="adminView.state=='wordpress'">
 							<div id="cmscontainer">
-								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Self Start</button> <!-- bs -->
-								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='wordpress'}" ng-click="adminViewState('wordpress')">Wordpress</button> <!-- bs -->
+								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Embed Code</button> <!-- bs -->
+								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='wordpress'}" ng-click="adminViewState('wordpress')">CMS Plugin</button> <!-- bs -->
 							</div>
 							<div class="card-wrap info-wrap thirteen columns" id="steps"> <!-- bs -->
-								<!--<a href="" class="close right">Hide</a>-->
 								<!-- step 1 -->
-								<div class="title">Activate your Wordpress plugin!</div>
+								<div class="title">Setup is simple with a CMS plugin!</div>
 								<br><br>
 								<strong>Step 1</strong>
-								<p>Activate the plugin in your WordPress admin panel.</p>
+								<p>Install the plugin and activate it in your CMS admin panel.</p>
 								<br>
 								<strong>Step 2</strong>
 								<br>
-								<p><span>Copy your UserBallot site ID:</span>&nbsp&nbsp<span><input style="border: 1px solid #a1a1a1; width: 150px; border-radius: 3px;" readonly type="text" value="{{site.id}}"></span></p>
+								<p><span>Copy your UserBallot site ID here:</span>&nbsp&nbsp<span><input style="border: 1px solid #a1a1a1; width: 150px; border-radius: 3px;" readonly type="text" value="{{site.id}}"></span>
+									<br>
+									<span class="small-instruction-text">NOTE: This includes the leading "-" character.</span>
+								</p>
 								<br>
 								<strong>Step 3</strong>
 								<br>
-								<p>Go to the UserBallot for WordPress configuration page in your Wordpress admin panel, and save your site ID.</p>
+								<p>Go to the plugin's configuration page, and save your site ID.</p>
 								<br>
 								<strong>Step 4</strong>
 								<br>
