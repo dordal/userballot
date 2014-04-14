@@ -1,24 +1,6 @@
-<?php
-	include('inc/environment.php');
-?>
-<!DOCTYPE html>
-<html style="height: 100%;">
-	<head>
-		 <!-- Basic Page Needs
-	    ================================================== -->
-    	<meta charset="utf-8">
-	    <title>UserBallot | Pricing</title>
-    	<meta name="description" content="">
-    	<meta name="author" content="">
+@extends('layout.master')
 
-	    <?php
-    	    include('inc/head.php');
-	    ?>
-	</head>
-	<body class="page">
-		<?php
-        	include('inc/topnav.php');
-    	?>
+@section('content')
 		<div class="page-wrap" style="height: 100%;">        
 		    <div class="masthead"> 
 		        <h1>A plan just for you.</h1>
@@ -82,8 +64,8 @@
 	        </div>
 	        <br><br><br>
 		</div>
-		<?php
-	    	include('inc/footer.php');
-	    ?>
-	</body>
-</html>
+		
+	    @include('includes/footer');
+	    
+
+@stop
