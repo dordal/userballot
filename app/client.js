@@ -239,7 +239,7 @@ $ub.displayMessage = function( allowmute, frequency, hue, shade ) {
 
 			$ub.updateCount("view");
 
-			$ub.updateUrlList();
+			//$ub.updateUrlList();
 		}, 1500);
 	}
 };
