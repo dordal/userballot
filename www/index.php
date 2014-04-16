@@ -57,46 +57,66 @@
                                 <a href="https://twitter.com/UserBallot"><img src="img/twitter.svg" alt="" class="social-media"></a>
                             </div>
                         </div>
-                            <h1 style="padding: 50px 0 20px;">Don't leave important decisions to chance!</h1>
-                            <p class="subheader center">Getting simple, easy to understand feedback from your users is key to making the right decisions. UserBallot is a simple feedback gathering tool that lets you get answers from more of your customers than ever before.</p>
+                            <h1 style="padding: 50px 0 20px;">What's a UserBallot?</h1>
+                            <div class="section-height subheader">
+                                <p>A UserBallot is a simple <a href="/faq.php#faq5">yes or no question</a> you create that appears as a footer on your website and <i>gently</i> nudges your site visitors to engage! Getting simple, easy to understand feedback from your users is a step in the right direction toward making better decisions.</p>
+                            </div>
                             <a id="save-question" class="signup-btn ubb what" style="margin-bottom: 5px;">What's a UserBallot?</a>
                             <p class="wait">(After you click, wait 3-5 seconds)</p>
                             <div class="container section-container row" style="margin-top: 150px;"> <!-- bs -->
                                 <div class="one-third column section-height section-right"> <!-- bs -->
-                                    <img src="img/scale.svg" class="vector" alt="">
+                                    <img src="img/long.svg" class="vector" alt="">
                                 </div>
                                 <div class="two-thirds column section-height section-left"> <!-- bs -->
-                                    <h1>Simplicity is key.</h1>
-                                    <p>Simple to implement, and simple to answer questions help you get the directional feedback you need to make better decisions. Limited to 99 characters, and requiring only one touch to answer, UserBallots provide a truly simple user experience that won't distract your visitors!</p>
+                                    <h1>The Problem</h1>
+                                    <p>Your online customers have short attention spans!   Getting online customers to complete <a href="/faq.php#faq10">traditional surveys</a> or just to engage with you is a problem you may have experienced.   Think about your own reaction when asked to take a ‘few minutes’ to complete a survey.  </p>
                                 </div>
                             </div>
                             <div class="container section-container row"> <!-- bs -->
                                 <div class="one-third column section-height section-left"> <!-- bs -->
-                                    <img src="img/chart.svg" class="vector" alt="">
+                                    <img src="img/touch.svg" class="vector" alt="">
                                 </div>
                                 <div class="two-thirds column section-height section-right"> <!-- bs -->
-                                    <h1>You're in control!</h1>
-                                    <p>The Control Center is the place you go to create questions, and get real-time results from your users.<!-- , and view analytics about the people answering your questions. --> Create simple yes or no feedback questions based on suggestions we provide, or your own ideas.</p>
+                                    <h1>Seamless Feedback</h1>
+                                    <p>Take the friction out of the <a href="/faq.php#faq5">customer feedback experience </a> and hear from more of your online visitors!  Limited to one question and requiring only one touch to answer, <a href="/faq.php#faq6">UserBallots</a> provide an elegant experience for your users and the directional feedback you need to make better decisions.</p>
                                 </div>
                             </div>
                             <div class="container section-container row"> <!-- bs -->
                                 <div class="one-third column section-height section-right"> <!-- bs -->
-                                    <img src="img/clock.svg" class="vector" alt="">
+                                    <img src="img/me.svg" class="vector" alt="">
                                 </div>
                                 <div class="two-thirds column section-height section-left"> <!-- bs -->
-                                    <h1>Working in minutes.</h1>
-                                    <p>UserBallot is easy to use! Just copy and paste two lines of code into your website and you’re set. We give you step by step instructions, so whether you are a do-it-yourselfer, have a webmaster that supports you, or use Wordpress we have you covered!</p>
+                                    <h1>Is this for me?</h1>
+                                    <p>If you have an online presence and a desire to be better connected to your users, you can benefit by becoming part of the UserBallot world!   E-commerce site owners, bloggers, software startups, tech companies, political campaigners, government and non-governmental organizations are just some of the people benefiting.  </p>
                                 </div>
                             </div>
-                            <!-- <div class="container section-container row"> 
+                            <div class="container section-container row"> 
                                 <div class="one-third column section-height section-left">
-                                    <img src="img/location.svg" class="vector">
+                                    <img src="img/joy.svg" class="vector">
                                 </div>
                                 <div class="two-thirds column section-height section-right">
-                                    <h1>See important demographics.</h1>
-                                    <p>Beyond the questions, our built in analytics give you powerful insight into who your audience is! See what's essential and use our analytics to focus on the answers you care about. Know your audience. Be <strong>driven</strong> by response.</p>
+                                    <h1>You're in Control!</h1>
+                                    <p>An easy to use Control Center puts <a href="/faq.php#faq4">question creation </a> and results at your fingertips!  Create short, simple yes or no feedback questions based on suggestions we provide, or your own ideas.  See how your questions are performing in terms of response rate and numbers of yes versus no answers in real time!</p>
                                 </div>
-                            </div> --> <!-- bs -->
+                            </div><!-- bs -->
+                            <div class="container section-container row"> <!-- bs -->
+                                <div class="one-third column section-height section-right"> <!-- bs -->
+                                    <img src="img/create.svg" class="vector" alt="">
+                                </div>
+                                <div class="two-thirds column section-height section-left"> <!-- bs -->
+                                    <h1>You Create the Look and Feel</h1>
+                                    <p>UserBallot is a simple to use customer feedback platform for serving up simple yes or no questions to your mobile and web site visitors alike.  We've improved your Control Center and given you the ability to customize the look and feel of your 'UserBallots'.  Feel free to take a look!</p>
+                                </div>
+                            </div>
+                            <div class="container section-container row"> 
+                                <div class="one-third column section-height section-left">
+                                    <img src="img/watch.svg" class="vector">
+                                </div>
+                                <div class="two-thirds column section-height section-right">
+                                    <h1>Getting Started</h1>
+                                    <p>You’re only minutes away from a better way to get online customer feedback! <a href="https://app.userballot.com/#/signup">Sign up</a> for an account.   Embed the code or have your website guy embed it for you.   Use our plug-in if you’re a wordpress.org site owner / manager.   Go!  Your Control Center is the place to start creating questions and getting results!</p>
+                                </div>
+                            </div><!-- bs -->
                             <div class="container funnel"> <!-- bs -->
                                 <div class="bottom-funnel">
                                     <a href="http://app.userballot.com/#/signup" id="save-question" class="signup-btn product-button">Try It Free!</a>
