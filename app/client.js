@@ -239,7 +239,7 @@ $ub.displayMessage = function( allowmute, frequency, hue, shade ) {
 
 			$ub.updateCount("view");
 
-			//$ub.updateUrlList();
+			$ub.updateUrlList();
 		}, 1500);
 	}
 };
@@ -339,7 +339,7 @@ $ub.updateUrlList = function() {
 						found = true;
 					}
 				}
-				if (!found) {
+				if (!found && urls.length < 20) {
 					urls.push(currentUrl);
 				}
 			} else {
