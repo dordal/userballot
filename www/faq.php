@@ -48,7 +48,7 @@
                 <h1 id="faq4">Can I control whether a question is active or not?</h1>
                 <p>Absolutely!  You can turn questions on or off in the Control Center.</p>                
                 <h1 id="faq5">Why only yes or no questions?</h1>
-                <p>Yes/no formatted questions are meant to create a low cognitive load for your users.  That sounds wonky - what you really want are quick polls that are as easy to answer as to dismiss so that you end up with directional feedback from all  of your site visitors.  This will allow you to get the pulse of your visitors quickly.</p>                
+                <p>Yes/no formatted questions are meant to create a low 'cognitive overhead' for your users.  That sounds wonky - what you really want are quick polls that are as easy to answer as to dismiss so that you end up with directional feedback from all  of your site visitors.  This will allow you to get the pulse of your visitors quickly.</p>                
                 <h1 id="faq6">Which questions will my customers see?</h1>
                 <p>The UserBallot software randomly assigns questions to your site visitors.  You can set how many days you would like between questions being shown up to an individual user.</p>
                 <h1 id="faq7">What kind of results will I receive from my site visitors?</h1>
@@ -56,7 +56,7 @@
                 <!-- <h1>What can I find out about my users?</h1>
                 <p>In addition to the directional feedback to each of your questions, you will be able to gain insights about who is answering your questions.  You will be able to filter your results based on location data, browser type, device, time spent on a question, and more.</p> -->                
                 <h1 id="faq8">How much does UserBallot cost?</h1>
-                <p>You can use UserBallot free for up to 50 responses monthly.  Website owners wanting more feedback will benefit greatly by choosing one of our monthly subscription plans.  The first tier plan is widely affordable and all plans can bring you tremendous value in the form of responses from all of your site visitors. You can look at our pricing <a href="/#/pricing">here!</a></p>                
+                <p>You can use UserBallot free for up to 50 responses monthly.  Website owners wanting more feedback will benefit greatly by choosing one of our monthly subscription plans.  The first tier plan is very affordable and all plans can bring you tremendous value in the form of responses from all of your site visitors. You can look at our pricing <a href="/pricing.php">here!</a></p>                
                 <p>We are taking this approach so we can provide as much value as possible to as many people possible.</p>
                 <h1 id="faq9">Is there a free version of your service?</h1>
                 <p>Yes, UserBallot is free for up to 50 responses per month so you don't need to commit to our service without test driving it first.</p>
@@ -69,7 +69,7 @@
         </div> 
         <div class="container funnel"> <!-- bs -->
             <div class="bottom-funnel">
-                <a href="http://app.userballot.com/#/signup" id="save-question" class="signup-btn product-button">Try It Free!</a>
+                <a href="<?php echo UB_APP_DOMAIN; ?>/#/signup" id="save-question" class="signup-btn product-button">Try It Free!</a>
                 <a href="/pricing.php" style="margin-left: 20px;" id="save-question" class="signup-btn product-button">See Our Plans!</a>
             </div>
         </div>

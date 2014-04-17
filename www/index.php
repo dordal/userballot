@@ -30,8 +30,8 @@
                 </div>
                 <h1 style="color: #3dcad7;">Get the pulse of your visitors.</h1>
                 <br><br>
-                <a href="http://app.userballot.com/#/signup" id="save-question" class="signup-btn" style="margin-bottom: 5px;">Get Started Free!</a>
-                <span><a href="http://app.userballot.com/#/login" style="color: #2ecc71; text-decoration: none;">Sign in</a></span>  
+                <a href="<?php echo UB_APP_DOMAIN; ?>/#/signup" id="save-question" class="signup-btn" style="margin-bottom: 5px;">Get Started Free!</a>
+                <span><a href="<?php echo UB_APP_DOMAIN; ?>/#/login" style="color: #2ecc71; text-decoration: none;">Sign in</a></span>  
             </div>    
         </div>
     </div>
@@ -114,12 +114,12 @@
                                 </div>
                                 <div class="two-thirds column section-height section-right">
                                     <h1>Getting Started</h1>
-                                    <p>You’re only minutes away from a better way to get online customer feedback! <a href="https://app.userballot.com/#/signup">Sign up</a> for an account.   Embed the code or have your website guy embed it for you.   Use our plug-in if you’re a wordpress.org site owner / manager.   Go!  Your Control Center is the place to start creating questions and getting results!</p>
+                                    <p>You’re only minutes away from a better way to get online customer feedback! <a href="<?php echo UB_APP_DOMAIN; ?>/#/signup">Sign up</a> for an account.   Embed the code or have your website guy embed it for you.   Use our plug-in if you’re a wordpress.org site owner / manager.   Go!  Your Control Center is the place to start creating questions and getting results!</p>
                                 </div>
                             </div><!-- bs -->
                             <div class="container funnel"> <!-- bs -->
                                 <div class="bottom-funnel">
-                                    <a href="http://app.userballot.com/#/signup" id="save-question" class="signup-btn product-button">Try It Free!</a>
+                                    <a href="<?php echo UB_APP_DOMAIN; ?>/#/signup" id="save-question" class="signup-btn product-button">Try It Free!</a>
                                     <a href="/pricing.php" style="margin-left: 20px;" id="save-question" class="signup-btn product-button">See Our Plans!</a>
                                 </div>
                             </div>
