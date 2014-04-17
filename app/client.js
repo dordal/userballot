@@ -339,7 +339,7 @@ $ub.updateUrlList = function() {
 						found = true;
 					}
 				}
-				if (!found) {
+				if (!found && urls.length < 20) {
 					urls.push(currentUrl);
 				}
 			} else {
