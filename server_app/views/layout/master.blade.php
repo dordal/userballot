@@ -65,5 +65,6 @@
           ga('create', '<?php echo GA_USERAGENT ?>', 'userballot.com');
           ga('send', 'pageview');
     </script>
+    <div id="ubScript"></div>
 </body>
 </html>
