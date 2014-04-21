@@ -77,6 +77,7 @@ switch ($action) {
 	// Get the specified question
 	// id: site ID
 	case "get":
+	
 		$id = $_GET['id'];
 		$site = $firebase->get("/sites/" . $id );
 

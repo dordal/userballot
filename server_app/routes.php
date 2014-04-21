@@ -50,3 +50,9 @@ Route::get('/order', function()
 {
 	return View::make('order');
 });
+
+Route::get('/ballot/get', 'BallotController@get');
+Route::get('/ballot/vote', 'BallotController@vote');
+Route::get('/ballot/mute', 'BallotController@mute');
+Route::get('/ballot/view', 'BallotController@view');
+Route::get('/analytics', 'AnalyticsController@getData');
