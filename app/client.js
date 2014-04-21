@@ -12,8 +12,8 @@
  */
 
 // change if needed for testing
-var UB_FIREBASE_DOMAIN = "https://userballotdb.firebaseio.com/";
-var UB_URL = "https://app.userballot.com/ub.php";
+var UB_FIREBASE_DOMAIN = "https://userballotdb-staging.firebaseio.com/";
+var UB_URL = "http://userballot-app-tfite/ub.php";
 
 window.onload = function() {
 
@@ -94,7 +94,7 @@ $ub.displayMessage = function( allowmute, frequency, hue, shade ) {
 		var powered = "powered.svg"
 		var poweredSide = "right";
 		
-
+		alert($ub.windowWidth());
 		if (($ub.windowWidth() < 600) && ($ub.windowWidth() > 480)) {
 			padding = "10px 10px 15px";
 			textPadding = "0 140px 0 0";
@@ -119,9 +119,12 @@ $ub.displayMessage = function( allowmute, frequency, hue, shade ) {
 		if (($ub.windowWidth() < 1279) && ($ub.windowWidth() > 961)) {
 			textPadding = "10px 240px 0 0";
 			ballotButtonLocation = "right: 120px";
-			}
+			ballotHeight = "80px";
+		}
 
-		if ($ub.windowWidth() < 1279) {
+		if ($ub.windowWidth() > 1279) {
+			textPadding = "10px 240px 0 0";
+			ballotHeight = "80px";
 			textAlign = "left";
 		}
 
