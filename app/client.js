@@ -12,8 +12,8 @@
  */
 
 // change if needed for testing
-var UB_FIREBASE_DOMAIN = "https://userballotdb-staging.firebaseio.com/";
-var UB_URL = "http://userballot-app-tfite/ub.php";
+var UB_FIREBASE_DOMAIN = "https://userballotdb.firebaseio.com/";
+var UB_URL = "http://app.userballot.com/ub.php";
 
 window.onload = function() {
 
