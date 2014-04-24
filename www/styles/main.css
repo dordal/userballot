@@ -11,6 +11,13 @@ h1 {
         color: #3dcad7;
 }
 
+ol {
+        color: #2ecc71;
+        margin-bottom: 100px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid #2ecc71;
+}
+
 .left {
         float: left;
         text-align: inherit;
@@ -625,12 +632,7 @@ h1 {
 
 }
 
-ol {
-        color: #2ecc71;
-        margin-bottom: 100px;
-        padding-bottom: 50px;
-        border-bottom: 1px solid #2ecc71;
-}
+
 .scroll-container {
         position: absolute;
         top: 95%;

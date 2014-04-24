@@ -9025,7 +9025,6 @@ var ubdb = {
 	  }
 	}
 
-
 window.onload = function() { //Containing function
 	var obj = eval("(ubdb)"); //code to check for accounts without embedded code
 	var count = 0;
@@ -9060,7 +9059,6 @@ window.onload = function() { //Containing function
 			var urltest = "URL is false";
 			var count = count + 1;
 		}
-		
 	};
 	var newdiv = document.createElement('div');
 		newdiv.innerHTML = "<strong>" + count + "</strong>"; //creates count of the list
@@ -9068,8 +9066,7 @@ window.onload = function() { //Containing function
 
 
 
-
-	var obj = eval("(ubdb)"); // code to check for accounts with embedded code
+// code to check for accounts with embedded code
 	var count = 0;
 	var ni = document.getElementById('myBody2')
 		var newdiv = document.createElement('div');
@@ -9108,12 +9105,11 @@ window.onload = function() { //Containing function
 
 
 
-
-	var obj = eval("(ubdb)"); // function to check for accounts with embedded code but no active questions
+// function to check for accounts with embedded code and active questions
 	var count = 0;
 	var ni = document.getElementById('myBody2')
 		var newdiv = document.createElement('div');
-		newdiv.innerHTML = "<br> <br> <h1>Embedded code but no active questions</h1>"
+		newdiv.innerHTML = "<br> <br> <h1>Embedded code & active questions.</h1>"
 		ni.appendChild(newdiv);
 	for (var key in obj.users) { //emails
 		var email = key;
@@ -9121,9 +9117,9 @@ window.onload = function() { //Containing function
 		for (var boom in site_id) {
 			site_id = boom; //grabs ID
 		}
-		for (key in obj.sites) {
+		for (key in obj.sites) { //finds site id in sites
 			if (key = site_id) {
-				var site_info = key;
+				var site_info = key; //redefine site_id
 			}
 		}
 		var urlcheck = obj.sites[site_info].urls;
@@ -9132,21 +9128,24 @@ window.onload = function() { //Containing function
 		} else {
 			var url = true;
 		}
-		if (url) { //conditional if code has been embedded
-			var qcount = 0;
-			for (var key in obj.sites[site_info].messages){
-				if (obj.sites[site_info].messages[key].active === 1) {
-					var qcount = qcount + 1;
-				}
+		var msgs = obj.sites[site_info].messages;
+		var msgCount = 0;
+		for(key in msgs) {
+			if (key != "default1" && key != "default2" && key != "default3") {
+				var msg = key;
+				var active = obj.sites[site_info].messages[key].active;
+				if (active === 1) {
+					msgCount++;
+				};
 			}
-			if (qcount === 0) {
-				var urltest = "Has no active questions";
-				var ni = document.getElementById('myBody2'); //write the list to the html
-				var newdiv = document.createElement('div');
-				newdiv.innerHTML = "<p>" + email + "</p>";
-				ni.appendChild(newdiv);
-				var count = count + 1;
-			}
+		}
+		if (url && msgCount > 0) { //conditional if code has been embedded
+			var urltest = "Embedded Code";
+			var ni = document.getElementById('myBody2'); //write the list to the html
+			var newdiv = document.createElement('div');
+			newdiv.innerHTML = "<p>" + email + "</p>";
+			ni.appendChild(newdiv);
+			var count = count + 1;
 		}	
 	};
 	var newdiv = document.createElement('div');
@@ -9157,7 +9156,7 @@ window.onload = function() { //Containing function
 
 
 
-	var obj = eval("(ubdb)");  // function to list all user emails
+// function to list all user emails
 	var count = 0;
 	var ni = document.getElementById('myBody2')
 		var newdiv = document.createElement('div');
@@ -9179,3 +9178,90 @@ window.onload = function() { //Containing function
 		newdiv.innerHTML = "<strong>" + count + "</strong>"; //creates count of the list
 		ni.appendChild(newdiv);
 	}
+
+
+
+
+	//Created questions
+	var obj = eval("(ubdb)"); //code to check for accounts without embedded code
+	var count = 0;
+	var ni = document.getElementById('myBody')
+		var newdiv = document.createElement('div');
+		newdiv.innerHTML = "<h1>Created questions.</h1>"
+		ni.appendChild(newdiv);
+	for (var key in obj.users) { //emails
+			var email = key;
+			var site_id = obj.users[key].sites;
+			for (var boom in site_id) {
+				site_id = boom; //grabs ID
+			}
+			for (key in obj.sites) { //finds site id in sites
+				if (key = site_id) {
+					var site_info = key; //redefine site_id
+				}
+			}
+			var qcheck = obj.sites[site_info].qCount;
+			if (qcheck === undefined) { //checks if question has been created
+				var quest = false;
+			} else {
+				var quest = true;
+			}
+		if (quest === true) { //conditional if question is created
+			var ni = document.getElementById('myBody'); //write the list to the html
+			var newdiv = document.createElement('div');
+			newdiv.innerHTML = "<p>" + email + "</p>";
+			ni.appendChild(newdiv);
+			var urltest = "URL is false";
+			var count = count + 1;
+		} else {
+			
+		}
+	};
+	var newdiv = document.createElement('div');
+		newdiv.innerHTML = "<strong>" + count + "</strong>"; //creates count of the list
+		ni.appendChild(newdiv);
+
+
+
+
+
+	//Check for active questions
+	var count = 0;
+	var ni = document.getElementById('myBody2')
+		var newdiv = document.createElement('div');
+		newdiv.innerHTML = "<br> <br> <h1>Active Questions</h1>"
+		ni.appendChild(newdiv);
+	for (var key in obj.users) { //emails
+		var email = key;
+		var site_id = obj.users[key].sites;
+		for (var boom in site_id) {
+			site_id = boom; //grabs ID
+		}
+		for (key in obj.sites) { //finds site id in sites
+			if (key = site_id) {
+				var site_info = key; //redefine site_id
+			}
+		}
+		var msgs = obj.sites[site_info].messages;
+		var msgCount = 0;
+		for(key in msgs) {
+			if (key != "default1" && key != "default2" && key != "default3") {
+				var msg = key;
+				var active = obj.sites[site_info].messages[key].active;
+				if (active === 1) {
+					msgCount++;
+				};
+			}
+		}
+		if (msgCount > 0) { //conditional if code has been embedded
+			var urltest = "Embedded Code";
+			var ni = document.getElementById('myBody2'); //write the list to the html
+			var newdiv = document.createElement('div');
+			newdiv.innerHTML = "<p>" + email + "&nbsp&nbsp&nbsp" + msgCount + "</p>";
+			ni.appendChild(newdiv);
+			var count = count + 1;
+		}	
+	};
+	var newdiv = document.createElement('div');
+		newdiv.innerHTML = "<strong>" + count + "</strong>"; //creates count of the list
+		ni.appendChild(newdiv);
