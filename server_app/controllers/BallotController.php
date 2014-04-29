@@ -2,7 +2,7 @@
 
 class BallotController extends Controller {
 
-	$this->firebase;
+	private $firebase;
 
 	public function __construct() {
 		// Init firebase connection, we're gonna need it.

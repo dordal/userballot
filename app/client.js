@@ -12,14 +12,14 @@
  */
 
 // change if needed for testing
-var UB_FIREBASE_DOMAIN = "https://userballotdb.firebaseio.com/";
-var UB_URL = "http://app.userballot.com/ub.php";
+var UB_FIREBASE_DOMAIN = "https://userballotdb-staging.firebaseio.com/";
+var UB_URL = "http://userballot-web-tfite/ballot/";
 
 window.onload = function() {
 
 	// Call UserBallot and get back a list of messages for this site
 	req = new XMLHttpRequest();
-	req.open("GET", UB_URL + "?a=get&id=" + $ub.siteId);
+	req.open("GET", UB_URL + "get/?id=" + $ub.siteId);
 
 	req.onreadystatechange = function() {
 		if (req.readyState==4 && req.status==200) {
@@ -313,7 +313,7 @@ var docCookies = {
 
 $ub.updateCount = function(type, answer) {
 	
-	var url = UB_URL + "?a=" + type + "&id=" + $ub.siteId + "&q=" + $ub.selectedMessage.id;
+	var url = UB_URL + type + "?id=" + $ub.siteId + "&q=" + $ub.selectedMessage.id;
 	if (answer !== undefined) {
 		url += "&t=" + answer;
 	}
