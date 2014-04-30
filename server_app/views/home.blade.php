@@ -41,7 +41,7 @@
                         </div>
                         <h1 style="padding: 50px 0 20px;">What's a UserBallot?</h1>
                         <div class="section-height subheader">
-                            <p>A UserBallot is a simple <a href="/faq.php#faq5">yes or no question</a> you create that appears as a footer on your website and <i>gently</i> nudges your site visitors to engage! Getting simple, easy to understand feedback from your users is a step in the right direction toward making better decisions.</p>
+                            <p>A UserBallot is a simple <a href="/faq/#faq5">yes or no question</a> you create that appears as a footer on your website and <i>gently</i> nudges your site visitors to engage! Getting simple, easy to understand feedback from your users is a step in the right direction toward making better decisions.</p>
                         </div>                        
                         <a id="save-question" class="signup-btn ubb what" style="margin-bottom: 5px;">What's a UserBallot?</a>
                         <p class="wait">(After you click, wait 3-5 seconds)</p>
@@ -51,7 +51,7 @@
                             </div>
                             <div class="two-thirds column section-height section-left"> <!-- bs -->
                                 <h1>The Problem</h1>
-                                <p>Your online customers have short attention spans!   Getting online customers to complete <a href="/faq.php#faq10">traditional surveys</a> or just to engage with you is a problem you may have experienced.   Think about your own reaction when asked to take a ‘few minutes’ to complete a survey.  </p>
+                                <p>Your online customers have short attention spans!   Getting online customers to complete <a href="/faq/#faq10">traditional surveys</a> or just to engage with you is a problem you may have experienced.   Think about your own reaction when asked to take a ‘few minutes’ to complete a survey.  </p>
                             </div>
                         </div>
                         <div class="container section-container row"> <!-- bs -->
@@ -60,7 +60,7 @@
                             </div>
                             <div class="two-thirds column section-height section-right"> <!-- bs -->
                                 <h1>Seamless Feedback</h1>
-                                <p>Take the friction out of the <a href="/faq.php#faq5">customer feedback experience </a> and hear from more of your online visitors!  Limited to one question and requiring only one touch to answer, <a href="/faq.php#faq6">UserBallots</a> provide an elegant experience for your users and the directional feedback you need to make better decisions.</p>
+                                <p>Take the friction out of the <a href="/faq/#faq5">customer feedback experience </a> and hear from more of your online visitors!  Limited to one question and requiring only one touch to answer, <a href="/faq/#faq6">UserBallots</a> provide an elegant experience for your users and the directional feedback you need to make better decisions.</p>
                             </div>
                         </div>
                         <div class="container section-container row"> <!-- bs -->
@@ -78,13 +78,13 @@
                             </div>
                             <div class="two-thirds column section-height section-right">
                                 <h1>You're in Control!</h1>
-                                <p>An easy to use Control Center puts <a href="/faq.php#faq4">question creation </a> and results at your fingertips!  Create short, simple yes or no feedback questions based on suggestions we provide, or your own ideas.  See how your questions are performing in terms of response rate and numbers of yes versus no answers in real time!</p>
+                                <p>An easy to use Control Center puts <a href="/faq/#faq4">question creation </a> and results at your fingertips!  Create short, simple yes or no feedback questions based on suggestions we provide, or your own ideas.  See how your questions are performing in terms of response rate and numbers of yes versus no answers in real time!</p>
                             </div>
                         </div> <!-- bs -->
                         <div class="container funnel"> <!-- bs -->
                             <div class="bottom-funnel">
                                 <a href="{{UB_APP_DOMAIN}}#/signup" id="save-question" class="signup-btn product-button">Try It Free!</a>
-                                <a href="/pricing.php" style="margin-left: 20px;" id="save-question" class="signup-btn product-button">See Our Plans!</a>
+                                <a href="/pricing" style="margin-left: 20px;" id="save-question" class="signup-btn product-button">See Our Plans!</a>
                             </div>
                         </div>
                         <div class="container section-container row"> <!-- bs -->
@@ -108,7 +108,7 @@
                         <div class="container funnel"> <!-- bs -->
                             <div class="bottom-funnel">
                                 <a href="{{UB_APP_DOMAIN}}#/signup" id="save-question" class="signup-btn product-button">Try It Free!</a>
-                                <a href="/pricing.php" style="margin-left: 20px;" id="save-question" class="signup-btn product-button">See Our Plans!</a>
+                                <a href="/pricing" style="margin-left: 20px;" id="save-question" class="signup-btn product-button">See Our Plans!</a>
                             </div>
                         </div>
                     </div>
