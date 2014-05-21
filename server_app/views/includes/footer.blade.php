@@ -30,7 +30,7 @@
                 </span>
             </div>
             <div style="margin: auto; width: 150px;">
-                <img src="img/rackspace.svg" style="height: 30px;" alt="">
+                <!-- <img src="img/rackspace.svg" style="height: 30px;" alt=""> -->
                 &copy;UserBallot.com
             </div>
         </div>
