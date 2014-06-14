@@ -50,7 +50,7 @@
     <div class="container funnel"> <!-- bs -->
         <div class="bottom-funnel">
             <a href="http://app.userballot.com/#/signup" id="save-question" class="signup-btn product-button">Try It Free!</a>
-            <a href="/pricing.php" style="margin-left: 20px;" id="save-question" class="signup-btn product-button">See Our Plans!</a>
+            <a href="/pricing/" style="margin-left: 20px;" id="save-question" class="signup-btn product-button">See Our Plans!</a>
         </div>
     </div>
 </div>
