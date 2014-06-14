@@ -10,154 +10,172 @@
 /*jshint globalstrict: true*/
 
 'use strict';
-function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userballotAuthSvc) {
-	$scope.sites = [];
-	$scope.messages = [];
-	$scope.question = '';
-	$scope.myError = '';
+function AdminAreaCtrl( $scope, $firebase, userballotAuthSvc) {
 
-	var user = $scope.user;
 
-	// get the logged in user's email
-	var loggedInEmail = user.email.replace(/\./g, ',');
-	// use this to query the appropriate user
-	var url = new Firebase(FIREBASE_DOMAIN + "/users/"+loggedInEmail);
-	var userPromise = angularFire(url, $scope, 'user');
-
-	// when this completes use the user data to get their site
-	userPromise.then(function(user) {
-
-		var siteId;
-		var userSite;
-		// you can't access the site due to a random ID
-		for (siteId in $scope.user.sites) {
-			// reference to the users site
-			userSite = $scope.user.sites[siteId];
-			break;
-		}
+	/**
+	 * initView: called when the view initializes
+	 * @return {void}
+	 */
+	$scope.initView = function() {
 		
-		// get vote count
-		var currentDate = new Date();
-		var currentMonth= ('0'+(currentDate.getMonth()+1)).slice(-2);
-		var currentYear = currentDate.getFullYear();
-		var voteCount = 0;
-		if ($scope.user.votes && $scope.user.votes[currentYear] &&
-				$scope.user.votes[currentYear][currentMonth])
-		{
-			voteCount = $scope.user.votes[currentYear][currentMonth];
-		}
-		$scope.user.voteCount = voteCount;
-		
-		// get subscription plan
-		var planType = $scope.user.planType;
-		if (planType == null) {
-			planType = "trial";
-		}
-		$scope.user.planType = planType;
-		var  planLimits = {trial: 50, entry: 2500, standard: 7500, deluxe: 25000}
-		var planLimit = planLimits[$scope.user.planType];
-		$scope.user.planLimit = planLimit;
-		
-		// check plan limit
-		$scope.user.nearPlanLimit = voteCount >= 0.9 * planLimit && voteCount < planLimit;
-		$scope.user.overPlanLimit = voteCount >= planLimit; 
-		
-		// get the specific site for the user from the database
-		$scope.sitesRef = new Firebase(FIREBASE_DOMAIN + "/sites/"+userSite);
-		var sitesPromise = angularFire($scope.sitesRef, $scope, "site");
+		// at this point the user needs to be authenticated
+		// before we can do anything, so we use the promise.then
+		// callback to determine when that has happened 
+		$scope.auth.$getCurrentUser().then(function(user){
 
-		// when this completes we have the site ID
-		sitesPromise.then(function(site) { 
-			// Assign site ID for easy access
-			$scope.site.id = siteId;
+			// get the logged in user's email
+			var loggedInEmail = user.email.replace(/\./g, ',');
 
-			// reset editing on new page loads
-			for( var message in $scope.site.messages ){
-				$scope.site.messages[message].editing = false;
-			}
+			// use this to query the appropriate user
+			var userDataRef = new Firebase(FIREBASE_DOMAIN + "/users/"+loggedInEmail);
+			$scope.userData = $firebase(userDataRef);
 
-			//reset account detail editing
-			$scope.user.editing = false;
-			$scope.user.editingEmail = false;
+			// this is our user to edit throughout this controller
+			// (once bound) ACCESSED AS: $scope.user
+			$scope.userData.$bind($scope, 'user').then(function() {
 
-			if ($scope.user.alertTab = true) {
-				$scope.user.alertTab = false;
-			}
-
-		});
-
-		// Flash updates to the vote counts
-		$scope.$watch("site.messages", function(newMessages, oldMessages) {
-			if (oldMessages != null) {
-				var flashClass = "";
-				var messageName = "";
-
-				// Compare old messages to new messages. Figure out if the yes or no vote count was
-				// updated and flash the correct one
-				for (var message in newMessages) {
-					if (newMessages[message].yesVotes != oldMessages[message].yesVotes) {
-						flashClass = "yes";
-						messageName = message;
-					}
-					if (newMessages[message].noVotes != oldMessages[message].noVotes) {
-						flashClass = "no";
-						messageName = message;
-					}
-					if (newMessages[message].mute != oldMessages[message].mute) {
-						flashClass = "mute";
-						messageName = message;
-					}
-					if (newMessages[message].views != oldMessages[message].views) {
-						flashClass = "views";
-						messageName = message;
-					}
+				var siteId;
+				var userSite;
+				// you can't access the site due to a random ID
+				for (siteId in $scope.user.sites) {
+					// reference to the users site
+					userSite = $scope.user.sites[siteId];
+					break;
 				}
-				if (flashClass !== "") {
-					jQuery("." + flashClass + "-" + messageName).css("background-color", "#eee");
-					jQuery("." + flashClass + "-" + messageName).animate({
-						backgroundColor: "#ffffff"
-					}, 1000);
-
+				
+				// get vote count
+				var currentDate = new Date();
+				var currentMonth= ('0'+(currentDate.getMonth()+1)).slice(-2);
+				var currentYear = currentDate.getFullYear();
+				var voteCount = 0;
+				if ($scope.user.votes && $scope.user.votes[currentYear] &&
+						$scope.user.votes[currentYear][currentMonth])
+				{
+					voteCount = $scope.user.votes[currentYear][currentMonth];
 				}
-			}
-		});
+				$scope.user.voteCount = voteCount;
+				
+				// get subscription plan
+				var planType = $scope.user.planType;
+				if (planType == null) {
+					planType = "trial";
+				}
+				$scope.user.planType = planType;
+				var  planLimits = {trial: 50, entry: 2500, standard: 7500, deluxe: 25000}
+				var planLimit = planLimits[$scope.user.planType];
+				$scope.user.planLimit = planLimit;
+				
+				// check plan limit
+				$scope.user.nearPlanLimit = voteCount >= 0.9 * planLimit && voteCount < planLimit;
+				$scope.user.overPlanLimit = voteCount >= planLimit; 
+				
+				// get the specific site for the user from the database
+				// we set the ref in scope here so we can push to the
+				// site object from other methods
+				$scope.siteRef = new Firebase(FIREBASE_DOMAIN + "/sites/"+userSite);
+				$scope.siteData = $firebase($scope.siteRef);
 
-		$scope.$watch('state', function(){
-			if($scope.onStateChange){
-				$scope.onStateChange();
-			}
-		}, true);
+				// this is our site to read/write to throughout this
+				// controller (once bound) ACCESSED AS: $scope.site
+				$scope.siteData.$bind($scope, 'site').then(function() {
 
-		// set the default admin area state
-		if ($scope.user.firstVisit === undefined || $scope.user.firstVisit == true) {
-			$scope.adminViewState('setup');
-			$scope.user.firstVisit = false;
-		} else {
-			$scope.adminViewState('questions');
-			
-		}
+					// Assign site ID for easy access
+					$scope.site.id = siteId;
+
+					// reset editing on new page loads
+					for( var message in $scope.site.messages ){
+						$scope.site.messages[message].editing = false;
+					}
+
+					//reset account detail editing
+					$scope.user.editing = false;
+					$scope.user.editingEmail = false;
+
+					// reset the "alertTab" flag
+					if ($scope.user.alertTab === true) {
+						$scope.user.alertTab = false;
+					}
+
+				});
+
+				// set the default admin area state
+				if (typeof $scope.user.firstVisit === 'undefined' || $scope.user.firstVisit === true) {
+					$scope.adminViewState('setup');
+					$scope.user.firstVisit = false;
+				} else {
+					$scope.adminViewState('questions');
+				}
+
+				// Flash updates to the vote counts
+				$scope.$watch("site.messages", function(newMessages, oldMessages) {
+					if (oldMessages != null) {
+						var flashClass = "";
+						var messageName = "";
+
+						// Compare old messages to new messages. Figure out if the yes or no vote count was
+						// updated and flash the correct one
+						for (var message in newMessages) {
+							if (newMessages[message].yesVotes != oldMessages[message].yesVotes) {
+								flashClass = "yes";
+								messageName = message;
+							}
+							if (newMessages[message].noVotes != oldMessages[message].noVotes) {
+								flashClass = "no";
+								messageName = message;
+							}
+							if (newMessages[message].mute != oldMessages[message].mute) {
+								flashClass = "mute";
+								messageName = message;
+							}
+							if (newMessages[message].views != oldMessages[message].views) {
+								flashClass = "views";
+								messageName = message;
+							}
+						}
+						if (flashClass !== "") {
+							jQuery("." + flashClass + "-" + messageName).css("background-color", "#eee");
+							jQuery("." + flashClass + "-" + messageName).animate({
+								backgroundColor: "#ffffff"
+							}, 1000);
+
+						}
+					}
+				});
 		
-	});
+			}); // close of: $scope.userData.$bind($scope, 'user').then...
+				
+		}); //close of: $scope.auth.$getCurrentUser()
+	};
 
-	// you would only submit if a valid user
+	/**
+	 * submit: called when a user attempts to add
+	 * a new question
+	 * 
+	 * @return {void}
+	 */
 	$scope.submit = function() {
-
 		if($scope.question) {
-			if ($scope.site.messages == undefined) {
+			// if there are no questions (messages) in
+			// the site object we create a new object for it
+			if (typeof $scope.site.messages === 'undefined') {
 				$scope.site.messages = {};
-
 			}
-			if ($scope.site.qCount == undefined) {
+			// if there is no reference to the number of questions
+			// associated with this site in our object we should
+			// create that 
+			if (typeof $scope.site.qCount === 'undefined') {
 				$scope.site.qCount = 0;
-
 			}
+			// and add one to the count for this new question
 			$scope.site.qCount = $scope.site.qCount + 1;
-			var count = $scope.site.qCount;
-			$scope.site.messages[$scope.sitesRef.push().name()] = {
+			
+			// add the question
+			$scope.site.messages[$scope.siteRef.push().name()] = {
 				text: $scope.question,
 				yesVotes: 0,
 				noVotes: 0,
-				position: count, //itemPosition,
+				position: $scope.site.qCount, //itemPosition,
 				active: 1, //questions active by default
 				views: 0,
 				mute: 0,
@@ -167,9 +185,13 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 		}else{
 			this.error = 'Dude you forgot to ask a question...';
 		}
+		// reset this so the "Ask a new question" box
+		// is empty for the next one
 		$scope.question = '';
 	};
 
+	// helper function for logging out that calls
+	// the auth service
 	$scope.logout = function() {
 		userballotAuthSvc.logout();
 	};
@@ -183,6 +205,8 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 		}
 	};
 
+	// update the site with the desired
+	// shade (or really theme)
 	$scope.setShade = function( shade ) {
 		$scope.site.shade = shade;
 	};
@@ -197,7 +221,6 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 					$scope.site.messages[i] = null;
 				}
 			}
-		}else{
 		}
 	};
 
@@ -230,7 +253,6 @@ function AdminAreaCtrl( $scope, $location, angularFire, angularFireAuth, userbal
 			message.yesVotes = 0;
 			message.noVotes = 0;
 			$scope.updateTimestamps(message, 'reset', (old == 1));
-		}else{
 		}
 	};
 

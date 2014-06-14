@@ -83,10 +83,13 @@ switch ($action) {
 		$siteObj = json_decode($site);
 		
 		// if the user is over their plan level, set the messages to empty.
-		if (isUserOverPlanLevel($id, $firebase))
-		{
-			$siteObj->messages = new stdClass();
-		}
+
+// 	TEMP - DO - 17 APRIL 2014: DISABLING PLAN QUOTA CHECKING UNTIL WE FIX THE PLAN LEVEL BUG
+
+//		if (isUserOverPlanLevel($id, $firebase))
+//		{
+//			$siteObj->messages = new stdClass();
+//		}
 
 		echo json_encode($siteObj);
 	break;
