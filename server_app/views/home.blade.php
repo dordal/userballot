@@ -81,12 +81,6 @@
                                 <p>An easy to use Control Center puts <a href="/faq.php#faq4">question creation </a> and results at your fingertips!  Create short, simple yes or no feedback questions based on suggestions we provide, or your own ideas.  See how your questions are performing in terms of response rate and numbers of yes versus no answers in real time!</p>
                             </div>
                         </div> <!-- bs -->
-                        <div class="container funnel"> <!-- bs -->
-                            <div class="bottom-funnel">
-                                <a href="{{UB_APP_DOMAIN}}#/signup" id="save-question" class="signup-btn product-button">Try It Free!</a>
-                                <a href="/pricing.php" style="margin-left: 20px;" id="save-question" class="signup-btn product-button">See Our Plans!</a>
-                            </div>
-                        </div>
                         <div class="container section-container row"> <!-- bs -->
                             <div class="one-third column section-height section-right"> <!-- bs -->
                                 <img src="img/create.svg" class="vector" alt="">
