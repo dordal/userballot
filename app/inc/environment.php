@@ -17,12 +17,6 @@ switch ($_SERVER['HTTP_HOST']) {
 		define('FIREBASE_URL', 'https://userballotdb.firebaseio.com');
 		define('FIREBASE_TOKEN', 'BMgUZdnbWu1dhri0TWwiJeKsBsIMNuiIsV84CU7u');
 		define('STRIPE_SECRET_KEY', 'sk_live_hsW3QjfGdnPgAzDKsH9r4wpn');
-
-		// Database
-		define('DB_USER','userballot');
-		define('DB_PASS','User8allot!');
-		define('DB_NAME','userballot');
-		define('DB_HOST','userballot.db.10461360.hostedresource.com');
 	break;
 	// Everybody Else
 	default:
@@ -30,9 +24,4 @@ switch ($_SERVER['HTTP_HOST']) {
 		define('FIREBASE_URL', 'https://userballotdb-staging.firebaseio.com');
 		define('FIREBASE_TOKEN', 'XfBvYQUesMSmcKXdSUs2LFUSbp0ww6r7GmVyDbCt');
 		define('STRIPE_SECRET_KEY', 'sk_test_oh7xChAgz9sTf53xJH0YlBVC');
-
-		define('DB_USER','userballot');
-		define('DB_PASS','UserBallot!');
-		define('DB_NAME','userballot');
-		define('DB_HOST','localhost');
 }
