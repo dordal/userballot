@@ -1,8 +1,0 @@
-user agent(browser)
-location
-referrer (site only, not on questions)
-user system Language 
-system type(Window, mac, android, etc.) because what the browser gives us may not be accurate)
-Operating system (note we may limit this to detecting operating (mac, windows, unix, iOS, Android, etc.))
-the presence of plugins (Java, Flash, HTML5, etc.)
-free form data hook(the site owner can pass infomation they know about the user to the question)
