@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container terms">
-	<h1 style="margin-top: 100px;">Terms of Service</h1>
+	<h1 class="h1-headline" style="margin-top: 100px;">Terms of Service</h1>
 	<p><strong>Date last updated:</strong> March 19, 2014</p>
 	<p><strong>PLEASE READ</strong> THESE TERMS OF SERVICE (THE &quotAGREEMENT&quot) CAREFULLY BEFORE USING THE SERVICES OFFERED BY USERBALLOT, INC. (&quotUSERBALLOT&quot). YOUR USE OF THE SERVICES IS EXPRESSLY CONDITIONED UPON YOUR ASSENT TO ALL OF THE TERMS AND CONDITIONS OF THIS AGREEMENT TO THE EXCLUSION OF ALL OTHER TERMS. BY CLICKING THE &quotSUBMIT&quot (OR SIMILAR) BUTTON, OR BY USING THE SERVICES IN ANY MANNER (AS APPLICABLE) (I) YOU OR THE ENTITY YOU REPRESENT (&quotCUSTOMER&quot) AGREE THAT YOU HAVE READ AND AGREE TO BE BOUND BY AND A PARTY TO THE TERMS AND CONDITIONS OF THIS AGREEMENT TO THE EXCLUSION OF ALL OTHER TERMS, AND (II) YOU REPRESENT AND WARRANT THAT YOU ARE AUTHORIZED TO BIND CUSTOMER.</p>
 	<p>1. &nbsp&nbsp&nbsp&nbsp <strong>Access to Service.</strong> Subject to Customer&#39s compliance with the terms and conditions of this Agreement (including payment of all applicable fees), UserBallot grants Customer the right to access and use the UserBallot services ordered by Customer (collectively, the &quotService,&quot or &quotServices&quot) during the Term (as defined below) for the internal business purposes of Customer, only as provided herein and only in accordance with UserBallot&#39s applicable user documentation. Customer&#39s use of the Services shall be subject to any additional limitations (e.g., maximum number of ballots or responses, platform restrictions, etc.) which are set forth on the Services or during the ordering process.</p>

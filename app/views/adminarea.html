@@ -36,7 +36,8 @@
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='questions'}" ng-click="adminViewState('questions')">Control Center</a>
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Get Started</a>
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='settings'}" ng-click="adminViewState('settings')">Settings</a>
-		              		<a class="main-nav-item" ng-class="{active: adminView.state=='pricing', important: user.nearPlanLimit, priority: user.overPlanLimit}" ng-click="adminViewState('pricing')">Upgrade!</a>
+		              		<!-- Disable paid plans -->
+		              		<!-- <a class="main-nav-item" ng-class="{active: adminView.state=='pricing', important: user.nearPlanLimit, priority: user.overPlanLimit}" ng-click="adminViewState('pricing')">Upgrade!</a> -->
 						</div>
 					</div>
 					
@@ -235,7 +236,6 @@
 
 									<!-- <div class="line-item card-wrap" ng:class="{true:'active', false:''}[message.active=='1']" ng-repeat="message in site.messages"> -->
 									<div ng-repeat="message in site.messages | orderObjectBy:'position':true">
-										<!-- <a class="three-columns alpha analytics activate_modal" name='first_window' ng-click="openAnalytics($index)">Analytics</a> -->
 										<div class="line-item card-wrap"> <!-- bs -->
                                             <div class="default">
     											<div class="timestamp">

@@ -344,16 +344,6 @@ function AdminAreaCtrl( $scope, $firebase, userballotAuthSvc) {
 		}
 		$scope.user.alertTab = false;
 	};
-
-	$scope.openAnalytics = function(index) {
-		var messageId = $scope.keyAt($scope.site.messages, index);
-
-		$.ajax( "/analytics/getdata.php?siteId=" + $scope.site.id + "&question=" + messageId + "}" ).done(
-			function(msg) {
-				document.write(msg);
-			}
-		);
-	};
 }
 
 $(document).ready(function(){  

@@ -12,8 +12,8 @@
                 </div>
                 <h1 style="color: #3dcad7;">Get the pulse of your visitors.</h1>
                 <br><br>
-                <a href="{{UB_APP_DOMAIN}}#/signup" id="save-question" class="signup-btn" style="margin-bottom: 5px;">Get Started Free!</a>
-                <span><a href="{{UB_APP_DOMAIN}}#/login" style="color: #2ecc71; text-decoration: none;">Sign in</a></span>  
+                <a href="{{UB_APP_DOMAIN}}#/signup/" id="save-question" class="signup-btn" style="margin-bottom: 5px;">Get Started Free!</a>
+                <span><a href="{{UB_APP_DOMAIN}}#/login/" style="color: #2ecc71; text-decoration: none;">Sign in</a></span>  
             </div>    
         </div>
     </div>
@@ -39,7 +39,7 @@
                                 <a href="https://twitter.com/UserBallot"><img src="img/twitter.svg" alt="" class="social-media"></a>
                             </div>
                         </div>
-                        <h1 style="padding: 50px 0 20px;">What's a UserBallot?</h1>
+                        <h1 class="h1-headline" style="padding: 50px 0 20px;">What's a UserBallot?</h1>
                         <div class="section-height subheader">
                             <p>A UserBallot is a simple <a href="/faq/#faq5">yes or no question</a> you create that appears as a footer on your website and <i>gently</i> nudges your site visitors to engage! Getting simple, easy to understand feedback from your users is a step in the right direction toward making better decisions.</p>
                         </div>                        
@@ -101,8 +101,7 @@
                         </div><!-- bs -->
                         <div class="container funnel"> <!-- bs -->
                             <div class="bottom-funnel">
-                                <a href="{{UB_APP_DOMAIN}}#/signup" id="save-question" class="signup-btn product-button">Try It Free!</a>
-                                <a href="/pricing" style="margin-left: 20px;" id="save-question" class="signup-btn product-button">See Our Plans!</a>
+                                <a href="{{UB_APP_DOMAIN}}#/signup" id="save-question" class="signup-btn">Try It Free!</a>
                             </div>
                         </div>
                     </div>

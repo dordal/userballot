@@ -6,9 +6,12 @@ body {
 h1 {
         font-family: 'Open Sans', sans-serif;
         margin: 0;
-        text-align: center;
         line-height: 35px !important;
         color: #3dcad7;
+}
+
+h1.h1-headline{
+        text-align: center;
 }
 
 ol {
@@ -108,11 +111,6 @@ ol {
 .page-wrap {
         margin-top: 50px;
         height: auto;
-}
-
-.product-button {
-        margin: 0;
-        float: left; 
 }
 
 .page-padded {
@@ -265,7 +263,6 @@ ol {
 }
 .text {
         margin: 0 10%;
-        text-indent: 30px;
         text-align: justify;
         color: #323232;
 }
@@ -364,10 +361,6 @@ ol {
         width: 584px;
         height: 120px;
         text-align: center;
-}
-
-.funnel a {
-        float: left;
 }
 
 #rackspace {

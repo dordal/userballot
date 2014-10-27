@@ -82,14 +82,7 @@ switch ($action) {
 
 		$siteObj = json_decode($site);
 		
-		// if the user is over their plan level, set the messages to empty.
-
-// 	TEMP - DO - 17 APRIL 2014: DISABLING PLAN QUOTA CHECKING UNTIL WE FIX THE PLAN LEVEL BUG
-
-//		if (isUserOverPlanLevel($id, $firebase))
-//		{
-//			$siteObj->messages = new stdClass();
-//		}
+		// TODO: If we ever implement multiple plan levels again, add checking code here.
 
 		echo json_encode($siteObj);
 	break;
@@ -125,19 +118,6 @@ switch ($action) {
 		
 		incrementVoteCount($id, $firebase);
 
-		// Record the answer in the analytics database
-		/*
-		$ip = $_SERVER['REMOTE_ADDR'];
-
-		define('UB_SITE', $id);
-		define('UB_QUESTION', $questionId);
-		define('UB_ANSWER', $answer);
-
-		if(!hasUser($ip)){
-		  addUser($ip);
-		}
-		logAnswer($ip);
-		*/
 	break;
 	// Increment the mute counter
 	// id: site ID
@@ -173,24 +153,6 @@ switch ($action) {
 		$views++;
 		$firebase->set("/sites/" . $id . "/messages/" . $questionId . "/views", $views);
 
-		// Log the visit to the analytics database
-		/*
-		what to do on accessing this page:
-		    - get the ip,
-		    - make user if applicable
-		    - store the visit in the db
-		*/
-		/* comment out analytics for now
-		$ip = $_SERVER['REMOTE_ADDR'];
-		//$site = $_REQUEST['siteId'];
-		define('UB_SITE', $id);
-		define('UB_QUESTION', $questionId);
-
-		if(!hasUser($ip)){
-		  addUser($ip);
-		}
-		logVisit($ip);
-		*/		
 	break;
 
 }

@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container terms">
-		<h1 style="margin-top: 100px;">Privacy Policy</h1>
+		<h1 class="h1-headline" style="margin-top: 100px;">Privacy Policy</h1>
 		<p><strong>Effective date:</strong> March 19, 2014</p>
 		<p>We at UserBallot know you care about how your personal information is used and shared, and we take your privacy seriously.  Please read the following to learn more about our Privacy Policy.  <strong>By using or accessing the Services in any manner, you acknowledge that you accept the practices and policies outlined in this Privacy Policy, and you hereby consent that we will collect, use, and share your information in the following ways.</strong></p>
 		<p>Generally, there are two primary ways that you might use or access our Services:</p>

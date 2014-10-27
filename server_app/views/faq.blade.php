@@ -5,7 +5,7 @@
  <div class="page-wrap" style="margin-top: 50px">        
     <div class="masthead">
         <div class="faq">
-            <h1 style="text-align: center;">FAQ</h1>
+            <h1 class="h1-headline">FAQ</h1>
             <ol>
                 <li><a class="scroll faq-scroll" href="#faq1">What is UserBallot?</a></li>
                 <li><a class="scroll faq-scroll" href="#faq2">How do I get started with UserBallot?</a></li>
@@ -49,8 +49,7 @@
     </div> 
     <div class="container funnel"> <!-- bs -->
         <div class="bottom-funnel">
-            <a href="http://app.userballot.com/#/signup" id="save-question" class="signup-btn product-button">Try It Free!</a>
-            <a href="/pricing/" style="margin-left: 20px;" id="save-question" class="signup-btn product-button">See Our Plans!</a>
+            <a href="{{UB_APP_DOMAIN}}#/signup" id="save-question" class="signup-btn">Try It Free!</a>
         </div>
     </div>
 </div>
