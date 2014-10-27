@@ -15,6 +15,9 @@
 var UB_FIREBASE_DOMAIN = "https://userballotdb.firebaseio.com/";
 var UB_URL = "https://app.userballot.com/ub.php";
 
+// var UB_FIREBASE_DOMAIN = "https://userballotdb-staging.firebaseio.com/";
+// var UB_URL = "http://staging-app.userballot.com/ub.php";
+
 window.onload = function() {
 
 	// Call UserBallot and get back a list of messages for this site
