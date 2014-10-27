@@ -245,7 +245,8 @@ $ub.displayMessage = function( allowmute, frequency, hue, shade ) {
 
 			$ub.updateCount("view");
 
-			$ub.updateUrlList();
+			// Disable Update URL code; non-functional as of 26 Oct due to changes in Firebase
+			// $ub.updateUrlList();
 		}, 1500);
 	}
 };
