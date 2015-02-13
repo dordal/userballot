@@ -5,9 +5,6 @@
 		<div class="admin-bar">
 			<span ng-show="user.firstName">Hello, <strong>{{user.firstName}}</strong></span>
 			<span ng-hide="user.firstName">Hello, <strong>{{user.email}}</strong></span>
-			<span ng-show="user.planType == 'entry'"> | <strong>Entry Plan</strong></span>
-			<span ng-show="user.planType == 'standard'"> | <strong>Standard Plan</strong></span>
-			<span ng-show="user.planType == 'deluxe'"> | <strong>Deluxe Plan</strong></span>
 			<span> | <a ng-click="logout()">Logout</a></span>
 		</div>
 		<!-- The container is a centered 960px -->

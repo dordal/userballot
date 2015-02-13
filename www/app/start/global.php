@@ -1,7 +1,7 @@
 <?php
 
 // Include our environment vars
-require_once(app_path().'/../www/inc/environment.php');
+require_once(app_path().'/../public/inc/environment.php');
 
 /*
 |--------------------------------------------------------------------------

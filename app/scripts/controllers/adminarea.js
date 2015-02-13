@@ -55,21 +55,7 @@ function AdminAreaCtrl( $scope, $firebase, userballotAuthSvc) {
 					voteCount = $scope.user.votes[currentYear][currentMonth];
 				}
 				$scope.user.voteCount = voteCount;
-				
-				// get subscription plan
-				var planType = $scope.user.planType;
-				if (planType == null) {
-					planType = "trial";
-				}
-				$scope.user.planType = planType;
-				var  planLimits = {trial: 50, entry: 2500, standard: 7500, deluxe: 25000}
-				var planLimit = planLimits[$scope.user.planType];
-				$scope.user.planLimit = planLimit;
-				
-				// check plan limit
-				$scope.user.nearPlanLimit = voteCount >= 0.9 * planLimit && voteCount < planLimit;
-				$scope.user.overPlanLimit = voteCount >= planLimit; 
-				
+								
 				// get the specific site for the user from the database
 				// we set the ref in scope here so we can push to the
 				// site object from other methods

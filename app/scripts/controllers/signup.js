@@ -84,12 +84,8 @@ userballotApp.controller('SignupCtrl', function($scope, $location, $routeParams,
 						ga('send', 'event', 'Account', 'Create');
 
 						// login the user and redirect to the admin interface
-						// If this is a free trial account, redirect to the "getting started" view in the admin area
-						if ($routeParams['plan'] === undefined || $routeParams['plan'] === "trial") {
-							$location.path('/admin');
-						} else {
-							$location.path('/order/' + $routeParams['plan']);
-						}
+						$location.path('/admin');
+
 					});
 
 				}else{

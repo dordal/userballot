@@ -22,7 +22,7 @@ function incrementVoteCount($id, $firebase)
 	$userEmailId = $firebase->get("/sites/" . $id . "/userEmailId");
 	$userEmailId = trim($userEmailId,'"');
 
-	// Increment the vote count for this site (used to enforce plan limit)
+	// Increment the vote count for this site
 	date_default_timezone_set('America/Los_Angeles');
 	$voteCountUrl = "/users/" . $userEmailId . "/votes/" . date('Y') . "/" . date('m');
 	$voteCount = $firebase->get($voteCountUrl);
