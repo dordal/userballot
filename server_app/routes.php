@@ -45,8 +45,3 @@ Route::get('/privacy', function()
 {
 	return View::make('privacy');
 });
-
-Route::get('/order', function()
-{
-	return View::make('order');
-});

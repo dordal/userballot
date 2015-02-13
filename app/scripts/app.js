@@ -52,11 +52,6 @@ var userballotApp = angular.module('userballotApp', ['firebase','ngRoute','ngSan
         controller: 'SignupCtrl',
         authRequired: false
       })
-      .when('/order/:plan', {
-        templateUrl: 'views/order.html',
-        controller: 'OrderCtrl',
-        authRequired: false
-      })
       .otherwise({
         redirectTo: '/login'
       });

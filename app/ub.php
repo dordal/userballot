@@ -32,44 +32,6 @@ function incrementVoteCount($id, $firebase)
 	$firebase->set($voteCountUrl, ++$voteCount);
 }
 
-function isUserOverPlanLevel($id, $firebase)
-{
-	// get Id of site owner
-	$userEmailId = $firebase->get("/sites/" . $id . "/userEmailId");
-	$userEmailId = trim($userEmailId,'"');
-
-	// get plan level
-	$planUrl = "/users/" . $userEmailId  . "/plan";
-	$plan = $firebase->get($planUrl);
-	// default to free plan if the plan is not defined
-	$plan = ($plan == 'null' ? 'trial' : $plan);
-
-	// get total vote count for this month
-	date_default_timezone_set('America/Los_Angeles');
-	$voteCountUrl = "/users/" . $userEmailId . "/votes/" . date('Y') . "/" . date('m');
-	$voteCount = $firebase->get($voteCountUrl);
-	$voteCount = ($voteCount == 'null' ? 0 : $voteCount);
-
-	// check plan level
-	$overPlanLevel = False;
-	switch ($plan) {
-		case "trial":
-			$overPlanLevel = $voteCount > 50;
-			break;
-		case "entry":
-			$overPlanLevel = $voteCount > 2500;
-			break;
-		case "standard":
-			$overPlanLevel = $voteCount > 5000;
-			break;
-		case "deluxe":
-			$overPlanLevel = $voteCount > 25000;
-			break;
-	}
-
-	return $overPlanLevel;
-}
-
 $action = $_GET['a'];
 
 switch ($action) {
@@ -81,9 +43,6 @@ switch ($action) {
 		$site = $firebase->get("/sites/" . $id );
 
 		$siteObj = json_decode($site);
-		
-		// TODO: If we ever implement multiple plan levels again, add checking code here.
-
 		echo json_encode($siteObj);
 	break;
 	// Vote yes or no
