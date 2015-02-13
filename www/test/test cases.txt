@@ -1,0 +1,88 @@
+-moved to google drive
+
+
+setup for all test
+I. clear cookies
+II.make sure you have a site set up for one of the qa accounts
+
+1.(for final depoyment) 
+I. open a site with one question in window A.
+II.  open a site with one question in window B. Answer the question in window B 'yes'.
+III. Answer the question in window A 'yes'.
+IV. the yes count for the question should go up two.
+2. (for final depoyment)
+I. make sure you have a site with one question.
+II.deactivate the question.
+III. make sure it doesn't show on the site.
+IV. reactivate the question.
+V. make sure it shows on the site.
+3. (for demo and final depoyment)
+I. Create a new question.
+II. look at it's results page. (the counts should be zero)
+III. vote yes on the question.
+IV. look at it's results page. (the yes count should be 1, the no count should be 0)
+V. vote no on the question.
+VI. look at it's results page. (the counts should both be 1)
+VII. delete the question
+4.(for final depoyment)
+I. embed in a page with an onLoad
+II. refresh page. The question should show and the page shouldn't be broken.
+5. (for final depoyment)
+I. create new user
+II. create a new site for that user
+III. create a new question
+IV. embed in page and point at new site
+V. load page. A question should appear.
+VI. Vote on the question.
+VII. look at the question's results page. one of the counts should be  one.
+VIII. delete the question, site, and user.
+6. (for final depoyment)
+I. Edit a question
+7. (for final depoyment)
+I. load a page in the site. leave the question up.
+II. switch to another window and edit the question.
+III.switch back to the site. vote on the question. 
+IV. look at the admin page. The question should have the edited wording and the count should up by 1.
+8.(for final depoyment)
+I. turn off debug mode for the site if on
+II. answer questions on the site, you should never get the same one twice
+9. (for final depoyment)
+for each distribution platform
+I. create complex page using that platform (i.e. Install a lot of plugins)
+II. note how it's working
+III. install userballot plugin
+IV. everything should work the same as step II and there should be a question at the bottom
+10. (for final depoyment)
+I. create a url targeted question
+II. goto the site of url target question. the url targeted question should appear on that page and only on that page
+11. (for final depoyment)
+I. set up a site with two question
+II. turn off debug mode if on
+III. set the number of days between questions to one
+IV. go to the site. a question should apper
+V. answer the question then reload the page a another question shouldn't apper
+VI. wait a day
+VII. go to the site. a question should apper
+12. 
+I. set up a site with two questions
+II. goto the site note the color of the userballot question
+III. change the color in the admin panel
+IV. goto the site the color of the userballot question should be the new color
+13. 
+I. goto the account admin and pay for a plan(may use any fake payment Stripe provides)
+II. the account should be a plan
+III. reverse any charges that happened
+14.
+I. goto the site a question should apper
+II. clear cookies
+III. install mute cookie
+IV. goto the site a question shouldn't apper
+--misc QA--
+test login (for demo and final depoyment)
+test registration (for final depoyment)
+test embed (for demo and final depoyment)
+add a question (for final depoyment)
+test voting (for demo and final depoyment)
+view results of a question (for demo and final depoyment)
+deactivate a question (for final depoyment)
+reactivate a question (for final depoyment)
