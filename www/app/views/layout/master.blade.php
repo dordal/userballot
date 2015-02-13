@@ -18,7 +18,7 @@
 
     <!-- JS
   ================================================== -->
-    <script src="http://app.userballot.com/scripts/jquery-2.0.3.min.js"></script>
+    <script src="/js/jquery-2.0.3.min.js"></script>
     <script src="/js/interactions.js"></script>
 
 
@@ -65,6 +65,9 @@
           ga('create', '<?php echo GA_USERAGENT ?>', 'userballot.com');
           ga('send', 'pageview');
     </script>
-    <div id="ubScript"></div>
+
+    @if (Request::is('/')) 
+    <!-- UserBallot: Add this before the closing body tag  --><script type="text/javascript">var $ub = window.$ub || {};$ub.siteId = '<?php echo UB_DEMO_SITEID ?>';</script><script src="<?php echo UB_APP_DOMAIN ?>/client.js"></script>
+    @endif
 </body>
 </html>

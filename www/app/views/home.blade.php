@@ -43,8 +43,6 @@
                         <div class="section-height subheader">
                             <p>A UserBallot is a simple <a href="/faq/#faq5">yes or no question</a> you create that appears as a footer on your website and <i>gently</i> nudges your site visitors to engage! Getting simple, easy to understand feedback from your users is a step in the right direction toward making better decisions.</p>
                         </div>                        
-                        <a id="save-question" class="signup-btn ubb what" style="margin-bottom: 5px;">What's a UserBallot?</a>
-                        <p class="wait">(After you click, wait 3-5 seconds)</p>
                         <div class="container section-container row" style="margin-top: 150px;"> <!-- bs -->
                             <div class="one-third column section-height section-right"> <!-- bs -->
                                 <img src="img/long.svg" class="vector" alt="">
@@ -110,5 +108,4 @@
             </section>
         </div>
     </div>
-
 @stop

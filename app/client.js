@@ -11,12 +11,22 @@
  * This is done so that we keep the load on user's site extremely light
  */
 
-// staging / production switch
-var UB_FIREBASE_DOMAIN = "https://userballotdb.firebaseio.com/";
-var UB_URL = "http://app.userballot.com/ub.php";
+var UB_FIREBASE_DOMAIN;
+var UB_URL;
 
-// var UB_FIREBASE_DOMAIN = "https://userballotdb-staging.firebaseio.com/";
-// var UB_URL = "http://staging-app.userballot.com/ub.php";
+// figure out where this script is running
+var scripts = document.getElementsByTagName('script');
+var src = scripts[scripts.length - 1].src;
+var host = src.match(new RegExp('https?://[^/]*'))
+
+// staging / production switch
+if (host == 'http://app.userballot.com') {
+	UB_FIREBASE_DOMAIN = "https://userballotdb.firebaseio.com/";
+} else {
+	UB_FIREBASE_DOMAIN = "https://userballotdb-staging.firebaseio.com/";
+}
+
+UB_URL = host + '/ub.php';
 
 window.onload = function() {
 
@@ -69,6 +79,7 @@ window.onload = function() {
  * displayMessage(): Adds the message to the DOM and displays it
  */
 $ub.displayMessage = function( allowmute, frequency, hue, shade ) {
+
 	// Check to see the last time that we voted
 	var vote_cookie = docCookies.hasItem('ub-vote-' + window.location.host);
 	var is_muted = docCookies.hasItem("mute");
@@ -179,7 +190,6 @@ $ub.displayMessage = function( allowmute, frequency, hue, shade ) {
 			html += "" +
 			"   <div style='position: absolute; bottom: " + bottomLogo + "; " + poweredSide + ": 10px; font-size:10px'><a href='http://www.userballot.com'><img style='width:auto; max-height: 28px;' src='http://www.userballot.com/img/" + powered + "'/></a></div>"+
 			"</div>";
-
 
 		var body = document.getElementsByTagName("body")[0];
 		var fragment = create(html);
