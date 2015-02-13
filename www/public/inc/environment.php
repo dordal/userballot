@@ -14,7 +14,7 @@ switch (Request::getHost()) {
 	// Production
 	case 'www.userballot.com':
 		define('GA_USERAGENT', 'UA-45967588-1');
-		define('UB_APP_DOMAIN', 'https://app.userballot.com');
+		define('UB_APP_DOMAIN', 'http://app.userballot.com');
 		define('UB_DEMO_SITEID', '-J9G9EIDUHVaZMRqI3M-');
 	break;
 	case 'userballot-web-tfite':
