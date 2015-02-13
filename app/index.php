@@ -63,7 +63,6 @@
         <script src="//cdn.firebase.com/js/client/1.0.6/firebase.js"></script>
         <script src="//cdn.firebase.com/js/simple-login/1.3.0/firebase-simple-login.js"></script>
         <script src="//cdn.firebase.com/libs/angularfire/0.7.1/angularfire.min.js"></script>
-        <script src="https://js.stripe.com/v2/"></script>
 
         <!-- build:js scripts/scripts.js -->
         <script src="scripts/app.js"></script>

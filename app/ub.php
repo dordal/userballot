@@ -9,8 +9,6 @@
  */
 include('inc/environment.php');
 include('lib/firebase/firebaseLib.php');
-// include("analytics/DBM.php");
-// include("analytics/functions.php");
 
 // Important! Allow all domains to hit this URL via AJAX
 header('Access-Control-Allow-Origin: *');

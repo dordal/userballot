@@ -36,83 +36,14 @@
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='questions'}" ng-click="adminViewState('questions')">Control Center</a>
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Get Started</a>
 		              		<a class="main-nav-item" ng-class="{active: adminView.state=='settings'}" ng-click="adminViewState('settings')">Settings</a>
-		              		<!-- Disable paid plans -->
-		              		<!-- <a class="main-nav-item" ng-class="{active: adminView.state=='pricing', important: user.nearPlanLimit, priority: user.overPlanLimit}" ng-click="adminViewState('pricing')">Upgrade!</a> -->
 						</div>
 					</div>
 					
-					<div ng-show="adminView.state=='pricing'" style="height: 0;">
-						<div class="container" style="height: 0;"> <!-- bs -->
-							<div class="card-wrap info-wrap thirteen columns settings2"> <!-- bs -->
-								<h1 style="text-align: center; color: #2ecc71;">A plan that's all yours!</h1>
-					        	<div class="pricing pricing-border">
-									<div ng-show="user.planType =='entry'" style="height: 300.875px; margin-bottom: -20px;">
-					        			<h1 style="color: #3dcad7 !important; font-weight: lighter;">Entry</h1>
-					        			<br><br>
-					        			<h3 style="font-weight: normal;">You have this plan!</h3>
-					        		</div>
-					        		<div ng-hide="user.planType =='entry'">
-						        		<h1 style="color: #3dcad7 !important; font-weight: lighter;">Entry</h1>
-						        		<p>Most Affordable!</p>
-						        		<br>
-						        		<h1 style="font-weight: normal;">$9</h1>
-						        		<p>per month</p>
-						        		<br>
-						        		<p><strong>2,500</strong> Responses Monthly</p>
-						        		<br>
-						        		<!-- <p style="text-decoration: underline;">Question Analytics Included</p> -->
-						        		<br><br>
-						        		<a href="/#/order/entry" style="" class="order buy-btn">Let's Rock</a>
-					        		</div>
-					        	</div>
-					        	<div class="pricing pricing-border">
-					        		<div ng-show="user.planType =='standard'" style="height: 300.875px; margin-bottom: -20px;">
-					        			<h1 style="color: #3dcad7 !important; font-weight: lighter;">Standard</h1>
-					        			<br><br>
-					        			<h3 style="font-weight: normal;">You have this plan!</h3>
-					        		</div>
-					        		<div ng-hide="user.planType =='standard'">
-					        			<h1 style="color: #3dcad7 !important; font-weight: lighter;">Standard</h1>
-						        		<p>Triple the Responses!</p>
-						        		<br>
-						        		<h1 style="font-weight: normal;">$19</h1>
-						        		<p>per month</p>
-						        		<br>
-						        		<p><strong>7,500</strong> Responses Monthly</p>
-						        		<br>
-						        		<!-- <p style="text-decoration: underline;">Question Analytics Included</p> -->
-						        		<br><br>
-						        		<a href="/#/order/standard" style="" class="order buy-btn">Time to Roll</a>
-					        		</div>
-					        	</div>
-					        	<div class="pricing">
-					        		<div ng-show="user.planType =='deluxe'" style="height: 300.875px; margin-bottom: -20px;">
-					        			<h1 style="color: #3dcad7 !important; font-weight: lighter;">Deluxe</h1>
-					        			<br><br>
-					        			<h3 style="font-weight: normal;">You have this plan!</h3>
-					        		</div>
-					        		<div ng-hide="user.planType =='deluxe'">
-						        		<h1 style="color: #3dcad7 !important; font-weight: lighter;">Deluxe</h1>
-						        		<p>Best Value!</p>
-						        		<br>
-						        		<h1 style="font-weight: normal;">$29</h1>
-						        		<p>per month</p>
-						        		<br>
-						        		<p><strong>25,000</strong> Responses Monthly</p>
-						        		<br>
-						        		<!-- <p style="text-decoration: underline;">Question Analytics Included</p> -->
-						        		<br><br>
-						        		<a href="/#/order/deluxe" style="" class="order buy-btn">Super Size Me</a>
-						        	</div>
-					        	</div>
-				        	</div>
-				        </div>
-					</div>
 					<div class="sixteen columns omega"><!-- bs -->
 						<div ng-show="adminView.state=='setup'">
 						<div id="cmscontainer">
 							<button class="three-columns alpha cms" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Embed Code</button> <!-- bs -->
-							<button class="three-columns alpha cms" ng-class="{active: adminView.state=='wordpress'}" ng-click="adminViewState('wordpress')">CMS Plugin</button> <!-- bs -->
+							<button class="three-columns alpha cms" ng-class="{active: adminView.state=='wordpress'}" ng-click="adminViewState('wordpress')">WP Plugin</button> <!-- bs -->
 						</div>
 							<div class="card-wrap info-wrap thirteen columns" id="steps"> <!-- bs -->
 								<!-- step 1 -->
@@ -139,14 +70,14 @@
 						<div ng-show="adminView.state=='wordpress'">
 							<div id="cmscontainer">
 								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='setup'}" ng-click="adminViewState('setup')">Embed Code</button> <!-- bs -->
-								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='wordpress'}" ng-click="adminViewState('wordpress')">CMS Plugin</button> <!-- bs -->
+								<button class="three-columns alpha cms" ng-class="{active: adminView.state=='wordpress'}" ng-click="adminViewState('wordpress')">WP Plugin</button> <!-- bs -->
 							</div>
 							<div class="card-wrap info-wrap thirteen columns" id="steps"> <!-- bs -->
 								<!-- step 1 -->
-								<div class="title">Setup is simple with a CMS plugin!</div>
+								<div class="title">Setup is simple with a Wordpress plugin!</div>
 								<br><br>
 								<strong>Step 1</strong>
-								<p>Install the plugin and activate it in your CMS admin panel.</p>
+								<p><a href="https://wordpress.org/plugins/userballot/">Install the plugin</a> and activate it in your Wordpress admin panel.</p>
 								<br>
 								<strong>Step 2</strong>
 								<br>
@@ -315,42 +246,6 @@
 				</div>
 			</div>
 		</div> 
-	</div>
-	<div style="text-align: center;">
-		<div ng-show="user.nearPlanLimit">
-			<div class="tab-alert second-priority">
-				<div ng-show="user.alertTab" class="full-tab-alert second-priority" style="padding-top: 10px;">
-					<strong>You have gotten<span>{{user.voteCount}}</span>of your<span>{{user.planLimit}}</span>responses.</strong><br>
-					<span> Upgrade now to get more feedback from your users!</span><br>
-					<a ng-click="adminViewState('pricing')">Upgrade Now</a>
-					<p style="font-size: 12px; cursor: pointer; float: right; margin-top: 40px; margin-right: 20px;" ng-click="alertTabClose()">close [x]</p>
-				</div>
-				<div ng-click="alertTab()" ng-hide="user.alertTab" style="cursor: pointer; padding: 10px 0;">
-					<span>A</span>
-					<span>L</span>
-					<span>E</span>
-					<span>R</span>
-					<span>T</span>
-				</div>
-			</div>
-		</div>
-		<div ng-show="user.overPlanLimit">
-			<div class="tab-alert first-priority">
-				<div ng-show="user.alertTab" class="full-tab-alert first-priority" style="padding-top: 10px;">
-					<strong>User feedback has been suspended.</strong> <br> 
-					<span> Upgrade now to get more feedback from your users!</span><br>
-					<a ng-click="adminViewState('pricing')">Upgrade Now</a>
-					<p style="font-size: 12px; cursor: pointer; float: right; margin-top: 40px; margin-right: 20px;" ng-click="alertTabClose()">close [x]</p>
-				</div>
-				<div ng-click="alertTab()" ng-hide="user.alertTab" style="cursor: pointer; padding: 10px 0;">
-					<span>A</span>
-					<span>L</span>
-					<span>E</span>
-					<span>R</span>
-					<span>T</span>
-				</div>
-			</div>
-		</div>
 	</div>
 </div> 
 

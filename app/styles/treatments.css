@@ -470,29 +470,6 @@ button:focus {
 	width: 100%;
 	text-align: center;
 }
-.analytics {
-	float: left;
-	background-color: #b9b9b9;
-	border-radius: 3px 0 0 3px;
-	color: #fff;
-	display: block;
-	margin-bottom: 10px;
-	padding: 10px 20px;
-	text-align: center;
-	text-decoration: none;
-	font-size: 14px;
-	float: left;
-}
-.analytics:active {
-	background-color: #2ecc71;
-	color: #a1a1a1;
-}
-.analytics:hover {
-	background-color: #27db73;
-	transition: background .25s ease-in-out;
-    -moz-transition: background .25s ease-in-out;
-    -webkit-transition: background .25s ease-in-out;
-}
 .cms {
 	background-color: #b9b9b9;
 	border-radius: 3px 0 0 3px;
@@ -565,51 +542,6 @@ button:focus {
 
 #names {
 	height: 42px;
-}
-
-.pricing {
-        height: 100%;
-        float: left;
-        text-align: center;
-        width: 33%;
-}
-
-.pricing-border {
-        border-right: 1px solid #323232;
-}
-
-.pricing h1 {
-        padding: 0 !important;
-        font-weight: bold;
-        color: #323232;
-        margin-bottom: 0;
-}
-
-.pricing p {
-        margin: 0 !important;
-        color: #323232;
-}
-
-.buy-btn {
-        letter-spacing: .5px;
-        display: block;
-        cursor: pointer; 
-        border: 1px solid #17994E;
-        padding: 7px 0px;
-        margin: auto;
-        width: 70%; 
-        color: #fff;  
-        font-size: 16px; 
-        background-color: #2ecc71; 
-        text-align: center;
-        text-decoration: none;
-        border-radius: 3px;
-}
-.buy-btn:hover {
-        background-color: #27DB73;
-        transition: background .25s ease-in-out;
-        -moz-transition: background .25s ease-in-out;
-        -webkit-transition: background .25s ease-in-out;
 }
 
 .logo-container {
@@ -770,17 +702,6 @@ input[type="checkbox"] {
 
 	#lastName {
 		width: 97% !important;
-	}
-}
-@media only screen and (max-width: 767px) {
-	.pricing {
-		width: 100%;
-	}
-	.pricing-border {
-		border: 0;
-	}
-	.order {
-		margin-bottom: 100px;
 	}
 }
 
