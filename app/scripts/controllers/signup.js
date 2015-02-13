@@ -2,11 +2,9 @@
 
 userballotApp.controller('SignupCtrl', function($scope, $location, $routeParams, $firebase, userballotAuthSvc) {
 
-
 	$scope.error = null;
 	$scope.emailError = null;
 
-	
 	/**
 	 * register: create a new user in Firebase Simple Login, and 
 	 * create a user to match directly in our Firebase datastore

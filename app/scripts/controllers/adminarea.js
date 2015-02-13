@@ -12,7 +12,6 @@
 'use strict';
 function AdminAreaCtrl( $scope, $firebase, userballotAuthSvc) {
 
-
 	/**
 	 * initView: called when the view initializes
 	 * @return {void}
