@@ -16,7 +16,7 @@ Route::get('/', function()
 	return View::make('home');
 });
 
-Route::get('pricing', function()
+Route::get('/pricing', function()
 {
 	return View::make('pricing');
 });
